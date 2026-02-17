@@ -311,64 +311,96 @@ Advanced analytical papers not tied to a specific course directory.
 
 **Skill Level: Graduate / AI-Supplemented** — MBA-adjacent sports business program. 12 courses spanning leadership, marketing, finance, legal, and operations. This era bridges the pre-AI undergraduate archive (UT Austin 2014–2020) and the current professional work (BSI 2026). Austin began using AI tools (ChatGPT, Claude) as writing supplements during this period — the documents reflect that transition.
 
-> **Note:** 48 of 70 documents are pending download from OneDrive (Full Sail account session expired). See [PENDING_DOWNLOADS.md](<Full Sail University (2024-2025)/PENDING_DOWNLOADS.md>) for the complete manifest. Directories with `.gitkeep` files are scaffolded and waiting for content.
+80 documents across 12 courses and 2 standalone papers. DMK Final Presentation (.pptx, 229MB), BSI Business Plan Presentation (.pptx, 169MB), and UT DCTF NIL Sponsorship Proposal (.pptx, 141MB) are excluded — all exceed GitHub's 100MB file limit.
 
 ### 01 — Personal Development & Leadership (PDL/GDMS, Jan 2025)
 
-*All 8 files pending OneDrive download.*
-
-Mastery paper on Rick Ankiel (T1), grit assessments, discussion posts, brainstorming frameworks, video script, mastery journey blog.
+- [Mastery Paper — Rick Ankiel (T1)](<Full Sail University (2024-2025)/01-Personal-Development-Leadership/Mastery Paper Rick Ankiel.docx>)
+- [1.2 Discussion — Grit & Ambition](<Full Sail University (2024-2025)/01-Personal-Development-Leadership/1.2 Discussion Activity Notes - Grit & Ambition.docx>)
+- [Discussion Board 1 — Grit & Ambition](<Full Sail University (2024-2025)/01-Personal-Development-Leadership/Discussion Board 1 - Grit & Ambition.docx>)
+- [3.2 Discussion Post](<Full Sail University (2024-2025)/01-Personal-Development-Leadership/3.2 Discussion Post.docx>)
+- [3.5 Assignment — Brainstorming & Research Framework](<Full Sail University (2024-2025)/01-Personal-Development-Leadership/3.5 Assignment Brainstorming & Research Framework.docx>)
+- [Assignment 1.3 — Turning Point Video Script](<Full Sail University (2024-2025)/01-Personal-Development-Leadership/Assignment 1.3 Turning Point Video Script.docx>)
+- [Assignment 4.3 — Mastery Journey Blog](<Full Sail University (2024-2025)/01-Personal-Development-Leadership/Assignment 4.3 Mastery Journey Blog.docx>)
+- [Grit Assessment](<Full Sail University (2024-2025)/01-Personal-Development-Leadership/GritAssessment.docx>)
 
 ### 02 — Executive Leadership (EXL-O, Feb 2025)
 
-*All 5 files pending OneDrive download.*
-
-Augie Garrido leadership analysis (T1), Pecha Kucha narration script, leadership mastery journal, decision-making discussion, video assignment.
+- [Augie Garrido — A Legacy of Leadership (T1)](<Full Sail University (2024-2025)/02-Executive-Leadership/Augie Garrido - A Legacy of Leadership.docx>)
+- [Pecha Kucha Narration Script — Augie Garrido](<Full Sail University (2024-2025)/02-Executive-Leadership/Pecha_Kucha_Narration_Script_Augie_Garrido.csv>)
+- [Leadership Mastery Journal](<Full Sail University (2024-2025)/02-Executive-Leadership/Humphrey_Austin_LeadershipMasteryJournal.docx>)
+- [2.1 Discussion — Decision Making](<Full Sail University (2024-2025)/02-Executive-Leadership/2.1 Discussion - Decision Making.docx>)
+- [Assignment 1.3 Video](<Full Sail University (2024-2025)/02-Executive-Leadership/Assignment 1.3 video.docx>)
 
 ### 03 — Business Brand Development (BBD, Spring 2025)
 
-*All 14 files pending OneDrive download.*
-
-Final Brand Strategy Canvas for Blaze Intelligence (T1), brand identity/positioning, comprehensive business plan 2025–2027, market analysis, digital content plan, championship ethos paper, digital leadership portfolio, cover letter.
+- [Final Brand Strategy Canvas — Blaze Intelligence (T1)](<Full Sail University (2024-2025)/03-Business-Brand-Development/Final_Brand_Strategy_Canvas_Blaze_Intelligence.docx>)
+- [3.3 Assignment — Brand Identity](<Full Sail University (2024-2025)/03-Business-Brand-Development/3.3 Assignment - Brand Identity.docx>)
+- [Brand Positioning Map & Strategic Reflection](<Full Sail University (2024-2025)/03-Business-Brand-Development/Brand Positioning Map & Strategic Reflection.docx>)
+- [Blaze Intelligence Comprehensive Business Plan 2025–2027](<Full Sail University (2024-2025)/03-Business-Brand-Development/Blaze Intelligence Comprehensive Business Plan 2025-2027.docx>)
+- [Market Analysis — Slowpitch Softball Bats in Texas](<Full Sail University (2024-2025)/03-Business-Brand-Development/Market Analysis Slowpitch Softball Bats in Texas.docx>)
+- [Digital Leadership Portfolio](<Full Sail University (2024-2025)/03-Business-Brand-Development/Digital Leadership Portfolio.docx>)
+- [Digital Content Plan](<Full Sail University (2024-2025)/03-Business-Brand-Development/DigitalContentPlan.docx>)
+- [Winning Strategies — Embodying the '06 Championship Ethos](<Full Sail University (2024-2025)/03-Business-Brand-Development/Winning Strategies Embodying the 06 Championship Ethos.docx>)
+- [Winning Strategies — Sports Marketing Final](<Full Sail University (2024-2025)/03-Business-Brand-Development/Winning_Strategies_Sports_Marketing_Final.docx>)
+- [Brand Canvas](<Full Sail University (2024-2025)/03-Business-Brand-Development/BrandCanvas.docx>)
+- [Mastery Journal](<Full Sail University (2024-2025)/03-Business-Brand-Development/Humphrey_A_MasteryJournal.docx>)
+- [Austin Humphrey Digital Leadership Profile](<Full Sail University (2024-2025)/03-Business-Brand-Development/Austin Humphrey Digital Leadership Profile.docx>)
+- [Austin Humphrey Leadership Portfolio](<Full Sail University (2024-2025)/03-Business-Brand-Development/Austin Humphrey Leadership Portfolio.docx>)
+- [DCTF Cover Letter](<Full Sail University (2024-2025)/03-Business-Brand-Development/DCTF Cover Letter.docx>)
 
 ### 04 — Sports Marketing & Sponsorship Sales (MSS-O, Apr 2025)
 
-*Both files pending OneDrive download.*
-
-Discussion post on sports marketing, Strategic Alliance Framework for UT Longhorns & DCTF.
+- [Week 1 Discussion Post](<Full Sail University (2024-2025)/04-Sports-Marketing-Sponsorship-Sales/Week 1 Discussion Post FINAL.docx>)
+- [Strategic Alliance Framework — UT Longhorns & DCTF (PDF)](<Full Sail University (2024-2025)/04-Sports-Marketing-Sponsorship-Sales/Strategic Alliance Framework UT Longhorns DCTF.pdf>)
 
 ### 05 — Executive Leadership 2 (EXL-O 2nd, May 2025)
 
-*All 5 files pending OneDrive download.*
-
-Championship Leadership Through Systems — Nick Saban analysis (T1), case studies, business model canvas, executive leadership framework.
+- [Championship Leadership Through Systems — Nick Saban (T1)](<Full Sail University (2024-2025)/05-Executive-Leadership-2/Championship Leadership Through Systems Nick Saban.docx>)
+- [Case Study 1](<Full Sail University (2024-2025)/05-Executive-Leadership-2/case1_austinhumphrey.docx>)
+- [Case Study 2](<Full Sail University (2024-2025)/05-Executive-Leadership-2/case2_austinhumphrey.docx>)
+- [Business Model Canvas](<Full Sail University (2024-2025)/05-Executive-Leadership-2/BusinessModelCanvas.docx>)
+- [Executive Leadership Framework](<Full Sail University (2024-2025)/05-Executive-Leadership-2/executive-leadership-framework.md>)
 
 ### 06 — Entertainment Business Finance (GEB6508-O, 2024)
 
-*All 7 files pending OneDrive download.*
-
-Financial statements, time value of money, break-even/investment analysis, pro forma, mastery journal, financial analysis notes, discussion post.
+- [Financial Statements](<Full Sail University (2024-2025)/06-Entertainment-Business-Finance/Humphrey_A_FinancialStatements.docx>)
+- [Time Value of Money](<Full Sail University (2024-2025)/06-Entertainment-Business-Finance/Humphrey_A_TimeValueOfMoney.docx>)
+- [3.3 Assignment — Break-Even and Investment](<Full Sail University (2024-2025)/06-Entertainment-Business-Finance/3.3 Assignment Break Even and Investment.docx>)
+- [Pro Forma](<Full Sail University (2024-2025)/06-Entertainment-Business-Finance/Humphrey Austin Pro Forma.docx>)
+- [Mastery Journal](<Full Sail University (2024-2025)/06-Entertainment-Business-Finance/Humphrey_A_MasteryJournal.docx>)
+- [Financial Statement Analysis Notes](<Full Sail University (2024-2025)/06-Entertainment-Business-Finance/FinancialStatementAnalysisNotes.doc>)
+- [Week 2 Discussion](<Full Sail University (2024-2025)/06-Entertainment-Business-Finance/week2-discussion-final.txt>)
 
 ### 07 — Sports Management & Operations (MAN6224-O, 2025)
 
-*All 7 files pending OneDrive download.*
-
-Final polished assignment 3.4 (T1), Cardinals strategic intelligence framework, Cardinals analysis, Texas Longhorns SEC-era revenue transformation, Grizzlies report, mastery journal, Cardinals performance dashboard.
+- [Assignment 3.4 — Final Polished Submission (T1)](<Full Sail University (2024-2025)/07-Sports-Management-Operations/Assignment-3.4-FINAL-POLISHED-SUBMISSION.md>)
+- [Cardinals Strategic Intelligence Framework (PDF)](<Full Sail University (2024-2025)/07-Sports-Management-Operations/Cardinals Strategic Intelligence Framework.pdf>)
+- [Assignment 1.3 — Cardinals Analysis](<Full Sail University (2024-2025)/07-Sports-Management-Operations/Assignment 1.3 Cardinals Analysis.docx>)
+- [Texas Longhorns Revenue Transformation in the SEC Era (PDF)](<Full Sail University (2024-2025)/07-Sports-Management-Operations/Texas Longhorns Revenue Transformation in the SEC Era.pdf>)
+- [Grizzlies Report](<Full Sail University (2024-2025)/07-Sports-Management-Operations/Grizzlies report.docx>)
+- [Sports Management & Operations Mastery Journal](<Full Sail University (2024-2025)/07-Sports-Management-Operations/MAN6224 Sports Management Operations Mastery Journal.docx>)
+- [St. Louis Cardinals 2024–2025 Performance Dashboard](<Full Sail University (2024-2025)/07-Sports-Management-Operations/St. Louis Cardinals 2024-2025 Performance Dashboard.docx>)
 
 ### 08 — Digital Marketing (DMK, 2024–2025)
 
-*All 6 files pending OneDrive download. DMK Final Presentation (.pptx, 229MB) skipped — exceeds GitHub 100MB limit.*
+DMK Final Presentation (.pptx, 229MB) excluded — exceeds GitHub 100MB limit.
 
-Final paper (T1), DMK Part 2, integrated marketing communications, Texas Longhorns SEC campaign, DMK Part 3 (budget & KPIs), mastery journal.
+- [DMK Final Paper (T1)](<Full Sail University (2024-2025)/08-Digital-Marketing/HumphreyA_DMKFinalPaper.docx>)
+- [DMK Part 2 — Top Tier](<Full Sail University (2024-2025)/08-Digital-Marketing/HumphreyA_DMKPart2_TopTier.docx>)
+- [Integrated Marketing Communications — Hall](<Full Sail University (2024-2025)/08-Digital-Marketing/IntegratedMarketingCommunications-Hall.docx>)
+- [Texas Longhorns SEC Campaign — Polished Version (PDF)](<Full Sail University (2024-2025)/08-Digital-Marketing/Texas Longhorns SEC Campaign - Polished Version.pdf>)
+- [DMK Part 3 — Budget & KPIs](<Full Sail University (2024-2025)/08-Digital-Marketing/HumphreyA_DMKPart3.docx>)
+- [Mastery Journal](<Full Sail University (2024-2025)/08-Digital-Marketing/4.4_Mastery_Journal_Submission_final.docx>)
 
 ### 09 — Negotiating & Deal-Making (NDM-O, 2024)
 
-5 of 7 archived; 2 pending download.
-
+- [Ndm 1.3 — MLB Vs.](<Full Sail University (2024-2025)/09-Negotiating-Deal-Making/Ndm 1.3 Initial Post Mlb Vs.docx>)
 - [2.5 Negotiation Worksheet](<Full Sail University (2024-2025)/09-Negotiating-Deal-Making/2.5 Negotiation Worksheet.docx>)
 - [3.4 Alternative Dispute Resolution](<Full Sail University (2024-2025)/09-Negotiating-Deal-Making/3.4 Alternative Dispute Resolution.docx>)
 - [4.3 Case Study Presentation](<Full Sail University (2024-2025)/09-Negotiating-Deal-Making/4.3 Case Study Presentation.docx>)
 - [Assignment 4.3 (Presentation)](<Full Sail University (2024-2025)/09-Negotiating-Deal-Making/Assignment 4.3.pptx>)
+- [1.3 Discussion — Industry Disputes](<Full Sail University (2024-2025)/09-Negotiating-Deal-Making/1.3 Discussion - Industry Disputes.docx>)
 - [2.4 Discussion — Communication Styles](<Full Sail University (2024-2025)/09-Negotiating-Deal-Making/2.4 Discussion - Communication Styles.docx>)
 
 ### 10 — Legal Issues in Sports (LIS-O, 2024–2025)
@@ -405,9 +437,10 @@ All 7 archived.
 
 ### Standalone-Exploratory
 
-*Both files pending OneDrive download.*
+Independent research papers on AI cognition written during the Full Sail period.
 
-Meta-Analysis of ChatGPT 4o Thought Process (T1) and Neural Processing of Temporal Memory Structures in LLMs (T1) — independent research papers on AI cognition written during the Full Sail period.
+- [Meta-Analysis of the Thought Process Behind My Conclusion as a ChatGPT 4o Model (T1)](<Full Sail University (2024-2025)/Standalone-Exploratory/Meta-Analysis of the Thought Process Behind My Conclusion as a ChatGPT 4o Model.docx>)
+- [Neural Processing of Temporal Memory Structures in Large Language Models (T1)](<Full Sail University (2024-2025)/Standalone-Exploratory/Neural Processing of Temporal Memory Structures in Large Language Models.docx>)
 
 ---
 
