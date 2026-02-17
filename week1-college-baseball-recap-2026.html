@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 1: Three Grand Slams. One Record Book. The Season Starts Now. | Blaze Sports Intel</title>
+<meta name="description" content="Opening Weekend 2026 college baseball recap. Tyce Armstrong ties a 50-year record. Michigan State stuns Louisville. Oklahoma storms the Shriners. The complete BSI breakdown.">
+<meta name="author" content="Blaze Sports Intel">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════
+   BSI DESIGN SYSTEM — WEEK 1 RECAP
+   Blaze Sports Intel · blazesportsintel.com
+   ═══════════════════════════════════════════════ */
+
+:root {
+  /* Core palette */
+  --burnt-orange: #BF5700;
+  --texas-soil: #8B4513;
+  --charcoal: #1A1A1A;
+  --midnight: #0D0D0D;
+  --ember: #FF6B35;
+  --bone: #F5F0EB;
+  --ash: #2A2A2A;
+  --smoke: #888;
+  --warm-white: #FAF8F5;
+  --rule-line: rgba(191, 87, 0, 0.15);
+
+  /* Typography */
+  --font-display: 'Oswald', sans-serif;
+  --font-body: 'Cormorant Garamond', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Sizing */
+  --content-max: 820px;
+  --wide-max: 1080px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--midnight);
+  color: var(--bone);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.72;
+  overflow-x: hidden;
+}
+
+/* Film grain overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ─── HERO ─── */
+.hero {
+  position: relative;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 4rem 2rem 3.5rem;
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(191,87,0,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(255,107,53,0.08) 0%, transparent 50%),
+    linear-gradient(175deg, var(--midnight) 0%, var(--charcoal) 100%);
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--burnt-orange), transparent);
+}
+
+.hero-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ember);
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards 0.2s;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: var(--warm-white);
+  max-width: var(--wide-max);
+  margin-bottom: 1.2rem;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.35s;
+}
+
+.hero-title em {
+  font-style: normal;
+  color: var(--burnt-orange);
+}
+
+.hero-deck {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--smoke);
+  max-width: 620px;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.5s;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(245,240,235,0.4);
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards 0.65s;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── ARTICLE BODY ─── */
+.article-body {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 5rem;
+}
+
+.article-body p {
+  margin-bottom: 1.35rem;
+  font-size: 1.05rem;
+}
+
+.article-body p:first-of-type::first-line {
+  font-weight: 600;
+}
+
+/* Drop cap on lede */
+.lede::first-letter {
+  float: left;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 3.8rem;
+  line-height: 0.8;
+  margin: 0.08em 0.12em 0 0;
+  color: var(--burnt-orange);
+}
+
+/* Section headings */
+.section-head {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--warm-white);
+  margin: 3rem 0 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--rule-line);
+  position: relative;
+}
+
+.section-head::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--burnt-orange);
+}
+
+/* Sub-headings (team capsules) */
+.capsule-head {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--ember);
+  margin: 2.2rem 0 0.6rem;
+}
+
+.capsule-record {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--smoke);
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+/* Em-dash stat callouts */
+strong {
+  font-weight: 600;
+  color: var(--warm-white);
+}
+
+em {
+  font-style: italic;
+  color: rgba(245,240,235,0.85);
+}
+
+/* Pull quotes */
+.pull-quote {
+  margin: 2.5rem 0;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  border-left: 3px solid var(--burnt-orange);
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--warm-white);
+  line-height: 1.55;
+}
+
+.pull-quote cite {
+  display: block;
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--smoke);
+  margin-top: 0.8rem;
+}
+
+/* Stat boxes */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1px;
+  margin: 2.5rem 0;
+  background: rgba(191,87,0,0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.stat-box {
+  background: var(--charcoal);
+  padding: 1.4rem 1.2rem;
+  text-align: center;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: var(--burnt-orange);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--smoke);
+  line-height: 1.4;
+}
+
+/* Rankings table */
+.rankings-wrap {
+  max-width: var(--wide-max);
+  margin: 2.5rem auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.rankings-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.rankings-table thead {
+  position: sticky;
+  top: 0;
+}
+
+.rankings-table th {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--burnt-orange);
+  background: var(--charcoal);
+  padding: 0.8rem 0.7rem;
+  text-align: left;
+  border-bottom: 2px solid var(--burnt-orange);
+}
+
+.rankings-table td {
+  padding: 0.65rem 0.7rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  vertical-align: top;
+}
+
+.rankings-table tbody tr:hover {
+  background: rgba(191,87,0,0.05);
+}
+
+.rankings-table .rank-cell {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--warm-white);
+  width: 40px;
+  text-align: center;
+}
+
+.rankings-table .team-cell {
+  font-weight: 600;
+  color: var(--warm-white);
+}
+
+.rankings-table .record-cell {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+}
+
+.rankings-table .movement-up {
+  color: #4CAF50;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.rankings-table .movement-down {
+  color: #e74c3c;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.rankings-table .movement-new {
+  color: var(--ember);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.rankings-table .movement-hold {
+  color: var(--smoke);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.rankings-table .notable-cell {
+  font-style: italic;
+  color: rgba(245,240,235,0.65);
+  font-size: 0.8rem;
+}
+
+/* Divider */
+.section-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--rule-line), transparent);
+  margin: 3rem 0;
+}
+
+/* Footer */
+.article-footer {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  border-top: 1px solid var(--rule-line);
+}
+
+.article-footer p {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: rgba(245,240,235,0.3);
+  line-height: 1.7;
+}
+
+.source-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--smoke);
+  background: rgba(255,255,255,0.03);
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+  margin: 0.15rem 0.1rem;
+}
+
+/* Utility */
+.wide-section {
+  max-width: var(--wide-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  html { font-size: 16px; }
+  .hero { min-height: 60vh; padding: 3rem 1.2rem 2.5rem; }
+  .hero-title { font-size: 2rem; }
+  .article-body { padding: 2.5rem 1.2rem 4rem; }
+  .stat-row { grid-template-columns: 1fr 1fr; }
+  .rankings-table { font-size: 0.75rem; }
+  .rankings-table td, .rankings-table th { padding: 0.5rem 0.4rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<header class="hero">
+  <span class="hero-label">College Baseball · Week 1 Recap · February 13–16, 2026</span>
+  <h1 class="hero-title">Three Grand Slams. <em>One Record Book.</em> The Season Starts Now.</h1>
+  <p class="hero-deck">Opening Weekend separated the teams that could win multiple ways from the teams that needed one script. Here's what the first 118 games actually told us.</p>
+  <div class="hero-meta">
+    <span>Blaze Sports Intel</span>
+    <span>D1Baseball · NCAA · ESPN · Baseball America</span>
+    <span>Feb 16, 2026 · 11:30 PM CT</span>
+  </div>
+</header>
+
+<!-- ═══════════════════ ARTICLE ═══════════════════ -->
+<article class="article-body">
+
+<!-- LEDE -->
+<p class="lede">Fourteen teams swept. Two dropped out of the Top 25. One man hit three grand slams in the same game. And somewhere in Louisville, a coaching staff is watching film of a Michigan State club that just walked into Jim Patterson Stadium and took the series like it belonged to them. Opening Weekend is the first honest conversation a roster has with itself — Friday starters face real hitters, bullpens work leverage before roles are set, and lineups reveal whether "depth" is a preseason press release or something that shows up when the schedule compresses. What we learned across 118 games, six neutral-site venues, and a dozen weather-forced doubleheaders is this: the best teams in college baseball already know how to win in multiple shapes, and the ones who needed a specific script to survive are already scrambling to rewrite it.</p>
+
+<p>Three things separated the contenders from the pretenders before a single conference game was played. First, bullpen roles are still fluid everywhere — even at the top. The teams that won doubleheaders (North Carolina, Mississippi State, Coastal Carolina, Clemson) quietly had the best weekends because compressed schedules force role definition under fatigue. You learn who can throw strikes in the seventh inning of a second game. That knowledge compounds for months. Second, weather-driven doubleheaders rewarded actual depth over projected depth. Twelve ranked teams played Saturday doubleheaders after rain pushed Sunday games forward, and the clubs that held serve — stacking wins without emptying the pen — entered midweek with a structural advantage. Third, elite offenses punished even the smallest defensive crack. Georgia Tech hung 27 in a single game. Texas A&M scored 38 runs in its first two. Miami run-ruled Lehigh into submission. When good lineups get free bases, they don't leave them there.</p>
+
+<!-- BIG-PICTURE STAT ROW -->
+<div class="stat-row">
+  <div class="stat-box">
+    <div class="stat-number">3</div>
+    <div class="stat-label">Grand Slams by<br>Tyce Armstrong</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-number">458</div>
+    <div class="stat-label">Feet — Barczi's<br>longest HR</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-number">100</div>
+    <div class="stat-label">MPH — Jackson<br>Flora's fastball</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-number">14</div>
+    <div class="stat-label">Teams that<br>swept 3-0</div>
+  </div>
+</div>
+
+<!-- SECTION: THE NEUTRAL SITES -->
+<h2 class="section-head">The Neutral Sites Told the Real Story</h2>
+
+<p>Forget home openers against mid-majors for a moment. The signal came from two places: Globe Life Field in Arlington and Surprise Stadium in Arizona. That's where ranked teams faced ranked teams, where coaching decisions carried actual stakes, and where Opening Weekend stopped being a scrimmage and started being information.</p>
+
+<p>The <strong>Shriners Children's College Showdown</strong> produced the weekend's clearest separation. Oklahoma — picked 14th in the SEC preseason poll, unranked nationally — went 3–0 and outscored opponents 32–6. Their starting pitching trio of Cameron Johnson, LJ Mercurius, and freshman Cord Rager combined to allow 3 runs on 8 hits with 31 strikeouts across three games. That's not a hot weekend. That's a rotation that was hiding in plain sight. Johnson, the 6-foot-6 lefty transfer from LSU who posted a 5.57 ERA in Baton Rouge last year, struck out a career-high 11 against Texas Tech in the opener — the most by an OU pitcher in a season opener since at least 1999. Rager, a true freshman, held No. 10 TCU to 1 run and 2 hits with 8 strikeouts in the tournament finale, a 12–2 run-rule win. Trey Gambill was named tournament MVP: 4-for-7, 2 homers, 5 RBI, 6 walks. Oklahoma entered Omaha conversation before February ended.</p>
+
+<p>TCU had the more nuanced weekend — and arguably the more valuable one. The Horned Frogs beat No. 23 Vanderbilt 5–4 on Friday and No. 7 Arkansas 5–4 on Saturday, then got run-ruled by Oklahoma on Sunday. Two one-run wins against ranked opponents in a neutral-site pressure cooker is the kind of résumé weekend that moves national perception. True freshman Lucas Franco, the Big 12 Preseason Freshman of the Year, announced himself with a home run in his first collegiate at-bat against Arkansas — his softest ball in play all day was 96 mph off the bat. The Sunday blowout loss to OU reveals that TCU's depth behind its first layer is still settling. But here's the read on TCU: they can beat elite teams if they keep games in the 4–6 run band. Proving they can also win when they need 9 is the next test — and it comes fast, because they travel to No. 1 UCLA this weekend.</p>
+
+<p>Vanderbilt left Arlington at 1–2 and dropped out of the Top 25 entirely — worst opening since 2021–22. Colin Barczi authored one of the weekend's most absurd performances in the TCU loss: three solo home runs (452 feet, 430 feet, 458 feet), exit velocities of 118, 115, 112, and 111 mph on his four batted balls. The 458-foot shot landed in the upper deck at Globe Life. First Commodore to go deep three times in a game since Connor Kaiser in 2018. And Vanderbilt still lost 5–4, because Barczi committed a throwing error on a dropped third strike in the eighth that cracked the door for TCU. That's the game in miniature: individual brilliance doesn't override team execution. The Commodores did get a promising bullpen look — freshman Wyatt Nadeau's debut featured a fastball that touched 98 mph with a cut-ride shape and an 89 mph slider that scouts described as a "death ball" with –5 inches of induced vertical break. The stuff is real. The winning has to catch up.</p>
+
+<p>Out west, the <strong>College Baseball Series at Surprise</strong> delivered its own verdict: Michigan went 3–0, beating No. 12 Oregon State, Stanford, and No. 24 Arizona. Kurt Barr threw a 7-inning, 1-hit gem to close out Arizona. Michigan hasn't made the NCAA Tournament since reaching the 2022 national championship game, but fourth-year coach Tracy Smith may have something brewing. Oregon State recovered from the Michigan loss to beat Arizona 7–6 — rallying from 6–2 down with a 5-run seventh — then walked off Stanford on Sunday. The Beavers, playing their final season as essentially an independent before the new Pac-12 expands, showed exactly what you want to see: the ability to lose a game, reset, and then execute in the late innings when the margin disappears. Arizona went 0–3 and fell out of the rankings.</p>
+
+<hr class="section-divider">
+
+<!-- SECTION: PERFORMANCE OF THE WEEKEND -->
+<h2 class="section-head">Performance of the Weekend</h2>
+
+<p>Baylor first baseman <strong>Tyce Armstrong</strong> hit three grand slams in a single game against New Mexico State — 12 RBI in a 15–2 run-rule win. He is only the second player in NCAA Division I history to accomplish that feat. The first was Jim LaFountain of Louisville, who did it on March 24, 1976. Fifty years. Think about that. Every slugger who has stepped into a college batter's box in the last half-century, and it took until a Friday night in Waco for someone to match LaFountain. Armstrong's slams came in the third, fourth, and seventh innings. Baylor drew 8 walks and absorbed 5 hit-by-pitches to keep loading the bases — and Armstrong kept clearing them. ESPN named him Player of the Week. He finished the full weekend with 14 RBI but was held hitless after the opener, which tells you something about how singular that performance was.</p>
+
+<!-- SECTION: THE UPSET BRACKET -->
+<h2 class="section-head">The Upset Bracket</h2>
+
+<p><strong>Michigan State at No. 8 Louisville</strong> was the weekend's biggest series result, and it wasn't close. The Spartans won the opener 4–3 on Friday — Randy Seymour and Adam Broski each homered — then clinched the series Saturday with a 13–4 rout powered by Parker Picot's 8-RBI day (grand slam in the fourth, 3-run homer in the sixth, sac fly). Picot was the first MSU player with 8 RBI in a game since Bob Malek in 2000. Louisville left 14 runners on base Saturday and went 2-for-10 with runners in scoring position. It was the first time Louisville lost their opening home series since 2011, and the first time they dropped their first series of a season since 2020. Star hitter Zion Rose didn't play all weekend for undisclosed reasons. Louisville dropped from No. 8 to No. 15 — the biggest poll slide of the week. The Spartans' next trip? No. 3 Texas.</p>
+
+<p><strong>UAB over No. 13 Florida, 9–7 in 10 innings</strong> on Opening Day was the most jarring single result of the night. Florida ace Liam Peterson — the No. 9 overall prospect in the 2026 MLB Draft, the No. 3 college arm per Baseball America — didn't survive the fourth inning. He walked 5 batters. That's not a "rough outing." That's a Friday night where a premier arm couldn't find the zone, and it's the kind of game that reminds you Opening Day is live ammunition. Florida committed 3 errors and issued 8 total walks. To their credit, the Gators righted the ship Saturday with an 11–0 run-rule and a 6–1 clincher — but the opener serves as exactly the kind of data that tells you a staff still has calibration work to do before SEC play.</p>
+
+<p>Jackson Flora's line for <strong>UC Santa Barbara against No. 20 Southern Miss</strong> deserves its own paragraph: 6 innings, 0 runs, 3 hits, touching 100 mph on the fastball with a new changeup and curveball alongside his already elite sweeper. Flora is the No. 14 prospect in the 2026 draft class, taking over as UCSB's ace after No. 2 overall pick Tyler Bremner went to the Angels. Southern Miss won the series — Joey Urban's 8th-inning 2-run blast completed a comeback Saturday, and Matt Russo walked it off on Sunday — but Flora put himself on the national map in a way that Friday-night starters dream about.</p>
+
+<hr class="section-divider">
+
+<!-- SECTION: RANKINGS TABLE -->
+<h2 class="section-head">The Post-Week 1 Top 25</h2>
+
+<p>The D1Baseball Top 25 as of February 16, 2026. Two new entrants — Oklahoma and West Virginia — replaced Vanderbilt and Arizona. Louisville's 7-spot drop was the largest. TCU's 3-spot climb on the strength of two ranked wins was the biggest rise.</p>
+
+<div class="rankings-wrap wide-section">
+<table class="rankings-table">
+  <thead>
+    <tr>
+      <th>Rk</th>
+      <th>Team</th>
+      <th>Record</th>
+      <th>Chg</th>
+      <th>Prev</th>
+      <th>Weekend Headline</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td class="rank-cell">1</td><td class="team-cell">UCLA</td><td class="record-cell">2-1</td><td class="movement-hold">—</td><td>1</td><td class="notable-cell">Won series; dropped finale to UCSD 8-7</td></tr>
+    <tr><td class="rank-cell">2</td><td class="team-cell">LSU</td><td class="record-cell">3-0</td><td class="movement-hold">—</td><td>2</td><td class="notable-cell">Swept Milwaukee 41-15; Cooper Moore 11 K debut</td></tr>
+    <tr><td class="rank-cell">3</td><td class="team-cell">Texas</td><td class="record-cell">3-0</td><td class="movement-hold">—</td><td>3</td><td class="notable-cell">Swept UC Davis 27-7; Volantis 7 IP, 1 H, 8 K</td></tr>
+    <tr><td class="rank-cell">4</td><td class="team-cell">Mississippi State</td><td class="record-cell">3-0</td><td class="movement-hold">—</td><td>4</td><td class="notable-cell">O'Connor era opens with sweep of Hofstra</td></tr>
+    <tr><td class="rank-cell">5</td><td class="team-cell">Georgia Tech</td><td class="record-cell">3-0</td><td class="movement-hold">—</td><td>5</td><td class="notable-cell">Outscored Bowling Green 50-11; 27-run game</td></tr>
+    <tr><td class="rank-cell">6</td><td class="team-cell">Coastal Carolina</td><td class="record-cell">3-0</td><td class="movement-hold">—</td><td>6</td><td class="notable-cell">Swept Fairfield; 4 runs allowed in 3 games</td></tr>
+    <tr><td class="rank-cell">7</td><td class="team-cell">TCU</td><td class="record-cell">2-1</td><td class="movement-up">↑3</td><td>10</td><td class="notable-cell">Beat Vandy + Arkansas 5-4 each; lost to OU</td></tr>
+    <tr><td class="rank-cell">8</td><td class="team-cell">Arkansas</td><td class="record-cell">2-1</td><td class="movement-down">↓1</td><td>7</td><td class="notable-cell">Walk-off vs. Texas Tech in 11; lost to TCU</td></tr>
+    <tr><td class="rank-cell">9</td><td class="team-cell">Auburn</td><td class="record-cell">3-0</td><td class="movement-hold">—</td><td>9</td><td class="notable-cell">Heltzer struck out 3 straight in 10th for walk-off</td></tr>
+    <tr><td class="rank-cell">10</td><td class="team-cell">North Carolina</td><td class="record-cell">3-0</td><td class="movement-up">↑1</td><td>11</td><td class="notable-cell">Winslow walk-off HR in 11th completes sweep</td></tr>
+    <tr><td class="rank-cell">11</td><td class="team-cell">Oregon State</td><td class="record-cell">2-1</td><td class="movement-up">↑1</td><td>12</td><td class="notable-cell">Rallied from 6-2 down vs. Arizona; walked off Stanford</td></tr>
+    <tr><td class="rank-cell">12</td><td class="team-cell">Florida</td><td class="record-cell">2-1</td><td class="movement-up">↑1</td><td>13</td><td class="notable-cell">Lost opener to UAB in extras; won series</td></tr>
+    <tr><td class="rank-cell">13</td><td class="team-cell">Tennessee</td><td class="record-cell">3-0</td><td class="movement-up">↑1</td><td>14</td><td class="notable-cell">Outscored Nicholls 27-3; record crowd 6,977</td></tr>
+    <tr><td class="rank-cell">14</td><td class="team-cell">Georgia</td><td class="record-cell">2-1</td><td class="movement-up">↑1</td><td>15</td><td class="notable-cell">22 D1 transfers; took series from Wright State</td></tr>
+    <tr><td class="rank-cell">15</td><td class="team-cell">Louisville</td><td class="record-cell">1-2</td><td class="movement-down">↓7</td><td>8</td><td class="notable-cell">Lost series to Michigan State at home</td></tr>
+    <tr><td class="rank-cell">16</td><td class="team-cell">Florida State</td><td class="record-cell">2-0</td><td class="movement-hold">—</td><td>16</td><td class="notable-cell">Took 2; Sunday canceled. 16-5 run-rule of JMU</td></tr>
+    <tr><td class="rank-cell">17</td><td class="team-cell">NC State</td><td class="record-cell">2-0</td><td class="movement-hold">—</td><td>17</td><td class="notable-cell">2-0 at Puerto Rico Challenge</td></tr>
+    <tr><td class="rank-cell">18</td><td class="team-cell">Kentucky</td><td class="record-cell">3-0</td><td class="movement-hold">—</td><td>18</td><td class="notable-cell">Outscored UNCG 34-11; Tyler Bell injured</td></tr>
+    <tr><td class="rank-cell">19</td><td class="team-cell">Clemson</td><td class="record-cell">3-0</td><td class="movement-hold">—</td><td>19</td><td class="notable-cell">Two shutouts of Army in Saturday DH</td></tr>
+    <tr><td class="rank-cell">20</td><td class="team-cell">Southern Miss</td><td class="record-cell">2-1</td><td class="movement-hold">—</td><td>20</td><td class="notable-cell">Won series despite Flora's masterpiece for UCSB</td></tr>
+    <tr><td class="rank-cell">21</td><td class="team-cell">Oklahoma</td><td class="record-cell">3-0</td><td class="movement-new">NEW</td><td>NR</td><td class="notable-cell">Shriners champion; rotation: 3 R, 31 K combined</td></tr>
+    <tr><td class="rank-cell">22</td><td class="team-cell">Wake Forest</td><td class="record-cell">2-1</td><td class="movement-down">↓1</td><td>21</td><td class="notable-cell">Lost to Houston; rebounded in Puerto Rico</td></tr>
+    <tr><td class="rank-cell">23</td><td class="team-cell">Miami (FL)</td><td class="record-cell">3-0</td><td class="movement-down">↓1</td><td>22</td><td class="notable-cell">Alex Sosa 3 HRs; swept Lehigh</td></tr>
+    <tr><td class="rank-cell">24</td><td class="team-cell">Texas A&amp;M</td><td class="record-cell">3-0</td><td class="movement-up">↑1</td><td>25</td><td class="notable-cell">38+ runs in first 2 games; Sorrell SEC POW</td></tr>
+    <tr><td class="rank-cell">25</td><td class="team-cell">West Virginia</td><td class="record-cell">3-0</td><td class="movement-new">NEW</td><td>NR</td><td class="notable-cell">Swept Ga. Southern; 31 runs, 13 pitchers used</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p style="font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.1em; color: var(--smoke); text-transform: uppercase; margin-top: -0.5rem; margin-bottom: 2rem;">Dropped out: Vanderbilt (prev. 23, 1-2) · Arizona (prev. 24, 0-3)</p>
+
+<hr class="section-divider">
+
+<!-- SECTION: THE COACHING DEBUTS -->
+<h2 class="section-head">Four Coaching Debuts Worth Tracking</h2>
+
+<p><strong>Brian O'Connor at Mississippi State</strong> — The man who built Virginia into a seven-time CWS program and won a national championship in Charlottesville opened his Mississippi State tenure with a sweep of Hofstra. The margin was tighter than the aggregate suggests — a one-run opener, then two more methodical wins in a Saturday doubleheader. O'Connor attacked the portal aggressively, and the early signs say the roster construction is sound. This isn't going to be Virginia South. It's going to be something different, and the SEC should pay attention.</p>
+
+<p><strong>Josh Elander at Tennessee</strong> — When Tony Vitello left for the San Francisco Giants — the first college head coach to jump directly to an MLB manager role — Elander inherited a program that expected to contend immediately. The Vols responded with a 27–3 aggregate against Nicholls and a record crowd of 6,977 at the renovated Lindsey Nelson Stadium. Tegan Kuhns threw 6.2 innings of shutout ball with 8 strikeouts in the opener. Reese Chapman hit .600 for the weekend. The message from Knoxville was clear: this program didn't skip a beat.</p>
+
+<p><strong>James Ramsey at Georgia Tech</strong> — Promoted after Danny Hall's retirement, Ramsey's first weekend produced a 50–11 aggregate against Bowling Green, including a 27–4 game that was the most runs scored in a single game by Georgia Tech since 1994. Caleb Daniel hit an inside-the-park home run on Opening Day. Alex Hernandez drove in 6 in the blowout. The offense's ceiling flashed early — the question is whether it holds against ACC-caliber pitching.</p>
+
+<p><strong>Chris Pollard at Virginia</strong> — The Cavaliers scored 56 runs in a Saturday doubleheader against Wagner, shattering the program record. O'Connor's departure created a narrative of decline; Pollard's first weekend was a blunt rejection of that idea. AJ Gracia, the Duke transfer with a career .299/.445/.559 line and 29 home runs, gives this offense a centerpiece it can build around.</p>
+
+<hr class="section-divider">
+
+<!-- SECTION: PORTAL IMPACT -->
+<h2 class="section-head">The Portal Players Who Showed Up Immediately</h2>
+
+<p>The new 34-scholarship era has fundamentally altered roster construction, and Opening Weekend was the first look at how aggressively programs leveraged the portal. Here's who justified the bet immediately.</p>
+
+<p><strong>Cooper Moore</strong> (Kansas → LSU): 6 IP, 1 R, 0 BB, career-high 11 K, 76 pitches with 61 strikes. His changeup was the primary weapon against Milwaukee, paired with a 92–93 mph fastball. Jay Johnson's quote — "We've been seeing this from Cooper since October" — suggests this wasn't a fluke but a development story that simply needed a bigger stage.</p>
+
+<p><strong>Cameron Johnson</strong> (LSU → Oklahoma): The irony of a former Tiger becoming the engine of Oklahoma's breakthrough can't be ignored. Johnson posted a 5.57 ERA in Baton Rouge last year. On Friday in Arlington, the 6-foot-6 lefty struck out 11 against Texas Tech. The SEC's Pitcher of the Week transferred out of the SEC and immediately pitched like a different arm.</p>
+
+<p><strong>Caden Sorrell</strong> (Maryland → Texas A&amp;M): Two home runs and 5 RBI in the opener against Tennessee Tech. Named SEC Player of the Week. Career .347/.465/.614 hitter who gives the Aggies — 38 runs in their first two games, most since 1946 — a lineup anchor with real draft equity.</p>
+
+<p><strong>Alex Sosa</strong> (NC State → Miami): 3 home runs across the Lehigh sweep. <strong>Brendan Brock</strong> (JUCO → Oklahoma): Grand slam in his OU debut against Oklahoma State. <strong>Macon Winslow</strong> (Duke → UNC): Walk-off home run in the 11th inning off the left-field scoreboard to complete the sweep of Indiana. That's the kind of swing that writes a career in Chapel Hill before March.</p>
+
+<hr class="section-divider">
+
+<!-- SECTION: THE ARMS RACE -->
+<h2 class="section-head">The Arms Race — Velocity and Stuff Notes</h2>
+
+<p>Opening Weekend is always the first real data on who added velocity, who changed shape, and whose stuff jumped over the fall. A few arms stood out beyond the headline performances.</p>
+
+<p><strong>Jackson Flora, UCSB</strong> — Fastball now regularly touches triple digits. Added a new changeup and curveball to complement an already elite sweeper. At No. 14 on MLB Pipeline's draft board, Flora is pitching like a top-5 arm.</p>
+
+<p><strong>Wyatt Nadeau, Vanderbilt (Fr.)</strong> — Fastball touched 98 mph with a cut-ride profile in his debut. Slider at 89 mph with –5 inches of induced vertical break. The stuff is premium. The challenge is channeling it consistently before SEC play.</p>
+
+<p><strong>England Bryan, Vanderbilt (So.)</strong> — Mechanical changes produced a new arm slot generating 19 inches of induced vertical break on the fastball. His cutter drew 3 whiffs on 4 swings. Vanderbilt's staff may have stumbled to a 1–2 record, but the individual arm talent suggests the turnaround won't take long.</p>
+
+<p><strong>Dylan Volantis, Texas</strong> — The 2025 SEC Freshman of the Year opened with 7 innings, 1 hit, 1 run, 8 strikeouts against UC Davis. At Texas, the No. 1 starter sets the tone for the series — and Volantis set it at "control." That profile travels in SEC weekends.</p>
+
+<hr class="section-divider">
+
+<!-- SECTION: THE INJURY THAT MATTERS -->
+<h2 class="section-head">The Injury That Changes a Draft Board</h2>
+
+<p>Kentucky shortstop <strong>Tyler Bell</strong> — the No. 14 prospect in Baseball America's Top 200 draft rankings, a projected first-round pick who turned down second-round money from the Rays last summer — injured his left shoulder diving for a ball in the seventh inning of Friday's opener against UNC Greensboro. He's out indefinitely. Bell hit .296/.385/.522 with 10 home runs as a freshman in 2025. Luke Lawrence stepped into the lineup and Kentucky still swept (34–11 aggregate, hitting .345 as a team), but losing a player of Bell's caliber reshapes how opposing staffs plan against the Wildcats and how front offices evaluate a draft class. Kentucky says they'll evaluate when they return to Lexington. The timeline matters for everyone — Bell, the program, and the 30 clubs projecting him.</p>
+
+<hr class="section-divider">
+
+<!-- SECTION: WHAT WEEK 2 IS ABOUT -->
+<h2 class="section-head">What Week 2 Is Really About</h2>
+
+<p>Coaches now have real information. Not fall scrimmage data, not intrasquad velocity readings — real information about who can throw strikes, who can handle the ninth inning, and whose lineup disappears when it can't slug. The guy-in-the-bullpen who can't find the zone in February becomes your only option in May if you don't discover alternatives now. That's why this weekend mattered more than the scores suggest.</p>
+
+<p>The marquee is <strong>No. 7 TCU at No. 1 UCLA</strong> (Feb. 20–22) — a true top-10 test where the question writes itself: can TCU's tight-game travel profile survive in Los Angeles against the best lineup in college baseball? Roch Cholowsky, the consensus No. 1 overall draft pick, homered on the first pitch he saw Saturday. Lucas Franco, TCU's electric freshman, had 96+ mph exit velocity on every ball he put in play. Something has to give. Also on deck: <strong>Michigan State at No. 3 Texas</strong>, where the Spartans get to find out whether the Louisville series win was a statement or a sugar high.</p>
+
+<p>Don't overreact to early polls — the Coaches Poll is conservative in February, and the real movement is in how programs deploy pitching and tighten defensive variance before March. The driver of lasting ranking change isn't one loss. It's <em>how</em> you lost — bullpen collapse, defensive volatility, and whether you showed a second way to win when the first one failed. The teams that answered that question this weekend already know what they can lean on. The rest are still guessing.</p>
+
+<div class="pull-quote">
+  The contenders now know what they can lean on — a true late-inning arm, a stable top three in the order, a starter who can turn a lineup over twice without falling apart. The pretenders learned what the scoreboard doesn't hide: free bases, shallow middle relief, and lineups that disappear when they can't slug.
+</div>
+
+<hr class="section-divider">
+
+<!-- QUICK HITS -->
+<h2 class="section-head">Quick Hits From the Margins</h2>
+
+<p><strong>La Salle returned to baseball</strong> after being cut during COVID in 2020. They swept Maryland-Eastern Shore 48–16 across three games and scored 27 runs in their first game in over five years. Programs come back when people fight for them.</p>
+
+<p><strong>Missouri posted a 34–3 win</strong> on Sunday with 32 RBI — a program record and the second-most runs scored in a game since 1902. Virginia's 56-run Saturday doubleheader also set a program record. Oregon went 4–0 with two 14-run wins. The margins were extreme on both ends.</p>
+
+<p><strong>USC threw a combined no-hitter</strong> against Pepperdine in an 11–0 run-rule Saturday. Grant Govel went 6 hitless innings; Andrew Lamb ended the game with a walk-off homer. The weekend that the college baseball world will remember for Armstrong's three grand slams also produced its share of quieter excellence.</p>
+
+<p><strong>Auburn's Ryan Heltzer</strong> entered the 10th inning of a 1–1 game against Youngstown State with runners on first and second, nobody out. He struck out three consecutive batters. Walk-off wild pitch won it. That's the kind of relief appearance that defines a bullpen role for months.</p>
+
+<p><strong>Context that matters going forward:</strong> The SEC now has 11 teams in the Top 25 and has won 6 straight national championships — 8 of the last 10. LSU is the defending champion after sweeping Coastal Carolina in the 2025 CWS Finals. The last back-to-back champion was South Carolina in 2010–11. The CWS begins June 12 at Charles Schwab Field in Omaha.</p>
+
+</article>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer class="article-footer">
+  <p>Sources: D1Baseball · ESPN · NCAA.com · Baseball America · Yahoo Sports/USA TODAY · On3 · Just Baseball · Saturday Down South · Sports Illustrated · Michigan State Athletics · Louisville Athletics · West Virginia Athletics · Florida Athletics · Kentucky Athletics · MLB Pipeline · FloBaseball · University athletic department releases</p>
+  <p style="margin-top: 0.8rem;">Rankings are the official D1Baseball Top 25 unless otherwise noted. BSI's own Power 25 rankings are published separately. · Coverage this sport has always deserved.</p>
+  <p style="margin-top: 1.2rem;">
+    <span class="source-tag">D1Baseball</span>
+    <span class="source-tag">ESPN</span>
+    <span class="source-tag">NCAA</span>
+    <span class="source-tag">Baseball America</span>
+    <span class="source-tag">MLB Pipeline</span>
+    <span class="source-tag">Just Baseball</span>
+    <span class="source-tag">On3</span>
+    <span class="source-tag">USA TODAY</span>
+  </p>
+  <p style="margin-top: 1.5rem;">&copy; 2026 Blaze Sports Intel · blazesportsintel.com</p>
+</footer>
+
+</body>
+</html>

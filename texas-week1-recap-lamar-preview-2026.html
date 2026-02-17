@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>#3 Texas Sweeps UC Davis, Hosts Lamar Tuesday | Blaze Sports Intel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --burnt-orange: #BF5700;
+  --texas-soil: #8B4513;
+  --charcoal: #1A1A1A;
+  --midnight: #0D0D0D;
+  --ember: #FF6B35;
+  --bone: #F5F0EB;
+  --warm-white: #FAF8F5;
+  --smoke: #888;
+  --ash: #2A2A2A;
+  --content-max: 820px;
+  --wide-max: 1080px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--midnight);
+  color: var(--bone);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 19px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.03;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  padding: 120px 24px 80px;
+  text-align: center;
+  background: radial-gradient(ellipse at 50% 0%, rgba(191,87,0,0.15) 0%, transparent 70%), var(--midnight);
+  overflow: hidden;
+}
+
+.hero-kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--burnt-orange);
+  margin-bottom: 16px;
+  animation: fadeUp 0.6s ease both;
+}
+
+.hero h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(32px, 6vw, 56px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  color: var(--warm-white);
+  max-width: var(--wide-max);
+  margin: 0 auto 20px;
+  animation: fadeUp 0.6s ease 0.1s both;
+}
+
+.hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-style: italic;
+  color: var(--smoke);
+  max-width: 600px;
+  margin: 0 auto 28px;
+  animation: fadeUp 0.6s ease 0.2s both;
+}
+
+.hero-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--smoke);
+  animation: fadeUp 0.6s ease 0.3s both;
+}
+
+.hero-meta span { color: var(--burnt-orange); }
+
+/* ── ARTICLE ── */
+.article-body {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.lede {
+  font-size: 21px;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.lede::first-letter {
+  float: left;
+  font-family: 'Oswald', sans-serif;
+  font-size: 72px;
+  line-height: 0.85;
+  font-weight: 700;
+  color: var(--burnt-orange);
+  margin: 4px 12px 0 0;
+}
+
+p { margin-bottom: 20px; }
+
+.section-head {
+  font-family: 'Oswald', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--warm-white);
+  margin: 48px 0 24px;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+.section-head::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--burnt-orange);
+}
+
+.capsule-head {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--burnt-orange);
+  margin: 36px 0 12px;
+}
+
+/* ── STATS ── */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  margin: 24px 0 32px;
+}
+
+.stat-box {
+  background: var(--ash);
+  border: 1px solid rgba(191,87,0,0.2);
+  border-radius: 8px;
+  padding: 20px 16px;
+  text-align: center;
+}
+
+.stat-box .num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--burnt-orange);
+  line-height: 1;
+}
+
+.stat-box .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--smoke);
+  margin-top: 8px;
+}
+
+/* ── GAME BOX ── */
+.game-box {
+  background: var(--ash);
+  border: 1px solid rgba(191,87,0,0.15);
+  border-radius: 10px;
+  padding: 28px 24px;
+  margin: 24px 0;
+}
+
+.game-box-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--warm-white);
+  margin-bottom: 4px;
+}
+
+.game-box-score {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  color: var(--burnt-orange);
+  margin-bottom: 16px;
+}
+
+.game-box p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.game-box p:last-child { margin-bottom: 0; }
+
+.pitcher-line {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--bone);
+  background: rgba(191,87,0,0.08);
+  border-left: 3px solid var(--burnt-orange);
+  padding: 10px 14px;
+  margin: 14px 0;
+  border-radius: 0 6px 6px 0;
+}
+
+/* ── PULL QUOTE ── */
+.pull-quote {
+  border-left: 3px solid var(--burnt-orange);
+  padding: 16px 24px;
+  margin: 36px 0;
+  font-size: 20px;
+  font-style: italic;
+  color: var(--warm-white);
+  line-height: 1.6;
+}
+
+.pull-quote .attr {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-style: normal;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--smoke);
+  margin-top: 10px;
+}
+
+/* ── TABLE ── */
+.rankings-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0 32px;
+  font-size: 15px;
+}
+
+.rankings-table thead {
+  position: sticky;
+  top: 0;
+}
+
+.rankings-table th {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--smoke);
+  background: var(--midnight);
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 2px solid var(--burnt-orange);
+}
+
+.rankings-table td {
+  font-family: 'Cormorant Garamond', serif;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  color: var(--bone);
+}
+
+.rankings-table tr:hover td { background: rgba(191,87,0,0.05); }
+
+.rankings-table .highlight { color: var(--burnt-orange); font-weight: 600; }
+
+/* ── DIVIDER ── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--burnt-orange), transparent);
+  margin: 48px 0;
+  border: none;
+}
+
+/* ── PREVIEW BOX ── */
+.preview-box {
+  background: linear-gradient(135deg, rgba(191,87,0,0.1), rgba(191,87,0,0.03));
+  border: 1px solid rgba(191,87,0,0.25);
+  border-radius: 12px;
+  padding: 32px 28px;
+  margin: 28px 0;
+}
+
+.preview-box .matchup {
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--warm-white);
+  margin-bottom: 4px;
+}
+
+.preview-box .details {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--smoke);
+  margin-bottom: 18px;
+}
+
+.preview-box .details span { color: var(--burnt-orange); }
+
+/* ── FOOTER ── */
+.article-footer {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 24px 64px;
+  text-align: center;
+}
+
+.source-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.source-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--smoke);
+  background: var(--ash);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.footer-line {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--smoke);
+}
+
+.footer-line a {
+  color: var(--burnt-orange);
+  text-decoration: none;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .hero { padding: 80px 20px 56px; }
+  .article-body { padding: 32px 20px 56px; }
+  .stat-row { grid-template-columns: repeat(2, 1fr); }
+  .game-box { padding: 20px 18px; }
+  .preview-box { padding: 24px 20px; }
+  body { font-size: 17px; }
+  .lede { font-size: 19px; }
+  .lede::first-letter { font-size: 56px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════ HERO ════════════ -->
+<header class="hero">
+  <div class="hero-kicker">Week 1 Recap · College Baseball 2026</div>
+  <h1>#3 Texas Opens with a Statement: 27–7 Sweep of UC Davis</h1>
+  <div class="hero-sub">Nine consecutive home openers won. A rotation that allowed five earned runs in 25 innings. And a Tuesday date with Lamar on deck.</div>
+  <div class="hero-meta">
+    <span>Blaze Sports Intel</span> &nbsp;·&nbsp; February 16, 2026 &nbsp;·&nbsp; UFCU Disch-Falk Field, Austin TX
+  </div>
+</header>
+
+<!-- ════════════ ARTICLE BODY ════════════ -->
+<article class="article-body">
+
+  <p class="lede">The third-ranked Longhorns didn't ease into the 2026 season — they buried the opening weekend under a 27-run offensive barrage, a rotation ERA of 1.80, and three games that never felt close. UC Davis came to Austin and left carrying the weight of a 27–7 aggregate deficit, outscored in every contest and outhit in two of three. For a Texas program with national-title expectations and a pitching staff built to sustain them, Week 1 answered the questions that mattered: the arms are sharp, the lineup has depth, and Disch-Falk remains a house of horrors for visiting programs.</p>
+
+  <!-- ── SERIES AGGREGATE ── -->
+  <h2 class="section-head">Series at a Glance</h2>
+
+  <div class="stat-row">
+    <div class="stat-box">
+      <div class="num">3-0</div>
+      <div class="label">Series Record</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">27</div>
+      <div class="label">Runs Scored</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">7</div>
+      <div class="label">Runs Allowed</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">1.80</div>
+      <div class="label">Staff ERA</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">23</div>
+      <div class="label">Strikeouts</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">9</div>
+      <div class="label">Consecutive Home Openers Won</div>
+    </div>
+  </div>
+
+  <p>The pitching staff set the tone from the first inning of Friday night's opener and never relented. Five earned runs across 25 innings of work. That's not a weekend — that's a statement of intent from a rotation that believes it can carry this team deep into June. The offense, meanwhile, produced crooked numbers in bunches, posting six-run frames twice and plating double digits in the Friday opener.</p>
+
+  <hr class="section-divider">
+
+  <!-- ── GAME 1 ── -->
+  <h2 class="section-head">Game-by-Game Breakdown</h2>
+
+  <div class="capsule-head">Game 1 · Friday, February 13</div>
+
+  <div class="game-box">
+    <div class="game-box-title">Texas 12, UC Davis 2 (Run Rule)</div>
+    <div class="game-box-score">Final · 7 Innings · UFCU Disch-Falk Field</div>
+
+    <p>Ruger Riojas answered the Friday night starter question in emphatic fashion. The right-hander carved through the UC Davis order for five innings of dominance, scattering three hits and surrendering a single run while punching out nine. His command was surgical: 52 strikes on 78 pitches, a 66.7% strike rate that had Aggie hitters chasing and missing all evening.</p>
+
+    <div class="pitcher-line">Riojas (W): 5.0 IP · 3 H · 1 R · 9 K · 78 pitches (52 strikes)</div>
+
+    <p>The offense matched the pitching's aggression. Aiden Robbins announced himself with a 2-for-4 night capped by a home run — his first as a Longhorn — and three RBI. Texas pounded 11 hits in total, building a lead large enough to invoke the run rule after seven. The 12–2 margin flattered UC Davis; this game was over by the fourth inning.</p>
+  </div>
+
+  <!-- ── GAME 2 ── -->
+  <div class="capsule-head">Game 2 · Saturday, February 14</div>
+
+  <div class="game-box">
+    <div class="game-box-title">Texas 6, UC Davis 4</div>
+    <div class="game-box-score">Final · 9 Innings · UFCU Disch-Falk Field</div>
+
+    <p>Saturday's contest was the tightest of the weekend, and the only game where UC Davis showed signs of life. Luke Harrison took the ball and worked 5.1 innings, yielding five hits and two runs with six strikeouts. His best sequence came in the fourth, when he punched out the side on 12 pitches — three batters, three swinging strikes, conversation over.</p>
+
+    <div class="pitcher-line">Harrison: 5.1 IP · 5 H · 2 R · 6 K</div>
+
+    <p>The offensive headline belonged to Mendoza, who delivered the weekend's most electric swing: a 108 mph exit velocity bomb that traveled 417 feet to dead center. He finished 3-for-4 with a homer and three RBI. Adrian Rodriguez doubled, Robbins singled again, and Borba added an RBI as the Longhorns built enough cushion to hold off a late UC Davis push.</p>
+
+    <div class="pull-quote">
+      108 mph off the bat, 417 feet to center. Mendoza's Saturday homer wasn't just a home run — it was a message to every weekend rotation Texas will face this season.
+    </div>
+  </div>
+
+  <!-- ── GAME 3 ── -->
+  <div class="capsule-head">Game 3 · Sunday, February 15</div>
+
+  <div class="game-box">
+    <div class="game-box-title">Texas 9, UC Davis 1</div>
+    <div class="game-box-score">Final · 9 Innings · UFCU Disch-Falk Field</div>
+
+    <p>Dylan Volantis closed the weekend with the kind of outing that makes coaching staffs sleep well in February. The left-hander earned the win — his first of the season — in a performance that kept UC Davis hitters off-balance from the first pitch. Behind him, freshman Michael Winter made his collegiate debut with two scoreless innings and two strikeouts, flashing the arm strength that made him one of the more intriguing arms in Texas' 2025 recruiting class.</p>
+
+    <div class="pitcher-line">Volantis (W, 1-0): Quality start · Winter: 2.0 IP · 0 R · 2 K (collegiate debut)</div>
+
+    <p>The third inning was the death blow. Texas sent 11 batters to the plate and scored six runs, with Adrian Rodriguez delivering a bases-clearing double that broke the game open. Robbins and Borba each added RBI singles in the frame. By the time UC Davis recorded the third out of the third, the series was already a sweep in all but the final six innings of formality.</p>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- ── KEY PERFORMERS ── -->
+  <h2 class="section-head">Key Performers</h2>
+
+  <table class="rankings-table">
+    <thead>
+      <tr>
+        <th>Player</th>
+        <th>Role</th>
+        <th>Week 1 Line</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="highlight">Ruger Riojas</td>
+        <td>RHP / Fri Starter</td>
+        <td>5.0 IP, 3 H, 1 R, 9 K, 78 P (52 strikes)</td>
+      </tr>
+      <tr>
+        <td class="highlight">Mendoza</td>
+        <td>OF / DH</td>
+        <td>3-for-4 (G2), HR (108 mph, 417 ft), 3 RBI</td>
+      </tr>
+      <tr>
+        <td class="highlight">Aiden Robbins</td>
+        <td>IF</td>
+        <td>Multi-hit games, HR (G1), 3 RBI (G1), hits in all 3</td>
+      </tr>
+      <tr>
+        <td>Luke Harrison</td>
+        <td>RHP / Sat Starter</td>
+        <td>5.1 IP, 5 H, 2 R, 6 K, punched out the side (4th)</td>
+      </tr>
+      <tr>
+        <td>Dylan Volantis</td>
+        <td>LHP / Sun Starter</td>
+        <td>W (1-0), strong start</td>
+      </tr>
+      <tr>
+        <td>Adrian Rodriguez</td>
+        <td>IF</td>
+        <td>Double (G2), bases-clearing double (G3)</td>
+      </tr>
+      <tr>
+        <td>Michael Winter</td>
+        <td>RHP / Reliever</td>
+        <td>2.0 IP, 0 R, 2 K (collegiate debut)</td>
+      </tr>
+      <tr>
+        <td>Borba</td>
+        <td>Utility</td>
+        <td>RBI in multiple games, consistent at-bats</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The rotation's depth is the story. Riojas, Harrison, and Volantis each kept their opponent under three runs, and the combined 23-strikeout weekend means opposing lineups were uncomfortable all series. Winter's debut adds a wrinkle that will matter in March and April — fresh arms who can hold leads give David Pierce options he didn't have late last season.</p>
+
+  <hr class="section-divider">
+
+  <!-- ── TUESDAY PREVIEW ── -->
+  <h2 class="section-head">Tuesday Preview: Lamar Cardinals</h2>
+
+  <div class="preview-box">
+    <div class="matchup">#3 Texas vs. Lamar Cardinals</div>
+    <div class="details">
+      Tuesday, February 17 &nbsp;·&nbsp; <span>5:00 PM CT</span> &nbsp;·&nbsp; UFCU Disch-Falk Field &nbsp;·&nbsp; <span>SEC Network+</span> &nbsp;·&nbsp; Longhorn Radio Network
+    </div>
+
+    <p>Lamar brings a Division I program with Southland Conference pedigree — 10 regular-season conference titles in their history — but they're walking into a buzzsaw. The Cardinals, coached by Will Davis, face a Texas club riding the momentum of a 27-run weekend and a pitching staff that just posted a 1.80 ERA in its first three outings.</p>
+
+    <p>Tuesday midweek games are where Texas traditionally tests its midweek rotation depth. Expect to see arms beyond the Friday-Saturday-Sunday trio, with Pierce likely giving extended looks to relievers and developmental starters who need innings. For the lineup, this is a chance to keep the bats warm before Michigan State visits Disch-Falk for the Week 2 series.</p>
+  </div>
+
+  <div class="pull-quote">
+    The midweek game isn't a throwaway — it's an audition. Every arm that pitches Tuesday is competing for a role that matters in March.
+  </div>
+
+  <p>Watch for the Longhorns' approach at the plate. Against a lower-seed opponent, the temptation is to swing for the fences. The better programs — the ones that survive regionals — use midweek at-bats to work counts, execute situationally, and build the plate discipline that wins tight games in May. If Texas hitters are patient against Lamar's staff, that tells you more about this lineup's ceiling than another 12-run outburst would.</p>
+
+  <h2 class="section-head">What's Next</h2>
+
+  <p>After Tuesday's matchup with Lamar, Texas hosts Michigan State for a three-game weekend series starting Friday. The Spartans will be the first true test of the Longhorns' rotation depth — a Power Four program with Big Ten ambitions. The opening-weekend sweep of UC Davis was exactly what you'd expect from a top-three team playing at home. The real evaluation starts when the competition arrives with something to prove.</p>
+
+</article>
+
+<!-- ════════════ FOOTER ════════════ -->
+<footer class="article-footer">
+  <div class="source-tags">
+    <span class="source-tag">texaslonghorns.com</span>
+    <span class="source-tag">SEC Network+</span>
+    <span class="source-tag">D1Baseball</span>
+    <span class="source-tag">BSI Analytics</span>
+  </div>
+  <div class="footer-line">
+    <a href="https://blazesportsintel.com">Blaze Sports Intel</a> &nbsp;·&nbsp; College Baseball Coverage &nbsp;·&nbsp; February 2026
+  </div>
+</footer>
+
+</body>
+</html>
