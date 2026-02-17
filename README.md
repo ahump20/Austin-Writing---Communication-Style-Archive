@@ -98,7 +98,7 @@ Early conceptual work — Plato, Descartes, Kant, Hume, Beauvoir.
 - [Kant Notes](<Philosophy/Kant Notes.pages>)
 - [Hume Notes](<Philosophy/Hume Notes.pages>)
 - [Simone De Beauvoir Notes](<Philosophy/Simone De Beauvoir Notes.pages>)
-- [Exam 2 Study Guide](<Philosophy/Exam 2 Sudy Guide.pages>)
+- [Exam 2 Study Guide](<Philosophy/Exam 2 Sudy Guide.pages>) *(filename: "Sudy")*
 
 ### Environmental Oceanography
 
