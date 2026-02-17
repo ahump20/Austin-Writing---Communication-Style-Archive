@@ -2,7 +2,7 @@
 
 Archive of my writing, style skills, agents, and communication documentation — organized chronologically and by skill level.
 
-Built from 90+ documents spanning college application essays, undergraduate coursework across 14 academic disciplines at UT Austin, and professional work. Every source document is 100% human-written.
+Built from 160+ documents spanning college application essays, undergraduate coursework across 14 academic disciplines at UT Austin, graduate coursework across 12 MBA-adjacent sports business courses at Full Sail University, and professional work. The pre-AI era (2014–2020) is 100% human-written; the Full Sail era (2024–2025) represents the transition to AI-supplemented writing.
 
 ---
 
@@ -15,6 +15,7 @@ Built from 90+ documents spanning college application essays, undergraduate cour
 | [Sophomore Year (2016-2017)](#sophomore-year-2016-2017) | American Literature, Extraterrestrial Life, Geographies of Globalization |
 | [Junior Year (2017-2018)](#junior-year-2017-2018) | International Relations, International Organizations, International Trade, Foundations of IRG, Global Entrepreneurship |
 | [Senior Year (2018-2020)](#senior-year-2018-2020) | IRG Capstone — culminating thesis-level work |
+| [Full Sail University (2024-2025)](#full-sail-university-2024-2025) | MBA-adjacent sports business — 12 courses, AI-supplemented era |
 | [Professional / Post-Grad](#professional--post-grad) | Resume package, editorial voice profile, sports writing |
 | [Writing Voice & Style Tools](#writing-voice--style-tools) | AI voice profiles, style prompts, stylometric analysis tools |
 
@@ -306,6 +307,110 @@ Advanced analytical papers not tied to a specific course directory.
 
 ---
 
+## Full Sail University (2024-2025)
+
+**Skill Level: Graduate / AI-Supplemented** — MBA-adjacent sports business program. 12 courses spanning leadership, marketing, finance, legal, and operations. This era bridges the pre-AI undergraduate archive (UT Austin 2014–2020) and the current professional work (BSI 2026). Austin began using AI tools (ChatGPT, Claude) as writing supplements during this period — the documents reflect that transition.
+
+> **Note:** 48 of 70 documents are pending download from OneDrive (Full Sail account session expired). See [PENDING_DOWNLOADS.md](<Full Sail University (2024-2025)/PENDING_DOWNLOADS.md>) for the complete manifest. Directories with `.gitkeep` files are scaffolded and waiting for content.
+
+### 01 — Personal Development & Leadership (PDL/GDMS, Jan 2025)
+
+*All 8 files pending OneDrive download.*
+
+Mastery paper on Rick Ankiel (T1), grit assessments, discussion posts, brainstorming frameworks, video script, mastery journey blog.
+
+### 02 — Executive Leadership (EXL-O, Feb 2025)
+
+*All 5 files pending OneDrive download.*
+
+Augie Garrido leadership analysis (T1), Pecha Kucha narration script, leadership mastery journal, decision-making discussion, video assignment.
+
+### 03 — Business Brand Development (BBD, Spring 2025)
+
+*All 14 files pending OneDrive download.*
+
+Final Brand Strategy Canvas for Blaze Intelligence (T1), brand identity/positioning, comprehensive business plan 2025–2027, market analysis, digital content plan, championship ethos paper, digital leadership portfolio, cover letter.
+
+### 04 — Sports Marketing & Sponsorship Sales (MSS-O, Apr 2025)
+
+*Both files pending OneDrive download.*
+
+Discussion post on sports marketing, Strategic Alliance Framework for UT Longhorns & DCTF.
+
+### 05 — Executive Leadership 2 (EXL-O 2nd, May 2025)
+
+*All 5 files pending OneDrive download.*
+
+Championship Leadership Through Systems — Nick Saban analysis (T1), case studies, business model canvas, executive leadership framework.
+
+### 06 — Entertainment Business Finance (GEB6508-O, 2024)
+
+*All 7 files pending OneDrive download.*
+
+Financial statements, time value of money, break-even/investment analysis, pro forma, mastery journal, financial analysis notes, discussion post.
+
+### 07 — Sports Management & Operations (MAN6224-O, 2025)
+
+*All 7 files pending OneDrive download.*
+
+Final polished assignment 3.4 (T1), Cardinals strategic intelligence framework, Cardinals analysis, Texas Longhorns SEC-era revenue transformation, Grizzlies report, mastery journal, Cardinals performance dashboard.
+
+### 08 — Digital Marketing (DMK, 2024–2025)
+
+*All 6 files pending OneDrive download. DMK Final Presentation (.pptx, 229MB) skipped — exceeds GitHub 100MB limit.*
+
+Final paper (T1), DMK Part 2, integrated marketing communications, Texas Longhorns SEC campaign, DMK Part 3 (budget & KPIs), mastery journal.
+
+### 09 — Negotiating & Deal-Making (NDM-O, 2024)
+
+5 of 7 archived; 2 pending download.
+
+- [2.5 Negotiation Worksheet](<Full Sail University (2024-2025)/09-Negotiating-Deal-Making/2.5 Negotiation Worksheet.docx>)
+- [3.4 Alternative Dispute Resolution](<Full Sail University (2024-2025)/09-Negotiating-Deal-Making/3.4 Alternative Dispute Resolution.docx>)
+- [4.3 Case Study Presentation](<Full Sail University (2024-2025)/09-Negotiating-Deal-Making/4.3 Case Study Presentation.docx>)
+- [Assignment 4.3 (Presentation)](<Full Sail University (2024-2025)/09-Negotiating-Deal-Making/Assignment 4.3.pptx>)
+- [2.4 Discussion — Communication Styles](<Full Sail University (2024-2025)/09-Negotiating-Deal-Making/2.4 Discussion - Communication Styles.docx>)
+
+### 10 — Legal Issues in Sports (LIS-O, 2024–2025)
+
+All 6 archived.
+
+- [Risk Management Analysis (PDF)](<Full Sail University (2024-2025)/10-Legal-Issues-Sports/Humphrey_Austin_riskmanagement.pdf>)
+- [Business Plan IP Audit](<Full Sail University (2024-2025)/10-Legal-Issues-Sports/Humphrey_Austin_IP_Audit.docx>)
+- [Sponsorship & Endorsement Contracts](<Full Sail University (2024-2025)/10-Legal-Issues-Sports/humphrey_austin_endorsement_final.docx>)
+- [BSI Research Outline (PDF)](<Full Sail University (2024-2025)/10-Legal-Issues-Sports/blaze_BSI_research_outline.pdf>)
+- [Mastery Journal (PDF)](<Full Sail University (2024-2025)/10-Legal-Issues-Sports/Humphrey_Austin_MasteryJournal.pdf>)
+- [NIL Revolution Transcript](<Full Sail University (2024-2025)/10-Legal-Issues-Sports/NIL - the revolution in US college sports Transcript.docx>)
+
+### 11 — Project & Team Management (PTM-O, Nov 2025)
+
+All 4 archived.
+
+- [Project Definition](<Full Sail University (2024-2025)/11-Project-Team-Management/Assignment_1_2_Project_Definition.docx>)
+- [Comprehensive PM Plan](<Full Sail University (2024-2025)/11-Project-Team-Management/Humphrey_PTM_ComprehensivePMPlan.docx>)
+- [Work Breakdown Structure (PDF)](<Full Sail University (2024-2025)/11-Project-Team-Management/WBS_report.pdf>)
+- [Team Quality Management](<Full Sail University (2024-2025)/11-Project-Team-Management/Week_4_Team_Quality_Management.docx>)
+
+### 12 — Final Business Plan Capstone (BPL-O, 2025–2026)
+
+All 7 archived.
+
+- [BSI Business Plan — Final Submission (T1)](<Full Sail University (2024-2025)/12-Final-Business-Plan-Capstone/BSI_Business_Plan_FINAL_SUBMISSION.docx>)
+- [Mastery Journal — Program Reflection Final (T1)](<Full Sail University (2024-2025)/12-Final-Business-Plan-Capstone/Mastery_Journal_Program_Reflection_FINAL.md>)
+- [Business Plan Week 3 Final](<Full Sail University (2024-2025)/12-Final-Business-Plan-Capstone/BSI_Business_Plan_Week3_Final.docx>)
+- [Digital Leadership Portfolio Deliverable](<Full Sail University (2024-2025)/12-Final-Business-Plan-Capstone/HumphreyA_DLPDeliverable.docx>)
+- [Week 1 Discussion Board (PDF)](<Full Sail University (2024-2025)/12-Final-Business-Plan-Capstone/BPL-O Week 1 Discussion Board.pdf>)
+- [Week 2 Discussion Board (PDF)](<Full Sail University (2024-2025)/12-Final-Business-Plan-Capstone/BPL-O Week 2 Discussion Board.pdf>)
+- [Management Styles Discussion Draft](<Full Sail University (2024-2025)/12-Final-Business-Plan-Capstone/3.3_Management_Styles_Discussion_DRAFT.md>)
+
+### Standalone-Exploratory
+
+*Both files pending OneDrive download.*
+
+Meta-Analysis of ChatGPT 4o Thought Process (T1) and Neural Processing of Temporal Memory Structures in LLMs (T1) — independent research papers on AI cognition written during the Full Sail period.
+
+---
+
 ## Professional / Post-Grad
 
 **Skill Level: Professional** — Business strategic writing, executive materials, editorial voice at its sharpest.
@@ -365,4 +470,5 @@ Resources for understanding Austin's writing voice and replicating it with AI as
 | **Intermediate** | 2016–2017 | American Literature, Extraterrestrial Life, Geographies of Globalization | Systemic lens emerging; comparative analysis; narrative science writing |
 | **Advanced** | 2017–2018 | International Relations, International Organizations, International Trade, Foundations of IRG, Global Entrepreneurship | Policy analysis sharpening; counterfactual reasoning; compressed syntax |
 | **Capstone** | 2018–2020 | IRG Capstone, standalone papers | Thesis-level research; systemic lens at full strength; culminating work |
-| **Professional** | 2020+ | Resume package, editorial voice, sports writing | Business strategy; editorial voice codified; AI voice tools |
+| **Graduate / AI-Supplemented** | 2024–2025 | Full Sail University — 12 MBA-adjacent sports business courses | AI tools enter the workflow; leadership analysis, brand strategy, finance, legal, capstone business plan |
+| **Professional** | 2026+ | Resume package, editorial voice, sports writing | Business strategy; editorial voice codified; AI voice tools |
