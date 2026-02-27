@@ -124,7 +124,7 @@ All files have been tested for:
 - 📧 Email: [Austin@BlazeSportsIntel.com](mailto:Austin@BlazeSportsIntel.com)
 - 📱 Phone: [(210) 273-5538](tel:+12102735538)
 - 💼 LinkedIn: [linkedin.com/in/ahump20](https://linkedin.com/in/ahump20)
-- 🌐 Portfolio: [BlazeSportsIntel.com](https://blazesportsintel.com)
+- 🌐 Portfolio: [austinhumphrey.com](https://austinhumphrey.com) | [blazesportsintel.com](https://blazesportsintel.com)
 - 🏠 Location: San Antonio, TX
 
 ---
@@ -133,7 +133,7 @@ All files have been tested for:
 
 View Austin's full portfolio with authentic birth story, athletic heritage, and project showcase:
 
-**[austin.blazesportsintel.com](https://austin.blazesportsintel.com)** *(Coming Soon)*
+**[austinhumphrey.com](https://austinhumphrey.com)** | **[blazesportsintel.com](https://blazesportsintel.com)**
 
 Features:
 - 🎯 Birth story: Born in Memphis with Texas soil from West Columbia
