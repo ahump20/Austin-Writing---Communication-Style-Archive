@@ -133,7 +133,7 @@ All files have been tested for:
 
 View Austin's full portfolio with authentic birth story, athletic heritage, and project showcase:
 
-**[austin.blazesportsintel.com](https://austin.blazesportsintel.com)** *(Coming Soon)*
+**[austinhumphrey.com](https://austinhumphrey.com)** | **[blazesportsintel.com](https://blazesportsintel.com)**
 
 Features:
 - 🎯 Birth story: Born in Memphis with Texas soil from West Columbia

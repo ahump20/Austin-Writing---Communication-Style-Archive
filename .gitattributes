@@ -1,0 +1,16 @@
+# Binary document files — treat as binary, don't diff
+*.docx binary
+*.doc binary
+*.pages binary
+*.pdf binary
+*.pptx binary
+*.xlsx binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
+
+# Text files — normalize line endings
+*.md text eol=lf
+*.txt text eol=lf
+*.csv text eol=lf
