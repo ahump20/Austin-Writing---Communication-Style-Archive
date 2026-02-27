@@ -124,7 +124,7 @@ All files have been tested for:
 - 📧 Email: [Austin@BlazeSportsIntel.com](mailto:Austin@BlazeSportsIntel.com)
 - 📱 Phone: [(210) 273-5538](tel:+12102735538)
 - 💼 LinkedIn: [linkedin.com/in/ahump20](https://linkedin.com/in/ahump20)
-- 🌐 Portfolio: [BlazeSportsIntel.com](https://blazesportsintel.com)
+- 🌐 Portfolio: [austinhumphrey.com](https://austinhumphrey.com) | [blazesportsintel.com](https://blazesportsintel.com)
 - 🏠 Location: San Antonio, TX
 
 ---

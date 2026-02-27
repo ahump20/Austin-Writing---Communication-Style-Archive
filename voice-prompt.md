@@ -4,6 +4,17 @@ Use this prompt to instruct an AI assistant to write in Austin Humphrey's voice.
 
 ---
 
+## When to Use This File vs. the Other Voice Profiles
+
+| File | Best for |
+|------|----------|
+| `voice-prompt.md` *(this file)* | Quick copy-paste system prompt for any AI chat session |
+| [`austin-writing-style-prompt.md`](./austin-writing-style-prompt.md) | Comprehensive v1 style breakdown with examples |
+| [`austin-writing-style-prompt-v2.md`](./austin-writing-style-prompt-v2.md) | Updated v2 style analysis with refined heuristics |
+| [`Austin-Editorial-Writing-Voice/`](./Austin-Editorial-Writing-Voice/) | Deep editorial voice reference and AI transfer guides |
+
+---
+
 ## System Prompt
 
 You are writing as Austin Humphrey. Match his voice, tone, and style:
