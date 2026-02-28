@@ -1,23 +1,83 @@
-# Austin Writing & Communication Style Archive
+# Austin Humphrey — Writing & Communication Style Archive
 
-Archive of my writing, style skills, agents, and communication documentation — organized chronologically and by skill level.
+> **A living archive and operational voice system** — 160+ documents spanning a decade of writing, from college application essays to thesis-level research to AI-assisted sports journalism and business strategy.
 
-Built from 160+ documents spanning college application essays, undergraduate coursework across 14 academic disciplines at UT Austin, graduate coursework across 12 MBA-adjacent sports business courses at Full Sail University, and professional work. The pre-AI era (2014–2020) is 100% human-written; the Full Sail era (2024–2025) represents the transition to AI-supplemented writing.
+[![License: All Rights Reserved](https://img.shields.io/badge/License-All%20Rights%20Reserved-red.svg)](#license)
 
 ---
 
-## Quick Reference
+## What This Is
 
-| Section | Description |
-|---------|-------------|
-| [Pre-College (2014-2015)](#pre-college-2014-2015) | College application essays — earliest archived writing |
-| [Freshman Year (2015-2016)](#freshman-year-2015-2016) | US History, World Geography, Philosophy, Environmental Oceanography |
-| [Sophomore Year (2016-2017)](#sophomore-year-2016-2017) | American Literature, Extraterrestrial Life, Geographies of Globalization |
-| [Junior Year (2017-2018)](#junior-year-2017-2018) | International Relations, International Organizations, International Trade, Foundations of IRG, Global Entrepreneurship |
-| [Senior Year (2018-2020)](#senior-year-2018-2020) | IRG Capstone — culminating thesis-level work |
-| [Full Sail University (2024-2025)](#full-sail-university-2024-2025) | MBA-adjacent sports business — 12 courses, AI-supplemented era |
-| [Professional / Post-Grad](#professional--post-grad) | Resume package, editorial voice profile, sports writing |
-| [Writing Voice & Style Tools](#writing-voice--style-tools) | AI voice profiles, style prompts, stylometric analysis tools |
+- **A voice archive** — representative samples across time, genre, and stakes (2014–2026)
+- **A voice specification** — repeatable rules, patterns, and anti-patterns codified into reusable tools
+- **A working toolkit** — prompts, rubrics, and auditing procedures that make "write like me" executable
+
+**Pre-AI era (2014–2020):** 100% human-written — college applications, 14 undergraduate disciplines at UT Austin, and capstone thesis work.
+**AI-supplemented era (2024–2025):** 12 MBA-adjacent sports business courses at Full Sail University — leadership, marketing, finance, legal, and operations.
+**Professional era (2026+):** Editorial voice applied to sports journalism, resume materials, and brand strategy.
+
+## What This Is Not
+
+- **Not** a brand guide for [Blaze Sports Intel](https://BlazeSportsIntel.com). BSI writing appears here as Austin's applied voice in a sports context, but the goal is the underlying engine.
+- **Not** a citation warehouse. Some samples include sourcing discipline as part of voice, but facts live with their sources.
+
+---
+
+## Key Documents
+
+Start here if you want to understand or replicate the writing voice.
+
+| Document | Purpose |
+|----------|---------|
+| [SKILL.md](<SKILL.md>) | **Master voice profile** — modes, instruction hierarchy, 10 core characteristics, sentence architecture, anti-patterns |
+| [Voice DNA](<voice-dna.md>) | Full characteristic set with exemplars and anti-pattern definitions |
+| [Writing System](<writing-system.md>) | Operational reference — drafting procedures, voice dimensions, rhythm engine |
+| [Humphrey Writing Index (HWI)](<Humphrey_Writing_Index_HWI.md>) | Scoring rubric: "Does this draft sound like Austin?" — 9 categories, anti-pattern deductions |
+| [Intellectual Autobiography](<Austin_Humphrey_Writing_Intellectual_Autobiography.md>) | First-person narrative of the writing arc from age 17 to present |
+| [Developmental Analysis](<developmental-analysis.md>) | Chronological analysis of 50+ human-authored documents — voice traits observed per period |
+| [Source Passages](<source-passages.md>) | Curated calibration excerpts organized by voice trait, with era annotations |
+| [Comprehensive Writing Record](<Comprehensive_Record_of_Austin_Humphreys_Writing_FINAL.md>) | Consolidated record across pre-AI and AI-assisted eras |
+| [Writing Record (Operational)](<README_Austin_Humphrey_Writing_Record.md>) | Practical "how to use this in 10 minutes" guide |
+| [Professional Context](<professional-context.md>) | Factual background — credentials, experience, education |
+| [Origin Story](<origin-story.md>) | Biographical narrative reference for brand and voice grounding |
+
+---
+
+## Writing Voice & Style Tools
+
+Resources for understanding Austin's writing voice and replicating it with AI assistance.
+
+### Voice Profiles
+
+- [Editorial Writing Voice — SKILL.md](<Austin-Editorial-Writing-Voice/SKILL.md>) — Full voice profile with 10 core characteristics, sentence architecture, vocabulary register, anti-patterns
+- [AI Voice Transfer Guide](<Austin-Editorial-Writing-Voice/ai-voice-transfer.md>) — First-person writing voice profile
+- [Claude AI Project Instructions](<Austin-Editorial-Writing-Voice/claude-ai-project-instructions.md>) — Third-person reference version
+
+### Style Prompts
+
+- [Writing Style Profile v1](<austin-writing-style-prompt.md>) — Custom response preferences derived from 2015–2020 academic analysis
+- [Writing Style Profile v2](<austin-writing-style-prompt-v2.md>) — Operational prompt for style injection with instruction hierarchy
+
+### Stylometric Analysis Tools
+
+- [Stylometric Fingerprint v1](<stylometric-fingerprint.jsx>)
+- [Stylometric Fingerprint v2](<stylometric-fingerprint-v2.jsx>)
+- [Rhythm & Cadence Analysis v1](<rhythm-cadence-analysis.jsx>)
+- [Rhythm & Cadence Analysis v2](<rhythm-cadence-analysis-v2.jsx>)
+
+---
+
+## Archive Navigator
+
+| Section | Period | Skill Level | Courses / Content |
+|---------|--------|-------------|-------------------|
+| [Pre-College](#pre-college-2014-2015) | 2014–2015 | Foundational | College application essays |
+| [Freshman Year](#freshman-year-2015-2016) | 2015–2016 | Developing | US History, World Geography, Philosophy, Environmental Oceanography |
+| [Sophomore Year](#sophomore-year-2016-2017) | 2016–2017 | Intermediate | American Literature, Extraterrestrial Life, Geographies of Globalization |
+| [Junior Year](#junior-year-2017-2018) | 2017–2018 | Advanced | International Relations, International Organizations, International Trade, Foundations of IRG, Global Entrepreneurship |
+| [Senior Year](#senior-year-2018-2020) | 2018–2020 | Capstone | IRG Capstone — thesis-level research |
+| [Full Sail University](#full-sail-university-2024-2025) | 2024–2025 | Graduate / AI-Supplemented | 12 MBA-adjacent sports business courses |
+| [Professional / Post-Grad](#professional--post-grad) | 2026+ | Professional | Resume package, editorial voice, sports writing |
 
 ---
 
@@ -470,30 +530,6 @@ Editorial baseball coverage — voice profile applied to sports journalism.
 
 ---
 
-## Writing Voice & Style Tools
-
-Resources for understanding Austin's writing voice and replicating it with AI assistance.
-
-### Voice Profiles
-
-- [Editorial Writing Voice — SKILL.md](<Austin-Editorial-Writing-Voice/SKILL.md>) — Full voice profile with 10 core characteristics, sentence architecture, vocabulary register, anti-patterns
-- [AI Voice Transfer Guide](<Austin-Editorial-Writing-Voice/ai-voice-transfer.md>) — First-person writing voice profile
-- [Claude AI Project Instructions](<Austin-Editorial-Writing-Voice/claude-ai-project-instructions.md>) — Third-person reference version
-
-### Style Prompts
-
-- [Writing Style Profile v1](<austin-writing-style-prompt.md>) — Custom response preferences derived from 2015–2020 academic analysis
-- [Writing Style Profile v2](<austin-writing-style-prompt-v2.md>) — Operational prompt for style injection with instruction hierarchy
-
-### Stylometric Analysis Tools
-
-- [Stylometric Fingerprint v1](<stylometric-fingerprint.jsx>)
-- [Stylometric Fingerprint v2](<stylometric-fingerprint-v2.jsx>)
-- [Rhythm & Cadence Analysis v1](<rhythm-cadence-analysis.jsx>)
-- [Rhythm & Cadence Analysis v2](<rhythm-cadence-analysis-v2.jsx>)
-
----
-
 ## Skill Progression Summary
 
 | Level | Period | Courses | Key Developments |
@@ -505,3 +541,23 @@ Resources for understanding Austin's writing voice and replicating it with AI as
 | **Capstone** | 2018–2020 | IRG Capstone, standalone papers | Thesis-level research; systemic lens at full strength; culminating work |
 | **Graduate / AI-Supplemented** | 2024–2025 | Full Sail University — 12 MBA-adjacent sports business courses | AI tools enter the workflow; leadership analysis, brand strategy, finance, legal, capstone business plan |
 | **Professional** | 2026+ | Resume package, editorial voice, sports writing | Business strategy; editorial voice codified; AI voice tools |
+
+---
+
+## Repository Stats
+
+| Metric | Count |
+|--------|-------|
+| Total files | 350+ |
+| Academic disciplines (UT Austin) | 14 |
+| Graduate courses (Full Sail) | 12 |
+| File formats | .docx, .pdf, .pages, .md, .html, .pptx, .jsx, .txt, .xlsx |
+| Timeline | 2014–2026 |
+
+---
+
+## License
+
+All Rights Reserved © 2014–2026 Austin Humphrey. See [LICENSE](LICENSE) for details.
+
+**Contact:** Austin@BlazeSportsIntel.com · [AustinHumphrey.com](https://AustinHumphrey.com) · [LinkedIn](https://linkedin.com/in/ahump20)
