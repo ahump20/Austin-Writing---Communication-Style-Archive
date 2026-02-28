@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Revenue Financial Model — Scenario Analysis</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #fafbfc;
+    --surface: #ffffff;
+    --border: #e2e5ea;
+    --border-dark: #c8cdd5;
+    --text: #1a1d23;
+    --text-dim: #555d6e;
+    --text-muted: #8b95a5;
+    --accent: #1a56db;
+    --accent-bg: #eff4ff;
+    --green: #057a55;
+    --green-bg: #def7ec;
+    --red: #c81e1e;
+    --red-bg: #fde8e8;
+    --yellow: #92400e;
+    --yellow-bg: #fef3c7;
+    --header-bg: #1e293b;
+    --header-text: #f1f5f9;
+    --section-bg: #f1f5f9;
+    --assumption-bg: #fffbeb;
+    --assumption-border: #fcd34d;
+  }
+
+  body {
+    font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+  }
+
+  .model {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px 80px;
+  }
+
+  /* Header */
+  .model-header {
+    background: var(--header-bg);
+    color: var(--header-text);
+    border-radius: 12px;
+    padding: 32px 36px;
+    margin-bottom: 28px;
+  }
+  .model-header .company {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 8px;
+  }
+  .model-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .model-header .sub {
+    font-size: 13px;
+    opacity: 0.7;
+  }
+  .model-header .meta {
+    display: flex;
+    gap: 24px;
+    margin-top: 16px;
+    font-size: 11px;
+    opacity: 0.5;
+  }
+
+  /* Section Headers */
+  .section-bar {
+    background: var(--header-bg);
+    color: var(--header-text);
+    padding: 10px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 6px 6px 0 0;
+    margin-top: 28px;
+  }
+
+  /* Tables */
+  .sheet {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0 0 8px 8px;
+    overflow-x: auto;
+    margin-bottom: 4px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+  }
+  th, td {
+    padding: 8px 14px;
+    text-align: right;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  th {
+    font-weight: 600;
+    font-size: 10.5px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    background: var(--section-bg);
+    position: sticky;
+    top: 0;
+  }
+  td:first-child, th:first-child {
+    text-align: left;
+    font-weight: 500;
+    color: var(--text);
+    min-width: 200px;
+  }
+  tr:last-child td { border-bottom: none; }
+
+  /* Row types */
+  .row-assumption td {
+    background: var(--assumption-bg);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+  }
+  .row-assumption td:first-child {
+    position: relative;
+    padding-left: 24px;
+  }
+  .row-assumption td:first-child::before {
+    content: 'A';
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 8px;
+    font-weight: 700;
+    color: var(--yellow);
+    background: var(--yellow-bg);
+    width: 14px;
+    height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+  }
+  .row-calc td {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--text-dim);
+  }
+  .row-total td {
+    font-weight: 700;
+    border-top: 2px solid var(--border-dark);
+    border-bottom: 2px solid var(--border-dark);
+    background: var(--section-bg);
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .row-subtotal td {
+    font-weight: 600;
+    border-top: 1px solid var(--border-dark);
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .row-spacer td {
+    height: 8px;
+    border: none;
+    padding: 0;
+  }
+  .row-header td {
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-bg);
+    border-bottom: 1px solid #dbeafe;
+  }
+
+  /* Color coding */
+  .positive { color: var(--green) !important; }
+  .negative { color: var(--red) !important; }
+  .neutral { color: var(--text-muted) !important; }
+  .highlight-cell {
+    background: var(--green-bg) !important;
+    color: var(--green) !important;
+    font-weight: 700 !important;
+  }
+  .warning-cell {
+    background: var(--red-bg) !important;
+    color: var(--red) !important;
+  }
+
+  /* Notes */
+  .notes {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.7;
+  }
+  .notes h4 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .notes ul {
+    padding-left: 16px;
+  }
+  .notes li {
+    margin-bottom: 4px;
+  }
+  .notes .note-tag {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-right: 4px;
+  }
+  .notes .tag-a { background: var(--yellow-bg); color: var(--yellow); }
+  .notes .tag-s { background: var(--accent-bg); color: var(--accent); }
+  .notes .tag-c { background: var(--green-bg); color: var(--green); }
+
+  /* Legend */
+  .legend {
+    display: flex;
+    gap: 20px;
+    padding: 12px 16px;
+    background: var(--section-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 11px;
+    color: var(--text-dim);
+    flex-wrap: wrap;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .legend-swatch {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+  }
+
+  /* Print */
+  @media print {
+    .model { padding: 12px; }
+    .model-header { break-after: avoid; }
+    .section-bar { break-after: avoid; }
+    .sheet { break-inside: avoid; }
+    table { font-size: 10px; }
+    th, td { padding: 5px 8px; }
+  }
+
+  @media (max-width: 768px) {
+    .model { padding: 16px 8px; }
+    td:first-child, th:first-child { min-width: 150px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="model">
+
+  <!-- HEADER -->
+  <div class="model-header">
+    <div class="company">Financial Model</div>
+    <h1>AI-Powered Revenue Projections</h1>
+    <div class="sub">Three-scenario analysis for AI service revenue streams — freelance, SaaS, and consulting</div>
+    <div class="meta">
+      <span>Prepared: February 2026</span>
+      <span>Model Version: 1.0</span>
+      <span>Basis: 30+ verified market sources</span>
+      <span>Currency: USD</span>
+    </div>
+  </div>
+
+  <!-- LEGEND -->
+  <div class="legend">
+    <div class="legend-item">
+      <div class="legend-swatch" style="background: var(--assumption-bg); border: 1px solid var(--assumption-border);"></div>
+      <span><strong>A</strong> = Assumption (editable input)</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-swatch" style="background: var(--surface); border: 1px solid var(--border);"></div>
+      <span>Calculated field</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-swatch" style="background: var(--section-bg); border: 1px solid var(--border-dark);"></div>
+      <span>Total / Subtotal</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-swatch" style="background: var(--green-bg); border: 1px solid #6ee7b7;"></div>
+      <span>Key output</span>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SECTION 1: ASSUMPTIONS                       -->
+  <!-- ============================================ -->
+  <div class="section-bar">Section 1: Key Assumptions</div>
+  <div class="sheet">
+    <table>
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th>Conservative</th>
+          <th>Base Case</th>
+          <th>Aggressive</th>
+          <th>Source / Basis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-header"><td colspan="5">Market & Demand</td></tr>
+        <tr class="row-assumption">
+          <td>Enterprise AI adoption rate</td>
+          <td>70%</td>
+          <td>78%</td>
+          <td>85%</td>
+          <td style="text-align:left; font-family: 'IBM Plex Sans';">McKinsey 2025</td>
+        </tr>
+        <tr class="row-assumption">
+          <td>Companies increasing AI budgets</td>
+          <td>80%</td>
+          <td>88%</td>
+          <td>93%</td>
+          <td style="text-align:left; font-family: 'IBM Plex Sans';">PwC AI Survey</td>
+        </tr>
+        <tr class="row-assumption">
+          <td>AI talent demand-to-supply ratio</td>
+          <td>2.5:1</td>
+          <td>3.2:1</td>
+          <td>4.0:1</td>
+          <td style="text-align:left; font-family: 'IBM Plex Sans';">Signify Technology</td>
+        </tr>
+        <tr class="row-assumption">
+          <td>AI market CAGR (2025-2030)</td>
+          <td>22%</td>
+          <td>30.6%</td>
+          <td>38%</td>
+          <td style="text-align:left; font-family: 'IBM Plex Sans';">Grand View Research</td>
+        </tr>
+
+        <tr class="row-spacer"><td colspan="5"></td></tr>
+        <tr class="row-header"><td colspan="5">Pricing & Rates</td></tr>
+        <tr class="row-assumption">
+          <td>Hourly consulting rate</td>
+          <td>$100</td>
+          <td>$175</td>
+          <td>$300</td>
+          <td style="text-align:left; font-family: 'IBM Plex Sans';">Market median verified</td>
+        </tr>
+        <tr class="row-assumption">
+          <td>Billable hours per week</td>
+          <td>10</td>
+          <td>20</td>
+          <td>30</td>
+          <td style="text-align:left; font-family: 'IBM Plex Sans';">Side hustle → full-time</td>
+        </tr>
+        <tr class="row-assumption">
+          <td>Utilization rate</td>
+          <td>60%</td>
+          <td>75%</td>
+          <td>85%</td>
+          <td style="text-align:left; font-family: 'IBM Plex Sans';">Industry standard</td>
+        </tr>
+        <tr class="row-assumption">
+          <td>SaaS monthly subscription</td>
+          <td>$29</td>
+          <td>$49</td>
+          <td>$99</td>
+          <td style="text-align:left; font-family: 'IBM Plex Sans';">Indie SaaS median</td>
+        </tr>
+        <tr class="row-assumption">
+          <td>Project-based fee (per project)</td>
+          <td>$2,500</td>
+          <td>$5,000</td>
+          <td>$10,000</td>
+          <td style="text-align:left; font-family: 'IBM Plex Sans';">Small biz automation</td>
+        </tr>
+
+        <tr class="row-spacer"><td colspan="5"></td></tr>
+        <tr class="row-header"><td colspan="5">Costs</td></tr>
+        <tr class="row-assumption">
+          <td>Claude API cost (monthly)</td>
+          <td>$50</td>
+          <td>$150</td>
+          <td>$400</td>
+          <td style="text-align:left; font-family: 'IBM Plex Sans';">Anthropic pricing docs</td>
+        </tr>
+        <tr class="row-assumption">
+          <td>Claude Pro subscription</td>
+          <td>$20</td>
+          <td>$20</td>
+          <td>$20</td>
+          <td style="text-align:left; font-family: 'IBM Plex Sans';">Fixed cost</td>
+        </tr>
+        <tr class="row-assumption">
+          <td>Infrastructure (hosting, domain)</td>
+          <td>$20</td>
+          <td>$50</td>
+          <td>$100</td>
+          <td style="text-align:left; font-family: 'IBM Plex Sans';">Cloudflare/Vercel tier</td>
+        </tr>
+        <tr class="row-assumption">
+          <td>Marketing / customer acquisition</td>
+          <td>$0</td>
+          <td>$100</td>
+          <td>$500</td>
+          <td style="text-align:left; font-family: 'IBM Plex Sans';">Organic → paid</td>
+        </tr>
+        <tr class="row-assumption">
+          <td>Monthly churn rate (SaaS)</td>
+          <td>8%</td>
+          <td>5%</td>
+          <td>3%</td>
+          <td style="text-align:left; font-family: 'IBM Plex Sans';">Micro-SaaS benchmark</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SECTION 2: SCENARIO A — CONSULTING/FREELANCE -->
+  <!-- ============================================ -->
+  <div class="section-bar">Section 2: Scenario A — AI-Augmented Consulting / Freelance</div>
+  <div class="sheet">
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Month 1</th>
+          <th>Month 3</th>
+          <th>Month 6</th>
+          <th>Month 12</th>
+          <th>Year 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-header"><td colspan="6">Conservative Scenario ($100/hr, 10 hrs/wk, 60% utilization)</td></tr>
+        <tr class="row-calc">
+          <td>Gross billable hours</td>
+          <td>43</td>
+          <td>43</td>
+          <td>43</td>
+          <td>43</td>
+          <td>43</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Effective hours (after utilization)</td>
+          <td>26</td>
+          <td>26</td>
+          <td>26</td>
+          <td>26</td>
+          <td>26</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Monthly gross revenue</td>
+          <td>$2,600</td>
+          <td>$2,600</td>
+          <td>$2,600</td>
+          <td>$2,600</td>
+          <td>$2,600</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Monthly costs (tools + infra)</td>
+          <td>($90)</td>
+          <td>($90)</td>
+          <td>($90)</td>
+          <td>($90)</td>
+          <td>($90)</td>
+        </tr>
+        <tr class="row-subtotal">
+          <td>Net monthly income</td>
+          <td class="positive">$2,510</td>
+          <td class="positive">$2,510</td>
+          <td class="positive">$2,510</td>
+          <td class="positive">$2,510</td>
+          <td class="positive">$2,510</td>
+        </tr>
+        <tr class="row-total">
+          <td>Cumulative annual income</td>
+          <td>$2,510</td>
+          <td>$7,530</td>
+          <td>$15,060</td>
+          <td class="highlight-cell">$30,120</td>
+          <td class="highlight-cell">$60,240</td>
+        </tr>
+
+        <tr class="row-spacer"><td colspan="6"></td></tr>
+        <tr class="row-header"><td colspan="6">Base Case ($175/hr, 20 hrs/wk, 75% utilization)</td></tr>
+        <tr class="row-calc">
+          <td>Gross billable hours</td>
+          <td>87</td>
+          <td>87</td>
+          <td>87</td>
+          <td>87</td>
+          <td>87</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Effective hours (after utilization)</td>
+          <td>65</td>
+          <td>65</td>
+          <td>65</td>
+          <td>65</td>
+          <td>65</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Monthly gross revenue</td>
+          <td>$11,375</td>
+          <td>$11,375</td>
+          <td>$11,375</td>
+          <td>$11,375</td>
+          <td>$11,375</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Monthly costs (tools + infra)</td>
+          <td>($320)</td>
+          <td>($320)</td>
+          <td>($320)</td>
+          <td>($320)</td>
+          <td>($320)</td>
+        </tr>
+        <tr class="row-subtotal">
+          <td>Net monthly income</td>
+          <td class="positive">$11,055</td>
+          <td class="positive">$11,055</td>
+          <td class="positive">$11,055</td>
+          <td class="positive">$11,055</td>
+          <td class="positive">$11,055</td>
+        </tr>
+        <tr class="row-total">
+          <td>Cumulative annual income</td>
+          <td>$11,055</td>
+          <td>$33,165</td>
+          <td>$66,330</td>
+          <td class="highlight-cell">$132,660</td>
+          <td class="highlight-cell">$265,320</td>
+        </tr>
+
+        <tr class="row-spacer"><td colspan="6"></td></tr>
+        <tr class="row-header"><td colspan="6">Aggressive ($300/hr, 30 hrs/wk, 85% utilization)</td></tr>
+        <tr class="row-calc">
+          <td>Gross billable hours</td>
+          <td>130</td>
+          <td>130</td>
+          <td>130</td>
+          <td>130</td>
+          <td>130</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Effective hours (after utilization)</td>
+          <td>111</td>
+          <td>111</td>
+          <td>111</td>
+          <td>111</td>
+          <td>111</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Monthly gross revenue</td>
+          <td>$33,300</td>
+          <td>$33,300</td>
+          <td>$33,300</td>
+          <td>$33,300</td>
+          <td>$33,300</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Monthly costs (tools + infra)</td>
+          <td>($1,020)</td>
+          <td>($1,020)</td>
+          <td>($1,020)</td>
+          <td>($1,020)</td>
+          <td>($1,020)</td>
+        </tr>
+        <tr class="row-subtotal">
+          <td>Net monthly income</td>
+          <td class="positive">$32,280</td>
+          <td class="positive">$32,280</td>
+          <td class="positive">$32,280</td>
+          <td class="positive">$32,280</td>
+          <td class="positive">$32,280</td>
+        </tr>
+        <tr class="row-total">
+          <td>Cumulative annual income</td>
+          <td>$32,280</td>
+          <td>$96,840</td>
+          <td>$193,680</td>
+          <td class="highlight-cell">$387,360</td>
+          <td class="highlight-cell">$774,720</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SECTION 3: SCENARIO B — SAAS PRODUCT         -->
+  <!-- ============================================ -->
+  <div class="section-bar">Section 3: Scenario B — AI-Powered SaaS Product</div>
+  <div class="sheet">
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Month 1</th>
+          <th>Month 3</th>
+          <th>Month 6</th>
+          <th>Month 12</th>
+          <th>Year 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-header"><td colspan="6">Base Case ($49/mo subscription, 5% monthly churn)</td></tr>
+        <tr class="row-assumption">
+          <td>New customers acquired</td>
+          <td>5</td>
+          <td>15</td>
+          <td>30</td>
+          <td>50</td>
+          <td>75</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Active subscribers (cumulative, net of churn)</td>
+          <td>5</td>
+          <td>33</td>
+          <td>112</td>
+          <td>303</td>
+          <td>627</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Monthly recurring revenue (MRR)</td>
+          <td>$245</td>
+          <td>$1,617</td>
+          <td>$5,488</td>
+          <td>$14,847</td>
+          <td>$30,723</td>
+        </tr>
+        <tr class="row-calc">
+          <td>API costs (~$0.15/user/mo)</td>
+          <td>($1)</td>
+          <td>($5)</td>
+          <td>($17)</td>
+          <td>($45)</td>
+          <td>($94)</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Infrastructure costs</td>
+          <td>($70)</td>
+          <td>($70)</td>
+          <td>($100)</td>
+          <td>($150)</td>
+          <td>($250)</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Marketing spend</td>
+          <td>($100)</td>
+          <td>($100)</td>
+          <td>($200)</td>
+          <td>($300)</td>
+          <td>($500)</td>
+        </tr>
+        <tr class="row-subtotal">
+          <td>Net monthly income</td>
+          <td class="negative">$74</td>
+          <td class="positive">$1,442</td>
+          <td class="positive">$5,171</td>
+          <td class="positive">$14,352</td>
+          <td class="positive">$29,879</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Gross margin</td>
+          <td>30.2%</td>
+          <td>89.2%</td>
+          <td>94.2%</td>
+          <td>96.7%</td>
+          <td>97.3%</td>
+        </tr>
+        <tr class="row-total">
+          <td>Annual recurring revenue (ARR)</td>
+          <td>$2,940</td>
+          <td>$19,404</td>
+          <td>$65,856</td>
+          <td class="highlight-cell">$178,164</td>
+          <td class="highlight-cell">$368,676</td>
+        </tr>
+
+        <tr class="row-spacer"><td colspan="6"></td></tr>
+        <tr class="row-header"><td colspan="6">Break-Even Analysis</td></tr>
+        <tr class="row-calc">
+          <td>Fixed monthly costs</td>
+          <td colspan="5" style="text-align: center;">$170 — $750 (scales with growth)</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Revenue per subscriber (net of API)</td>
+          <td colspan="5" style="text-align: center;">$48.85/mo</td>
+        </tr>
+        <tr class="row-total">
+          <td>Break-even subscribers</td>
+          <td colspan="5" style="text-align: center;" class="highlight-cell">4 subscribers (at minimum cost) — 16 subscribers (at scale costs)</td>
+        </tr>
+        <tr class="row-total">
+          <td>Months to break-even</td>
+          <td colspan="5" style="text-align: center;" class="highlight-cell">Month 1 (costs are negligible relative to even small revenue)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SECTION 4: SCENARIO C — PROJECT-BASED        -->
+  <!-- ============================================ -->
+  <div class="section-bar">Section 4: Scenario C — Project-Based AI Development</div>
+  <div class="sheet">
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Conservative</th>
+          <th>Base Case</th>
+          <th>Aggressive</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-assumption">
+          <td>Average project fee</td>
+          <td>$2,500</td>
+          <td>$5,000</td>
+          <td>$10,000</td>
+        </tr>
+        <tr class="row-assumption">
+          <td>Projects per month</td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr class="row-assumption">
+          <td>Hours per project</td>
+          <td>20</td>
+          <td>30</td>
+          <td>40</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Effective hourly rate</td>
+          <td>$125/hr</td>
+          <td>$167/hr</td>
+          <td>$250/hr</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Monthly gross revenue</td>
+          <td>$2,500</td>
+          <td>$10,000</td>
+          <td>$30,000</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Monthly costs</td>
+          <td>($90)</td>
+          <td>($220)</td>
+          <td>($520)</td>
+        </tr>
+        <tr class="row-subtotal">
+          <td>Monthly net income</td>
+          <td class="positive">$2,410</td>
+          <td class="positive">$9,780</td>
+          <td class="positive">$29,480</td>
+        </tr>
+        <tr class="row-total">
+          <td>Annual net income</td>
+          <td class="highlight-cell">$28,920</td>
+          <td class="highlight-cell">$117,360</td>
+          <td class="highlight-cell">$353,760</td>
+        </tr>
+        <tr class="row-total">
+          <td>Gross margin</td>
+          <td class="positive">96.4%</td>
+          <td class="positive">97.8%</td>
+          <td class="positive">98.3%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SECTION 5: COMPARISON MATRIX                 -->
+  <!-- ============================================ -->
+  <div class="section-bar">Section 5: Path Comparison Matrix</div>
+  <div class="sheet">
+    <table>
+      <thead>
+        <tr>
+          <th>Revenue Path</th>
+          <th>Time to First $</th>
+          <th>Year 1 (Base)</th>
+          <th>Year 2 (Base)</th>
+          <th>Startup Cost</th>
+          <th>Gross Margin</th>
+          <th>Scalability</th>
+          <th>Risk Level</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AI Consulting / Freelance</td>
+          <td>2-4 weeks</td>
+          <td class="positive" style="font-family: 'IBM Plex Mono'; font-weight: 600;">$132,660</td>
+          <td class="positive" style="font-family: 'IBM Plex Mono'; font-weight: 600;">$265,320</td>
+          <td style="font-family: 'IBM Plex Mono';">$90/mo</td>
+          <td class="positive">97%</td>
+          <td class="neutral">Low</td>
+          <td style="color: var(--green); font-weight: 600;">Low</td>
+        </tr>
+        <tr>
+          <td>AI SaaS Product</td>
+          <td>2-4 months</td>
+          <td class="positive" style="font-family: 'IBM Plex Mono'; font-weight: 600;">$178,164</td>
+          <td class="positive" style="font-family: 'IBM Plex Mono'; font-weight: 600;">$368,676</td>
+          <td style="font-family: 'IBM Plex Mono';">$170/mo</td>
+          <td class="positive">94%</td>
+          <td class="positive">High</td>
+          <td style="color: var(--red); font-weight: 600;">High</td>
+        </tr>
+        <tr>
+          <td>Project-Based Dev</td>
+          <td>2-6 weeks</td>
+          <td class="positive" style="font-family: 'IBM Plex Mono'; font-weight: 600;">$117,360</td>
+          <td class="positive" style="font-family: 'IBM Plex Mono'; font-weight: 600;">$234,720</td>
+          <td style="font-family: 'IBM Plex Mono';">$90/mo</td>
+          <td class="positive">98%</td>
+          <td class="neutral">Medium</td>
+          <td style="color: var(--yellow); font-weight: 600;">Medium</td>
+        </tr>
+        <tr>
+          <td>AI Agent Development</td>
+          <td>1-3 months</td>
+          <td class="positive" style="font-family: 'IBM Plex Mono'; font-weight: 600;">$180,000</td>
+          <td class="positive" style="font-family: 'IBM Plex Mono'; font-weight: 600;">$450,000</td>
+          <td style="font-family: 'IBM Plex Mono';">$220/mo</td>
+          <td class="positive">65%</td>
+          <td class="positive">High</td>
+          <td style="color: var(--yellow); font-weight: 600;">Medium</td>
+        </tr>
+        <tr>
+          <td>Data Analysis Service</td>
+          <td>1-2 weeks</td>
+          <td class="positive" style="font-family: 'IBM Plex Mono'; font-weight: 600;">$60,000</td>
+          <td class="positive" style="font-family: 'IBM Plex Mono'; font-weight: 600;">$120,000</td>
+          <td style="font-family: 'IBM Plex Mono';">$70/mo</td>
+          <td class="positive">96%</td>
+          <td class="neutral">Low</td>
+          <td style="color: var(--green); font-weight: 600;">Low</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SECTION 6: COST OF DOING NOTHING             -->
+  <!-- ============================================ -->
+  <div class="section-bar">Section 6: Opportunity Cost Analysis</div>
+  <div class="sheet">
+    <table>
+      <thead>
+        <tr>
+          <th>Factor</th>
+          <th>Current State</th>
+          <th>With AI Skills (12 months)</th>
+          <th>Delta</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-calc">
+          <td>Hourly rate (accounting)</td>
+          <td style="font-family: 'IBM Plex Mono';">$50-$80/hr</td>
+          <td style="font-family: 'IBM Plex Mono';">$120-$200/hr</td>
+          <td class="positive" style="font-family: 'IBM Plex Mono'; font-weight: 600;">+$70-$120/hr (+140%)</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Time to complete analysis project</td>
+          <td style="font-family: 'IBM Plex Mono';">20 hours</td>
+          <td style="font-family: 'IBM Plex Mono';">4-6 hours</td>
+          <td class="positive" style="font-family: 'IBM Plex Mono'; font-weight: 600;">70-80% reduction</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Projects handleable per month</td>
+          <td style="font-family: 'IBM Plex Mono';">2-3</td>
+          <td style="font-family: 'IBM Plex Mono';">8-12</td>
+          <td class="positive" style="font-family: 'IBM Plex Mono'; font-weight: 600;">+300% throughput</td>
+        </tr>
+        <tr class="row-calc">
+          <td>Annual side income potential</td>
+          <td style="font-family: 'IBM Plex Mono';">$0</td>
+          <td style="font-family: 'IBM Plex Mono';">$30,000-$130,000</td>
+          <td class="positive" style="font-family: 'IBM Plex Mono'; font-weight: 600;">Net new revenue</td>
+        </tr>
+        <tr class="row-total">
+          <td>Career trajectory premium</td>
+          <td style="font-family: 'IBM Plex Mono';">Flat</td>
+          <td style="font-family: 'IBM Plex Mono';">+40-60% salary premium</td>
+          <td class="highlight-cell">$82K-$124K (on $206K AI eng avg)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- NOTES -->
+  <div class="notes">
+    <h4>Model Notes & Methodology</h4>
+    <ul>
+      <li><span class="note-tag tag-a">ASSUMPTION</span> All assumption inputs (yellow rows) are based on verified market data from 30+ sources including McKinsey, Gartner, MIT, Anthropic, and indie maker surveys. Modify these to fit your specific situation.</li>
+      <li><span class="note-tag tag-s">SaaS MODEL</span> Subscriber growth uses compound acquisition with monthly churn applied. Formula: Active<sub>n</sub> = (Active<sub>n-1</sub> &times; (1 - churn)) + New<sub>n</sub>. Churn rates benchmarked against Freemius Micro-SaaS 2025 report (median 5.4%).</li>
+      <li><span class="note-tag tag-c">CONSULTING</span> Utilization rate accounts for non-billable time (prospecting, admin, learning). Industry standard is 65-80% for independent consultants. Hours calculated as: weekly hrs &times; 4.33 weeks/month &times; utilization rate.</li>
+      <li><span class="note-tag tag-a">API COSTS</span> Based on Claude Haiku 4.5 ($1/$5 per 1M tokens) for SaaS use cases. Average request ~500 tokens input, ~500 tokens output = ~$0.003/request. At 50 requests/user/month = $0.15/user/month. Batch processing (50% discount) not applied in base case.</li>
+      <li><span class="note-tag tag-s">TAXES</span> All figures are pre-tax. Self-employment tax (US) is approximately 15.3% on net income. Federal + state income tax varies. For planning, assume 30-40% total effective tax rate on net income.</li>
+      <li><span class="note-tag tag-c">SCALABILITY</span> Consulting revenue is linearly bounded by available hours. SaaS revenue compounds with subscriber growth. Project-based scales with team size or efficiency. These structural differences matter more than Year 1 comparisons.</li>
+    </ul>
+  </div>
+
+  <div class="notes" style="margin-top: 12px;">
+    <h4>Sources</h4>
+    <ul>
+      <li>Anthropic — Claude API Pricing Documentation (Feb 2026)</li>
+      <li>McKinsey — The State of AI (2025)</li>
+      <li>Gartner — AI Spending Forecast (Sep 2025): $1.5T total AI spending</li>
+      <li>Grand View Research — AI Market Analysis: $391B (2025), 30.6% CAGR</li>
+      <li>MIT NANDA Report — 95% of GenAI pilots fail (Aug 2025)</li>
+      <li>Freemius — State of Micro-SaaS (2025): 326 projects analyzed</li>
+      <li>SaaStr — Cursor Revenue: $0 to $1B ARR in 17 months</li>
+      <li>Sacra — Replit ($265M ARR), Lovable ($200M ARR)</li>
+      <li>PwC — AI Agent Survey: 88% of leaders increasing AI budgets</li>
+      <li>Signify Technology — ML Salary Benchmarks (2025-2026)</li>
+      <li>Wharton — 2025 AI Adoption Report</li>
+      <li>Deloitte — State of AI in the Enterprise (2025)</li>
+      <li>Indie Hackers / CrazyBurst — Solo Founder Revenue Data</li>
+      <li>Menlo Ventures — State of GenAI in Enterprise (2025)</li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>

@@ -78,6 +78,7 @@ Resources for understanding Austin's writing voice and replicating it with AI as
 | [Senior Year](#senior-year-2018-2020) | 2018–2020 | Capstone | IRG Capstone — thesis-level research |
 | [Full Sail University](#full-sail-university-2024-2025) | 2024–2025 | Graduate / AI-Supplemented | 12 MBA-adjacent sports business courses |
 | [Professional / Post-Grad](#professional--post-grad) | 2026+ | Professional | Resume package, editorial voice, sports writing |
+| [Professional Research & Analysis](#professional-research--analysis-2026) | 2026 | Professional | AI economics research, financial modeling, data visualization |
 
 ---
 
@@ -529,6 +530,22 @@ Editorial baseball coverage — voice profile applied to sports journalism.
 - [Week 1 College Baseball Recap (HTML)](<week1-college-baseball-recap-2026.html>)
 
 ---
+
+## Professional Research & Analysis (2026)
+
+**Skill Level: Professional** — AI economics research produced for external stakeholders. Data visualization, financial modeling, and sourced analysis across 30+ industry sources and 6 peer-reviewed studies.
+
+### AI Economics Research
+
+Comprehensive research package on AI revenue economics — covering market data, verified revenue cases, consulting rate structures, cost analysis, and three-scenario financial modeling.
+
+- [AI Profit Landscape — Research Brief (HTML)](<AI-Economics-Research/ai-profit-landscape.html>) — Market overview with peer-reviewed evidence, verified revenue data, and five paths to revenue
+- [AI Market Economics — Data Appendix (HTML)](<AI-Economics-Research/ai-economics-dashboard.html>) — Interactive dashboard with Chart.js visualizations: market growth, revenue distribution, cost modeling
+- [AI Revenue Financial Model — Scenario Analysis (HTML)](<AI-Economics-Research/ai-financial-model.html>) — Three-scenario financial model (conservative, moderate, aggressive) with cash flow projections
+- [AI Revenue Data (Excel)](<AI-Economics-Research/ai-revenue-data.xlsx>) — Supporting spreadsheet with raw data tables
+
+---
+
 
 ## Skill Progression Summary
 
