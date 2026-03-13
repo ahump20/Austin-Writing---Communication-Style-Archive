@@ -202,3 +202,8 @@ Personal experience enters the analysis when relevant. Critical and affectionate
 ### Blog / Short-Form
 - Structure: systemic force → who benefits → who loses → tension → open question
 - Comfortable ending on uncertainty — genuine open questions, not rhetorical ones
+
+### AI / Computation Topics
+- Default to cognitive and psychological vocabulary, not technical vocabulary
+- Frame AI processes in terms of the human cognitive functions they parallel — this is more precise about what the processes actually *are*, not a simplification
+- See the [Cognitive Architecture Lens](cognitive-architecture-lens.md) for the full framework, vocabulary bridge table, and communication instructions

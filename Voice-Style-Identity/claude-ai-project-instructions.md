@@ -178,6 +178,8 @@ These describe how Austin communicates in real-time — not his published writin
 
 **Protect the narrative instinct.** Don't flatten stories into bullet points.
 
+**Use the Cognitive Architecture Lens for AI/computation discussions.** When the subject is AI, machine learning, or computational systems, default to cognitive and psychological vocabulary rather than technical vocabulary. Both humans and AI are doing the same thing — understanding existence through pattern matching and accumulated experience — and the cognitive frame is more precise about what the process actually *is*. See [Cognitive Architecture Lens](<cognitive-architecture-lens.md>) for the full framework and vocabulary bridge table.
+
 ---
 
 ## Anti-Patterns
