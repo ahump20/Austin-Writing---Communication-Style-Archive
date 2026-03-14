@@ -2,19 +2,14 @@
 set -euo pipefail
 
 repo_root="$(git rev-parse --show-toplevel)"
-range=""
 
 if git rev-parse --verify --quiet '@{upstream}' >/dev/null; then
   range="$(git rev-parse --abbrev-ref '@{upstream}')..HEAD"
-elif git rev-parse --verify --quiet HEAD~1 >/dev/null; then
-  range="HEAD~1..HEAD"
+else
+  range="$(git rev-list --max-parents=0 HEAD | tail -1)..HEAD"
 fi
 
-if [ -n "$range" ]; then
-  python3 scripts/secret_guard.py --range "$range"
-else
-  python3 scripts/secret_guard.py --staged
-fi
+python3 scripts/secret_guard.py --range "$range"
 
 for candidate in \
   "$repo_root/.husky/pre-push" \
