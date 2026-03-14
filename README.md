@@ -54,6 +54,7 @@ Start here if you want to understand or replicate the writing voice.
 | [Writing Record (Operational)](<Writing-Record/README_Austin_Humphrey_Writing_Record.md>) | Practical "how to use this in 10 minutes" guide |
 | [Professional Context](<Voice-Style-Identity/professional-context.md>) | Factual background — credentials, experience, education |
 | [Origin Story](<Voice-Style-Identity/origin-story.md>) | Biographical narrative reference for brand and voice grounding |
+| [Cognitive Architecture Lens](<Voice-Style-Identity/cognitive-architecture-lens.md>) | Framework for discussing AI/computation through the lens of human cognitive architecture — the vocabulary bridge between mind-mapping and machine learning |
 
 ---
 
@@ -66,6 +67,10 @@ All voice and style resources live in [`Voice-Style-Identity/`](Voice-Style-Iden
 - [SKILL.md — Master Voice Profile](<Voice-Style-Identity/SKILL.md>) — Modes, instruction hierarchy, 10 core characteristics, sentence architecture, anti-patterns
 - [AI Voice Transfer Guide](<Voice-Style-Identity/ai-voice-transfer.md>) — First-person writing voice profile for AI transfer
 - [Claude AI Project Instructions](<Voice-Style-Identity/claude-ai-project-instructions.md>) — Third-person reference version for Claude projects
+
+### Philosophical Frameworks
+
+- [Cognitive Architecture Lens](<Voice-Style-Identity/cognitive-architecture-lens.md>) — Framework for discussing AI/computation through the lens of human cognitive architecture; includes vocabulary bridge table and communication instructions
 
 ### Style Prompts
 
