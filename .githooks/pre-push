@@ -10,11 +10,17 @@ elif git rev-parse --verify --quiet HEAD~1 >/dev/null; then
   range="HEAD~1..HEAD"
 fi
 
-if [ -n "$range" ]; then
-  python3 scripts/secret_guard.py --range "$range"
-else
-  python3 scripts/secret_guard.py --staged
+if [ -z "$range" ]; then
+  root_commit="$(git rev-list --max-parents=0 HEAD 2>/dev/null || true)"
+  if [ -n "$root_commit" ]; then
+    range="${root_commit}..HEAD"
+  else
+    echo "secret-guard: unable to determine push range; skipping scan." >&2
+    exit 0
+  fi
 fi
+
+python3 scripts/secret_guard.py --range "$range"
 
 for candidate in \
   "$repo_root/.husky/pre-push" \
