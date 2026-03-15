@@ -54,7 +54,7 @@ class Finding:
 
 
 def run_git(args: list[str]) -> str:
-    return subprocess.check_output(["git", *args], text=True, stderr=subprocess.STDOUT)
+    return subprocess.check_output(["git", *args], text=True, stderr=subprocess.DEVNULL)
 
 
 def repo_root() -> Path:
