@@ -1,0 +1,47 @@
+name: Repo Guardrails
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve revision range
+        id: range
+        env:
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+          GITHUB_EVENT_BEFORE: ${{ github.event.before }}
+          GITHUB_PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          GITHUB_SHA: ${{ github.sha }}
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
+            echo "value=${GITHUB_PR_BASE_SHA}...${GITHUB_SHA}" >> "$GITHUB_OUTPUT"
+          elif [ -n "$GITHUB_EVENT_BEFORE" ] && [ "$GITHUB_EVENT_BEFORE" != "0000000000000000000000000000000000000000" ]; then
+            echo "value=${GITHUB_EVENT_BEFORE}...${GITHUB_SHA}" >> "$GITHUB_OUTPUT"
+          else
+            if git rev-parse --verify --quiet HEAD~1 >/dev/null; then
+              echo "value=HEAD~1...HEAD" >> "$GITHUB_OUTPUT"
+            else
+              base_commit="$(git rev-list --max-parents=0 HEAD | tail -n 1)"
+              echo "value=${base_commit}...HEAD" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
+      - name: Run secret guard
+        env:
+          REVISION_RANGE: ${{ steps.range.outputs.value }}
+        run: python3 scripts/secret_guard.py --range "$REVISION_RANGE"

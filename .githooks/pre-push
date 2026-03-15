@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo_root="$(git rev-parse --show-toplevel)"
+range=""
+
+if git rev-parse --verify --quiet '@{upstream}' >/dev/null; then
+  range="$(git rev-parse --abbrev-ref '@{upstream}')..HEAD"
+elif git rev-parse --verify --quiet HEAD~1 >/dev/null; then
+  range="HEAD~1..HEAD"
+fi
+
+if [ -z "$range" ]; then
+  root_commit="$(git rev-list --max-parents=0 HEAD 2>/dev/null || true)"
+  if [ -n "$root_commit" ]; then
+    range="${root_commit}..HEAD"
+  else
+    echo "secret-guard: unable to determine push range; skipping scan." >&2
+    exit 0
+  fi
+fi
+
+python3 scripts/secret_guard.py --range "$range"
+
+for candidate in \
+  "$repo_root/.husky/pre-push" \
+  "$repo_root/git-hooks/pre-push" \
+  "$repo_root/clawdbot/git-hooks/pre-push"
+do
+  if [ -f "$candidate" ] && [ "$candidate" != "$repo_root/.githooks/pre-push" ]; then
+    if [ -x "$candidate" ]; then
+      "$candidate"
+    else
+      sh "$candidate"
+    fi
+    break
+  fi
+done
