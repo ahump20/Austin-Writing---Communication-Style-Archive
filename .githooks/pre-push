@@ -6,7 +6,13 @@ repo_root="$(git rev-parse --show-toplevel)"
 if git rev-parse --verify --quiet '@{upstream}' >/dev/null; then
   range="$(git rev-parse --abbrev-ref '@{upstream}')..HEAD"
 else
-  range="$(git rev-list --max-parents=0 HEAD | tail -1)..HEAD"
+  root_commit="$(git rev-list --max-parents=0 HEAD 2>/dev/null | tail -1 || true)"
+  if [ -n "$root_commit" ]; then
+    range="${root_commit}..HEAD"
+  else
+    echo "secret-guard: unable to determine push range; skipping scan." >&2
+    exit 0
+  fi
 fi
 
 python3 scripts/secret_guard.py --range "$range"
