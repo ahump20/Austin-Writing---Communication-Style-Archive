@@ -2,16 +2,11 @@
 set -euo pipefail
 
 repo_root="$(git rev-parse --show-toplevel)"
-range=""
 
 if git rev-parse --verify --quiet '@{upstream}' >/dev/null; then
   range="$(git rev-parse --abbrev-ref '@{upstream}')..HEAD"
-elif git rev-parse --verify --quiet HEAD~1 >/dev/null; then
-  range="HEAD~1..HEAD"
-fi
-
-if [ -z "$range" ]; then
-  root_commit="$(git rev-list --max-parents=0 HEAD 2>/dev/null || true)"
+else
+  root_commit="$(git rev-list --max-parents=0 HEAD 2>/dev/null | tail -1 || true)"
   if [ -n "$root_commit" ]; then
     range="${root_commit}..HEAD"
   else
