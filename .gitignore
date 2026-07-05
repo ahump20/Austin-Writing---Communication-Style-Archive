@@ -6,3 +6,12 @@ __pycache__/
 # Local X/Twitter archive source files. Commit processed findings deliberately.
 *.zip
 X-Twitter-Archive/source/
+
+# Live X feed capture can generate large raw GraphQL pages. Commit the cleaned
+# rows and analysis, not every transient feed response.
+X-Twitter-Archive/live-capture/**/page-*.json
+X-Twitter-Archive/live-capture/**/response-*.json
+X-Twitter-Archive/live-capture/**/*.endpoint.json
+X-Twitter-Archive/live-capture/**/capture-state.json
+X-Twitter-Archive/live-capture/**/*-capture-tweets.json
+X-Twitter-Archive/live-capture/**/*-capture-summary.json

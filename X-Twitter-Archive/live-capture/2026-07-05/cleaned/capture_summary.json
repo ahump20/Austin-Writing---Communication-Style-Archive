@@ -1,0 +1,211 @@
+{
+  "captured_at_utc": "2026-07-05T20:29:05.161107+00:00",
+  "source_boundary": "Live logged-in X feed capture through Chrome. Uploaded archive ZIP/tweets.js was not present in the workspace, so this is not a complete official X archive export.",
+  "counts": {
+    "TXTrickWhooper": {
+      "unique_activity_items": 383,
+      "authored_voice_tweets": 173,
+      "retweets_context": 133,
+      "date_range_ct": [
+        "2022-07-08T01:33:52-05:00",
+        "2026-07-05T13:42:07-05:00"
+      ],
+      "by_year": {
+        "2022": 4,
+        "2023": 31,
+        "2024": 45,
+        "2025": 13,
+        "2026": 80
+      },
+      "by_activity_type": {
+        "reply": 71,
+        "tweet": 78,
+        "reply_with_quote": 4,
+        "quote": 20
+      },
+      "top_themes": [
+        [
+          "everyday observation",
+          98
+        ],
+        [
+          "AI/dev/tools",
+          25
+        ],
+        [
+          "sports/Texas",
+          24
+        ],
+        [
+          "question/reply energy",
+          23
+        ],
+        [
+          "X/platform",
+          8
+        ],
+        [
+          "politics/news",
+          5
+        ],
+        [
+          "food/vices",
+          5
+        ],
+        [
+          "place/Texas/Memphis",
+          1
+        ]
+      ],
+      "top_humor_tags": [
+        [
+          "short deadpan",
+          104
+        ],
+        [
+          "reply volley",
+          65
+        ],
+        [
+          "casual bluntness",
+          23
+        ],
+        [
+          "self-involving aside",
+          19
+        ],
+        [
+          "overstated stakes",
+          8
+        ],
+        [
+          "absurd everyday object",
+          6
+        ],
+        [
+          "mock PSA setup",
+          2
+        ],
+        [
+          "mock gratitude",
+          2
+        ]
+      ],
+      "avg_words": 14.2,
+      "median_words": 11,
+      "question_rate": 0.133,
+      "hashtag_rate": 0.173,
+      "mention_rate": 0.618
+    },
+    "a_hump20": {
+      "unique_activity_items": 863,
+      "authored_voice_tweets": 506,
+      "retweets_context": 320,
+      "date_range_ct": [
+        "2014-01-22T10:42:57-06:00",
+        "2025-10-18T21:24:56-05:00"
+      ],
+      "by_year": {
+        "2014": 160,
+        "2015": 11,
+        "2016": 6,
+        "2017": 3,
+        "2019": 12,
+        "2020": 60,
+        "2021": 99,
+        "2022": 44,
+        "2023": 65,
+        "2024": 34,
+        "2025": 12
+      },
+      "by_activity_type": {
+        "tweet": 361,
+        "quote": 80,
+        "reply": 64,
+        "reply_with_quote": 1
+      },
+      "top_themes": [
+        [
+          "everyday observation",
+          408
+        ],
+        [
+          "sports/Texas",
+          59
+        ],
+        [
+          "question/reply energy",
+          24
+        ],
+        [
+          "food/vices",
+          9
+        ],
+        [
+          "X/platform",
+          8
+        ],
+        [
+          "politics/news",
+          6
+        ],
+        [
+          "AI/dev/tools",
+          3
+        ],
+        [
+          "place/Texas/Memphis",
+          2
+        ]
+      ],
+      "top_humor_tags": [
+        [
+          "short deadpan",
+          362
+        ],
+        [
+          "reply volley",
+          40
+        ],
+        [
+          "self-involving aside",
+          30
+        ],
+        [
+          "casual bluntness",
+          25
+        ],
+        [
+          "absurd everyday object",
+          3
+        ],
+        [
+          "mock gratitude",
+          2
+        ],
+        [
+          "overstated stakes",
+          2
+        ]
+      ],
+      "avg_words": 10.7,
+      "median_words": 9.0,
+      "question_rate": 0.047,
+      "hashtag_rate": 0.154,
+      "mention_rate": 0.239
+    }
+  },
+  "totals": {
+    "unique_activity_items": 1246,
+    "authored_voice_tweets": 679,
+    "retweets_context": 453
+  },
+  "source_files": [
+    "X-Twitter-Archive/live-capture/2026-07-05/TXTrickWhooper/UserTweets/capture-state.json",
+    "X-Twitter-Archive/live-capture/2026-07-05/TXTrickWhooper/UserTweets-exact/exact-capture-tweets.json",
+    "X-Twitter-Archive/live-capture/2026-07-05/TXTrickWhooper/UserTweetsAndReplies-exact/exact-capture-tweets.json",
+    "X-Twitter-Archive/live-capture/2026-07-05/TXTrickWhooper/UserTweetsAndReplies-ui/ui-capture-tweets.json",
+    "X-Twitter-Archive/live-capture/2026-07-05/a_hump20/UserTweets-exact/exact-capture-tweets.json",
+    "X-Twitter-Archive/live-capture/2026-07-05/a_hump20/UserTweetsAndReplies-exact/exact-capture-tweets.json"
+  ]
+}
