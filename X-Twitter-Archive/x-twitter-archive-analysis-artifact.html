@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Austin Humphrey X Archive Analysis Status</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Oswald:wght@400;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+  :root {
+    --paper: #faf8f5;
+    --paper-deep: #f0ebe4;
+    --paper-warm: #f5f0eb;
+    --ink: #1a1a1a;
+    --muted: #5f5a54;
+    --faint: #d8cfc3;
+    --burnt: #bf5700;
+    --brown: #8b4513;
+    --blue: #0055aa;
+    --blue-bg: #e8f4fd;
+    --red: #b42318;
+    --red-bg: #fff0f0;
+    --green: #006600;
+    --green-bg: #f0fff0;
+    --yellow: #fff3cd;
+    --shadow: 0 18px 45px rgba(44, 26, 8, 0.10);
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.72;
+    color: var(--ink);
+    background:
+      linear-gradient(90deg, rgba(191,87,0,0.05) 0 1px, transparent 1px 100%),
+      linear-gradient(180deg, rgba(139,69,19,0.05) 0 1px, transparent 1px 100%),
+      var(--paper);
+    background-size: 34px 34px;
+  }
+
+  a { color: var(--burnt); }
+
+  button, input {
+    font: inherit;
+  }
+
+  button:focus-visible, a:focus-visible {
+    outline: 3px solid rgba(191,87,0,0.45);
+    outline-offset: 4px;
+  }
+
+  .page-shell {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 40px 42px 72px;
+  }
+
+  .title-page {
+    min-height: 76vh;
+    display: grid;
+    align-content: center;
+    gap: 22px;
+    text-align: center;
+    border-bottom: 4px double var(--burnt);
+    margin-bottom: 40px;
+    padding: 64px 0 58px;
+  }
+
+  h1, h2, h3, h4, .nav-link, .mono-label, .grade, .status-pill, .tab-button {
+    font-family: "Oswald", "Arial Narrow", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  h1 {
+    margin: 0;
+    color: var(--burnt);
+    font-size: clamp(2.6rem, 7vw, 5.7rem);
+    line-height: 0.95;
+  }
+
+  h2 {
+    margin: 58px 0 20px;
+    color: var(--brown);
+    font-size: clamp(1.65rem, 3vw, 2.2rem);
+    border-bottom: 3px solid var(--burnt);
+    padding-bottom: 8px;
+  }
+
+  h3 {
+    margin: 28px 0 10px;
+    color: var(--ink);
+    font-size: 1.22rem;
+  }
+
+  h4 {
+    margin: 0 0 8px;
+    color: var(--brown);
+    font-size: 1.02rem;
+  }
+
+  p { margin: 0 0 14px; }
+
+  .subtitle {
+    max-width: 820px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: clamp(1.15rem, 2vw, 1.6rem);
+    font-style: italic;
+  }
+
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 24px auto 0;
+    width: min(900px, 100%);
+  }
+
+  .meta-card {
+    background: var(--paper-deep);
+    border-left: 4px solid var(--burnt);
+    padding: 14px 16px;
+    text-align: left;
+    min-height: 112px;
+  }
+
+  .mono-label, .metric-label {
+    display: block;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.73rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .metric-value {
+    display: block;
+    margin-top: 6px;
+    font-family: "Oswald", "Arial Narrow", sans-serif;
+    color: var(--ink);
+    font-size: 1.65rem;
+    line-height: 1.05;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 -12px 34px;
+    padding: 12px;
+    background: rgba(250,248,245,0.94);
+    border-bottom: 1px solid var(--faint);
+    backdrop-filter: blur(12px);
+  }
+
+  .nav-link {
+    border: 1px solid var(--faint);
+    color: var(--brown);
+    background: #fffdf9;
+    text-decoration: none;
+    padding: 7px 12px;
+    font-size: 0.78rem;
+  }
+
+  .nav-link:hover { border-color: var(--burnt); color: var(--burnt); }
+
+  .toc {
+    background: rgba(245,240,235,0.92);
+    border: 1px solid var(--faint);
+    box-shadow: var(--shadow);
+    padding: 22px;
+    margin-bottom: 34px;
+  }
+
+  .toc ul {
+    columns: 2;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc li {
+    break-inside: avoid;
+    padding: 6px 0;
+    border-bottom: 1px dotted #c8bbae;
+  }
+
+  .status-strip {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr;
+    gap: 18px;
+    margin: 28px 0;
+  }
+
+  .status-panel, .note-panel, .prompt-card, .finding-card, .account-card, .parser-card {
+    background: rgba(255,253,249,0.86);
+    border: 1px solid var(--faint);
+    box-shadow: var(--shadow);
+    padding: 22px;
+  }
+
+  .status-panel.verified { border-left: 4px solid var(--green); }
+  .status-panel.blocked { border-left: 4px solid var(--red); }
+  .status-panel.open { border-left: 4px solid var(--burnt); }
+
+  .status-pill {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid currentColor;
+    padding: 2px 9px;
+    font-size: 0.72rem;
+    margin-bottom: 9px;
+  }
+
+  .verified .status-pill { color: var(--green); background: var(--green-bg); }
+  .blocked .status-pill { color: var(--red); background: var(--red-bg); }
+  .open .status-pill { color: var(--brown); background: var(--yellow); }
+
+  .callout {
+    margin: 18px 0;
+    padding: 12px 16px;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    background: var(--blue-bg);
+    border-left: 3px solid var(--blue);
+    color: var(--blue);
+  }
+
+  .red-note {
+    background: var(--red-bg);
+    border-left: 3px solid var(--red);
+    color: var(--red);
+  }
+
+  .green-note {
+    background: var(--green-bg);
+    border-left: 3px solid var(--green);
+    color: var(--green);
+  }
+
+  .ledger {
+    display: grid;
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .ledger-row {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 14px;
+    background: var(--paper-deep);
+    border-left: 4px solid var(--burnt);
+    padding: 12px 16px;
+  }
+
+  .evidence-tag {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .account-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .account-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 8px;
+    background: linear-gradient(90deg, var(--burnt), var(--brown));
+  }
+
+  .account-name {
+    margin-top: 8px;
+    font-family: "Oswald", "Arial Narrow", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  .handle {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    color: var(--muted);
+    font-size: 0.88rem;
+  }
+
+  .quote-box {
+    margin: 16px 0;
+    padding: 14px 16px;
+    background: var(--paper-deep);
+    border-left: 4px solid var(--burnt);
+    font-size: 1.12rem;
+    font-style: italic;
+  }
+
+  .micro-list {
+    padding-left: 22px;
+    margin: 8px 0 0;
+  }
+
+  .micro-list li { margin: 7px 0; }
+
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--faint);
+    background: #fffdf9;
+    box-shadow: var(--shadow);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 820px;
+    font-size: 0.98rem;
+  }
+
+  th {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    color: var(--brown);
+    background: var(--paper-deep);
+    text-align: left;
+    letter-spacing: 0.05em;
+    padding: 12px;
+    border-bottom: 2px solid var(--burnt);
+  }
+
+  td {
+    padding: 13px 12px;
+    vertical-align: top;
+    border-bottom: 1px solid #e6ddd2;
+  }
+
+  tr:last-child td { border-bottom: 0; }
+
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0 20px;
+  }
+
+  .tab-button {
+    cursor: pointer;
+    border: 1px solid var(--faint);
+    background: #fffdf9;
+    color: var(--brown);
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .tab-button[aria-selected="true"] {
+    color: #fff;
+    border-color: var(--burnt);
+    background: var(--burnt);
+  }
+
+  .prompt-card {
+    margin: 0 0 16px;
+  }
+
+  .prompt-card.blocked { border-left: 4px solid var(--red); }
+  .prompt-card.partial { border-left: 4px solid var(--burnt); }
+  .prompt-card.ready { border-left: 4px solid var(--green); }
+
+  .prompt-head {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  .grade {
+    display: inline-block;
+    color: #fff;
+    background: var(--brown);
+    padding: 4px 10px;
+    font-size: 0.82rem;
+  }
+
+  .code-block {
+    white-space: pre-wrap;
+    overflow-x: auto;
+    background: #1b1713;
+    color: #fff8ed;
+    border-left: 4px solid var(--burnt);
+    padding: 16px;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+
+  .timeline {
+    display: grid;
+    gap: 14px;
+    margin: 18px 0;
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 18px;
+    border-top: 2px solid #e0d5c8;
+    padding-top: 14px;
+  }
+
+  .timeline-time {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.74rem;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .footer-note {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 4px double var(--burnt);
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .hidden { display: none; }
+
+  @media (max-width: 820px) {
+    body { font-size: 16px; }
+    .page-shell { padding: 24px 18px 54px; }
+    .title-page { min-height: auto; padding: 48px 0 38px; }
+    .meta-grid, .status-strip, .grid-2, .grid-3 {
+      grid-template-columns: 1fr;
+      min-width: 0;
+    }
+    .grid-2 > *, .grid-3 > *, .status-strip > *, .meta-grid > * { min-width: 0; }
+    .toc ul { columns: 1; }
+    .ledger-row, .timeline-item {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+    .nav {
+      position: static;
+      justify-content: flex-start;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+    }
+    .nav-link, .tab-button { white-space: nowrap; }
+    .micro-list li, .code-block, td {
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+    .table-wrap { overflow: visible; }
+    table { min-width: 0; }
+    thead { display: none; }
+    tbody, tr, td { display: block; width: 100%; }
+    tr { padding: 12px 0; border-bottom: 1px solid #e6ddd2; }
+    td { border: 0; padding: 6px 12px; }
+    td::before {
+      display: block;
+      margin-bottom: 2px;
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 0.68rem;
+      color: var(--brown);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    td:nth-child(1)::before { content: "Finding"; }
+    td:nth-child(2)::before { content: "Solid"; }
+    td:nth-child(3)::before { content: "Applied Meaning"; }
+  }
+
+  @media print {
+    body { background: #fff; color: #000; font-size: 11pt; }
+    .page-shell { max-width: 100%; padding: 0.5in; }
+    .nav, .tabs { display: none; }
+    .title-page { min-height: auto; page-break-after: always; }
+    section { page-break-inside: avoid; }
+    .status-panel, .note-panel, .prompt-card, .finding-card, .account-card, .parser-card, .table-wrap {
+      box-shadow: none;
+    }
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script>
+const h = React.createElement;
+
+const DATA = {
+  generated: {
+    date: "2026-07-05",
+    timezone: "America/Chicago",
+    repo: "ahump20/Austin-Writing---Communication-Style-Archive",
+    pushedCommit: "a33e43420fb11db173917d9edcafb288be364c61",
+    birdclawHead: "66523e1dcb323fd0b02490c5813fb5e5b277aa8e"
+  },
+  sourceState: [
+    {
+      tag: "verified",
+      label: "No archive rows",
+      text: "Only two profile screenshots were available. No X archive ZIP, tweets.js, tweet.js, tweet.json, or extracted archive directory was found in the accessible checked paths."
+    },
+    {
+      tag: "verified",
+      label: "Parser ready",
+      text: "A local parser was written, compiled, tested against a synthetic archive, committed, and pushed to main."
+    },
+    {
+      tag: "open",
+      label: "Full analysis waits",
+      text: "Speech patterns, theme evolution, humor cataloging, and voice memorization require the actual tweet corpus. Counts and date ranges remain unknown."
+    }
+  ],
+  accounts: [
+    {
+      name: "Stallion of the Steroid Era",
+      handle: "@TXTrickWhooper",
+      role: "Commentary account",
+      screenshotFacts: [
+        "[verified screenshot] Bio reads: Ladies love the Longhorn #LegalizeRoids - Artificial Intelligence & Machine Learning @UTexasMcCombs.",
+        "[verified screenshot] Joined July 2022. Profile showed 995 following and 108 followers.",
+        "[verified screenshot] Pinned reply dated 6/5/26 reads: Waffle house is our last line of defense.",
+        "[verified screenshot] The pinned reply showed 458 likes, 18 reposts, and 15K views in the screenshot."
+      ],
+      provisionalRead: "[reasoned] The visible voice is persona-first, Texas-coded, absurdist, and compressed. The joke lands by treating a tiny phrase as a civic institution. This is useful evidence, but it is not enough for archive-level synthesis."
+    },
+    {
+      name: "Austin Humphrey",
+      handle: "@a_hump20",
+      role: "Personal account",
+      screenshotFacts: [
+        "[verified screenshot] Bio reads: Save a horse ride a Longhorn @TexasExes.",
+        "[verified screenshot] Location shown as Boerne, TX. Birth date shown as August 17, 1995. Joined May 2011.",
+        "[verified screenshot] Profile showed 417 following and 451 followers.",
+        "[verified screenshot] Top visible post was a repost from Nash about Bevo remaining Texas Longhorns mascot for the 2026 football season."
+      ],
+      provisionalRead: "[reasoned] The visible surface is identity-heavy: Texas, Longhorns, Boerne, alumni tie. The screenshot does not provide enough authored text to model humor or sentence rhythm."
+    }
+  ],
+  birdclaw: [
+    {
+      claim: "Archive discovery",
+      status: "verified",
+      detail: "BirdClaw reads ZIP entries by normalized path and supports archives with arbitrary root folders, as long as files end in data/*.js."
+    },
+    {
+      claim: "Identity anchor",
+      status: "verified",
+      detail: "data/account.js is mandatory. data/profile.js is optional. Missing account.js fails import because the archive cannot be tied to an account."
+    },
+    {
+      claim: "Tweet slices",
+      status: "verified",
+      detail: "Expected tweet files include data/tweets.js, data/tweets-partN.js, data/community-tweet*.js, and data/note-tweet*.js."
+    },
+    {
+      claim: "JSON extraction",
+      status: "verified",
+      detail: "The JS file is treated as an assignment wrapper. The parser extracts the JSON array or object and never evaluates JavaScript."
+    },
+    {
+      claim: "Tweet fields",
+      status: "verified",
+      detail: "Useful fields include id_str, full_text, created_at, favorite_count, retweet_count when present, reply IDs, quote IDs, entities, and extended_entities."
+    },
+    {
+      claim: "Thread limits",
+      status: "verified",
+      detail: "Archive import preserves reply_to_id and quoted_tweet_id. Full outside thread context needs live lookup or matching rows in the archive."
+    },
+    {
+      claim: "Filename hardening",
+      status: "reasoned",
+      detail: "The local parser supports both direct-messages.js and direct_messages.js because archive variants are plausible and cheap to support."
+    }
+  ],
+  promptSections: [
+    {
+      key: "A",
+      title: "Speech Patterns & Linguistic Style",
+      state: "blocked",
+      status: "Blocked by missing corpus",
+      whatCanBeSaid: "Screenshot-only evidence shows one deadpan one-liner from the commentary account and identity copy on the personal account.",
+      needed: "All authored tweets with dates, reply flags, text, hashtags, media metadata, and engagement counts where present."
+    },
+    {
+      key: "B",
+      title: "Theme Evolution & Content Shifts",
+      state: "blocked",
+      status: "Blocked by missing chronology",
+      whatCanBeSaid: "Account-level identities point toward Texas sports, Longhorn identity, AI/McCombs references, Pitch Atlas, and commentary persona work.",
+      needed: "Chronological tweet rows bucketed by year or posting phase."
+    },
+    {
+      key: "C",
+      title: "Humor Patterns",
+      state: "partial",
+      status: "One real clue, no catalog yet",
+      whatCanBeSaid: "The Waffle House line suggests compressed absurdism: ordinary institution plus emergency-scale framing. The vape tweet snippet suggests discovery-post humor with hashtag pile-on.",
+      needed: "Originals, replies, quote posts, and thread context so recurring joke structures can be counted and dated."
+    },
+    {
+      key: "D",
+      title: "Style Evolution & Personal Branding",
+      state: "blocked",
+      status: "Blocked by account history",
+      whatCanBeSaid: "The visible split is clear: personal Austin account carries direct Longhorn identity; Stallion account carries a named commentary persona.",
+      needed: "Full date range for each account plus bio/profile snapshots if included."
+    },
+    {
+      key: "E",
+      title: "Voice Synthesis & Memorization",
+      state: "blocked",
+      status: "Not safe to memorize yet",
+      whatCanBeSaid: "A durable X voice model should not be built from two screenshots. The parser and repo lane are ready for the real pass.",
+      needed: "Cleaned tweet corpus and explicit final synthesis after analysis."
+    },
+    {
+      key: "F",
+      title: "Overall Synthesis & Key Insights",
+      state: "partial",
+      status: "Operational synthesis only",
+      whatCanBeSaid: "The right conclusion now is process truth: the ingestion rail exists, the corpus is absent, and the next move is to place the ZIPs where the parser can read them.",
+      needed: "Archive rows before any writer-level claims are treated as settled."
+    }
+  ],
+  execution: [
+    { time: "Step 1", title: "Searched uploaded attachments", detail: "[verified] The attachment directory contained screenshots only, not archive ZIPs or tweet exports." },
+    { time: "Step 2", title: "Checked local likely paths", detail: "[verified] Workspace, Downloads, Desktop, and Documents searches did not find X archive data. Some broad macOS scans were noisy, so the claim is limited to checked paths." },
+    { time: "Step 3", title: "Read BirdClaw", detail: "[verified] BirdClaw repo and docs were checked for archive schema and parser behavior." },
+    { time: "Step 4", title: "Built parser", detail: "[verified] scripts/parse_x_archive.py now parses ZIPs or extracted folders into JSONL, CSV, year buckets, thread rows, duplicate logs, and summary JSON." },
+    { time: "Step 5", title: "Verified parser", detail: "[verified] Python compile passed, diff check passed, and a synthetic archive produced expected counts and thread grouping." },
+    { time: "Step 6", title: "Saved and pushed", detail: "[verified] Commit a33e434 was pushed to main with the ingestion lane and status note." }
+  ],
+  parserOutputs: [
+    "X-Twitter-Archive/processed/<account>/summary.json",
+    "X-Twitter-Archive/processed/<account>/tweets_cleaned.jsonl",
+    "X-Twitter-Archive/processed/<account>/tweets_cleaned.csv",
+    "X-Twitter-Archive/processed/<account>/by_year/*.jsonl",
+    "X-Twitter-Archive/processed/<account>/threads.jsonl",
+    "X-Twitter-Archive/processed/<account>/duplicates_removed.jsonl"
+  ]
+};
+
+function StatusTag({ tag }) {
+  return h("span", { className: "evidence-tag" }, `[${tag}]`);
+}
+
+function TitlePage() {
+  return h("header", { className: "title-page", id: "top" },
+    h("div", null,
+      h("h1", null, "X Archive Analysis Status"),
+      h("p", { className: "subtitle" }, "A viewable React report for the two-account X/Twitter archive request. It records what is proven, what is missing, and what the full voice analysis needs next.")
+    ),
+    h("div", { className: "meta-grid", "aria-label": "Run metadata" },
+      h("div", { className: "meta-card" }, h("span", { className: "metric-label" }, "Corpus rows"), h("span", { className: "metric-value" }, "0"), h("span", { className: "mono-label" }, "Archive files absent")),
+      h("div", { className: "meta-card" }, h("span", { className: "metric-label" }, "Parser state"), h("span", { className: "metric-value" }, "Ready"), h("span", { className: "mono-label" }, "Synthetic test passed")),
+      h("div", { className: "meta-card" }, h("span", { className: "metric-label" }, "Repo commit"), h("span", { className: "metric-value" }, "a33e434"), h("span", { className: "mono-label" }, "Pushed to main")),
+      h("div", { className: "meta-card" }, h("span", { className: "metric-label" }, "Report date"), h("span", { className: "metric-value" }, DATA.generated.date), h("span", { className: "mono-label" }, DATA.generated.timezone))
+    )
+  );
+}
+
+function Nav() {
+  const items = [
+    ["#known", "Known"],
+    ["#accounts", "Accounts"],
+    ["#prompt", "A-F Prompt"],
+    ["#birdclaw", "BirdClaw"],
+    ["#parser", "Parser"],
+    ["#execution", "Execution"],
+    ["#next", "Next"]
+  ];
+  return h("nav", { className: "nav", "aria-label": "Report sections" },
+    items.map(([href, label]) => h("a", { key: href, className: "nav-link", href }, label))
+  );
+}
+
+function KnownSection() {
+  return h("section", { id: "known" },
+    h("h2", null, "Known, Unknown, Open"),
+    h("div", { className: "status-strip" },
+      DATA.sourceState.map(item => h("article", { key: item.label, className: `status-panel ${item.tag === "open" ? "open" : item.tag}` },
+        h("span", { className: "status-pill" }, item.tag),
+        h("h3", null, item.label),
+        h("p", null, item.text)
+      ))
+    ),
+    h("div", { className: "callout red-note" },
+      "[verified] Step 1 cannot be marked complete. Reporting tweet counts or date ranges now would require inventing data."
+    ),
+    h("div", { className: "ledger" },
+      h("div", { className: "ledger-row" }, h(StatusTag, { tag: "verified" }), h("div", null, "Only two X profile screenshots were available in the attachment folder.")),
+      h("div", { className: "ledger-row" }, h(StatusTag, { tag: "verified" }), h("div", null, "No archive ZIP, tweets.js, tweet.js, or tweet.json was found in the checked workspace paths.")),
+      h("div", { className: "ledger-row" }, h(StatusTag, { tag: "verified" }), h("div", null, "A second local clone exists at /Users/AustinHumphrey/austin-writing---communication-style-archive, but it was behind main and did not contain this X lane.")),
+      h("div", { className: "ledger-row" }, h(StatusTag, { tag: "reasoned" }), h("div", null, "The safe source boundary is authored public tweets first. DMs should stay out unless you explicitly ask for a private-message pass."))
+    )
+  );
+}
+
+function AccountsSection() {
+  return h("section", { id: "accounts" },
+    h("h2", null, "Account Evidence From Screenshots"),
+    h("p", null, "This section is intentionally narrow. It records visible screenshot facts and a rough read, not an archive conclusion."),
+    h("div", { className: "grid-2" },
+      DATA.accounts.map(account => h("article", { key: account.handle, className: "account-card" },
+        h("div", { className: "account-name" }, account.name),
+        h("div", { className: "handle" }, `${account.handle} · ${account.role}`),
+        h("ul", { className: "micro-list" },
+          account.screenshotFacts.map(fact => h("li", { key: fact }, fact))
+        ),
+        h("div", { className: "quote-box" }, account.provisionalRead)
+      ))
+    )
+  );
+}
+
+function PromptSection() {
+  const [active, setActive] = React.useState("all");
+  const visible = active === "all" ? DATA.promptSections : DATA.promptSections.filter(item => item.state === active);
+  return h("section", { id: "prompt" },
+    h("h2", null, "Original Prompt Coverage"),
+    h("p", null, "The requested A-F analysis is represented below exactly where the evidence allows it. Most sections are blocked because the archive rows are missing."),
+    h("div", { className: "tabs", role: "tablist", "aria-label": "Prompt section filters" },
+      [["all", "All"], ["blocked", "Blocked"], ["partial", "Partial"], ["ready", "Ready"]].map(([key, label]) =>
+        h("button", {
+          key,
+          className: "tab-button",
+          type: "button",
+          role: "tab",
+          "aria-selected": active === key,
+          onClick: () => setActive(key)
+        }, label)
+      )
+    ),
+    h("div", null,
+      visible.map(item => h("article", { key: item.key, className: `prompt-card ${item.state}` },
+        h("div", { className: "prompt-head" },
+          h("h3", null, `${item.key}. ${item.title}`),
+          h("span", { className: "grade" }, item.status)
+        ),
+        h("p", null, h("strong", null, "What can be said now: "), item.whatCanBeSaid),
+        h("p", null, h("strong", null, "Needed for full execution: "), item.needed)
+      ))
+    )
+  );
+}
+
+function BirdClawSection() {
+  return h("section", { id: "birdclaw" },
+    h("h2", null, "BirdClaw Parsing Notes"),
+    h("p", null, "BirdClaw supplied the schema floor for this ingestion pass. The local parser follows these rules where they matter for analysis."),
+    h("div", { className: "table-wrap" },
+      h("table", null,
+        h("thead", null,
+          h("tr", null,
+            h("th", null, "Finding"),
+            h("th", null, "Solid"),
+            h("th", null, "Applied Meaning")
+          )
+        ),
+        h("tbody", null,
+          DATA.birdclaw.map(row => h("tr", { key: row.claim },
+            h("td", null, row.claim),
+            h("td", null, `[${row.status}]`),
+            h("td", null, row.detail)
+          ))
+        )
+      )
+    )
+  );
+}
+
+function ParserSection() {
+  return h("section", { id: "parser" },
+    h("h2", null, "Parser Built For The Real Pass"),
+    h("div", { className: "grid-2" },
+      h("article", { className: "parser-card" },
+        h("h3", null, "What It Does"),
+        h("ul", { className: "micro-list" },
+          h("li", null, "[verified] Reads archive ZIPs or extracted archive folders."),
+          h("li", null, "[verified] Extracts JS assignment JSON without executing JavaScript."),
+          h("li", null, "[verified] Dedupes tweets by tweet ID."),
+          h("li", null, "[verified] Preserves raw JSON with each cleaned row."),
+          h("li", null, "[verified] Adds Central time, year buckets, reply flags, self-thread grouping, and media summaries.")
+        )
+      ),
+      h("article", { className: "parser-card" },
+        h("h3", null, "Output Files"),
+        h("ul", { className: "micro-list" },
+          DATA.parserOutputs.map(path => h("li", { key: path }, path))
+        )
+      )
+    ),
+    h("h3", null, "Run Command"),
+    h("pre", { className: "code-block" }, "python3 scripts/parse_x_archive.py /path/to/txtrickwhooper-archive.zip /path/to/a_hump20-archive.zip")
+  );
+}
+
+function ExecutionSection() {
+  return h("section", { id: "execution" },
+    h("h2", null, "Execution Ledger"),
+    h("div", { className: "timeline" },
+      DATA.execution.map(item => h("article", { key: item.time, className: "timeline-item" },
+        h("div", { className: "timeline-time" }, item.time),
+        h("div", null,
+          h("h3", null, item.title),
+          h("p", null, item.detail)
+        )
+      ))
+    )
+  );
+}
+
+function NextSection() {
+  return h("section", { id: "next" },
+    h("h2", null, "Next Execution Plan"),
+    h("div", { className: "note-panel" },
+      h("p", null, "[verified] The next move is not more analysis. It is source placement."),
+      h("ol", { className: "micro-list" },
+        h("li", null, "Put both X archive ZIPs in Downloads, this repo root, or another exact path."),
+        h("li", null, "Run the parser command above."),
+        h("li", null, "Open each summary.json and confirm the account handles match @TXTrickWhooper and @a_hump20."),
+        h("li", null, "Run the A-F analysis from tweets_cleaned.jsonl, citing dated examples."),
+        h("li", null, "Only then write the voice and humor synthesis into the repo as a real source-backed profile.")
+      ),
+      h("div", { className: "callout green-note" },
+        "[reasoned] Once the archives exist, the full analysis should be a second artifact, not a patch inside this status report. The second artifact can quote dated examples, compare accounts, and update the voice system with evidence."
+      )
+    ),
+    h("p", { className: "footer-note" }, "This report is intentionally unfinished where the evidence is unfinished. That is the point. It keeps the archive analysis from turning into a confident story laid over missing rows.")
+  );
+}
+
+function App() {
+  return h("main", { className: "page-shell" },
+    h(TitlePage),
+    h(Nav),
+    h("section", { className: "toc", "aria-labelledby": "toc-title" },
+      h("h2", { id: "toc-title" }, "Report Map"),
+      h("ul", null,
+        h("li", null, h("a", { href: "#known" }, "Known, unknown, and open items")),
+        h("li", null, h("a", { href: "#accounts" }, "Screenshot evidence for both accounts")),
+        h("li", null, h("a", { href: "#prompt" }, "A-F prompt coverage and blockers")),
+        h("li", null, h("a", { href: "#birdclaw" }, "BirdClaw parsing notes")),
+        h("li", null, h("a", { href: "#parser" }, "Parser outputs and run command")),
+        h("li", null, h("a", { href: "#execution" }, "Execution ledger")),
+        h("li", null, h("a", { href: "#next" }, "Next execution plan"))
+      )
+    ),
+    h(KnownSection),
+    h(AccountsSection),
+    h(PromptSection),
+    h(BirdClawSection),
+    h(ParserSection),
+    h(ExecutionSection),
+    h(NextSection)
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>
+</body>
+</html>
