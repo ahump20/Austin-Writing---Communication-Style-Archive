@@ -2,3 +2,7 @@
 __pycache__/
 *.pyc
 *.pyo
+
+# Local X/Twitter archive source files. Commit processed findings deliberately.
+*.zip
+X-Twitter-Archive/source/

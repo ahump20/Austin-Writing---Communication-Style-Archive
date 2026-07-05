@@ -32,6 +32,7 @@
 ├── Full-Sail-Coursework/        → 12 Full Sail MBA-adjacent courses + exploratory papers (2024–2025)
 ├── Sports-Writing/              → Editorial baseball coverage and sports journalism (2026)
 ├── Research/                    → AI economics research and BSI/NIL analysis
+├── X-Twitter-Archive/           → X/Twitter archive ingestion, status notes, and processed tweet evidence
 ├── Austin_Humphrey_Resume_Package/  → Executive resume, headshot, and professional materials
 ```
 
@@ -55,6 +56,7 @@ Start here if you want to understand or replicate the writing voice.
 | [Professional Context](<Voice-Style-Identity/professional-context.md>) | Factual background — credentials, experience, education |
 | [Origin Story](<Voice-Style-Identity/origin-story.md>) | Biographical narrative reference for brand and voice grounding |
 | [Cognitive Architecture Lens](<Voice-Style-Identity/cognitive-architecture-lens.md>) | Framework for discussing AI/computation through the lens of human cognitive architecture — the vocabulary bridge between mind-mapping and machine learning |
+| [X/Twitter Archive Ingestion](<X-Twitter-Archive/README.md>) | Parser and evidence lane for two-account X/Twitter voice and humor analysis |
 
 ---
 
