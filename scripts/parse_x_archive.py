@@ -35,6 +35,7 @@ PROFILE_RE = re.compile(r"(?:^|/)data/profile\.js$", re.I)
 TWEET_RE = re.compile(
     r"(?:^|/)data/(?:tweets?|community-tweet)(?:-part\d+)?\.js$", re.I
 )
+DELETED_TWEET_RE = re.compile(r"(?:^|/)data/deleted-tweets(?:-part\d+)?\.js$", re.I)
 NOTE_TWEET_RE = re.compile(r"(?:^|/)data/note-tweet(?:-part\d+)?\.js$", re.I)
 LIKE_RE = re.compile(r"(?:^|/)data/likes?(?:-part\d+)?\.js$", re.I)
 DM_RE = re.compile(r"(?:^|/)data/direct[-_]messages(?:-group)?(?:-part\d+)?\.js$", re.I)
@@ -247,6 +248,7 @@ def normalize_tweet(
         return None
     full_text = str(tweet.get("full_text") or tweet.get("text") or "")
     created_utc, created_local = parse_datetime(tweet.get("created_at"))
+    deleted_utc, deleted_local = parse_datetime(tweet.get("deleted_at"))
     entities = entity_summary(tweet)
     reply_to_id = tweet.get("in_reply_to_status_id_str") or tweet.get("in_reply_to_status_id")
     quote_id = tweet.get("quoted_status_id_str") or tweet.get("quoted_status_id")
@@ -257,8 +259,11 @@ def normalize_tweet(
         "account_id": account.get("account_id") or "",
         "archive_source": source_path,
         "archive_kind": kind,
+        "is_deleted": kind == "deleted_tweet",
         "created_at_utc": created_utc,
         "created_at_local": created_local,
+        "deleted_at_utc": deleted_utc,
+        "deleted_at_local": deleted_local,
         "year": created_utc[:4] if created_utc else "unknown",
         "full_text": full_text,
         "text_hash": text_hash(full_text),
@@ -305,8 +310,11 @@ def normalize_note_tweet(wrapper: dict[str, Any], source_path: str, account: dic
         "account_id": account.get("account_id") or "",
         "archive_source": source_path,
         "archive_kind": "noteTweet",
+        "is_deleted": False,
         "created_at_utc": created_utc,
         "created_at_local": created_local,
+        "deleted_at_utc": None,
+        "deleted_at_local": None,
         "year": created_utc[:4] if created_utc else "unknown",
         "full_text": full_text,
         "text_hash": text_hash(full_text),
@@ -401,6 +409,7 @@ def load_tweets(source: ArchiveSource) -> tuple[dict[str, Any], list[dict[str, A
         "account": matching(source.entries, ACCOUNT_RE),
         "profile": matching(source.entries, PROFILE_RE),
         "tweets": matching(source.entries, TWEET_RE),
+        "deletedTweets": matching(source.entries, DELETED_TWEET_RE),
         "noteTweets": matching(source.entries, NOTE_TWEET_RE),
         "likes": matching(source.entries, LIKE_RE),
         "directMessages": matching(source.entries, DM_RE),
@@ -409,6 +418,11 @@ def load_tweets(source: ArchiveSource) -> tuple[dict[str, Any], list[dict[str, A
     for entry in files["tweets"]:
         for wrapper in parse_array(source.read_text(entry)):
             row = normalize_tweet(wrapper, entry, account, "tweet")
+            if row:
+                rows.append(row)
+    for entry in files["deletedTweets"]:
+        for wrapper in parse_array(source.read_text(entry)):
+            row = normalize_tweet(wrapper, entry, account, "deleted_tweet")
             if row:
                 rows.append(row)
     for entry in files["noteTweets"]:
@@ -437,6 +451,9 @@ def csv_row(row: dict[str, Any]) -> dict[str, Any]:
         "account_handle",
         "created_at_utc",
         "created_at_local",
+        "deleted_at_utc",
+        "deleted_at_local",
+        "is_deleted",
         "year",
         "full_text",
         "favorite_count",
@@ -458,6 +475,8 @@ def csv_row(row: dict[str, Any]) -> dict[str, Any]:
         "archive_source",
     ]
     out = {key: row.get(key) for key in keep}
+    if isinstance(out.get("full_text"), str):
+        out["full_text"] = "\n".join(line.rstrip() for line in str(out["full_text"]).splitlines())
     out["hashtags"] = ",".join(row.get("hashtags") or [])
     out["mentions"] = ",".join(
         item.get("screen_name", "") for item in row.get("mentions") or [] if isinstance(item, dict)
@@ -489,6 +508,7 @@ def summarize(
     originals = sum(1 for row in rows if not row.get("is_reply"))
     replies = sum(1 for row in rows if row.get("is_reply"))
     self_thread_replies = sum(1 for row in rows if row.get("is_self_thread_reply"))
+    deleted = sum(1 for row in rows if row.get("is_deleted"))
     dated = [row["created_at_utc"] for row in rows if row.get("created_at_utc")]
     top_hashtags = Counter(tag.lower() for row in rows for tag in row.get("hashtags", []))
     top_mentions = Counter(
@@ -508,6 +528,7 @@ def summarize(
             "originals_or_quote_posts": originals,
             "replies": replies,
             "self_thread_replies": self_thread_replies,
+            "deleted_tweets": deleted,
             "threads_or_conversations": len({row.get("thread_key") for row in rows}),
         },
         "date_range": {

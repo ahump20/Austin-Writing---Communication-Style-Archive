@@ -4,6 +4,7 @@ set -euo pipefail
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 source_dir="$repo_root/X-Twitter-Archive/source"
 out_dir="$repo_root/X-Twitter-Archive/processed"
+analysis_dir="$repo_root/X-Twitter-Archive/official-analysis/2026-07-06"
 
 mkdir -p "$source_dir" "$out_dir"
 
@@ -26,10 +27,13 @@ EOF
 fi
 
 python3 "$repo_root/scripts/parse_x_archive.py" "${archives[@]}" --out "$out_dir"
+python3 "$repo_root/scripts/build_x_voice_artifact.py" --processed "$out_dir" --out "$analysis_dir" --html "$repo_root/X-Twitter-Archive/x-twitter-archive-analysis-artifact.html"
 
 cat <<EOF
 
-[verified] Official archive parsing finished.
+[verified] Official archive parsing and artifact build finished.
 Output:
   $out_dir
+  $analysis_dir
+  $repo_root/X-Twitter-Archive/x-twitter-archive-analysis-artifact.html
 EOF

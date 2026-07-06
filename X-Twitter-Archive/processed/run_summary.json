@@ -1,0 +1,955 @@
+{
+  "archives": [
+    {
+      "source_path": "/Users/AustinHumphrey/Downloads/Twitter:X Metadata/twitter-2026-07-06 ahump20",
+      "generated_at_utc": "2026-07-06T22:43:08.173955Z",
+      "timezone": "America/Chicago",
+      "account": {
+        "account_id": "305387451",
+        "handle": "a_hump20",
+        "display_name": "Austin Humphrey",
+        "created_at_utc": "2011-05-26T03:47:36Z",
+        "created_at_local": "2011-05-25T22:47:36-05:00",
+        "bio": "Save a horse ride a Longhorn @TexasExes",
+        "has_account_js": true,
+        "has_profile_js": true,
+        "account_entry": "data/account.js",
+        "profile_entry": "data/profile.js"
+      },
+      "counts": {
+        "tweets_cleaned": 4760,
+        "duplicates_removed": 0,
+        "originals_or_quote_posts": 3134,
+        "replies": 1626,
+        "self_thread_replies": 28,
+        "deleted_tweets": 0,
+        "threads_or_conversations": 4732
+      },
+      "date_range": {
+        "first_utc": "2011-07-02T16:50:11Z",
+        "last_utc": "2025-12-16T04:57:13Z"
+      },
+      "files_found": {
+        "account": [
+          "data/account.js"
+        ],
+        "profile": [
+          "data/profile.js"
+        ],
+        "tweets": [
+          "data/community-tweet.js",
+          "data/tweets.js"
+        ],
+        "deletedTweets": [
+          "data/deleted-tweets.js"
+        ],
+        "noteTweets": [
+          "data/note-tweet.js"
+        ],
+        "likes": [
+          "data/like.js"
+        ],
+        "directMessages": [
+          "data/direct-messages-group.js",
+          "data/direct-messages.js"
+        ]
+      },
+      "years": {
+        "2011": 559,
+        "2012": 1655,
+        "2013": 1483,
+        "2014": 347,
+        "2015": 27,
+        "2016": 15,
+        "2017": 13,
+        "2019": 31,
+        "2020": 119,
+        "2021": 248,
+        "2022": 116,
+        "2023": 94,
+        "2024": 38,
+        "2025": 15
+      },
+      "top_hashtags": [
+        [
+          "hookem",
+          59
+        ],
+        [
+          "saveq",
+          27
+        ],
+        [
+          "thunderup",
+          24
+        ],
+        [
+          "hookemhorns",
+          14
+        ],
+        [
+          "fantasyfootball",
+          13
+        ],
+        [
+          "cardinalnation",
+          13
+        ],
+        [
+          "chargernation",
+          12
+        ],
+        [
+          "hottytoddy",
+          10
+        ],
+        [
+          "longhornnation",
+          9
+        ],
+        [
+          "titanup",
+          8
+        ],
+        [
+          "clutch",
+          7
+        ],
+        [
+          "blessed",
+          7
+        ],
+        [
+          "entlerfacts",
+          7
+        ],
+        [
+          "stlcards",
+          7
+        ],
+        [
+          "atx",
+          6
+        ],
+        [
+          "yourethebest",
+          6
+        ],
+        [
+          "getmilamonsportscenter",
+          6
+        ],
+        [
+          "fml",
+          5
+        ],
+        [
+          "winning",
+          5
+        ],
+        [
+          "worldseries",
+          5
+        ],
+        [
+          "cardinalsnation",
+          5
+        ],
+        [
+          "realtalk",
+          5
+        ],
+        [
+          "sctop10",
+          5
+        ],
+        [
+          "bleedblue",
+          5
+        ],
+        [
+          "heightsgirlsarefat",
+          5
+        ],
+        [
+          "stlfly",
+          5
+        ],
+        [
+          "cantwait",
+          4
+        ],
+        [
+          "hopoffthewagon",
+          4
+        ],
+        [
+          "fantasyproblems",
+          4
+        ],
+        [
+          "whodatnation",
+          4
+        ],
+        [
+          "hatersgonnahate",
+          4
+        ],
+        [
+          "dynasty",
+          4
+        ],
+        [
+          "getout",
+          4
+        ],
+        [
+          "nodoubt",
+          4
+        ],
+        [
+          "chargerfootball",
+          4
+        ],
+        [
+          "thesethingshappen",
+          4
+        ],
+        [
+          "leggo",
+          3
+        ],
+        [
+          "scrub",
+          3
+        ],
+        [
+          "stlouiscardinals",
+          3
+        ],
+        [
+          "ihatemylife",
+          3
+        ],
+        [
+          "texasforever",
+          3
+        ],
+        [
+          "inlove",
+          3
+        ],
+        [
+          "cardinals",
+          3
+        ],
+        [
+          "ravensnation",
+          3
+        ],
+        [
+          "oops",
+          3
+        ],
+        [
+          "liar",
+          3
+        ],
+        [
+          "themasters",
+          3
+        ],
+        [
+          "not",
+          3
+        ],
+        [
+          "dbu",
+          3
+        ],
+        [
+          "bestteam",
+          3
+        ]
+      ],
+      "top_mentions": [
+        [
+          "dylanmurdock",
+          152
+        ],
+        [
+          "bradysully",
+          143
+        ],
+        [
+          "acast23",
+          114
+        ],
+        [
+          "pameelaann",
+          106
+        ],
+        [
+          "mmangus21",
+          65
+        ],
+        [
+          "maddiestarks",
+          62
+        ],
+        [
+          "espn",
+          61
+        ],
+        [
+          "sportscenter",
+          61
+        ],
+        [
+          "youshoulddokoch",
+          61
+        ],
+        [
+          "goddamnliberals",
+          59
+        ],
+        [
+          "chubbywhiteboi",
+          54
+        ],
+        [
+          "jennawidell",
+          53
+        ],
+        [
+          "someofmyfat",
+          51
+        ],
+        [
+          "samvannest",
+          50
+        ],
+        [
+          "_marshall_35",
+          43
+        ],
+        [
+          "austin_humphrey",
+          38
+        ],
+        [
+          "jordann_taylorr",
+          37
+        ],
+        [
+          "cardinals",
+          36
+        ],
+        [
+          "rachelclarke111",
+          35
+        ],
+        [
+          "courtneyrcain",
+          35
+        ],
+        [
+          "baileyyjones",
+          33
+        ],
+        [
+          "eharlos",
+          31
+        ],
+        [
+          "haleybarham",
+          30
+        ],
+        [
+          "laurencarrol",
+          30
+        ],
+        [
+          "hlutto",
+          29
+        ],
+        [
+          "gberne24",
+          28
+        ],
+        [
+          "hannahhodo",
+          28
+        ],
+        [
+          "titans",
+          28
+        ],
+        [
+          "kdtrey5",
+          26
+        ],
+        [
+          "evan_talbot",
+          25
+        ],
+        [
+          "fndukwejr",
+          24
+        ],
+        [
+          "cheyanneeep",
+          22
+        ],
+        [
+          "jessicaaparrott",
+          22
+        ],
+        [
+          "sadienohrn",
+          22
+        ],
+        [
+          "daniijlozano",
+          22
+        ],
+        [
+          "joeyenglish2",
+          22
+        ],
+        [
+          "travismiller34",
+          22
+        ],
+        [
+          "entlerjared",
+          22
+        ],
+        [
+          "lenzycolquitt",
+          21
+        ],
+        [
+          "bigballerbern",
+          21
+        ],
+        [
+          "em_perr",
+          20
+        ],
+        [
+          "kmacyomamma",
+          20
+        ],
+        [
+          "uberfacts",
+          19
+        ],
+        [
+          "poeske_kyle10",
+          19
+        ],
+        [
+          "morgantiller",
+          18
+        ],
+        [
+          "coreywood6",
+          18
+        ],
+        [
+          "kieradominguez8",
+          18
+        ],
+        [
+          "joestrong24",
+          18
+        ],
+        [
+          "texasbaseball",
+          18
+        ],
+        [
+          "jamorant",
+          17
+        ]
+      ],
+      "known_limits": [
+        "X archives usually omit full public engagement history after export time.",
+        "Replies are preserved by IDs, but full external thread context requires live lookup or another archive row.",
+        "Deleted tweets only appear if X included them in the archive slice."
+      ]
+    },
+    {
+      "source_path": "/Users/AustinHumphrey/Downloads/Twitter:X Metadata/twitter:X Metadata -2026-07-06.zip",
+      "generated_at_utc": "2026-07-06T22:43:09.330246Z",
+      "timezone": "America/Chicago",
+      "account": {
+        "account_id": "1542810769905139713",
+        "handle": "TXTrickWhooper",
+        "display_name": "Stallion of the Steroid Era",
+        "created_at_utc": "2022-07-01T10:02:22.501000Z",
+        "created_at_local": "2022-07-01T05:02:22.501000-05:00",
+        "bio": "Ladies love the Longhorn #LegalizeRoids - Artificial Intelligence & Machine Learning @UTexasMcCombs",
+        "has_account_js": true,
+        "has_profile_js": true,
+        "account_entry": "data/account.js",
+        "profile_entry": "data/profile.js"
+      },
+      "counts": {
+        "tweets_cleaned": 1540,
+        "duplicates_removed": 0,
+        "originals_or_quote_posts": 247,
+        "replies": 1293,
+        "self_thread_replies": 65,
+        "deleted_tweets": 4,
+        "threads_or_conversations": 1475
+      },
+      "date_range": {
+        "first_utc": "2022-07-02T01:58:29Z",
+        "last_utc": "2026-07-06T20:45:12Z"
+      },
+      "files_found": {
+        "account": [
+          "data/account.js"
+        ],
+        "profile": [
+          "data/profile.js"
+        ],
+        "tweets": [
+          "data/community-tweet.js",
+          "data/tweets.js"
+        ],
+        "deletedTweets": [
+          "data/deleted-tweets.js"
+        ],
+        "noteTweets": [
+          "data/note-tweet.js"
+        ],
+        "likes": [
+          "data/like.js"
+        ],
+        "directMessages": [
+          "data/direct-messages-group.js",
+          "data/direct-messages.js"
+        ]
+      },
+      "years": {
+        "2022": 22,
+        "2023": 111,
+        "2024": 720,
+        "2025": 327,
+        "2026": 360
+      },
+      "top_hashtags": [
+        [
+          "hookem",
+          9
+        ],
+        [
+          "ctespn",
+          7
+        ],
+        [
+          "sports",
+          5
+        ],
+        [
+          "cfb",
+          3
+        ],
+        [
+          "baseball",
+          2
+        ],
+        [
+          "stlcards",
+          2
+        ],
+        [
+          "zachbryan",
+          2
+        ],
+        [
+          "cfbplayoff",
+          2
+        ],
+        [
+          "titanup",
+          2
+        ],
+        [
+          "thegreatamericanbarscene",
+          2
+        ],
+        [
+          "openingday",
+          2
+        ],
+        [
+          "mlbtheshow22",
+          1
+        ],
+        [
+          "mlbtheshow",
+          1
+        ],
+        [
+          "rolltide",
+          1
+        ],
+        [
+          "texasvsalabama",
+          1
+        ],
+        [
+          "football",
+          1
+        ],
+        [
+          "newprofilepic",
+          1
+        ],
+        [
+          "michiganmanifesto",
+          1
+        ],
+        [
+          "collegegameday",
+          1
+        ],
+        [
+          "sec",
+          1
+        ],
+        [
+          "texas",
+          1
+        ],
+        [
+          "oregon",
+          1
+        ],
+        [
+          "country",
+          1
+        ],
+        [
+          "music",
+          1
+        ],
+        [
+          "funny",
+          1
+        ],
+        [
+          "stonedatthebar",
+          1
+        ],
+        [
+          "kittytwitter",
+          1
+        ],
+        [
+          "animals",
+          1
+        ],
+        [
+          "cute",
+          1
+        ],
+        [
+          "thelionqueen",
+          1
+        ],
+        [
+          "titans",
+          1
+        ],
+        [
+          "nye",
+          1
+        ],
+        [
+          "ripking",
+          1
+        ],
+        [
+          "hellnahhoe",
+          1
+        ],
+        [
+          "kendrickdiss",
+          1
+        ],
+        [
+          "meethegrahams",
+          1
+        ],
+        [
+          "drake",
+          1
+        ],
+        [
+          "gashousegang",
+          1
+        ],
+        [
+          "willlevis",
+          1
+        ],
+        [
+          "giaduddy",
+          1
+        ],
+        [
+          "cigsinside",
+          1
+        ],
+        [
+          "gigem",
+          1
+        ],
+        [
+          "cws",
+          1
+        ],
+        [
+          "collegeworldseries",
+          1
+        ],
+        [
+          "memphis",
+          1
+        ],
+        [
+          "ai",
+          1
+        ],
+        [
+          "spacex",
+          1
+        ],
+        [
+          "seti",
+          1
+        ],
+        [
+          "futureofai",
+          1
+        ],
+        [
+          "aliens",
+          1
+        ]
+      ],
+      "top_mentions": [
+        [
+          "grok",
+          122
+        ],
+        [
+          "ab84",
+          39
+        ],
+        [
+          "mlbtheshow",
+          31
+        ],
+        [
+          "nut_history",
+          25
+        ],
+        [
+          "fsumollz",
+          24
+        ],
+        [
+          "claudeai",
+          24
+        ],
+        [
+          "talkinbaseball_",
+          23
+        ],
+        [
+          "mlbtheshowzone",
+          22
+        ],
+        [
+          "kodean17",
+          18
+        ],
+        [
+          "guhnrr__",
+          18
+        ],
+        [
+          "zachlanebryan",
+          17
+        ],
+        [
+          "barstoolsports",
+          16
+        ],
+        [
+          "bcherny",
+          16
+        ],
+        [
+          "texasbaseball",
+          15
+        ],
+        [
+          "rileyreidx3",
+          15
+        ],
+        [
+          "bob4florida",
+          13
+        ],
+        [
+          "linkofsunshine",
+          13
+        ],
+        [
+          "claudecodelog",
+          13
+        ],
+        [
+          "anthropicai",
+          12
+        ],
+        [
+          "mahaaaay",
+          12
+        ],
+        [
+          "biggameboomer",
+          11
+        ],
+        [
+          "see_hendo",
+          11
+        ],
+        [
+          "bschaeffer12",
+          11
+        ],
+        [
+          "everythingrebs",
+          11
+        ],
+        [
+          "texasfootball",
+          10
+        ],
+        [
+          "_willcompton",
+          10
+        ],
+        [
+          "fdsportsbook",
+          10
+        ],
+        [
+          "thedunkcentral",
+          9
+        ],
+        [
+          "kourtneyinhell",
+          9
+        ],
+        [
+          "1mizzou16693",
+          9
+        ],
+        [
+          "theskippersview",
+          9
+        ],
+        [
+          "dataman422",
+          9
+        ],
+        [
+          "mickmami",
+          9
+        ],
+        [
+          "esjesjesj",
+          9
+        ],
+        [
+          "t2ohrd_blvd",
+          9
+        ],
+        [
+          "missminayoon",
+          9
+        ],
+        [
+          "keokiknows",
+          9
+        ],
+        [
+          "shadydoorags",
+          9
+        ],
+        [
+          "dailyloud",
+          8
+        ],
+        [
+          "nfl",
+          8
+        ],
+        [
+          "titans",
+          8
+        ],
+        [
+          "txtrickwhooper",
+          8
+        ],
+        [
+          "bymaxc",
+          8
+        ],
+        [
+          "cfbonfox",
+          7
+        ],
+        [
+          "stephenasmith",
+          7
+        ],
+        [
+          "patmcafeeshow",
+          7
+        ],
+        [
+          "nfl_dovkleiman",
+          7
+        ],
+        [
+          "kirawontmiss",
+          7
+        ],
+        [
+          "coltweezus",
+          7
+        ],
+        [
+          "texanfirst33",
+          7
+        ]
+      ],
+      "known_limits": [
+        "X archives usually omit full public engagement history after export time.",
+        "Replies are preserved by IDs, but full external thread context requires live lookup or another archive row.",
+        "Deleted tweets only appear if X included them in the archive slice."
+      ]
+    }
+  ]
+}
