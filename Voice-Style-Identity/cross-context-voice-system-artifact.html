@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Austin Cross-Context Voice System</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <style>
+    :root {
+      --paper: #f6f3ec;
+      --ink: #171512;
+      --muted: #635d53;
+      --line: #d9d0c1;
+      --panel: #fffaf1;
+      --panel-2: #ece3d3;
+      --accent: #b8422a;
+      --accent-2: #2f6b5f;
+      --dark: #24201b;
+      --blue: #243f61;
+      --shadow: 0 18px 50px rgba(37, 31, 23, 0.14);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    a { color: inherit; }
+    .shell {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+    }
+    aside {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      padding: 28px 22px;
+      background: var(--dark);
+      color: #f9efe0;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      overflow: auto;
+    }
+    aside h1 {
+      margin: 0 0 10px;
+      font-size: 30px;
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+    aside p {
+      color: #cabda8;
+      font-size: 14px;
+      margin: 0 0 22px;
+    }
+    .nav {
+      display: grid;
+      gap: 8px;
+      margin-top: 18px;
+    }
+    .nav button {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+      color: #f9efe0;
+      border-radius: 8px;
+      padding: 10px 12px;
+      text-align: left;
+      cursor: pointer;
+      font: inherit;
+      font-size: 14px;
+    }
+    .nav button.active {
+      background: #f9efe0;
+      color: var(--dark);
+      border-color: #f9efe0;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid rgba(255,255,255,0.14);
+      color: #f1dcc4;
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: 12px;
+      margin: 4px 5px 0 0;
+      white-space: nowrap;
+    }
+    main {
+      padding: 44px clamp(22px, 5vw, 72px) 72px;
+    }
+    .hero {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+      align-items: stretch;
+      margin-bottom: 34px;
+    }
+    .hero-copy {
+      padding: clamp(30px, 5vw, 56px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: 8px;
+    }
+    .hero h2 {
+      margin: 0;
+      font-size: clamp(40px, 7vw, 86px);
+      line-height: 0.93;
+      letter-spacing: 0;
+      max-width: 920px;
+    }
+    .hero .lede {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 19px;
+      margin: 22px 0 0;
+    }
+    .proof {
+      display: grid;
+      gap: 12px;
+    }
+    .metric {
+      background: var(--dark);
+      color: #f9efe0;
+      border-radius: 8px;
+      padding: 18px;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .metric strong {
+      display: block;
+      font-size: 32px;
+      line-height: 1;
+    }
+    .metric span {
+      color: #cbbca6;
+      font-size: 13px;
+    }
+    section {
+      margin: 34px 0;
+      scroll-margin-top: 24px;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: end;
+      padding-bottom: 13px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 18px;
+    }
+    h3 {
+      margin: 0;
+      font-size: clamp(26px, 3vw, 42px);
+      line-height: 1.05;
+    }
+    .section-note {
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0;
+      font-size: 15px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+    }
+    .card h4 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      line-height: 1.15;
+    }
+    .card p, .card li {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .card ul {
+      padding-left: 18px;
+      margin: 10px 0 0;
+    }
+    .router {
+      display: grid;
+      gap: 12px;
+    }
+    .router-row {
+      display: grid;
+      grid-template-columns: 210px minmax(0, 1fr) 150px;
+      gap: 14px;
+      align-items: start;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .router-row h4 {
+      margin: 0;
+      font-size: 17px;
+    }
+    .router-row p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .status {
+      justify-self: end;
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: 12px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .status.verified { background: #e4efe9; color: #21584d; border-color: #bdd8cf; }
+    .status.reasoned { background: #f4ead1; color: #76561c; border-color: #e0c88f; }
+    .status.open { background: #f3dddd; color: #8a302d; border-color: #dfb1ad; }
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 18px;
+      align-items: start;
+    }
+    .ladder {
+      display: grid;
+      gap: 10px;
+    }
+    .line {
+      border-left: 4px solid var(--accent);
+      background: var(--panel);
+      border-radius: 7px;
+      padding: 13px 15px;
+    }
+    .line strong {
+      display: block;
+      font-size: 13px;
+      color: var(--accent);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .quote {
+      background: #24201b;
+      color: #f9efe0;
+      border-radius: 8px;
+      padding: 18px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+    .quote small {
+      display: block;
+      color: #cbbca6;
+      margin-top: 10px;
+      font-size: 12px;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .controls button {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 8px 11px;
+      font: inherit;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .controls button.active {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+    .footer {
+      margin-top: 52px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    @media (max-width: 980px) {
+      .shell { grid-template-columns: 1fr; }
+      aside {
+        position: relative;
+        height: auto;
+      }
+      .hero, .split { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr 1fr; }
+      .router-row { grid-template-columns: 1fr; }
+      .status { justify-self: start; }
+    }
+    @media (max-width: 640px) {
+      main { padding: 24px 14px 42px; }
+      .grid { grid-template-columns: 1fr; }
+      .hero-copy { padding: 24px; }
+      .hero h2 { font-size: 42px; }
+      .section-head { display: block; }
+      .section-note { margin-top: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    const evidence = [
+      { label: "Official X rows", value: "6,300", note: "5,437 authored voice rows across @a_hump20 and @TXTrickWhooper." },
+      { label: "Snapchat chat rows", value: "2,417", note: "1,052 sent text rows, 208 conversations, raw private text kept local-only." },
+      { label: "Writing archive", value: "50+", note: "Human-authored coursework and professional documents analyzed across ages 17-25." },
+      { label: "iMessage", value: "Open", note: "macOS still blocks Messages database reads, so Apple thread context remains unresolved." }
+    ];
+
+    const constants = [
+      ["Specific first", "A named object, place, person, stat, team, or tool carries the point."],
+      ["System behind event", "The surface event almost always points at incentives, institutions, product choices, or a larger causal chain."],
+      ["Verdict early", "Austin enters at the claim and explains after the reader has something to hold."],
+      ["Affection plus critique", "The voice can love a team, place, tool, or person while roasting the failure mode."],
+      ["Scale mismatch", "Small inconvenience becomes civic emergency, rights violation, or sports malpractice."],
+      ["Self-own pressure valve", "Confidence lands better when self-awareness is allowed into the room."],
+      ["Private contraction", "In private chat, the same voice compresses into quick asks, shared context, and short reactions."]
+    ];
+
+    const privateSignals = [
+      ["Date range", "2016-03-24 to 2026-07-04", "Snapchat metadata export, UTC timestamps."],
+      ["Median sent private text", "5 words", "75th percentile is 8 words. 90th percentile is 12."],
+      ["Direct ask / question rate", "34.41 per 100", "The private register asks and coordinates more than it performs."],
+      ["Logistics rate", "17.87 per 100", "Where, when, time, send, call, plans, coming, and similar markers."],
+      ["Laughter rate", "12.17 per 100", "Humor shows up as immediate reaction, not always a standalone public bit."],
+      ["Affection rate", "5.23 per 100", "Warmth exists, but the evidence supports brief specific attention over polished paragraphs."]
+    ];
+
+    const contexts = [
+      {
+        name: "Public long-form analysis",
+        status: "verified",
+        use: "Essays, sports analysis, strategy, research, public thought leadership.",
+        shape: "Claim early, explain the system, show who benefits and who pays, place evidence where the claim needs it, close with a forward reframe."
+      },
+      {
+        name: "Public brand and platform prose",
+        status: "verified",
+        use: "About pages, BSI copy, portfolio copy, product prose.",
+        shape: "Vision over grievance, concrete proof over positioning language, mission earned by work. Do not revive stale multi-sport BSI framing."
+      },
+      {
+        name: "X / social commentary",
+        status: "verified",
+        use: "Tweets, replies, captions, commentary bits.",
+        shape: "Concrete noun, blunt verdict, absurd escalation, stop. Humor works by refusing to explain itself."
+      },
+      {
+        name: "One-on-one AI partnership",
+        status: "verified",
+        use: "Codex and Claude collaboration, writing sessions, debugging, product judgment.",
+        shape: "Start with outcome, tag known/unknown/open, challenge weak premises, translate plumbing into what a user sees."
+      },
+      {
+        name: "Friend-group / group chat",
+        status: "verified",
+        use: "Casual replies, sports arguments, quick jokes, coordination with people who know the shorthand.",
+        shape: "Faster than public social, less polished, teasing through specifics, self-own when the jab might land too hard. Snapchat verifies the compression; iMessage is still open for true group-thread behavior."
+      },
+      {
+        name: "Warm one-on-one / flirting",
+        status: "verified",
+        use: "Playful private messages and affectionate banter.",
+        shape: "Specific attention, playful challenge, confidence softened by self-awareness, low-pressure invitation. Keep it short; the private evidence does not want a speech."
+      },
+      {
+        name: "Basic coordination",
+        status: "verified",
+        use: "Scheduling, quick asks, task follow-up.",
+        shape: "Direct ask, one useful detail, no ceremony. Snapchat shows 34.41 question/direct-ask markers and 17.87 logistics markers per 100 sent texts."
+      },
+      {
+        name: "Repair or vulnerable conversation",
+        status: "reasoned",
+        use: "Apologies, conflict repair, direct emotional communication.",
+        shape: "Name the issue, own the specific action, explain mechanism without excuse, state next behavior."
+      }
+    ];
+
+    const ladder = [
+      ["Public platform", "The failure was not the outage by itself. It was the absence of a recovery path when the user had already committed time to the workflow."],
+      ["BSI / product", "A scouting platform does not earn trust by being right when everything is clean. It earns trust when the data path breaks and the user still knows what happened."],
+      ["Codex partnership", "The tool failed right where the work needed proof. We need a fallback path, not another status message."],
+      ["X / social", "Incredible work from the tool deciding to find religion mid-ship."],
+      ["Friend group", "Computer picked the funniest possible time to become useless."],
+      ["Warm private", "I was trying to be impressive and the laptop immediately filed a formal objection."]
+    ];
+
+    const principles = [
+      ["Do not make every context sound like X.", "The Waffle House voice is real. It is not the voice for a legal memo, a grieving friend, or a customer-facing incident report."],
+      ["Do not make every public doc sound like grad school.", "The systemic lens matters, but public product prose still needs speed, proof, and breathing room."],
+      ["Do not remove the edge when edge is timing.", "Some jokes die when sanded down. Keep the sharpness when the venue can hold it."],
+      ["Do not add edge when the job is trust.", "High-stakes, professional, or vulnerable contexts need clarity before performance."],
+      ["Do not confuse voice with favorite words.", "A sentence can say Waffle House, Longhorns, and Grok and still not think like Austin."]
+    ];
+
+    function statusClass(status) {
+      return status === "verified" ? "verified" : status === "reasoned" ? "reasoned" : "open";
+    }
+
+    function App() {
+      const [active, setActive] = React.useState("overview");
+      const sections = [
+        ["overview", "Overview"],
+        ["evidence", "Evidence"],
+        ["private", "Private Signals"],
+        ["constants", "Constants"],
+        ["router", "Context Router"],
+        ["inner", "Inner Monologue"],
+        ["ladder", "Register Ladder"],
+        ["rules", "Anti-Flattening"]
+      ];
+      const jump = (id) => {
+        setActive(id);
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      };
+      return (
+        React.createElement("div", { className: "shell" },
+          React.createElement("aside", null,
+            React.createElement("h1", null, "Austin Voice System"),
+            React.createElement("p", null, "A cross-context router for public prose, social jokes, one-on-one collaboration, group chat, warmth, repair, and basic communication."),
+            React.createElement("div", null,
+              React.createElement("span", { className: "tag" }, "[verified] X + writing archive"),
+              React.createElement("span", { className: "tag" }, "[verified] Snapchat private signals"),
+              React.createElement("span", { className: "tag" }, "[open] iMessage access")
+            ),
+            React.createElement("div", { className: "nav" },
+              sections.map(([id, label]) => React.createElement("button", {
+                key: id,
+                className: active === id ? "active" : "",
+                onClick: () => jump(id)
+              }, label))
+            )
+          ),
+          React.createElement("main", null,
+            React.createElement("section", { id: "overview", className: "hero" },
+              React.createElement("div", { className: "hero-copy" },
+                React.createElement("h2", null, "One voice. Multiple rooms."),
+                React.createElement("p", { className: "lede" }, "The point is not to mimic Twitter everywhere. The point is to know which Austin shows up in which room, what stays constant underneath, and how an AI partner should mirror the thinking instead of copying the loudest surface.")
+              ),
+              React.createElement("div", { className: "proof" },
+                evidence.map((item) => React.createElement("div", { className: "metric", key: item.label },
+                  React.createElement("span", null, item.label),
+                  React.createElement("strong", null, item.value),
+                  React.createElement("span", null, item.note)
+                ))
+              )
+            ),
+            React.createElement("section", { id: "evidence" },
+              React.createElement("div", { className: "section-head" },
+                React.createElement("h3", null, "Evidence Boundary"),
+                React.createElement("p", { className: "section-note" }, "Strong public and long-form evidence is already in the repo. Private-message evidence is explicitly not proven yet.")
+              ),
+              React.createElement("div", { className: "grid" },
+                React.createElement("div", { className: "card" },
+                  React.createElement("h4", null, "[verified] X archive"),
+                  React.createElement("p", null, "6,300 official rows, 5,437 authored voice rows, 2011-2026. Best evidence for public social voice, replies, jokes, and persona.")
+                ),
+                React.createElement("div", { className: "card" },
+                  React.createElement("h4", null, "[verified] Writing archive"),
+                  React.createElement("p", null, "Coursework, sports writing, professional docs, and existing voice files. Best evidence for long-form analytical voice and public platform prose.")
+                ),
+                React.createElement("div", { className: "card" },
+                  React.createElement("h4", null, "[verified] Snapchat export"),
+                  React.createElement("p", null, "2,417 chat rows, 1,052 sent text rows, 208 conversations, 2016-2026. Best evidence for private compression, logistics, quick reactions, and warm short-form patterns.")
+                ),
+                React.createElement("div", { className: "card" },
+                  React.createElement("h4", null, "[open] iMessage"),
+                  React.createElement("p", null, "macOS privacy still blocks the Messages database. Apple-specific reactions, group-thread dynamics, and current iMessage distribution remain open.")
+                )
+              )
+            ),
+            React.createElement("section", { id: "private" },
+              React.createElement("div", { className: "section-head" },
+                React.createElement("h3", null, "Private Signals"),
+                React.createElement("p", { className: "section-note" }, "Snapchat raw message text stays local. The committed artifact uses derived counts and rates.")
+              ),
+              React.createElement("div", { className: "grid" },
+                privateSignals.map(([title, value, note]) => React.createElement("div", { className: "card", key: title },
+                  React.createElement("h4", null, title),
+                  React.createElement("p", { style: { color: "var(--ink)", fontSize: "24px", lineHeight: "1.1", margin: "8px 0" } }, value),
+                  React.createElement("p", null, note)
+                ))
+              )
+            ),
+            React.createElement("section", { id: "constants" },
+              React.createElement("div", { className: "section-head" },
+                React.createElement("h3", null, "Core Constants"),
+                React.createElement("p", { className: "section-note" }, "These patterns survive register shifts. They are the engine under the range.")
+              ),
+              React.createElement("div", { className: "grid" },
+                constants.map(([title, body]) => React.createElement("div", { className: "card", key: title },
+                  React.createElement("h4", null, title),
+                  React.createElement("p", null, body)
+                ))
+              )
+            ),
+            React.createElement("section", { id: "router" },
+              React.createElement("div", { className: "section-head" },
+                React.createElement("h3", null, "Context Router"),
+                React.createElement("p", { className: "section-note" }, "Choose the register from the job, not from a single favorite style.")
+              ),
+              React.createElement("div", { className: "router" },
+                contexts.map((ctx) => React.createElement("div", { className: "router-row", key: ctx.name },
+                  React.createElement("h4", null, ctx.name),
+                  React.createElement("div", null,
+                    React.createElement("p", null, React.createElement("strong", null, "Use: "), ctx.use),
+                    React.createElement("p", { style: { marginTop: "6px" } }, React.createElement("strong", null, "Shape: "), ctx.shape)
+                  ),
+                  React.createElement("span", { className: "status " + statusClass(ctx.status) }, "[" + ctx.status + "]")
+                ))
+              )
+            ),
+            React.createElement("section", { id: "inner" },
+              React.createElement("div", { className: "section-head" },
+                React.createElement("h3", null, "Inner Monologue Model"),
+                React.createElement("p", { className: "section-note" }, "The same thought path can produce an essay, a product decision, or a one-line joke.")
+              ),
+              React.createElement("div", { className: "split" },
+                React.createElement("div", { className: "quote" },
+                  "Concrete thing -> system behind it -> who benefits or pays -> hidden second-order effect -> blunt verdict -> funniest scale mismatch or next move.",
+                  React.createElement("small", null, "[reasoned] synthesized from X plus long-form writing archive")
+                ),
+                React.createElement("div", { className: "card" },
+                  React.createElement("h4", null, "How the AI partner should mirror it"),
+                  React.createElement("ul", null,
+                    React.createElement("li", null, "Start with what is known, what changed, and what is open."),
+                    React.createElement("li", null, "Challenge weak premises instead of smoothing them over."),
+                    React.createElement("li", null, "Use evidence tags so polished guesses do not sound proven."),
+                    React.createElement("li", null, "Keep warmth present, but do not turn companionship into agreement theater.")
+                  )
+                )
+              )
+            ),
+            React.createElement("section", { id: "ladder" },
+              React.createElement("div", { className: "section-head" },
+                React.createElement("h3", null, "Register Ladder"),
+                React.createElement("p", { className: "section-note" }, "Same thought, different room: a tool failed when it mattered.")
+              ),
+              React.createElement("div", { className: "ladder" },
+                ladder.map(([label, body]) => React.createElement("div", { className: "line", key: label },
+                  React.createElement("strong", null, label),
+                  body
+                ))
+              )
+            ),
+            React.createElement("section", { id: "rules" },
+              React.createElement("div", { className: "section-head" },
+                React.createElement("h3", null, "Anti-Flattening Rules"),
+                React.createElement("p", { className: "section-note" }, "Voice synthesis fails when it picks one register and runs it everywhere.")
+              ),
+              React.createElement("div", { className: "grid" },
+                principles.map(([title, body]) => React.createElement("div", { className: "card", key: title },
+                  React.createElement("h4", null, title),
+                  React.createElement("p", null, body)
+                ))
+              )
+            ),
+            React.createElement("div", { className: "footer" },
+              "[verified] Public, analytical, brand, X/social, and Snapchat private-register patterns are backed by current repository evidence. [open] iMessage still needs access before Apple-specific private thread behavior can be treated as proven."
+            )
+          )
+        )
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(App));
+  </script>
+</body>
+</html>

@@ -19,6 +19,8 @@ This skill is the single source of truth for Austin's writing voice, biographica
 
 **Interact:** Peer mode. Start in motion. Challenge with evidence. No sycophancy.
 
+**Context-route:** When Austin asks for range across contexts, private/public communication, friend-group tone, one-on-one voice, social media, flirting, or AI companionship/partnership, load `references/cross-context-communication-system.md` if installed there, otherwise load `cross-context-communication-system.md` from this folder. Do not apply the X/social register everywhere. Snapchat-derived private signals verify the short private-register baseline; iMessage thread behavior is still open until Messages access works.
+
 ## Instruction Hierarchy
 
 1. **Truth over flourish** — do not claim what cannot be supported.
@@ -139,6 +141,21 @@ Core voice stays constant. Register shifts by genre:
 - **Blog/short-form:** Systemic force → who benefits → who loses → tension → open question
 - **Brand/biographical:** Origin material from `references/origin-story.md`, narrative threads woven through voice characteristics, vision over grievance as governing principle
 
+## Cross-Context Routing
+
+Use `cross-context-communication-system.md` when the task is about communication range rather than only polished writing. Its main rule: choose the register from the room.
+
+- Public long-form: systemic lens, evidence at point of need, conclusive reframe.
+- Public platform/brand: vision over grievance, concrete proof, no stale BSI multi-sport framing.
+- X/social: concrete noun, blunt verdict, absurd escalation, stop.
+- AI partnership: outcome first, evidence tags, known/unknown/open, no sycophancy.
+- Friend group: faster, more teasing, more shorthand, less public-persona polish. Snapchat verifies private compression; iMessage is still needed for true group-thread behavior.
+- Warm/flirty private: specific attention, playful challenge, low pressure, brief lines over polished paragraphs.
+- Basic coordination: direct ask, one useful detail, no ceremony. Snapchat shows high question/direct-ask and logistics marker density.
+- Repair/vulnerable: own the specific action, explain mechanism without excuse, state next behavior. Repair style remains partly reasoned because Snapchat repair markers are sparse.
+
+Snapchat private-register evidence is verified from a privacy-safe derived summary: 2,417 chat rows, 1,052 sent text rows, 208 conversations, 2016-2026, median sent text 5 words. Raw private text is not part of this repository. iMessage remains open because macOS privacy blocks database reads.
+
 ## Quick Calibration (pass before sending)
 
 1. Does the first sentence do work, or warm up?
@@ -187,6 +204,7 @@ Do not flag these. Just fix them.
 - `references/writing-system.md` — Operational writing system with self-check rubric, domain calibration, and exemplar transformations
 - `references/professional-context.md` — Resume, credentials, technical stack, and career history for grounding professional content
 - `references/origin-story.md` — Biographical narrative, BSI origin, Texas covenant, family legacy, and brand storytelling material
+- `cross-context-communication-system.md` — Context router for public/private/social/one-on-one communication range
 - `assets/rhythm-cadence-analysis.jsx` — Interactive rhythm visualization component
 - `assets/stylometric-fingerprint.jsx` — Stylometric comparison component
 

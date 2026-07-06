@@ -1,0 +1,651 @@
+{
+  "auxiliary": {
+    "account_export": {
+      "display_name_changes": 2,
+      "download_reports": 1
+    },
+    "friends": {
+      "Blocked Users": 18,
+      "Deleted Friends": 179,
+      "Friend Requests Sent": 578,
+      "Friends": 853,
+      "Hidden Friend Suggestions": 163,
+      "Ignored Snapchatters": 76,
+      "Pending Requests": 0,
+      "Shortcuts": 0
+    },
+    "memories": {
+      "first_utc": "2016-07-31T14:44:32Z",
+      "last_utc": "2026-06-18T03:12:07Z",
+      "media_types": {
+        "Image": 524,
+        "Video": 621
+      },
+      "saved_media": 1145
+    },
+    "snaps": {
+      "media_types": {
+        "IMAGE": 74,
+        "VIDEO": 60
+      },
+      "received_rows": 25,
+      "rows": 134,
+      "sent_rows": 109
+    },
+    "stories": {
+      "total_story_replies": 0,
+      "total_story_views": 316,
+      "your_story_rows": 72
+    }
+  },
+  "by_year": {
+    "2016": {
+      "marker_counts_sent": {
+        "logistics": 1,
+        "question": 2
+      },
+      "median_sent_words": 8,
+      "rows": 8,
+      "sent_rows": 2,
+      "sent_text_rows": 2,
+      "text_rows": 8
+    },
+    "2017": {
+      "marker_counts_sent": {},
+      "median_sent_words": null,
+      "rows": 23,
+      "sent_rows": 0,
+      "sent_text_rows": 0,
+      "text_rows": 19
+    },
+    "2018": {
+      "marker_counts_sent": {
+        "affection": 3,
+        "laughter": 17,
+        "logistics": 31,
+        "profanity": 1,
+        "question": 52,
+        "repair": 2,
+        "sports_place": 3
+      },
+      "median_sent_words": 7,
+      "rows": 423,
+      "sent_rows": 125,
+      "sent_text_rows": 124,
+      "text_rows": 389
+    },
+    "2019": {
+      "marker_counts_sent": {
+        "affection": 9,
+        "laughter": 32,
+        "logistics": 51,
+        "question": 75,
+        "repair": 1,
+        "sports_place": 1
+      },
+      "median_sent_words": 5,
+      "rows": 447,
+      "sent_rows": 219,
+      "sent_text_rows": 215,
+      "text_rows": 405
+    },
+    "2020": {
+      "marker_counts_sent": {
+        "affection": 16,
+        "laughter": 28,
+        "logistics": 41,
+        "profanity": 9,
+        "question": 69,
+        "sports_place": 6
+      },
+      "median_sent_words": 6,
+      "rows": 407,
+      "sent_rows": 230,
+      "sent_text_rows": 224,
+      "text_rows": 380
+    },
+    "2021": {
+      "marker_counts_sent": {
+        "affection": 6,
+        "laughter": 12,
+        "logistics": 17,
+        "profanity": 2,
+        "question": 28,
+        "sports_place": 4
+      },
+      "median_sent_words": 5,
+      "rows": 210,
+      "sent_rows": 107,
+      "sent_text_rows": 99,
+      "text_rows": 170
+    },
+    "2022": {
+      "marker_counts_sent": {
+        "affection": 3,
+        "laughter": 13,
+        "logistics": 14,
+        "profanity": 4,
+        "question": 38,
+        "sports_place": 6
+      },
+      "median_sent_words": 5,
+      "rows": 255,
+      "sent_rows": 128,
+      "sent_text_rows": 120,
+      "text_rows": 231
+    },
+    "2023": {
+      "marker_counts_sent": {
+        "affection": 3,
+        "laughter": 7,
+        "logistics": 9,
+        "profanity": 5,
+        "question": 18
+      },
+      "median_sent_words": 5,
+      "rows": 160,
+      "sent_rows": 78,
+      "sent_text_rows": 72,
+      "text_rows": 133
+    },
+    "2024": {
+      "marker_counts_sent": {
+        "affection": 5,
+        "laughter": 10,
+        "logistics": 12,
+        "profanity": 2,
+        "question": 30,
+        "sports_place": 4
+      },
+      "median_sent_words": 5,
+      "rows": 161,
+      "sent_rows": 93,
+      "sent_text_rows": 79,
+      "text_rows": 129
+    },
+    "2025": {
+      "marker_counts_sent": {
+        "affection": 7,
+        "laughter": 5,
+        "logistics": 9,
+        "profanity": 3,
+        "question": 33,
+        "sports_place": 2
+      },
+      "median_sent_words": 5,
+      "rows": 174,
+      "sent_rows": 97,
+      "sent_text_rows": 88,
+      "text_rows": 162
+    },
+    "2026": {
+      "marker_counts_sent": {
+        "affection": 3,
+        "laughter": 4,
+        "logistics": 3,
+        "question": 17
+      },
+      "median_sent_words": 5,
+      "rows": 149,
+      "sent_rows": 60,
+      "sent_text_rows": 29,
+      "text_rows": 80
+    }
+  },
+  "chat": {
+    "chat_date_range_utc": {
+      "first": "2016-03-24T20:21:29Z",
+      "last": "2026-07-04T18:16:55Z"
+    },
+    "marker_by_year": {
+      "2016": {
+        "laughter": 1,
+        "logistics": 1,
+        "profanity": 1,
+        "question": 4
+      },
+      "2017": {
+        "laughter": 1,
+        "logistics": 1,
+        "question": 3,
+        "repair": 2,
+        "sports_place": 1
+      },
+      "2018": {
+        "affection": 14,
+        "laughter": 44,
+        "logistics": 62,
+        "profanity": 10,
+        "question": 114,
+        "repair": 4,
+        "sports_place": 6
+      },
+      "2019": {
+        "affection": 16,
+        "laughter": 78,
+        "logistics": 80,
+        "profanity": 4,
+        "question": 119,
+        "repair": 7,
+        "sports_place": 2
+      },
+      "2020": {
+        "affection": 28,
+        "laughter": 51,
+        "logistics": 62,
+        "profanity": 14,
+        "question": 115,
+        "repair": 1,
+        "sports_place": 9
+      },
+      "2021": {
+        "affection": 11,
+        "laughter": 19,
+        "logistics": 26,
+        "profanity": 4,
+        "question": 45,
+        "repair": 1,
+        "sports_place": 9
+      },
+      "2022": {
+        "affection": 7,
+        "laughter": 31,
+        "logistics": 29,
+        "mock_scale": 1,
+        "profanity": 7,
+        "question": 71,
+        "repair": 1,
+        "sports_place": 10
+      },
+      "2023": {
+        "affection": 8,
+        "laughter": 17,
+        "logistics": 15,
+        "profanity": 8,
+        "question": 28,
+        "repair": 1,
+        "sports_place": 2
+      },
+      "2024": {
+        "affection": 6,
+        "laughter": 12,
+        "logistics": 14,
+        "profanity": 4,
+        "question": 40,
+        "repair": 1,
+        "sports_place": 4
+      },
+      "2025": {
+        "affection": 15,
+        "laughter": 8,
+        "logistics": 17,
+        "profanity": 3,
+        "question": 56,
+        "sports_place": 2
+      },
+      "2026": {
+        "affection": 5,
+        "laughter": 16,
+        "logistics": 7,
+        "profanity": 1,
+        "question": 38,
+        "sports_place": 1
+      }
+    },
+    "marker_counts": {
+      "affection": 110,
+      "laughter": 278,
+      "logistics": 314,
+      "mock_scale": 1,
+      "profanity": 56,
+      "question": 633,
+      "repair": 18,
+      "sports_place": 46
+    },
+    "marker_rates_per_100_sent_texts": {
+      "affection": 5.23,
+      "laughter": 12.17,
+      "logistics": 17.87,
+      "profanity": 2.47,
+      "question": 34.41,
+      "repair": 0.29,
+      "sports_place": 2.47
+    },
+    "message_counts": {
+      "all_chat_rows": 2417,
+      "received_rows": 1278,
+      "received_text_rows": 1054,
+      "sent_rows": 1139,
+      "sent_share_pct": 47.12,
+      "sent_text_rows": 1052,
+      "text_rows": 2106,
+      "text_share_pct": 87.13
+    },
+    "sent_date_range_utc": {
+      "first": "2016-03-24T20:39:46Z",
+      "last": "2026-07-04T18:16:55Z"
+    },
+    "sent_marker_counts": {
+      "affection": 55,
+      "laughter": 128,
+      "logistics": 188,
+      "profanity": 26,
+      "question": 362,
+      "repair": 3,
+      "sports_place": 26
+    },
+    "word_count": {
+      "all_text_median": 5,
+      "all_text_p75": 8,
+      "sent_median": 5,
+      "sent_p75": 8,
+      "sent_p90": 12
+    }
+  },
+  "contacts": {
+    "conversation_count": 208,
+    "long_tail": {
+      "fifty_or_more_rows": 10,
+      "five_or_fewer_rows": 130,
+      "one_row_conversations": 67
+    },
+    "top_conversations_anonymized": [
+      {
+        "contact_label": "contact_001",
+        "first_utc": "2017-11-07T19:02:38Z",
+        "last_utc": "2023-11-03T20:43:03Z",
+        "rows": 261,
+        "sent_marker_counts": {
+          "affection": 1,
+          "logistics": 1,
+          "profanity": 1
+        },
+        "sent_rows": 12,
+        "sent_text_rows": 8,
+        "text_rows": 205
+      },
+      {
+        "contact_label": "contact_002",
+        "first_utc": "2018-08-07T05:15:50Z",
+        "last_utc": "2019-03-08T03:23:25Z",
+        "rows": 126,
+        "sent_marker_counts": {
+          "laughter": 13,
+          "logistics": 17,
+          "profanity": 1,
+          "question": 35,
+          "repair": 1
+        },
+        "sent_rows": 72,
+        "sent_text_rows": 72,
+        "text_rows": 126
+      },
+      {
+        "contact_label": "contact_003",
+        "first_utc": "2025-11-06T09:50:49Z",
+        "last_utc": "2025-11-07T04:17:08Z",
+        "rows": 117,
+        "sent_marker_counts": {
+          "affection": 4,
+          "laughter": 3,
+          "logistics": 5,
+          "profanity": 1,
+          "question": 22
+        },
+        "sent_rows": 60,
+        "sent_text_rows": 57,
+        "text_rows": 114
+      },
+      {
+        "contact_label": "contact_004",
+        "first_utc": "2017-11-05T16:27:02Z",
+        "last_utc": "2023-11-09T00:04:45Z",
+        "rows": 113,
+        "sent_marker_counts": {
+          "question": 1
+        },
+        "sent_rows": 2,
+        "sent_text_rows": 1,
+        "text_rows": 70
+      },
+      {
+        "contact_label": "contact_005",
+        "first_utc": "2019-03-07T11:20:59Z",
+        "last_utc": "2019-04-26T14:51:38Z",
+        "rows": 108,
+        "sent_marker_counts": {
+          "affection": 1,
+          "laughter": 12,
+          "logistics": 19,
+          "question": 24,
+          "sports_place": 1
+        },
+        "sent_rows": 60,
+        "sent_text_rows": 60,
+        "text_rows": 108
+      },
+      {
+        "contact_label": "contact_006",
+        "first_utc": "2019-08-19T04:27:02Z",
+        "last_utc": "2020-10-27T21:30:38Z",
+        "rows": 88,
+        "sent_marker_counts": {
+          "affection": 1,
+          "laughter": 6,
+          "logistics": 8,
+          "profanity": 1,
+          "question": 17,
+          "sports_place": 1
+        },
+        "sent_rows": 51,
+        "sent_text_rows": 51,
+        "text_rows": 88
+      },
+      {
+        "contact_label": "contact_007",
+        "first_utc": "2018-10-20T04:26:01Z",
+        "last_utc": "2021-07-18T15:01:42Z",
+        "rows": 61,
+        "sent_marker_counts": {
+          "laughter": 4,
+          "logistics": 10,
+          "profanity": 2,
+          "question": 11
+        },
+        "sent_rows": 39,
+        "sent_text_rows": 39,
+        "text_rows": 60
+      },
+      {
+        "contact_label": "contact_008",
+        "first_utc": "2019-10-29T05:40:07Z",
+        "last_utc": "2020-04-30T08:56:06Z",
+        "rows": 53,
+        "sent_marker_counts": {
+          "affection": 5,
+          "laughter": 3,
+          "logistics": 7,
+          "question": 8
+        },
+        "sent_rows": 31,
+        "sent_text_rows": 31,
+        "text_rows": 53
+      },
+      {
+        "contact_label": "contact_009",
+        "first_utc": "2023-06-15T03:06:33Z",
+        "last_utc": "2023-09-09T09:10:29Z",
+        "rows": 53,
+        "sent_marker_counts": {
+          "affection": 1,
+          "logistics": 3,
+          "profanity": 4,
+          "question": 5
+        },
+        "sent_rows": 24,
+        "sent_text_rows": 22,
+        "text_rows": 51
+      },
+      {
+        "contact_label": "contact_010",
+        "first_utc": "2021-11-30T21:01:15Z",
+        "last_utc": "2022-01-19T04:15:26Z",
+        "rows": 51,
+        "sent_marker_counts": {
+          "affection": 3,
+          "laughter": 3,
+          "logistics": 10,
+          "question": 12,
+          "sports_place": 1
+        },
+        "sent_rows": 34,
+        "sent_text_rows": 34,
+        "text_rows": 51
+      },
+      {
+        "contact_label": "contact_011",
+        "first_utc": "2019-12-26T00:46:03Z",
+        "last_utc": "2024-03-26T01:23:29Z",
+        "rows": 45,
+        "sent_marker_counts": {},
+        "sent_rows": 0,
+        "sent_text_rows": 0,
+        "text_rows": 24
+      },
+      {
+        "contact_label": "contact_012",
+        "first_utc": "2022-11-26T06:41:58Z",
+        "last_utc": "2026-07-04T17:21:47Z",
+        "rows": 45,
+        "sent_marker_counts": {
+          "question": 1
+        },
+        "sent_rows": 21,
+        "sent_text_rows": 5,
+        "text_rows": 8
+      },
+      {
+        "contact_label": "contact_013",
+        "first_utc": "2026-04-09T07:19:42Z",
+        "last_utc": "2026-04-11T10:39:10Z",
+        "rows": 44,
+        "sent_marker_counts": {
+          "affection": 2,
+          "laughter": 1,
+          "logistics": 3,
+          "question": 10
+        },
+        "sent_rows": 18,
+        "sent_text_rows": 18,
+        "text_rows": 44
+      },
+      {
+        "contact_label": "contact_014",
+        "first_utc": "2020-09-09T04:26:10Z",
+        "last_utc": "2022-12-16T20:53:06Z",
+        "rows": 40,
+        "sent_marker_counts": {
+          "affection": 2,
+          "laughter": 2,
+          "logistics": 1,
+          "profanity": 1,
+          "question": 5,
+          "sports_place": 1
+        },
+        "sent_rows": 28,
+        "sent_text_rows": 28,
+        "text_rows": 40
+      },
+      {
+        "contact_label": "contact_015",
+        "first_utc": "2020-10-28T20:04:30Z",
+        "last_utc": "2020-12-28T06:57:54Z",
+        "rows": 40,
+        "sent_marker_counts": {
+          "affection": 2,
+          "logistics": 2,
+          "profanity": 1,
+          "question": 7
+        },
+        "sent_rows": 29,
+        "sent_text_rows": 29,
+        "text_rows": 40
+      },
+      {
+        "contact_label": "contact_016",
+        "first_utc": "2019-04-26T20:29:59Z",
+        "last_utc": "2019-06-01T09:24:19Z",
+        "rows": 37,
+        "sent_marker_counts": {
+          "affection": 2,
+          "laughter": 5,
+          "logistics": 6,
+          "question": 8
+        },
+        "sent_rows": 24,
+        "sent_text_rows": 24,
+        "text_rows": 37
+      },
+      {
+        "contact_label": "contact_017",
+        "first_utc": "2021-08-02T17:25:16Z",
+        "last_utc": "2023-01-25T21:52:00Z",
+        "rows": 37,
+        "sent_marker_counts": {},
+        "sent_rows": 2,
+        "sent_text_rows": 1,
+        "text_rows": 31
+      },
+      {
+        "contact_label": "contact_018",
+        "first_utc": "2020-07-09T06:14:13Z",
+        "last_utc": "2020-07-09T06:46:36Z",
+        "rows": 35,
+        "sent_marker_counts": {
+          "affection": 2,
+          "laughter": 1,
+          "logistics": 4,
+          "question": 10
+        },
+        "sent_rows": 21,
+        "sent_text_rows": 21,
+        "text_rows": 35
+      },
+      {
+        "contact_label": "contact_019",
+        "first_utc": "2020-03-17T23:47:32Z",
+        "last_utc": "2020-03-18T01:08:26Z",
+        "rows": 34,
+        "sent_marker_counts": {
+          "affection": 2,
+          "laughter": 3,
+          "logistics": 4,
+          "question": 8
+        },
+        "sent_rows": 21,
+        "sent_text_rows": 21,
+        "text_rows": 34
+      },
+      {
+        "contact_label": "contact_020",
+        "first_utc": "2021-09-04T15:25:13Z",
+        "last_utc": "2024-05-01T12:02:54Z",
+        "rows": 34,
+        "sent_marker_counts": {
+          "affection": 2,
+          "laughter": 1,
+          "logistics": 2,
+          "question": 4
+        },
+        "sent_rows": 22,
+        "sent_text_rows": 21,
+        "text_rows": 33
+      }
+    ]
+  },
+  "source": {
+    "archive_name": "mydata~1783376316584.zip",
+    "parsed_at_utc": "2026-07-06T23:14:38.193540Z",
+    "privacy_boundary": "raw Snapchat message text, contact names, media URLs, and media files are not written to repo outputs"
+  }
+}

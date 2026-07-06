@@ -57,6 +57,9 @@ Start here if you want to understand or replicate the writing voice.
 | [Origin Story](<Voice-Style-Identity/origin-story.md>) | Biographical narrative reference for brand and voice grounding |
 | [Cognitive Architecture Lens](<Voice-Style-Identity/cognitive-architecture-lens.md>) | Framework for discussing AI/computation through the lens of human cognitive architecture — the vocabulary bridge between mind-mapping and machine learning |
 | [X/Twitter Archive Ingestion](<X-Twitter-Archive/README.md>) | Parser and evidence lane for two-account X/Twitter voice and humor analysis |
+| [Cross-Context Communication System](<Voice-Style-Identity/cross-context-communication-system.md>) | Context router for public prose, social media, AI partnership, group chat, private warmth, coordination, and repair |
+| [Cross-Context HTML Artifact](<Voice-Style-Identity/cross-context-voice-system-artifact.html>) | Viewable React artifact for the communication range model |
+| [Snapchat Private Voice Signals](<Voice-Style-Identity/snapchat-analysis/2026-07-06/snapchat_private_voice_summary.md>) | Privacy-safe derived signals from the Snapchat export: chat counts, date range, marker rates, and private-register corrections |
 
 ---
 
