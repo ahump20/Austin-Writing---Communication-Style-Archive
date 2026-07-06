@@ -1,0 +1,356 @@
+{
+  "bucket": {
+    "handle": "a_hump20",
+    "since": "2015-01-01",
+    "until": "2019-01-01",
+    "maxScrolls": 28
+  },
+  "captured_at_utc": "2026-07-06T00:49:22.349Z",
+  "rows": [
+    {
+      "account": "a_hump20",
+      "date_utc": "2017-09-18T04:23:40.000Z",
+      "handle": "a_hump20",
+      "id": "909634001433919489",
+      "mentions": [
+        "YouShouldDoKoch",
+        "EntlerJared"
+      ],
+      "metrics": {
+        "favorite_count": 1,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nSep 17, 2017\nReplying to \n@YouShouldDoKoch\n and \n@EntlerJared\nSpot on impersonation\n1",
+      "since": "2015-01-01",
+      "status": "https://x.com/a_hump20/status/909634001433919489",
+      "text": "Spot on impersonation",
+      "until": "2019-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2017-06-25T23:19:59.000Z",
+      "handle": "a_hump20",
+      "id": "879116993919635456",
+      "mentions": [
+        "JordanSpieth"
+      ],
+      "metrics": {
+        "favorite_count": 1,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nJun 25, 2017\n@JordanSpieth\n with the most lit finish I've seen since Tiger was still relevant #MakeGolfGreatAgain\n1",
+      "since": "2015-01-01",
+      "status": "https://x.com/a_hump20/status/879116993919635456",
+      "text": "@JordanSpieth\n with the most lit finish I've seen since Tiger was still relevant #MakeGolfGreatAgain",
+      "until": "2019-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2017-06-19T04:09:18.000Z",
+      "handle": "a_hump20",
+      "id": "876653090715430912",
+      "mentions": [
+        "EricDecker87",
+        "Titans",
+        "PredsNHL"
+      ],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nJun 18, 2017\nMight as well hand us that AFC South crown now\nQuote\nEric Decker\n@EricDecker87\n·\nJun 18, 2017\nExcited to be joining the @Titans and my new band of brothers! Gotta keep that energy flowing from the @PredsNHL this fall!\n1\n2",
+      "since": "2015-01-01",
+      "status": "https://x.com/a_hump20/status/876653090715430912",
+      "text": "Might as well hand us that AFC South crown now\nExcited to be joining the @Titans and my new band of brothers! Gotta keep that energy flowing from the @PredsNHL this fall!",
+      "until": "2019-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2017-01-07T08:14:38.000Z",
+      "handle": "a_hump20",
+      "id": "817645607091404800",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nJan 7, 2017\nMike Conley is ice cold\n2",
+      "since": "2015-01-01",
+      "status": "https://x.com/a_hump20/status/817645607091404800",
+      "text": "Mike Conley is ice cold",
+      "until": "2019-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2016-12-21T00:34:07.000Z",
+      "handle": "a_hump20",
+      "id": "811369119031431168",
+      "mentions": [
+        "BigBallerBern",
+        "chubbywhiteboi"
+      ],
+      "metrics": {
+        "favorite_count": 1,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nDec 20, 2016\nReplying to \n@BigBallerBern\n and \n@chubbywhiteboi\nprolly just curious when you'll be over to pillage my nugs and drink our beer\n1",
+      "since": "2015-01-01",
+      "status": "https://x.com/a_hump20/status/811369119031431168",
+      "text": "prolly just curious when you'll be over to pillage my nugs and drink our beer",
+      "until": "2019-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2016-05-18T19:26:04.000Z",
+      "handle": "a_hump20",
+      "id": "733015820188712960",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 0,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nMay 18, 2016\nYou're absolutely right, everyone knows any self respecting NFL player is signing with the Titans these days \nhttps://\nx.com/acast23/status\n/733014297232572416\n…\n1",
+      "since": "2015-01-01",
+      "status": "https://x.com/a_hump20/status/733015820188712960",
+      "text": "You're absolutely right, everyone knows any self respecting NFL player is signing with the Titans these days \nhttps://\nx.com/acast23/status\n/733014297232572416\n…",
+      "until": "2019-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2016-05-14T06:40:39.000Z",
+      "handle": "a_hump20",
+      "id": "731373643360505856",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 3,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nMay 14, 2016\nNot to mention once again making drunk driving a relevant issue in Austin #ThanksTaxis\n3",
+      "since": "2015-01-01",
+      "status": "https://x.com/a_hump20/status/731373643360505856",
+      "text": "Not to mention once again making drunk driving a relevant issue in Austin #ThanksTaxis",
+      "until": "2019-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2016-05-14T06:39:39.000Z",
+      "handle": "a_hump20",
+      "id": "731373389697449984",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 3,
+        "reply_count": 0,
+        "retweet_count": 1
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nMay 14, 2016\nTaxis have failed to adapt and provide the customer service required in order to compete in the modern market #BringUberBackToAustin\n1\n3",
+      "since": "2015-01-01",
+      "status": "https://x.com/a_hump20/status/731373389697449984",
+      "text": "Taxis have failed to adapt and provide the customer service required in order to compete in the modern market #BringUberBackToAustin",
+      "until": "2019-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2016-02-27T21:09:57.000Z",
+      "handle": "a_hump20",
+      "id": "703688543709765632",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 1,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nFeb 27, 2016\nBuddy who? #ousucks\n1",
+      "since": "2015-01-01",
+      "status": "https://x.com/a_hump20/status/703688543709765632",
+      "text": "Buddy who? #ousucks",
+      "until": "2019-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2016-02-03T22:40:08.000Z",
+      "handle": "a_hump20",
+      "id": "695013932033974272",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 1,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nFeb 3, 2016\nQuite the #NationalSigningDay for Coach Strong and the boys #LetsRide\n1",
+      "since": "2015-01-01",
+      "status": "https://x.com/a_hump20/status/695013932033974272",
+      "text": "Quite the #NationalSigningDay for Coach Strong and the boys #LetsRide",
+      "until": "2019-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2016-01-07T02:45:17.000Z",
+      "handle": "a_hump20",
+      "id": "684928764648660992",
+      "mentions": [
+        "_ximena_alvarez"
+      ],
+      "metrics": {
+        "favorite_count": 1,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nJan 6, 2016\nReplying to \n@_ximena_alvarez\n@_ximena_alvarez\n thx for the Twitter love #sportsrdacoolest\n1\n1",
+      "since": "2015-01-01",
+      "status": "https://x.com/a_hump20/status/684928764648660992",
+      "text": "@_ximena_alvarez\n thx for the Twitter love #sportsrdacoolest",
+      "until": "2019-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2016-01-07T01:07:48.000Z",
+      "handle": "a_hump20",
+      "id": "684904231120146432",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 3,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nJan 6, 2016\nCongrats to Ken Griffey Jr. on being elected to the Baseball Hall of Fame. Definitely the sweetest swing the sport's ever seen. #TheKid\n3",
+      "since": "2015-01-01",
+      "status": "https://x.com/a_hump20/status/684904231120146432",
+      "text": "Congrats to Ken Griffey Jr. on being elected to the Baseball Hall of Fame. Definitely the sweetest swing the sport's ever seen. #TheKid",
+      "until": "2019-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2015-11-20T19:18:19.000Z",
+      "handle": "a_hump20",
+      "id": "667784053848866816",
+      "mentions": [
+        "pameelaann",
+        "austin_humphrey"
+      ],
+      "metrics": {
+        "favorite_count": 0,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nNov 20, 2015\nMuch appreciated Pamela you da best\nQuote\nPamela Covert\n@pameelaann\n·\nNov 20, 2015\n.BIG S/O TO MY BFF @austin_humphrey FOR GETTING INTO TEXAS! So so proud of you!! ",
+      "since": "2015-01-01",
+      "status": "https://x.com/a_hump20/status/667784053848866816",
+      "text": "Much appreciated Pamela you da best\n.BIG S/O TO MY BFF @austin_humphrey FOR GETTING INTO TEXAS! So so proud of you!!",
+      "until": "2019-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2015-05-17T00:11:28.000Z",
+      "handle": "a_hump20",
+      "id": "599728907852484608",
+      "mentions": [
+        "RemiBuckingham",
+        "fndukwejr"
+      ],
+      "metrics": {
+        "favorite_count": 1,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nMay 16, 2015\n@RemiBuckingham hahaha I swear I thought \n@fndukwejr\n was in this photo at first glance\n1",
+      "since": "2015-01-01",
+      "status": "https://x.com/a_hump20/status/599728907852484608",
+      "text": "@RemiBuckingham hahaha I swear I thought \n@fndukwejr\n was in this photo at first glance",
+      "until": "2019-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2015-04-06T03:28:14.000Z",
+      "handle": "a_hump20",
+      "id": "584920521264861185",
+      "mentions": [
+        "Cardinals"
+      ],
+      "metrics": {
+        "favorite_count": 1,
+        "reply_count": 0,
+        "retweet_count": 1
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nApr 5, 2015\nEaster and the \n@Cardinals\n starting off the season right with a win on the road against the Cubbies #1-0 #DoesntGetMuchBetterThanThat\n1\n1",
+      "since": "2015-01-01",
+      "status": "https://x.com/a_hump20/status/584920521264861185",
+      "text": "Easter and the \n@Cardinals\n starting off the season right with a win on the road against the Cubbies #1-0 #DoesntGetMuchBetterThanThat",
+      "until": "2019-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2015-03-12T16:58:28.000Z",
+      "handle": "a_hump20",
+      "id": "576064729593982976",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nMar 12, 2015\nMy love for Texas country just keeps growing by the day\n2",
+      "since": "2015-01-01",
+      "status": "https://x.com/a_hump20/status/576064729593982976",
+      "text": "My love for Texas country just keeps growing by the day",
+      "until": "2019-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2015-02-21T01:01:08.000Z",
+      "handle": "a_hump20",
+      "id": "568938435659964416",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 1,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nFeb 20, 2015\nSincerely hope that Manny Pacquiao embarrasses Floyd Mayweather's greedy ass in the ring\n1",
+      "since": "2015-01-01",
+      "status": "https://x.com/a_hump20/status/568938435659964416",
+      "text": "Sincerely hope that Manny Pacquiao embarrasses Floyd Mayweather's greedy ass in the ring",
+      "until": "2019-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2015-02-02T03:06:28.000Z",
+      "handle": "a_hump20",
+      "id": "562084611123994626",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 1,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nFeb 1, 2015\nDefinitely one of the most entertaining Super Bowls I've watched in a long time\n1",
+      "since": "2015-01-01",
+      "status": "https://x.com/a_hump20/status/562084611123994626",
+      "text": "Definitely one of the most entertaining Super Bowls I've watched in a long time",
+      "until": "2019-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2015-01-25T17:52:24.000Z",
+      "handle": "a_hump20",
+      "id": "559408458567385088",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 6,
+        "reply_count": 0,
+        "retweet_count": 1
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nJan 25, 2015\nHonestly have no idea how I manage to lose my phone 8/10 times I go to Sixth Street\n1\n6",
+      "since": "2015-01-01",
+      "status": "https://x.com/a_hump20/status/559408458567385088",
+      "text": "Honestly have no idea how I manage to lose my phone 8/10 times I go to Sixth Street",
+      "until": "2019-01-01"
+    }
+  ]
+}

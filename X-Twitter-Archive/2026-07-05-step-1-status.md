@@ -17,9 +17,10 @@ Then use the cleaned corpus for long-form voice, theme, humor, and style analysi
 - [verified] BirdClaw's archive importer expects `data/account.js`, parses JS assignment payloads without evaluating JavaScript, supports ZIP roots, and dedupes canonical tweets by tweet ID.
 - [verified] The local parser follows that model and writes cleaned JSONL, CSV, per-year buckets, thread groupings, duplicate reports, and account summaries.
 - [verified] A live logged-in X capture was completed through Chrome after the archive ZIPs were not present.
-- [verified] The live capture extracted 1,246 unique activity rows, including 679 authored voice tweets/replies and 453 retweet/context rows.
-- [verified] `@TXTrickWhooper` live capture: 173 authored rows, July 8, 2022 to July 5, 2026.
-- [verified] `@a_hump20` live capture: 506 authored rows, January 22, 2014 to October 18, 2025.
+- [verified] A follow-up X search capture was completed through Chrome to catch older visible rows that profile feed pagination skipped.
+- [verified] The live/search capture extracted 1,467 unique activity rows, including 900 authored voice tweets/replies and 453 retweet/context rows.
+- [verified] `@TXTrickWhooper` live/search capture: 373 authored rows, July 1, 2022 to July 5, 2026.
+- [verified] `@a_hump20` live/search capture: 527 authored rows, January 22, 2014 to October 18, 2025.
 - [verified] The React HTML artifact at `X-Twitter-Archive/x-twitter-archive-analysis-artifact.html` is built from real captured tweets and labels the source boundary.
 - [verified] X's official archive route is reachable after switching out of delegated `@TXTrickWhooper` mode and back to `@a_hump20`.
 - [verified] Opening `Download an archive of your data` led to X's password re-verification flow at `https://x.com/i/flow/verify_account_ownership`.
@@ -29,7 +30,7 @@ Then use the cleaned corpus for long-form voice, theme, humor, and style analysi
 - [unknown/open] Whether X has already prepared an archive ZIP for either account.
 - [unknown/open] Whether the delegated `@TXTrickWhooper` account can export its own archive from the same owner login or needs a separate account/password path.
 - [unknown/open] Exact official archive tweet counts and date ranges for both accounts.
-- [unknown/open] Whether the official export includes rows missing from the live feed capture because of cursor limits, rate limits, deletion state, or account export boundaries.
+- [unknown/open] Whether the official export includes rows missing from the live/search capture because of cursor limits, search ranking limits, deletion state, or account export boundaries.
 
 ## Current Blocker
 

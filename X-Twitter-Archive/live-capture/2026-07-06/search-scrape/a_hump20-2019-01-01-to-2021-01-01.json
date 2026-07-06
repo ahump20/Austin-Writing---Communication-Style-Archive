@@ -1,0 +1,394 @@
+{
+  "bucket": {
+    "handle": "a_hump20",
+    "since": "2019-01-01",
+    "until": "2021-01-01",
+    "maxScrolls": 30
+  },
+  "captured_at_utc": "2026-07-06T00:49:43.949Z",
+  "rows": [
+    {
+      "account": "a_hump20",
+      "date_utc": "2020-12-29T22:29:26.000Z",
+      "handle": "a_hump20",
+      "id": "1344047903392866306",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nDec 29, 2020\nFINALLY COPPED THE PS5 BABY!!!\n2",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1344047903392866306",
+      "text": "FINALLY COPPED THE PS5 BABY!!!",
+      "until": "2021-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2020-12-27T22:28:24.000Z",
+      "handle": "a_hump20",
+      "id": "1343322871549079552",
+      "mentions": [
+        "jwyattsports",
+        "Titans"
+      ],
+      "metrics": {
+        "favorite_count": 0,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nDec 27, 2020\nReplying to \n@jwyattsports\n \n@Titans\n and 3 others\nThis tweet is fire\n1",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1343322871549079552",
+      "text": "This tweet is fire",
+      "until": "2021-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2020-12-25T15:08:37.000Z",
+      "handle": "a_hump20",
+      "id": "1342487418344251393",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nDec 25, 2020\nViking funerals were so much sicker than modern ones. Like they literally went out boats blazing and all we do is get buried in a cramped coffin\n2",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1342487418344251393",
+      "text": "Viking funerals were so much sicker than modern ones. Like they literally went out boats blazing and all we do is get buried in a cramped coffin",
+      "until": "2021-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2020-12-24T21:09:04.000Z",
+      "handle": "a_hump20",
+      "id": "1342215739076390913",
+      "mentions": [
+        "_willcompton"
+      ],
+      "metrics": {
+        "favorite_count": 10,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nDec 24, 2020\nReplying to \n@_willcompton\nHairstylist: “Just give it a week or two to grow out and you’ll look great”\n\n*2 weeks later*\n10",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1342215739076390913",
+      "text": "Hairstylist: “Just give it a week or two to grow out and you’ll look great”\n\n*2 weeks later*",
+      "until": "2021-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2020-12-09T18:23:54.000Z",
+      "handle": "a_hump20",
+      "id": "1336738359448899586",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 3,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nDec 9, 2020\nI swear Sony must be taking a page out of Apple’s handbook bc my PS4 has gone to utter shit since they released the new console\n1\n3",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1336738359448899586",
+      "text": "I swear Sony must be taking a page out of Apple’s handbook bc my PS4 has gone to utter shit since they released the new console",
+      "until": "2021-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2020-10-23T03:48:20.000Z",
+      "handle": "a_hump20",
+      "id": "1319485786052505600",
+      "mentions": [
+        "el_Pipo_",
+        "zackerscrackers"
+      ],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nOct 22, 2020\nReplying to \n@el_Pipo_\n and \n@zackerscrackers\nWe here for u bro\n1\n2",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1319485786052505600",
+      "text": "We here for u bro",
+      "until": "2021-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2020-10-19T15:23:18.000Z",
+      "handle": "a_hump20",
+      "id": "1318211125822083072",
+      "mentions": [
+        "SharpFootball"
+      ],
+      "metrics": {
+        "favorite_count": 3,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nOct 19, 2020\nVrabes is a mad genius\nQuote\nWarren Sharp\n@SharpFootball\n·\nOct 19, 2020\nMike Vrabel is outstanding\n\n1. he rushes in 46 late (12th man on D)\n2. 33 is WTF\n3. penalty for 12men\n4. Vrabel fakes upset & brings 46 off\n\nWHY?\n\n-penalty stops clock\n-time > yds\n-knows HOU will score\n\nResult:\n\n- w :04 left, TEN scores tying TD\n- move saved 40 seconds & won game\n1\n3",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1318211125822083072",
+      "text": "Vrabes is a mad genius\nMike Vrabel is outstanding\n\n1. he rushes in 46 late (12th man on D)\n2. 33 is WTF\n3. penalty for 12men\n4. Vrabel fakes upset & brings 46 off\n\nWHY?\n\n-penalty stops clock\n-time > yds\n-knows HOU will score\n\nResult:\n\n- w :04 left, TEN scores tying TD\n- move saved 40 seconds & won game",
+      "until": "2021-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2020-10-10T19:52:13.000Z",
+      "handle": "a_hump20",
+      "id": "1315017311561166848",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nOct 10, 2020\nEhlinger deserves more than this Longhorns team\n2",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1315017311561166848",
+      "text": "Ehlinger deserves more than this Longhorns team",
+      "until": "2021-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2020-10-03T06:38:00.000Z",
+      "handle": "a_hump20",
+      "id": "1312280724989501441",
+      "mentions": [
+        "MLB"
+      ],
+      "metrics": {
+        "favorite_count": 3,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nOct 3, 2020\nHands down the most dominant pitcher to ever play, especially in Game 7s. RIP to a legend\nQuote\nMLB\n@MLB\n·\nOct 2, 2020\nWe mourn the passing of Bob Gibson, a Hall of Famer and two-time World Series champion. He was 84. \nhttps://\natmlb.com/M27FTw\n3",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1312280724989501441",
+      "text": "Hands down the most dominant pitcher to ever play, especially in Game 7s. RIP to a legend\nWe mourn the passing of Bob Gibson, a Hall of Famer and two-time World Series champion. He was 84. \nhttps://\natmlb.com/M27FTw",
+      "until": "2021-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2020-09-29T18:54:24.000Z",
+      "handle": "a_hump20",
+      "id": "1311016494038429696",
+      "mentions": [
+        "byBDavis",
+        "kennyvaccaro"
+      ],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nSep 29, 2020\nReplying to \n@byBDavis\nYou’re forgetting the best of the bunch my man, the boy \n@kennyvaccaro\n has been ballin’\n2",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1311016494038429696",
+      "text": "You’re forgetting the best of the bunch my man, the boy \n@kennyvaccaro\n has been ballin’",
+      "until": "2021-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2020-09-09T01:38:06.000Z",
+      "handle": "a_hump20",
+      "id": "1303507943623622658",
+      "mentions": [
+        "Someofmyfat"
+      ],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nSep 8, 2020\nReplying to \n@Someofmyfat\nFat king with the ideas\n1\n2",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1303507943623622658",
+      "text": "Fat king with the ideas",
+      "until": "2021-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2020-07-05T02:26:08.000Z",
+      "handle": "a_hump20",
+      "id": "1279602430817325056",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 1,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nJul 4, 2020\nIs it just me or are a shit ton of fireworks being shot off this year?\n1",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1279602430817325056",
+      "text": "Is it just me or are a shit ton of fireworks being shot off this year?",
+      "until": "2021-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2020-06-11T18:32:21.000Z",
+      "handle": "a_hump20",
+      "id": "1271148279703666689",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 3,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nJun 11, 2020\nFinally someone spits the real facts about the ‘05 Heisman \nhttps://\nx.com/FoxworthShow/s\n/FoxworthShow/status/1270836949931241473\n…\nThis post is unavailable.\n3",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1271148279703666689",
+      "text": "Finally someone spits the real facts about the ‘05 Heisman \nhttps://\nx.com/FoxworthShow/s\n/FoxworthShow/status/1270836949931241473\n…",
+      "until": "2021-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2020-05-08T03:12:15.000Z",
+      "handle": "a_hump20",
+      "id": "1258595540658540544",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 3,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nMay 7, 2020\nReplying to \n@a_hump20\nDingers and performance enhancing drugs I mean c’mon what else can a baseball fanatic ask for\n3",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1258595540658540544",
+      "text": "Dingers and performance enhancing drugs I mean c’mon what else can a baseball fanatic ask for",
+      "until": "2021-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2020-05-08T03:07:49.000Z",
+      "handle": "a_hump20",
+      "id": "1258594426366169088",
+      "mentions": [
+        "BaseballBros"
+      ],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nMay 7, 2020\nEasily the most stoked I’ve ever been for a documentary and it’s not even close\nQuote\nBaseball Bros\n@BaseballBros\n·\nMay 5, 2020\nESPN’s 30 for 30 “Long Gone Summer” on the 1998 home run chase between Mark McGwire and Sammy Sosa, is coming out on June 14th \n1\n2",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1258594426366169088",
+      "text": "Easily the most stoked I’ve ever been for a documentary and it’s not even close\nESPN’s 30 for 30 “Long Gone Summer” on the 1998 home run chase between Mark McGwire and Sammy Sosa, is coming out on June 14th",
+      "until": "2021-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2020-04-03T08:42:25.000Z",
+      "handle": "a_hump20",
+      "id": "1245995055405555717",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 0,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nApr 3, 2020\nRewatching this ‘06 Rose Bowl makes me miss the days when you could actually lay the wood on someone without getting suspended",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1245995055405555717",
+      "text": "Rewatching this ‘06 Rose Bowl makes me miss the days when you could actually lay the wood on someone without getting suspended",
+      "until": "2021-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2020-03-17T13:40:01.000Z",
+      "handle": "a_hump20",
+      "id": "1239909356868718598",
+      "mentions": [
+        "SportsCenter",
+        "NFL"
+      ],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nMar 17, 2020\nNot even in my wildest dreams could I have imagined a more crushingly poetic conclusion to the Pats dynasty #TitanUp #LetsRunItBack\nQuote\nSportsCenter\n@SportsCenter\n·\nMar 17, 2020\nTom Brady's last pass as a New England Patriot.\n\n(via @NFL)\n1\n2",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1239909356868718598",
+      "text": "Not even in my wildest dreams could I have imagined a more crushingly poetic conclusion to the Pats dynasty #TitanUp #LetsRunItBack\nTom Brady's last pass as a New England Patriot.\n\n(via @NFL)",
+      "until": "2021-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2019-11-05T06:26:15.000Z",
+      "handle": "a_hump20",
+      "id": "1191602607913086977",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 5,
+        "reply_count": 0,
+        "retweet_count": 1
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nNov 5, 2019\nThis ban really be out here doing the lord’s work for Humps everywhere\n1\n5",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1191602607913086977",
+      "text": "This ban really be out here doing the lord’s work for Humps everywhere",
+      "until": "2021-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2019-10-31T03:13:58.000Z",
+      "handle": "a_hump20",
+      "id": "1189742280556601345",
+      "mentions": [
+        "ajhinch"
+      ],
+      "metrics": {
+        "favorite_count": 7,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nOct 30, 2019\nPulling Greinke after 1 run and 80 pitches \n@ajhinch\n how high are you?\n7",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1189742280556601345",
+      "text": "Pulling Greinke after 1 run and 80 pitches \n@ajhinch\n how high are you?",
+      "until": "2021-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2019-10-29T18:38:07.000Z",
+      "handle": "a_hump20",
+      "id": "1189250071965130752",
+      "mentions": [
+        "AP"
+      ],
+      "metrics": {
+        "favorite_count": 6,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nOct 29, 2019\nPraise Jesus for the dark days are done and I’ll never have to buy Madden again\nQuote\nThe Associated Press\n@AP\n·\nOct 29, 2019\nBREAKING: NCAA will permit athletes to be compensated for their names, images and likenesses, Board of Governors says. \nhttp://\napne.ws/QJKYR3j\n1\n6",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1189250071965130752",
+      "text": "Praise Jesus for the dark days are done and I’ll never have to buy Madden again\nBREAKING: NCAA will permit athletes to be compensated for their names, images and likenesses, Board of Governors says. \nhttp://\napne.ws/QJKYR3j",
+      "until": "2021-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2019-08-17T13:23:23.000Z",
+      "handle": "a_hump20",
+      "id": "1162716553336504320",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 1,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nAug 17, 2019\nThe bane of my existence\n1",
+      "since": "2019-01-01",
+      "status": "https://x.com/a_hump20/status/1162716553336504320",
+      "text": "The bane of my existence",
+      "until": "2021-01-01"
+    }
+  ]
+}

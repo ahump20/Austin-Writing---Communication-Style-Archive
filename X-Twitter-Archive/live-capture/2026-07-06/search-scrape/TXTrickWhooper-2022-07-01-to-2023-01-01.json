@@ -1,0 +1,30 @@
+{
+  "bucket": {
+    "handle": "TXTrickWhooper",
+    "since": "2022-07-01",
+    "until": "2023-01-01",
+    "maxScrolls": 22
+  },
+  "captured_at_utc": "2026-07-06T00:47:19.553Z",
+  "rows": [
+    {
+      "account": "TXTrickWhooper",
+      "date_utc": "2022-07-02T01:58:29.000Z",
+      "handle": "TXTrickWhooper",
+      "id": "1543051451374735360",
+      "mentions": [
+        "MLBTheShow"
+      ],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Stallion of the Steroid Era\n@TXTrickWhooper\n·\nJul 1, 2022\nCommentary account\nReplying to \n@MLBTheShow\nHow tf y’all be juicing bronzes to 125 everything but can’t even let diamond Nolan break 100 on any stat but Power Left?\n1\n2",
+      "since": "2022-07-01",
+      "status": "https://x.com/TXTrickWhooper/status/1543051451374735360",
+      "text": "How tf y’all be juicing bronzes to 125 everything but can’t even let diamond Nolan break 100 on any stat but Power Left?",
+      "until": "2023-01-01"
+    }
+  ]
+}

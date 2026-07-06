@@ -1,0 +1,113 @@
+{
+  "captured_at_utc": "2026-07-06T00:50:18.361Z",
+  "results": [
+    {
+      "bucket": {
+        "handle": "TXTrickWhooper",
+        "since": "2022-07-01",
+        "until": "2023-01-01",
+        "maxScrolls": 22
+      },
+      "rows": 1,
+      "first": "2022-07-02T01:58:29.000Z",
+      "last": "2022-07-02T01:58:29.000Z",
+      "outPath": "/Users/AustinHumphrey/Documents/Codex/2026-07-05/you-are-now-my-personal-x-2/Austin-Writing---Communication-Style-Archive/X-Twitter-Archive/live-capture/2026-07-06/search-scrape/TXTrickWhooper-2022-07-01-to-2023-01-01.json"
+    },
+    {
+      "bucket": {
+        "handle": "TXTrickWhooper",
+        "since": "2023-01-01",
+        "until": "2024-01-01",
+        "maxScrolls": 28
+      },
+      "rows": 11,
+      "first": "2023-12-04T21:40:32.000Z",
+      "last": "2023-10-06T08:54:53.000Z",
+      "outPath": "/Users/AustinHumphrey/Documents/Codex/2026-07-05/you-are-now-my-personal-x-2/Austin-Writing---Communication-Style-Archive/X-Twitter-Archive/live-capture/2026-07-06/search-scrape/TXTrickWhooper-2023-01-01-to-2024-01-01.json"
+    },
+    {
+      "bucket": {
+        "handle": "TXTrickWhooper",
+        "since": "2024-01-01",
+        "until": "2025-01-01",
+        "maxScrolls": 28
+      },
+      "rows": 87,
+      "first": "2024-12-22T05:34:58.000Z",
+      "last": "2024-04-10T13:47:53.000Z",
+      "outPath": "/Users/AustinHumphrey/Documents/Codex/2026-07-05/you-are-now-my-personal-x-2/Austin-Writing---Communication-Style-Archive/X-Twitter-Archive/live-capture/2026-07-06/search-scrape/TXTrickWhooper-2024-01-01-to-2025-01-01.json"
+    },
+    {
+      "bucket": {
+        "handle": "TXTrickWhooper",
+        "since": "2025-01-01",
+        "until": "2026-07-07",
+        "maxScrolls": 28
+      },
+      "rows": 128,
+      "first": "2026-07-05T18:42:07.000Z",
+      "last": "2025-04-19T23:24:05.000Z",
+      "outPath": "/Users/AustinHumphrey/Documents/Codex/2026-07-05/you-are-now-my-personal-x-2/Austin-Writing---Communication-Style-Archive/X-Twitter-Archive/live-capture/2026-07-06/search-scrape/TXTrickWhooper-2025-01-01-to-2026-07-07.json"
+    },
+    {
+      "bucket": {
+        "handle": "a_hump20",
+        "since": "2011-05-01",
+        "until": "2015-01-01",
+        "maxScrolls": 35
+      },
+      "rows": 12,
+      "first": "2014-11-30T20:02:42.000Z",
+      "last": "2014-08-17T02:07:15.000Z",
+      "outPath": "/Users/AustinHumphrey/Documents/Codex/2026-07-05/you-are-now-my-personal-x-2/Austin-Writing---Communication-Style-Archive/X-Twitter-Archive/live-capture/2026-07-06/search-scrape/a_hump20-2011-05-01-to-2015-01-01.json"
+    },
+    {
+      "bucket": {
+        "handle": "a_hump20",
+        "since": "2015-01-01",
+        "until": "2019-01-01",
+        "maxScrolls": 28
+      },
+      "rows": 19,
+      "first": "2017-09-18T04:23:40.000Z",
+      "last": "2015-01-25T17:52:24.000Z",
+      "outPath": "/Users/AustinHumphrey/Documents/Codex/2026-07-05/you-are-now-my-personal-x-2/Austin-Writing---Communication-Style-Archive/X-Twitter-Archive/live-capture/2026-07-06/search-scrape/a_hump20-2015-01-01-to-2019-01-01.json"
+    },
+    {
+      "bucket": {
+        "handle": "a_hump20",
+        "since": "2019-01-01",
+        "until": "2021-01-01",
+        "maxScrolls": 30
+      },
+      "rows": 21,
+      "first": "2020-12-29T22:29:26.000Z",
+      "last": "2019-08-17T13:23:23.000Z",
+      "outPath": "/Users/AustinHumphrey/Documents/Codex/2026-07-05/you-are-now-my-personal-x-2/Austin-Writing---Communication-Style-Archive/X-Twitter-Archive/live-capture/2026-07-06/search-scrape/a_hump20-2019-01-01-to-2021-01-01.json"
+    },
+    {
+      "bucket": {
+        "handle": "a_hump20",
+        "since": "2021-01-01",
+        "until": "2023-01-01",
+        "maxScrolls": 32
+      },
+      "rows": 30,
+      "first": "2022-12-17T20:35:56.000Z",
+      "last": "2021-01-06T03:35:43.000Z",
+      "outPath": "/Users/AustinHumphrey/Documents/Codex/2026-07-05/you-are-now-my-personal-x-2/Austin-Writing---Communication-Style-Archive/X-Twitter-Archive/live-capture/2026-07-06/search-scrape/a_hump20-2021-01-01-to-2023-01-01.json"
+    },
+    {
+      "bucket": {
+        "handle": "a_hump20",
+        "since": "2023-01-01",
+        "until": "2026-07-07",
+        "maxScrolls": 32
+      },
+      "rows": 13,
+      "first": "2025-10-11T03:15:30.000Z",
+      "last": "2023-01-15T03:43:21.000Z",
+      "outPath": "/Users/AustinHumphrey/Documents/Codex/2026-07-05/you-are-now-my-personal-x-2/Austin-Writing---Communication-Style-Archive/X-Twitter-Archive/live-capture/2026-07-06/search-scrape/a_hump20-2023-01-01-to-2026-07-07.json"
+    }
+  ]
+}

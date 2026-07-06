@@ -1,0 +1,217 @@
+{
+  "captured_at_utc": "2026-07-06T00:42:00Z",
+  "source_boundary": "Live logged-in X feed and X search capture through Chrome. Official X archive export remains blocked by X password re-verification, so this is broader live capture, not a complete official archive ZIP.",
+  "counts": {
+    "TXTrickWhooper": {
+      "unique_activity_items": 583,
+      "authored_voice_tweets": 373,
+      "retweets_context": 133,
+      "date_range_ct": [
+        "2022-07-01T20:58:29-05:00",
+        "2026-07-05T13:42:07-05:00"
+      ],
+      "by_year": {
+        "2022": 5,
+        "2023": 40,
+        "2024": 126,
+        "2025": 63,
+        "2026": 139
+      },
+      "by_activity_type": {
+        "reply": 257,
+        "tweet": 92,
+        "reply_with_quote": 4,
+        "quote": 20
+      },
+      "top_themes": [
+        [
+          "question/reply energy",
+          210
+        ],
+        [
+          "everyday observation",
+          107
+        ],
+        [
+          "sports/Texas",
+          53
+        ],
+        [
+          "AI/dev/tools",
+          43
+        ],
+        [
+          "X/platform",
+          16
+        ],
+        [
+          "place/Texas/Memphis",
+          9
+        ],
+        [
+          "politics/news",
+          8
+        ],
+        [
+          "food/vices",
+          7
+        ]
+      ],
+      "top_humor_tags": [
+        [
+          "reply volley",
+          251
+        ],
+        [
+          "short deadpan",
+          241
+        ],
+        [
+          "self-involving aside",
+          106
+        ],
+        [
+          "casual bluntness",
+          45
+        ],
+        [
+          "overstated stakes",
+          13
+        ],
+        [
+          "absurd everyday object",
+          8
+        ],
+        [
+          "mock gratitude",
+          6
+        ],
+        [
+          "mock PSA setup",
+          5
+        ]
+      ],
+      "avg_words": 15.2,
+      "median_words": 11,
+      "question_rate": 0.113,
+      "hashtag_rate": 0.088,
+      "mention_rate": 0.786
+    },
+    "a_hump20": {
+      "unique_activity_items": 884,
+      "authored_voice_tweets": 527,
+      "retweets_context": 320,
+      "date_range_ct": [
+        "2014-01-22T10:42:57-06:00",
+        "2025-10-18T21:24:56-05:00"
+      ],
+      "by_year": {
+        "2014": 160,
+        "2015": 11,
+        "2016": 8,
+        "2017": 5,
+        "2019": 14,
+        "2020": 65,
+        "2021": 108,
+        "2022": 45,
+        "2023": 65,
+        "2024": 34,
+        "2025": 12
+      },
+      "by_activity_type": {
+        "tweet": 366,
+        "quote": 80,
+        "reply": 80,
+        "reply_with_quote": 1
+      },
+      "top_themes": [
+        [
+          "everyday observation",
+          412
+        ],
+        [
+          "sports/Texas",
+          60
+        ],
+        [
+          "question/reply energy",
+          40
+        ],
+        [
+          "food/vices",
+          10
+        ],
+        [
+          "X/platform",
+          10
+        ],
+        [
+          "politics/news",
+          6
+        ],
+        [
+          "AI/dev/tools",
+          4
+        ],
+        [
+          "place/Texas/Memphis",
+          2
+        ]
+      ],
+      "top_humor_tags": [
+        [
+          "short deadpan",
+          379
+        ],
+        [
+          "reply volley",
+          56
+        ],
+        [
+          "self-involving aside",
+          40
+        ],
+        [
+          "casual bluntness",
+          26
+        ],
+        [
+          "absurd everyday object",
+          3
+        ],
+        [
+          "mock gratitude",
+          3
+        ],
+        [
+          "overstated stakes",
+          2
+        ]
+      ],
+      "avg_words": 10.8,
+      "median_words": 9,
+      "question_rate": 0.046,
+      "hashtag_rate": 0.152,
+      "mention_rate": 0.262
+    }
+  },
+  "totals": {
+    "unique_activity_items": 1467,
+    "authored_voice_tweets": 900,
+    "retweets_context": 453
+  },
+  "source_files": [
+    "X-Twitter-Archive/live-capture/2026-07-05/TXTrickWhooper/UserTweets/capture-state.json",
+    "X-Twitter-Archive/live-capture/2026-07-05/TXTrickWhooper/UserTweets-exact/exact-capture-tweets.json",
+    "X-Twitter-Archive/live-capture/2026-07-05/TXTrickWhooper/UserTweetsAndReplies-exact/exact-capture-tweets.json",
+    "X-Twitter-Archive/live-capture/2026-07-05/TXTrickWhooper/UserTweetsAndReplies-ui/ui-capture-tweets.json",
+    "X-Twitter-Archive/live-capture/2026-07-05/a_hump20/UserTweets-exact/exact-capture-tweets.json",
+    "X-Twitter-Archive/live-capture/2026-07-05/a_hump20/UserTweetsAndReplies-exact/exact-capture-tweets.json",
+    "X-Twitter-Archive/live-capture/2026-07-06/TXTrickWhooper/UserTweets-resume/resume-capture-summary.json",
+    "X-Twitter-Archive/live-capture/2026-07-06/search-scrape/search-scrape-summary.json"
+  ],
+  "new_search_capture": {
+    "visible_search_rows_seen": 322,
+    "authored_rows_added_after_dedupe": 221
+  }
+}

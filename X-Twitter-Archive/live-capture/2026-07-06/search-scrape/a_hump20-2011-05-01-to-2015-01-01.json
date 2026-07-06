@@ -1,0 +1,220 @@
+{
+  "bucket": {
+    "handle": "a_hump20",
+    "since": "2011-05-01",
+    "until": "2015-01-01",
+    "maxScrolls": 35
+  },
+  "captured_at_utc": "2026-07-06T00:49:06.630Z",
+  "rows": [
+    {
+      "account": "a_hump20",
+      "date_utc": "2014-11-30T20:02:42.000Z",
+      "handle": "a_hump20",
+      "id": "539147527837454336",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 1,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nNov 30, 2014\nHell yeah Colt keeping the play alive!! #HookEmRedskins\n1",
+      "since": "2011-05-01",
+      "status": "https://x.com/a_hump20/status/539147527837454336",
+      "text": "Hell yeah Colt keeping the play alive!! #HookEmRedskins",
+      "until": "2015-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2014-11-19T15:22:54.000Z",
+      "handle": "a_hump20",
+      "id": "535090847461560322",
+      "mentions": [
+        "CauseWereGuys",
+        "LukeBaird1"
+      ],
+      "metrics": {
+        "favorite_count": 1,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nNov 19, 2014\nReplying to \n@CauseWereGuys\n“\n@CauseWereGuys\n: RT if you know one ” the definition of your life \n@LukeBaird1\n1",
+      "since": "2011-05-01",
+      "status": "https://x.com/a_hump20/status/535090847461560322",
+      "text": "“\n@CauseWereGuys\n: RT if you know one ” the definition of your life \n@LukeBaird1",
+      "until": "2015-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2014-10-28T03:44:46.000Z",
+      "handle": "a_hump20",
+      "id": "526942625157238784",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nOct 27, 2014\nPut your horns up!!\n2",
+      "since": "2011-05-01",
+      "status": "https://x.com/a_hump20/status/526942625157238784",
+      "text": "Put your horns up!!",
+      "until": "2015-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2014-10-28T03:33:32.000Z",
+      "handle": "a_hump20",
+      "id": "526939799525941248",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 1,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nOct 27, 2014\nColt lookin like he's back at Texas again! #HookEm\n1",
+      "since": "2011-05-01",
+      "status": "https://x.com/a_hump20/status/526939799525941248",
+      "text": "Colt lookin like he's back at Texas again! #HookEm",
+      "until": "2015-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2014-10-20T00:46:03.000Z",
+      "handle": "a_hump20",
+      "id": "523998544907083776",
+      "mentions": [
+        "ColtMcCoy"
+      ],
+      "metrics": {
+        "favorite_count": 4,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nOct 19, 2014\nLoved seeing \n@ColtMcCoy\n play well today #HookEm\n4",
+      "since": "2011-05-01",
+      "status": "https://x.com/a_hump20/status/523998544907083776",
+      "text": "Loved seeing \n@ColtMcCoy\n play well today #HookEm",
+      "until": "2015-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2014-09-20T04:43:04.000Z",
+      "handle": "a_hump20",
+      "id": "513186557637840896",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 14,
+        "reply_count": 0,
+        "retweet_count": 1
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nSep 19, 2014\nCongrats to my boys on the victory tonight! #heightsgirlsarestillfat\n1\n14",
+      "since": "2011-05-01",
+      "status": "https://x.com/a_hump20/status/513186557637840896",
+      "text": "Congrats to my boys on the victory tonight! #heightsgirlsarestillfat",
+      "until": "2015-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2014-09-18T19:59:43.000Z",
+      "handle": "a_hump20",
+      "id": "512692463547330560",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 1,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nSep 18, 2014\nHahaha I honestly just don't understand the thought process of some people nowadays\n1",
+      "since": "2011-05-01",
+      "status": "https://x.com/a_hump20/status/512692463547330560",
+      "text": "Hahaha I honestly just don't understand the thought process of some people nowadays",
+      "until": "2015-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2014-09-11T21:55:37.000Z",
+      "handle": "a_hump20",
+      "id": "510184917817245696",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 4,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nSep 11, 2014\nMy entire dorm complex exudes the constant stench of marijuana and stale beer regardless of what day of the week or time it is #college\n1\n4",
+      "since": "2011-05-01",
+      "status": "https://x.com/a_hump20/status/510184917817245696",
+      "text": "My entire dorm complex exudes the constant stench of marijuana and stale beer regardless of what day of the week or time it is #college",
+      "until": "2015-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2014-08-23T15:15:08.000Z",
+      "handle": "a_hump20",
+      "id": "503198763226128384",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nAug 23, 2014\nIt's only been one night and I already love college\n2",
+      "since": "2011-05-01",
+      "status": "https://x.com/a_hump20/status/503198763226128384",
+      "text": "It's only been one night and I already love college",
+      "until": "2015-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2014-08-22T15:16:28.000Z",
+      "handle": "a_hump20",
+      "id": "502836708417630208",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 6,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nAug 22, 2014\nBoerne you've been good to me #ATXBound\n6",
+      "since": "2011-05-01",
+      "status": "https://x.com/a_hump20/status/502836708417630208",
+      "text": "Boerne you've been good to me #ATXBound",
+      "until": "2015-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2014-08-17T04:08:29.000Z",
+      "handle": "a_hump20",
+      "id": "500856666678501376",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 3,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nAug 16, 2014\nCan't believe I turn 19 in less than an hour #timeflies\n3",
+      "since": "2011-05-01",
+      "status": "https://x.com/a_hump20/status/500856666678501376",
+      "text": "Can't believe I turn 19 in less than an hour #timeflies",
+      "until": "2015-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2014-08-17T02:07:15.000Z",
+      "handle": "a_hump20",
+      "id": "500826155448946689",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 16,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nAug 16, 2014\nThe realization that everyone's going off to college didn't hit me until half the town departed for Tech\n16",
+      "since": "2011-05-01",
+      "status": "https://x.com/a_hump20/status/500826155448946689",
+      "text": "The realization that everyone's going off to college didn't hit me until half the town departed for Tech",
+      "until": "2015-01-01"
+    }
+  ]
+}

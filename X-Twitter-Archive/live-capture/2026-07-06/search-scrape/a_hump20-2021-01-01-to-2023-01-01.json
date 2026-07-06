@@ -1,0 +1,549 @@
+{
+  "bucket": {
+    "handle": "a_hump20",
+    "since": "2021-01-01",
+    "until": "2023-01-01",
+    "maxScrolls": 32
+  },
+  "captured_at_utc": "2026-07-06T00:50:03.611Z",
+  "rows": [
+    {
+      "account": "a_hump20",
+      "date_utc": "2022-12-17T20:35:56.000Z",
+      "handle": "a_hump20",
+      "id": "1604213831487655937",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nDec 17, 2022\nI absolutely despise Justin Jefferson right now\n1\n2\n352",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1604213831487655937",
+      "text": "I absolutely despise Justin Jefferson right now",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2022-10-12T15:21:51.000Z",
+      "handle": "a_hump20",
+      "id": "1580217190912954368",
+      "mentions": [
+        "Clarke_Smith98"
+      ],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 2,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nOct 12, 2022\nReplying to \n@Clarke_Smith98\nI’ll give it to y’all… that was pretty electric\n2\n2",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1580217190912954368",
+      "text": "I’ll give it to y’all… that was pretty electric",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2022-10-08T17:34:04.000Z",
+      "handle": "a_hump20",
+      "id": "1578800909118689280",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 3,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nOct 8, 2022\nImagine getting your ass beat like this then having to go back to NORMAN after #FuckOU #RedRiverShowdown\n3",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1578800909118689280",
+      "text": "Imagine getting your ass beat like this then having to go back to NORMAN after #FuckOU #RedRiverShowdown",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2022-10-06T11:17:03.000Z",
+      "handle": "a_hump20",
+      "id": "1577981256696045568",
+      "mentions": [
+        "WaffleHouse"
+      ],
+      "metrics": {
+        "favorite_count": 5,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nOct 6, 2022\nHow does San Antonio not have one \n@WaffleHouse\n, and how am I just now noticing? Absolute shame to fans of fine 24/7 breakfast dining everywhere.\n5",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1577981256696045568",
+      "text": "How does San Antonio not have one \n@WaffleHouse\n, and how am I just now noticing? Absolute shame to fans of fine 24/7 breakfast dining everywhere.",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2022-05-25T18:50:42.000Z",
+      "handle": "a_hump20",
+      "id": "1529535446283427846",
+      "mentions": [
+        "gofundme"
+      ],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nMay 25, 2022\n#PrayForUvalde\nQuote\nGoFundMe\n@gofundme\n·\nMay 24, 2022\nTo support those affected by the elementary school shooting in Uvalde, Texas, GoFundMe has created a centralized hub to house every verified fundraiser. \n\nOur Trust & Safety team will continue to update this hub with more fundraisers as they are verified. \nhttps://\ngofundme.com/c/act/donate-t\no-texas-elementary-school-shooting-relief?pc=CR_social&utm_source=twitter&utm_medium=social&utm_campaign=bcgfm_CR_texas-shooting-tw\n…\n2",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1529535446283427846",
+      "text": "#PrayForUvalde\nTo support those affected by the elementary school shooting in Uvalde, Texas, GoFundMe has created a centralized hub to house every verified fundraiser. \n\nOur Trust & Safety team will continue to update this hub with more fundraisers as they are verified. \nhttps://\ngofundme.com/c/act/donate-t\no-texas-elementary-school-shooting-relief?pc=CR_social&utm_source=twitter&utm_medium=social&utm_campaign=bcgfm_CR_texas-shooting-tw\n…",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2022-01-15T09:29:51.000Z",
+      "handle": "a_hump20",
+      "id": "1482283879646048256",
+      "mentions": [
+        "KendrickPerkins",
+        "JaMorant"
+      ],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nJan 15, 2022\nOne of the few national media personalities not brainwashed by big markets or slave to network narrative nowadays. Props to Perk for preaching that #TennesseeTruth #CarryOn\nQuote\nKendrick Perkins\n@KendrickPerkins\n·\nJan 14, 2022\nMy first ever video essay, so you damn right it’s about the PHENOM @JaMorant. Carry the hell on… #NBATODAY\n1\n2",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1482283879646048256",
+      "text": "One of the few national media personalities not brainwashed by big markets or slave to network narrative nowadays. Props to Perk for preaching that #TennesseeTruth #CarryOn\nMy first ever video essay, so you damn right it’s about the PHENOM @JaMorant. Carry the hell on… #NBATODAY",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-12-22T02:13:17.000Z",
+      "handle": "a_hump20",
+      "id": "1473476706740719621",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nDec 21, 2021\nOf course Cooper Kupp cucks me\n2",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1473476706740719621",
+      "text": "Of course Cooper Kupp cucks me",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-12-04T16:14:26.000Z",
+      "handle": "a_hump20",
+      "id": "1467165409770188801",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 8,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nDec 4, 2021\nIf the chicken tender goes extinct I’m no longer meant for this world \nhttps://\nx.com/balleralert/st\n/balleralert/status/1466979473127968768\n…\nThis post is unavailable.\n8",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1467165409770188801",
+      "text": "If the chicken tender goes extinct I’m no longer meant for this world \nhttps://\nx.com/balleralert/st\n/balleralert/status/1466979473127968768\n…",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-11-30T03:05:55.000Z",
+      "handle": "a_hump20",
+      "id": "1465517419313704962",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nNov 29, 2021\nMcKissic is a damn vulture\n1\n2",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1465517419313704962",
+      "text": "McKissic is a damn vulture",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-10-18T15:51:40.000Z",
+      "handle": "a_hump20",
+      "id": "1450127448079753223",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nOct 18, 2021\nThe jokes inflicted upon this poor guy in middle school must’ve been endless\n2",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1450127448079753223",
+      "text": "The jokes inflicted upon this poor guy in middle school must’ve been endless",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-08-19T07:03:12.000Z",
+      "handle": "a_hump20",
+      "id": "1428251182175248386",
+      "mentions": [
+        "MLBVault"
+      ],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nAug 19, 2021\nHow on earth have I never seen this throw. Dude had an absolute cannon\nQuote\nMLB Vault\n@MLBVault\n·\nAug 18, 2021\nThe great Roberto Clemente was born OTD in 1934, so of course we have to post this incredible throw. \n0:09From \nMLB Vault\n1\n2",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1428251182175248386",
+      "text": "How on earth have I never seen this throw. Dude had an absolute cannon\nThe great Roberto Clemente was born OTD in 1934, so of course we have to post this incredible throw.",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-07-02T02:19:06.000Z",
+      "handle": "a_hump20",
+      "id": "1410785070558875651",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 1,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nJul 1, 2021\n*Continues chowing down*\nMe: “How bout that Tits game tho”\n1",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1410785070558875651",
+      "text": "*Continues chowing down*\nMe: “How bout that Tits game tho”",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-05-28T14:34:14.000Z",
+      "handle": "a_hump20",
+      "id": "1398286496927518727",
+      "mentions": [
+        "_willcompton"
+      ],
+      "metrics": {
+        "favorite_count": 0,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nMay 28, 2021\nReplying to \n@_willcompton\nBuford’s on west sixth is a must my man",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1398286496927518727",
+      "text": "Buford’s on west sixth is a must my man",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-05-12T03:32:37.000Z",
+      "handle": "a_hump20",
+      "id": "1392321789716480001",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nMay 11, 2021\nThis Nolan Arenado-Paul Goldschmidt one-two punch is a thing of beauty when it’s clicking #STLFLY\n2",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1392321789716480001",
+      "text": "This Nolan Arenado-Paul Goldschmidt one-two punch is a thing of beauty when it’s clicking #STLFLY",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-03-17T22:20:04.000Z",
+      "handle": "a_hump20",
+      "id": "1372311801661120514",
+      "mentions": [
+        "el_Pipo_"
+      ],
+      "metrics": {
+        "favorite_count": 1,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nMar 17, 2021\nReplying to \n@el_Pipo_\nAny woman would be lucky to have you Bolty. You’re a true model of monogamy\n1",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1372311801661120514",
+      "text": "Any woman would be lucky to have you Bolty. You’re a true model of monogamy",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-03-10T17:49:15.000Z",
+      "handle": "a_hump20",
+      "id": "1369706933347876866",
+      "mentions": [
+        "zackerscrackers",
+        "el_Pipo_",
+        "sarahschnugget"
+      ],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nMar 10, 2021\nReplying to \n@zackerscrackers\n \n@el_Pipo_\n and \n@sarahschnugget\nLet’s not lie to the lady Zackers, officially it was a mere 4.52\n2",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1369706933347876866",
+      "text": "Let’s not lie to the lady Zackers, officially it was a mere 4.52",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-03-10T16:52:18.000Z",
+      "handle": "a_hump20",
+      "id": "1369692601457274880",
+      "mentions": [
+        "el_Pipo_",
+        "sarahschnugget"
+      ],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nMar 10, 2021\nReplying to \n@el_Pipo_\n and \n@sarahschnugget\nThank you for your kind words Boltron. Having you by my side as a friend and hype man is truly the honor of my life\n1\n2",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1369692601457274880",
+      "text": "Thank you for your kind words Boltron. Having you by my side as a friend and hype man is truly the honor of my life",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-03-10T15:09:46.000Z",
+      "handle": "a_hump20",
+      "id": "1369666800141631491",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 1,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nMar 10, 2021\nEvery time I open Facebook I immediately regret doing so\n1",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1369666800141631491",
+      "text": "Every time I open Facebook I immediately regret doing so",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-03-10T14:39:41.000Z",
+      "handle": "a_hump20",
+      "id": "1369659225589301256",
+      "mentions": [
+        "sarahschnugget"
+      ],
+      "metrics": {
+        "favorite_count": 4,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nMar 10, 2021\nReplying to \n@sarahschnugget\nHere comes the half court heaves\n1\n4",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1369659225589301256",
+      "text": "Here comes the half court heaves",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-03-09T07:48:32.000Z",
+      "handle": "a_hump20",
+      "id": "1369193370078359552",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 4,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nMar 9, 2021\nThe Last of Us 2 is a work of art in every sense of the word\n1\n4",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1369193370078359552",
+      "text": "The Last of Us 2 is a work of art in every sense of the word",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-03-01T20:24:27.000Z",
+      "handle": "a_hump20",
+      "id": "1366484501103321095",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 10,
+        "reply_count": 0,
+        "retweet_count": 1
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nMar 1, 2021\nRIP sweet prince. Gone but never forgotten\n1\n10",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1366484501103321095",
+      "text": "RIP sweet prince. Gone but never forgotten",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-03-01T20:02:09.000Z",
+      "handle": "a_hump20",
+      "id": "1366478886217936898",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 3,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nMar 1, 2021\nI truly don’t understand why college baseball gets virtually no TV exposure or media coverage. The sport is absolutely electric\n1\n3",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1366478886217936898",
+      "text": "I truly don’t understand why college baseball gets virtually no TV exposure or media coverage. The sport is absolutely electric",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-02-06T03:40:57.000Z",
+      "handle": "a_hump20",
+      "id": "1357897038311129089",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nFeb 5, 2021\nBilly football is my hero\n2",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1357897038311129089",
+      "text": "Billy football is my hero",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-02-04T23:41:22.000Z",
+      "handle": "a_hump20",
+      "id": "1357474358592233475",
+      "mentions": [
+        "zackerscrackers"
+      ],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nFeb 4, 2021\nReplying to \n@a_hump20\n \n@zackerscrackers\n and 3 others\nBut hey not everyone’s built for the big apple, y’all can always join the jets in Jersey\n2",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1357474358592233475",
+      "text": "But hey not everyone’s built for the big apple, y’all can always join the jets in Jersey",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-01-27T06:53:11.000Z",
+      "handle": "a_hump20",
+      "id": "1354321536484847616",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 1,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nJan 27, 2021\nNo drug can teach you to be as good at baseball as Barry Bonds and Roger Clemens were. Steroids or not, they deserve to be in the Hall.\n1",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1354321536484847616",
+      "text": "No drug can teach you to be as good at baseball as Barry Bonds and Roger Clemens were. Steroids or not, they deserve to be in the Hall.",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-01-18T17:01:41.000Z",
+      "handle": "a_hump20",
+      "id": "1351213180450729985",
+      "mentions": [
+        "BigBallerBern"
+      ],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nJan 18, 2021\nReplying to \n@BigBallerBern\nI see your switch hitter and raise you my swinger cuz Brad. Man made it official on xmas eve at age 35 in front of half my friends and fam\n1\n2",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1351213180450729985",
+      "text": "I see your switch hitter and raise you my swinger cuz Brad. Man made it official on xmas eve at age 35 in front of half my friends and fam",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-01-18T08:08:18.000Z",
+      "handle": "a_hump20",
+      "id": "1351078951486160896",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 5,
+        "reply_count": 2,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nJan 18, 2021\nToday my 10 year old cuz went snap story official with her bf and all I can say is thank Jesus I had a flip phone\n2\n5",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1351078951486160896",
+      "text": "Today my 10 year old cuz went snap story official with her bf and all I can say is thank Jesus I had a flip phone",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-01-17T22:15:09.000Z",
+      "handle": "a_hump20",
+      "id": "1350929681613266945",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nJan 17, 2021\nI refuse to acknowledge a Browns AFC championship appearance if they beat Chad Henne’s Chiefs\n2",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1350929681613266945",
+      "text": "I refuse to acknowledge a Browns AFC championship appearance if they beat Chad Henne’s Chiefs",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-01-06T16:01:00.000Z",
+      "handle": "a_hump20",
+      "id": "1346849257760960516",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 2,
+        "reply_count": 0,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nJan 6, 2021\nReplying to \n@a_hump20\nUpdate: it rained overnight and these hoodlums officially pulled off the perfect tepee job\n2",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1346849257760960516",
+      "text": "Update: it rained overnight and these hoodlums officially pulled off the perfect tepee job",
+      "until": "2023-01-01"
+    },
+    {
+      "account": "a_hump20",
+      "date_utc": "2021-01-06T03:35:43.000Z",
+      "handle": "a_hump20",
+      "id": "1346661698128764928",
+      "mentions": [],
+      "metrics": {
+        "favorite_count": 4,
+        "reply_count": 1,
+        "retweet_count": 0
+      },
+      "raw": "Austin Humphrey\n@a_hump20\n·\nJan 5, 2021\nSome mfers really just toilet papered my house at 9 pm w 5 cars outside and idk whether to be impressed or pissed at the little shits\n1\n4",
+      "since": "2021-01-01",
+      "status": "https://x.com/a_hump20/status/1346661698128764928",
+      "text": "Some mfers really just toilet papered my house at 9 pm w 5 cars outside and idk whether to be impressed or pissed at the little shits",
+      "until": "2023-01-01"
+    }
+  ]
+}

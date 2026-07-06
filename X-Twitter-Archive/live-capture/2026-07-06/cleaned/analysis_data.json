@@ -1,0 +1,2073 @@
+{
+  "summary": {
+    "captured_at_utc": "2026-07-06T00:42:00Z",
+    "source_boundary": "Live logged-in X feed and X search capture through Chrome. Official X archive export remains blocked by X password re-verification, so this is broader live capture, not a complete official archive ZIP.",
+    "counts": {
+      "TXTrickWhooper": {
+        "unique_activity_items": 583,
+        "authored_voice_tweets": 373,
+        "retweets_context": 133,
+        "date_range_ct": [
+          "2022-07-01T20:58:29-05:00",
+          "2026-07-05T13:42:07-05:00"
+        ],
+        "by_year": {
+          "2022": 5,
+          "2023": 40,
+          "2024": 126,
+          "2025": 63,
+          "2026": 139
+        },
+        "by_activity_type": {
+          "reply": 257,
+          "tweet": 92,
+          "reply_with_quote": 4,
+          "quote": 20
+        },
+        "top_themes": [
+          [
+            "question/reply energy",
+            210
+          ],
+          [
+            "everyday observation",
+            107
+          ],
+          [
+            "sports/Texas",
+            53
+          ],
+          [
+            "AI/dev/tools",
+            43
+          ],
+          [
+            "X/platform",
+            16
+          ],
+          [
+            "place/Texas/Memphis",
+            9
+          ],
+          [
+            "politics/news",
+            8
+          ],
+          [
+            "food/vices",
+            7
+          ]
+        ],
+        "top_humor_tags": [
+          [
+            "reply volley",
+            251
+          ],
+          [
+            "short deadpan",
+            241
+          ],
+          [
+            "self-involving aside",
+            106
+          ],
+          [
+            "casual bluntness",
+            45
+          ],
+          [
+            "overstated stakes",
+            13
+          ],
+          [
+            "absurd everyday object",
+            8
+          ],
+          [
+            "mock gratitude",
+            6
+          ],
+          [
+            "mock PSA setup",
+            5
+          ]
+        ],
+        "avg_words": 15.2,
+        "median_words": 11,
+        "question_rate": 0.113,
+        "hashtag_rate": 0.088,
+        "mention_rate": 0.786
+      },
+      "a_hump20": {
+        "unique_activity_items": 884,
+        "authored_voice_tweets": 527,
+        "retweets_context": 320,
+        "date_range_ct": [
+          "2014-01-22T10:42:57-06:00",
+          "2025-10-18T21:24:56-05:00"
+        ],
+        "by_year": {
+          "2014": 160,
+          "2015": 11,
+          "2016": 8,
+          "2017": 5,
+          "2019": 14,
+          "2020": 65,
+          "2021": 108,
+          "2022": 45,
+          "2023": 65,
+          "2024": 34,
+          "2025": 12
+        },
+        "by_activity_type": {
+          "tweet": 366,
+          "quote": 80,
+          "reply": 80,
+          "reply_with_quote": 1
+        },
+        "top_themes": [
+          [
+            "everyday observation",
+            412
+          ],
+          [
+            "sports/Texas",
+            60
+          ],
+          [
+            "question/reply energy",
+            40
+          ],
+          [
+            "food/vices",
+            10
+          ],
+          [
+            "X/platform",
+            10
+          ],
+          [
+            "politics/news",
+            6
+          ],
+          [
+            "AI/dev/tools",
+            4
+          ],
+          [
+            "place/Texas/Memphis",
+            2
+          ]
+        ],
+        "top_humor_tags": [
+          [
+            "short deadpan",
+            379
+          ],
+          [
+            "reply volley",
+            56
+          ],
+          [
+            "self-involving aside",
+            40
+          ],
+          [
+            "casual bluntness",
+            26
+          ],
+          [
+            "absurd everyday object",
+            3
+          ],
+          [
+            "mock gratitude",
+            3
+          ],
+          [
+            "overstated stakes",
+            2
+          ]
+        ],
+        "avg_words": 10.8,
+        "median_words": 9,
+        "question_rate": 0.046,
+        "hashtag_rate": 0.152,
+        "mention_rate": 0.262
+      }
+    },
+    "totals": {
+      "unique_activity_items": 1467,
+      "authored_voice_tweets": 900,
+      "retweets_context": 453
+    },
+    "source_files": [
+      "X-Twitter-Archive/live-capture/2026-07-05/TXTrickWhooper/UserTweets/capture-state.json",
+      "X-Twitter-Archive/live-capture/2026-07-05/TXTrickWhooper/UserTweets-exact/exact-capture-tweets.json",
+      "X-Twitter-Archive/live-capture/2026-07-05/TXTrickWhooper/UserTweetsAndReplies-exact/exact-capture-tweets.json",
+      "X-Twitter-Archive/live-capture/2026-07-05/TXTrickWhooper/UserTweetsAndReplies-ui/ui-capture-tweets.json",
+      "X-Twitter-Archive/live-capture/2026-07-05/a_hump20/UserTweets-exact/exact-capture-tweets.json",
+      "X-Twitter-Archive/live-capture/2026-07-05/a_hump20/UserTweetsAndReplies-exact/exact-capture-tweets.json",
+      "X-Twitter-Archive/live-capture/2026-07-06/TXTrickWhooper/UserTweets-resume/resume-capture-summary.json",
+      "X-Twitter-Archive/live-capture/2026-07-06/search-scrape/search-scrape-summary.json"
+    ],
+    "new_search_capture": {
+      "visible_search_rows_seen": 322,
+      "authored_rows_added_after_dedupe": 221
+    }
+  },
+  "examples": [
+    {
+      "label": "Waffle House as civil-defense institution",
+      "tweet": {
+        "account": "TXTrickWhooper",
+        "date_ct": "2026-06-05T15:01:49-05:00",
+        "type": "reply",
+        "text": "@DrewVento Waffle house is our last line of defense",
+        "likes": 458,
+        "reposts": 16,
+        "replies": 5,
+        "url": "https://x.com/TXTrickWhooper/status/2062988282917494908",
+        "themes": [
+          "sports/Texas",
+          "food/vices"
+        ],
+        "humor": [
+          "overstated stakes",
+          "reply volley",
+          "absurd everyday object",
+          "short deadpan"
+        ]
+      }
+    },
+    {
+      "label": "Mock life lesson from a vape charger",
+      "tweet": {
+        "account": "TXTrickWhooper",
+        "date_ct": "2026-07-05T10:07:50-05:00",
+        "type": "tweet",
+        "text": "Yesterday I learned you can charge your vape by plugging it directly into your phone with the charging wire #themoreyouknow #nicoFIEND #gamechanger",
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "url": "https://x.com/TXTrickWhooper/status/2073785932877017597",
+        "themes": [
+          "food/vices"
+        ],
+        "humor": [
+          "mock PSA setup",
+          "absurd everyday object",
+          "self-involving aside"
+        ]
+      }
+    },
+    {
+      "label": "Cats-as-hardware deadpan",
+      "tweet": {
+        "account": "TXTrickWhooper",
+        "date_ct": "2026-06-25T06:41:08-05:00",
+        "type": "tweet",
+        "text": "Not sure who needed to hear this, but cats make incredible mouse pads https://t.co/UciiwZXmRk",
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "url": "https://x.com/TXTrickWhooper/status/2070110038312554745",
+        "themes": [
+          "everyday observation"
+        ],
+        "humor": [
+          "mock PSA setup",
+          "absurd everyday object",
+          "short deadpan"
+        ]
+      }
+    },
+    {
+      "label": "Competitive-eating patriot theology",
+      "tweet": {
+        "account": "TXTrickWhooper",
+        "date_ct": "2026-07-05T10:42:04-05:00",
+        "type": "reply",
+        "text": "@Sremetv American patriot and hero Joey Chestnut would be shook to his core",
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "url": "https://x.com/TXTrickWhooper/status/2073794549789380612",
+        "themes": [
+          "politics/news"
+        ],
+        "humor": [
+          "overstated stakes",
+          "reply volley",
+          "short deadpan"
+        ]
+      }
+    },
+    {
+      "label": "AI-tool self-own",
+      "tweet": {
+        "account": "TXTrickWhooper",
+        "date_ct": "2026-07-05T06:27:23-05:00",
+        "type": "reply",
+        "text": "@robj3d3 I’ve never done this cuz no way I could remember the name of the file I need from my jumble of ADHD-fueled AI slop",
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "url": "https://x.com/TXTrickWhooper/status/2073730456579711383",
+        "themes": [
+          "AI/dev/tools"
+        ],
+        "humor": [
+          "reply volley",
+          "self-involving aside"
+        ]
+      }
+    },
+    {
+      "label": "Anti-code-reading punchline",
+      "tweet": {
+        "account": "TXTrickWhooper",
+        "date_ct": "2026-07-05T06:16:26-05:00",
+        "type": "reply",
+        "text": "@theo Reading code is for nerds and agents",
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "url": "https://x.com/TXTrickWhooper/status/2073727702498951283",
+        "themes": [
+          "AI/dev/tools"
+        ],
+        "humor": [
+          "reply volley",
+          "short deadpan"
+        ]
+      }
+    },
+    {
+      "label": "Baseball vocabulary gatekeeping",
+      "tweet": {
+        "account": "TXTrickWhooper",
+        "date_ct": "2026-07-04T07:14:49-05:00",
+        "type": "reply",
+        "text": "@trendingusa_com @Cubs I can tell you don’t watch baseball because you said “match”",
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "url": "https://x.com/TXTrickWhooper/status/2073380006873420106",
+        "themes": [
+          "sports/Texas"
+        ],
+        "humor": [
+          "reply volley",
+          "short deadpan"
+        ]
+      }
+    },
+    {
+      "label": "Claude model complaint",
+      "tweet": {
+        "account": "TXTrickWhooper",
+        "date_ct": "2026-06-23T12:15:35-05:00",
+        "type": "reply",
+        "text": "@claudeai Bro give us a new fuckin model, Opus 4.8 is, as kindly as I can put it, ass.",
+        "likes": 129,
+        "reposts": 2,
+        "replies": 4,
+        "url": "https://x.com/TXTrickWhooper/status/2069469430468190217",
+        "themes": [
+          "AI/dev/tools"
+        ],
+        "humor": [
+          "reply volley",
+          "short deadpan"
+        ]
+      }
+    },
+    {
+      "label": "For You page complaint escalated",
+      "tweet": {
+        "account": "TXTrickWhooper",
+        "date_ct": "2026-06-23T22:55:38-05:00",
+        "type": "tweet",
+        "text": "Dear @elonmusk, I literally have every single soccer-related synonym in the dictionary muted. I also block EVERY single user I come across who mentions it permanently. That said, PLEASE kindly get it THE fuck off my “For You” FEATURED page. Or at least allow the option to remove it. Thx :) Best regards, Stallion P.S., Soccer can suck my shriveled suck",
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "url": "https://x.com/TXTrickWhooper/status/2069630504819728432",
+        "themes": [
+          "X/platform"
+        ],
+        "humor": [
+          "overstated stakes",
+          "casual bluntness",
+          "self-involving aside"
+        ]
+      }
+    },
+    {
+      "label": "Waffle House San Antonio bit, early form",
+      "tweet": {
+        "account": "a_hump20",
+        "date_ct": "2022-10-06T06:17:03-05:00",
+        "type": "tweet",
+        "text": "How does San Antonio not have one @WaffleHouse, and how am I just now noticing? Absolute shame to fans of fine 24/7 breakfast dining everywhere.",
+        "likes": 5,
+        "reposts": 0,
+        "replies": 0,
+        "url": "https://x.com/a_hump20/status/1577981256696045568",
+        "themes": [
+          "sports/Texas",
+          "food/vices",
+          "place/Texas/Memphis",
+          "question/reply energy"
+        ],
+        "humor": [
+          "absurd everyday object"
+        ]
+      }
+    },
+    {
+      "label": "Family cat cover-up story",
+      "tweet": {
+        "account": "a_hump20",
+        "date_ct": "2025-01-23T03:37:44-06:00",
+        "type": "tweet",
+        "text": "My dad inadvertently catnapped a cat (let in bc cold), couldn't find him till 7 PM the next day, then had my mom cover for him on the FB HOA page. The kicker? Brownie has a mean streak😂😂😂 https://t.co/XS8AR0DFKF",
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "url": "https://x.com/a_hump20/status/1882362069665882308",
+        "themes": [
+          "question/reply energy"
+        ],
+        "humor": [
+          "casual bluntness",
+          "absurd everyday object"
+        ]
+      }
+    },
+    {
+      "label": "College-football craving as withdrawal",
+      "tweet": {
+        "account": "a_hump20",
+        "date_ct": "2025-08-15T15:52:39-05:00",
+        "type": "tweet",
+        "text": "Been itching like a crack addict on his last rock for a lil college football action",
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "url": "https://x.com/a_hump20/status/1956459041862844767",
+        "themes": [
+          "sports/Texas"
+        ],
+        "humor": [
+          "short deadpan"
+        ]
+      }
+    },
+    {
+      "label": "Chick-fil-A mock acceptance speech",
+      "tweet": {
+        "account": "a_hump20",
+        "date_ct": "2025-04-10T14:43:56-05:00",
+        "type": "tweet",
+        "text": "I would like to thank Jesus, my family, and most importantly @ChickfilA for existing #Dynasty #championshipDNA https://t.co/Quk68kLlXQ",
+        "likes": 1,
+        "reposts": 0,
+        "replies": 1,
+        "url": "https://x.com/a_hump20/status/1910418489376202903",
+        "themes": [
+          "everyday observation"
+        ],
+        "humor": [
+          "self-involving aside"
+        ]
+      }
+    },
+    {
+      "label": "Sports-camera one-job blast",
+      "tweet": {
+        "account": "a_hump20",
+        "date_ct": "2025-10-18T21:24:56-05:00",
+        "type": "tweet",
+        "text": "That camera man had one fuckin job and fucked it up on the biggest play of the game lmao",
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "url": "https://x.com/a_hump20/status/1979735486857171194",
+        "themes": [
+          "everyday observation"
+        ],
+        "humor": [
+          "short deadpan"
+        ]
+      }
+    },
+    {
+      "label": "Sark/Arch frustration as tactical rant",
+      "tweet": {
+        "account": "a_hump20",
+        "date_ct": "2024-12-07T19:19:35-06:00",
+        "type": "tweet",
+        "text": "The fact Sark literally teased us with one effective zone read with Arch in just to pull him the next play is what hurts most Like even my NANA knows Quinn ain’t pulling that rock to run the mfer couldn’t break 6 seconds flat on a 20 yard dash",
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "url": "https://x.com/a_hump20/status/1865566862253179351",
+        "themes": [
+          "sports/Texas"
+        ],
+        "humor": [
+          "casual bluntness"
+        ]
+      }
+    },
+    {
+      "label": "Barbie/Oppenheimer social bit",
+      "tweet": {
+        "account": "a_hump20",
+        "date_ct": "2023-07-23T04:53:37-05:00",
+        "type": "tweet",
+        "text": "Haven’t been able to resist asking every single group of girls I see dressed in Barbie pink this weekend how Oppenheimer was. I need to be stopped",
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "url": "https://x.com/a_hump20/status/1683052741147627520",
+        "themes": [
+          "everyday observation"
+        ],
+        "humor": [
+          "overstated stakes"
+        ]
+      }
+    },
+    {
+      "label": "Early self-awareness",
+      "tweet": {
+        "account": "a_hump20",
+        "date_ct": "2014-02-01T13:10:19-06:00",
+        "type": "tweet",
+        "text": "Reading all my old Facebook messages makes me realize how weird I really was",
+        "likes": 23,
+        "reposts": 1,
+        "replies": 0,
+        "url": "https://x.com/a_hump20/status/429693209279610880",
+        "themes": [
+          "everyday observation"
+        ],
+        "humor": [
+          "short deadpan"
+        ]
+      }
+    },
+    {
+      "label": "Early deadpan confession",
+      "tweet": {
+        "account": "a_hump20",
+        "date_ct": "2014-02-12T21:54:21-06:00",
+        "type": "tweet",
+        "text": "I just wanted to fight😔",
+        "likes": 17,
+        "reposts": 7,
+        "replies": 0,
+        "url": "https://x.com/a_hump20/status/433811354873389057",
+        "themes": [
+          "everyday observation"
+        ],
+        "humor": [
+          "short deadpan"
+        ]
+      }
+    },
+    {
+      "label": "College transition marker",
+      "tweet": {
+        "account": "a_hump20",
+        "date_ct": "2014-08-16T21:07:15-05:00",
+        "type": "tweet",
+        "text": "The realization that everyone's going off to college didn't hit me until half the town departed for Tech",
+        "likes": 16,
+        "reposts": 0,
+        "replies": 0,
+        "url": "https://x.com/a_hump20/status/500826155448946689",
+        "themes": [
+          "everyday observation"
+        ],
+        "humor": []
+      }
+    },
+    {
+      "label": "2021 America/social media pressure",
+      "tweet": {
+        "account": "a_hump20",
+        "date_ct": "2021-01-06T17:03:42-06:00",
+        "type": "tweet",
+        "text": "Christ a man can’t even log off social media for 2 hours nowadays without America going full shambles again",
+        "likes": 1,
+        "reposts": 0,
+        "replies": 1,
+        "url": "https://x.com/a_hump20/status/1346955633652883457",
+        "themes": [
+          "politics/news"
+        ],
+        "humor": []
+      }
+    },
+    {
+      "label": "Bar glass rinsers as cup bidets",
+      "tweet": {
+        "account": "TXTrickWhooper",
+        "date_ct": "2023-12-04T05:12:41-06:00",
+        "type": "tweet",
+        "text": "Anyone else ever noticed how bar glass rinsers are just bidets for cups? #StonedAtTheBar https://t.co/5jrTqkHBE1",
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "url": "https://x.com/TXTrickWhooper/status/1731632611439628621",
+        "themes": [
+          "question/reply energy"
+        ],
+        "humor": []
+      }
+    },
+    {
+      "label": "MLB The Show card-or-riot escalation",
+      "tweet": {
+        "account": "TXTrickWhooper",
+        "date_ct": "2022-08-11T03:02:59-05:00",
+        "type": "tweet",
+        "text": ".@MLBTheShow Give us a Chandler Redmond card in some shape or form or we riot. 5 hits, 4 bombs (in as many innings), and 11 RBIs to hit for the home-run cycle is absurd on any level #MLBTheShow #Baseball #STLCards",
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "url": "https://x.com/TXTrickWhooper/status/1557638694756040705",
+        "themes": [
+          "sports/Texas"
+        ],
+        "humor": []
+      }
+    },
+    {
+      "label": "Twitter memories cancellation bit",
+      "tweet": {
+        "account": "TXTrickWhooper",
+        "date_ct": "2023-10-28T04:43:25-05:00",
+        "type": "tweet",
+        "text": "What if Twitter had “On this day” memories with all the dumb shit celebs said when they were 12 and get ousted for 10+ years later I can imagine it now: “On this day 12 years ago you posted: ‘N*****’”😂",
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "url": "https://x.com/TXTrickWhooper/status/1718201795825078339",
+        "themes": [
+          "X/platform"
+        ],
+        "humor": [
+          "casual bluntness"
+        ]
+      }
+    },
+    {
+      "label": "New Year poop ceremonial deadpan",
+      "tweet": {
+        "account": "TXTrickWhooper",
+        "date_ct": "2024-01-01T00:11:08-06:00",
+        "type": "tweet",
+        "text": "The first poop on the New Year just hits different #NYE",
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "url": "https://x.com/TXTrickWhooper/status/1741703583370768821",
+        "themes": [
+          "everyday observation"
+        ],
+        "humor": [
+          "short deadpan"
+        ]
+      }
+    },
+    {
+      "label": "70-3 Big 12 title reply correction",
+      "tweet": {
+        "account": "TXTrickWhooper",
+        "date_ct": "2024-04-30T15:55:05-05:00",
+        "type": "reply",
+        "text": "Not to mention the year he exampled we smacked them 70-3 in the Big 12 Title Game",
+        "likes": 4,
+        "reposts": 0,
+        "replies": 0,
+        "url": "https://x.com/TXTrickWhooper/status/1785412579747115280",
+        "themes": [
+          "sports/Texas",
+          "question/reply energy"
+        ],
+        "humor": [
+          "reply volley",
+          "self-involving aside"
+        ]
+      }
+    },
+    {
+      "label": "AB schizo savior reply",
+      "tweet": {
+        "account": "TXTrickWhooper",
+        "date_ct": "2024-04-10T13:13:50-05:00",
+        "type": "reply",
+        "text": "AB don’t give a fuck he’s our schizo savior",
+        "likes": 3,
+        "reposts": 0,
+        "replies": 1,
+        "url": "https://x.com/TXTrickWhooper/status/1778124243722469768",
+        "themes": [
+          "question/reply energy"
+        ],
+        "humor": [
+          "short deadpan",
+          "reply volley",
+          "casual bluntness",
+          "self-involving aside",
+          "overstated stakes"
+        ]
+      }
+    },
+    {
+      "label": "Draymond as Donkey from Shrek",
+      "tweet": {
+        "account": "TXTrickWhooper",
+        "date_ct": "2023-11-15T08:34:52-06:00",
+        "type": "reply",
+        "text": "Can we all agree Draymond looks like Donkey from Shrek?",
+        "likes": 2,
+        "reposts": 0,
+        "replies": 0,
+        "url": "https://x.com/TXTrickWhooper/status/1724798123187617904",
+        "themes": [
+          "sports/Texas",
+          "question/reply energy"
+        ],
+        "humor": [
+          "short deadpan",
+          "reply volley",
+          "self-involving aside",
+          "absurd everyday object",
+          "mock PSA setup"
+        ]
+      }
+    },
+    {
+      "label": "Athlete health fentanyl reply",
+      "tweet": {
+        "account": "TXTrickWhooper",
+        "date_ct": "2023-11-16T07:27:46-06:00",
+        "type": "reply",
+        "text": "Many of which are fentanyl-related for you. Also, just because they are young athletes doesn’t mean they’re healthy. In a lot of cases elite athletes are taking supplements, pre-workouts, or even HGH which put stress on the heart and other organs to gain an edge within the rules.",
+        "likes": 3,
+        "reposts": 0,
+        "replies": 0,
+        "url": "https://x.com/TXTrickWhooper/status/1725143623283478781",
+        "themes": [
+          "food/vices",
+          "X/platform",
+          "politics/news",
+          "question/reply energy"
+        ],
+        "humor": [
+          "reply volley"
+        ]
+      }
+    }
+  ],
+  "phrases": {
+    "TXTrickWhooper": {
+      "words": [
+        [
+          "co",
+          29
+        ],
+        [
+          "like",
+          26
+        ],
+        [
+          "grok",
+          26
+        ],
+        [
+          "what",
+          23
+        ],
+        [
+          "how",
+          18
+        ],
+        [
+          "when",
+          18
+        ],
+        [
+          "know",
+          16
+        ],
+        [
+          "get",
+          15
+        ],
+        [
+          "him",
+          15
+        ],
+        [
+          "game",
+          15
+        ],
+        [
+          "man",
+          14
+        ],
+        [
+          "time",
+          14
+        ],
+        [
+          "even",
+          14
+        ],
+        [
+          "texas",
+          14
+        ],
+        [
+          "who",
+          13
+        ],
+        [
+          "never",
+          13
+        ],
+        [
+          "baseball",
+          13
+        ],
+        [
+          "than",
+          13
+        ],
+        [
+          "say",
+          12
+        ],
+        [
+          "don",
+          12
+        ],
+        [
+          "claudeai",
+          12
+        ],
+        [
+          "one",
+          12
+        ],
+        [
+          "ve",
+          11
+        ],
+        [
+          "take",
+          11
+        ],
+        [
+          "first",
+          11
+        ],
+        [
+          "give",
+          11
+        ],
+        [
+          "re",
+          11
+        ],
+        [
+          "here",
+          11
+        ],
+        [
+          "off",
+          10
+        ],
+        [
+          "ai",
+          10
+        ],
+        [
+          "bro",
+          10
+        ],
+        [
+          "up",
+          10
+        ],
+        [
+          "more",
+          10
+        ],
+        [
+          "everyone",
+          10
+        ],
+        [
+          "watch",
+          9
+        ],
+        [
+          "love",
+          9
+        ],
+        [
+          "fuck",
+          9
+        ],
+        [
+          "yeah",
+          9
+        ],
+        [
+          "ll",
+          9
+        ],
+        [
+          "mean",
+          9
+        ],
+        [
+          "dude",
+          9
+        ],
+        [
+          "sports",
+          9
+        ],
+        [
+          "life",
+          9
+        ],
+        [
+          "go",
+          8
+        ],
+        [
+          "ur",
+          8
+        ],
+        [
+          "god",
+          8
+        ],
+        [
+          "best",
+          8
+        ],
+        [
+          "day",
+          8
+        ],
+        [
+          "new",
+          8
+        ],
+        [
+          "think",
+          8
+        ],
+        [
+          "most",
+          8
+        ],
+        [
+          "big",
+          8
+        ],
+        [
+          "their",
+          8
+        ],
+        [
+          "vs",
+          8
+        ],
+        [
+          "why",
+          8
+        ],
+        [
+          "will",
+          8
+        ],
+        [
+          "top",
+          7
+        ],
+        [
+          "ain",
+          7
+        ],
+        [
+          "way",
+          7
+        ],
+        [
+          "said",
+          7
+        ],
+        [
+          "12",
+          7
+        ],
+        [
+          "year",
+          7
+        ],
+        [
+          "any",
+          7
+        ],
+        [
+          "other",
+          7
+        ],
+        [
+          "made",
+          7
+        ],
+        [
+          "opus",
+          7
+        ],
+        [
+          "still",
+          7
+        ],
+        [
+          "every",
+          7
+        ],
+        [
+          "also",
+          7
+        ],
+        [
+          "call",
+          7
+        ],
+        [
+          "put",
+          7
+        ],
+        [
+          "amp",
+          7
+        ],
+        [
+          "ever",
+          7
+        ],
+        [
+          "good",
+          7
+        ],
+        [
+          "far",
+          7
+        ],
+        [
+          "twitter",
+          7
+        ],
+        [
+          "anyone",
+          6
+        ],
+        [
+          "lmao",
+          6
+        ],
+        [
+          "already",
+          6
+        ],
+        [
+          "fable",
+          6
+        ]
+      ],
+      "bigrams": [
+        [
+          "keokiknows shadydoorags",
+          6
+        ],
+        [
+          "i'm claiming",
+          4
+        ],
+        [
+          "ai agent",
+          4
+        ],
+        [
+          "moltbook verification",
+          4
+        ],
+        [
+          "ve never",
+          3
+        ],
+        [
+          "junaid_1460 claudeai",
+          3
+        ],
+        [
+          "every single",
+          3
+        ],
+        [
+          "san antonio",
+          3
+        ],
+        [
+          "good looking",
+          3
+        ],
+        [
+          "grok theo",
+          3
+        ],
+        [
+          "sounds like",
+          3
+        ],
+        [
+          "how many",
+          3
+        ],
+        [
+          "30 seconds",
+          3
+        ],
+        [
+          "ai slop",
+          2
+        ],
+        [
+          "adolescent male",
+          2
+        ],
+        [
+          "male mind",
+          2
+        ],
+        [
+          "mind wants",
+          2
+        ],
+        [
+          "seems like",
+          2
+        ],
+        [
+          "best regards",
+          2
+        ],
+        [
+          "regards stallion",
+          2
+        ],
+        [
+          "stallion soccer",
+          2
+        ],
+        [
+          "devilliersbr703 claudeai",
+          2
+        ],
+        [
+          "other than",
+          2
+        ],
+        [
+          "day one",
+          2
+        ],
+        [
+          "one till",
+          2
+        ],
+        [
+          "claudecodelog i'm",
+          2
+        ],
+        [
+          "bro give",
+          2
+        ],
+        [
+          "new fuckin",
+          2
+        ],
+        [
+          "fuckin model",
+          2
+        ],
+        [
+          "model opus",
+          2
+        ],
+        [
+          "grok anthropicai",
+          2
+        ],
+        [
+          "max plan",
+          2
+        ],
+        [
+          "god damn",
+          2
+        ],
+        [
+          "xvx_lehcim drewvento",
+          2
+        ],
+        [
+          "waffle house",
+          2
+        ],
+        [
+          "when see",
+          2
+        ],
+        [
+          "during covid",
+          2
+        ],
+        [
+          "theo grok",
+          2
+        ],
+        [
+          "ok yeah",
+          2
+        ],
+        [
+          "gpt vs",
+          2
+        ],
+        [
+          "4o vs",
+          2
+        ],
+        [
+          "opus vs",
+          2
+        ],
+        [
+          "vs gemini",
+          2
+        ],
+        [
+          "agent clawdbot",
+          2
+        ],
+        [
+          "clawdbot codex",
+          2
+        ],
+        [
+          "verification bay",
+          2
+        ],
+        [
+          "bay jjjh",
+          2
+        ],
+        [
+          "hey grok",
+          2
+        ],
+        [
+          "ain 280",
+          2
+        ],
+        [
+          "ve ever",
+          2
+        ],
+        [
+          "ever seen",
+          2
+        ],
+        [
+          "zachlanebryan thegreatamericanbarscene",
+          2
+        ],
+        [
+          "thegreatamericanbarscene co",
+          2
+        ],
+        [
+          "every time",
+          2
+        ],
+        [
+          "everyone knows",
+          2
+        ],
+        [
+          "don get",
+          2
+        ],
+        [
+          "texas hill",
+          2
+        ],
+        [
+          "hill country",
+          2
+        ],
+        [
+          "sports cfb",
+          2
+        ],
+        [
+          "one loss",
+          2
+        ],
+        [
+          "years later",
+          2
+        ],
+        [
+          "far more",
+          2
+        ],
+        [
+          "considering how",
+          2
+        ],
+        [
+          "how bad",
+          2
+        ],
+        [
+          "base running",
+          2
+        ],
+        [
+          "running runs",
+          2
+        ],
+        [
+          "runs above",
+          2
+        ],
+        [
+          "above average",
+          2
+        ],
+        [
+          "will say",
+          2
+        ],
+        [
+          "big nasty",
+          2
+        ],
+        [
+          "act like",
+          2
+        ],
+        [
+          "dianalokada who",
+          1
+        ],
+        [
+          "who knows",
+          1
+        ],
+        [
+          "knows tho",
+          1
+        ],
+        [
+          "get bored",
+          1
+        ],
+        [
+          "bored saying",
+          1
+        ],
+        [
+          "same shit",
+          1
+        ],
+        [
+          "shit twice",
+          1
+        ],
+        [
+          "twice tbh",
+          1
+        ],
+        [
+          "dianalokada either",
+          1
+        ]
+      ]
+    },
+    "a_hump20": {
+      "words": [
+        [
+          "co",
+          43
+        ],
+        [
+          "how",
+          26
+        ],
+        [
+          "man",
+          25
+        ],
+        [
+          "like",
+          25
+        ],
+        [
+          "up",
+          22
+        ],
+        [
+          "game",
+          21
+        ],
+        [
+          "ever",
+          21
+        ],
+        [
+          "one",
+          20
+        ],
+        [
+          "even",
+          19
+        ],
+        [
+          "day",
+          16
+        ],
+        [
+          "life",
+          16
+        ],
+        [
+          "than",
+          15
+        ],
+        [
+          "most",
+          15
+        ],
+        [
+          "let",
+          15
+        ],
+        [
+          "when",
+          15
+        ],
+        [
+          "never",
+          15
+        ],
+        [
+          "more",
+          14
+        ],
+        [
+          "last",
+          14
+        ],
+        [
+          "back",
+          14
+        ],
+        [
+          "tonight",
+          14
+        ],
+        [
+          "get",
+          14
+        ],
+        [
+          "best",
+          14
+        ],
+        [
+          "absolutely",
+          13
+        ],
+        [
+          "again",
+          13
+        ],
+        [
+          "baby",
+          13
+        ],
+        [
+          "go",
+          13
+        ],
+        [
+          "now",
+          12
+        ],
+        [
+          "right",
+          12
+        ],
+        [
+          "baseball",
+          12
+        ],
+        [
+          "shit",
+          12
+        ],
+        [
+          "love",
+          12
+        ],
+        [
+          "off",
+          12
+        ],
+        [
+          "play",
+          11
+        ],
+        [
+          "who",
+          11
+        ],
+        [
+          "without",
+          11
+        ],
+        [
+          "tits",
+          11
+        ],
+        [
+          "much",
+          11
+        ],
+        [
+          "time",
+          11
+        ],
+        [
+          "really",
+          11
+        ],
+        [
+          "damn",
+          11
+        ],
+        [
+          "only",
+          10
+        ],
+        [
+          "ve",
+          10
+        ],
+        [
+          "there",
+          10
+        ],
+        [
+          "night",
+          10
+        ],
+        [
+          "these",
+          10
+        ],
+        [
+          "don't",
+          10
+        ],
+        [
+          "it's",
+          10
+        ],
+        [
+          "thing",
+          9
+        ],
+        [
+          "god",
+          9
+        ],
+        [
+          "good",
+          9
+        ],
+        [
+          "re",
+          9
+        ],
+        [
+          "please",
+          9
+        ],
+        [
+          "seen",
+          9
+        ],
+        [
+          "year",
+          9
+        ],
+        [
+          "hookem",
+          9
+        ],
+        [
+          "titans",
+          9
+        ],
+        [
+          "boys",
+          9
+        ],
+        [
+          "over",
+          9
+        ],
+        [
+          "honestly",
+          9
+        ],
+        [
+          "still",
+          9
+        ],
+        [
+          "i've",
+          9
+        ],
+        [
+          "football",
+          8
+        ],
+        [
+          "great",
+          8
+        ],
+        [
+          "electric",
+          8
+        ],
+        [
+          "what",
+          8
+        ],
+        [
+          "going",
+          8
+        ],
+        [
+          "better",
+          8
+        ],
+        [
+          "cardinals",
+          8
+        ],
+        [
+          "today",
+          8
+        ],
+        [
+          "two",
+          8
+        ],
+        [
+          "absolute",
+          8
+        ],
+        [
+          "any",
+          8
+        ],
+        [
+          "got",
+          8
+        ],
+        [
+          "everyone",
+          8
+        ],
+        [
+          "school",
+          8
+        ],
+        [
+          "down",
+          7
+        ],
+        [
+          "ll",
+          7
+        ],
+        [
+          "him",
+          7
+        ],
+        [
+          "ain",
+          7
+        ],
+        [
+          "don",
+          7
+        ]
+      ],
+      "bigrams": [
+        [
+          "let go",
+          7
+        ],
+        [
+          "absolutely electric",
+          5
+        ],
+        [
+          "right now",
+          5
+        ],
+        [
+          "feel like",
+          5
+        ],
+        [
+          "spring break",
+          5
+        ],
+        [
+          "ve ever",
+          4
+        ],
+        [
+          "ever seen",
+          4
+        ],
+        [
+          "even close",
+          4
+        ],
+        [
+          "i've ever",
+          4
+        ],
+        [
+          "thank jesus",
+          3
+        ],
+        [
+          "woke up",
+          3
+        ],
+        [
+          "albert pujols",
+          3
+        ],
+        [
+          "world series",
+          3
+        ],
+        [
+          "last night",
+          3
+        ],
+        [
+          "diaper change",
+          3
+        ],
+        [
+          "don't think",
+          3
+        ],
+        [
+          "college football",
+          2
+        ],
+        [
+          "spurs fans",
+          2
+        ],
+        [
+          "carson beck",
+          2
+        ],
+        [
+          "tom brady",
+          2
+        ],
+        [
+          "sgt_mac87 badsportsrefs",
+          2
+        ],
+        [
+          "nearly like",
+          2
+        ],
+        [
+          "someone please",
+          2
+        ],
+        [
+          "look up",
+          2
+        ],
+        [
+          "once again",
+          2
+        ],
+        [
+          "san antonio",
+          2
+        ],
+        [
+          "stephen smith",
+          2
+        ],
+        [
+          "god bless",
+          2
+        ],
+        [
+          "absolutely despise",
+          2
+        ],
+        [
+          "cards devil",
+          2
+        ],
+        [
+          "devil magic",
+          2
+        ],
+        [
+          "never fails",
+          2
+        ],
+        [
+          "10 year",
+          2
+        ],
+        [
+          "absolute savage",
+          2
+        ],
+        [
+          "ll never",
+          2
+        ],
+        [
+          "quite honestly",
+          2
+        ],
+        [
+          "greatest thing",
+          2
+        ],
+        [
+          "go baby",
+          2
+        ],
+        [
+          "tits game",
+          2
+        ],
+        [
+          "thing ve",
+          2
+        ],
+        [
+          "please keep",
+          2
+        ],
+        [
+          "aj brown",
+          2
+        ],
+        [
+          "go tits",
+          2
+        ],
+        [
+          "tits titans",
+          2
+        ],
+        [
+          "must ve",
+          2
+        ],
+        [
+          "how much",
+          2
+        ],
+        [
+          "never seen",
+          2
+        ],
+        [
+          "paul goldschmidt",
+          2
+        ],
+        [
+          "seen since",
+          2
+        ],
+        [
+          "looks like",
+          2
+        ],
+        [
+          "every time",
+          2
+        ],
+        [
+          "understand why",
+          2
+        ],
+        [
+          "how high",
+          2
+        ],
+        [
+          "old facebook",
+          2
+        ],
+        [
+          "social media",
+          2
+        ],
+        [
+          "more than",
+          2
+        ],
+        [
+          "know one",
+          2
+        ],
+        [
+          "don't understand",
+          2
+        ],
+        [
+          "less than",
+          2
+        ],
+        [
+          "much fun",
+          2
+        ],
+        [
+          "joestrong24 samvannest",
+          2
+        ],
+        [
+          "how it's",
+          2
+        ],
+        [
+          "even possible",
+          2
+        ],
+        [
+          "don't get",
+          2
+        ],
+        [
+          "next year",
+          2
+        ],
+        [
+          "another diaper",
+          2
+        ],
+        [
+          "any better",
+          2
+        ],
+        [
+          "forgot how",
+          2
+        ],
+        [
+          "camera man",
+          1
+        ],
+        [
+          "one fuckin",
+          1
+        ],
+        [
+          "fuckin job",
+          1
+        ],
+        [
+          "biggest play",
+          1
+        ],
+        [
+          "game lmao",
+          1
+        ],
+        [
+          "ryan nibblett",
+          1
+        ],
+        [
+          "only thing",
+          1
+        ],
+        [
+          "thing standing",
+          1
+        ],
+        [
+          "standing between",
+          1
+        ],
+        [
+          "date rn",
+          1
+        ],
+        [
+          "rather down",
+          1
+        ],
+        [
+          "down cocktail",
+          1
+        ]
+      ]
+    }
+  }
+}
