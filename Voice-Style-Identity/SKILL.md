@@ -7,6 +7,8 @@ description: "Use when Austin asks for voice, writing as him, public/social/bran
 
 This skill is the single source of truth for Austin's writing voice, biographical narrative, and brand storytelling. It replaces `austin-editorial-writing-voice`, `austin-editorial-writing-voice-v2`, `austin-voice-profile`, `austin-master-communication-and-editorial-voice`, and subsumes `austin-humphrey-story`.
 
+Local runtime note: the compact active router lives at `/Users/AustinHumphrey/plugins/austin-communication-os/skills/austin-communication-router/SKILL.md`. This repo file remains the full human-readable source; the local plugin keeps day-to-day triggering small.
+
 ## Operating Premise
 
 This skill is a durable reference/context/refresher for future work with Austin, not a one-off writing report. It should help the assistant understand how Austin thinks, communicates, synthesizes information, jokes, coordinates, repairs, presents himself publicly, and expects a working-partner agent to interact with him.

@@ -15,6 +15,7 @@ Use these files first:
 
 - `SKILL.md`: local reusable skill entry point.
 - `austin-voice-consolidated-harness.md`: top-level instruction file.
+- `austin-communication-os.md`: live local plugin/router architecture and compatibility map.
 - `cross-context-communication-system.md`: canonical room/router model.
 - `codex-self-persona-harness.md`: Codex partner behavior layer for working-memory routing, persona boundary, mixed initiative, error recovery, golden responses, and durable continuity with Austin.
 - `claude-self-persona-harness.md`: Claude partner behavior layer for proof-over-process, lane discipline, repair, and cross-agent continuity.
@@ -24,6 +25,18 @@ Use these files first:
 - `austin-communication-context-map.html`: canonical viewable React translation system, usable voice examples, source receipts, private-room shape, purpose buckets, system-behavior layer, and privacy boundary brief.
 
 If these files conflict with older archive documents, the canonical layer wins for current behavior.
+
+## Local Runtime Layer
+
+The public repo is the durable source. The local runtime layer is intentionally smaller.
+
+- Plugin root: `/Users/AustinHumphrey/plugins/austin-communication-os`
+- Active plugin skill: `skills/austin-communication-router/SKILL.md`
+- Local `austin-voice` skill: compatibility shim for voice and writing triggers.
+- Local `codex-self-persona-harness` skills: compatibility shims for Codex/agent behavior and repair triggers.
+- Living-brain skills: private recall/sync boundary. Route to them when needed; do not merge their private write rules into voice/persona files.
+
+The local trigger files should stay compact. If they grow into another dossier, move details back into the repo canonical layer or plugin references.
 
 ## Evidence Lanes
 

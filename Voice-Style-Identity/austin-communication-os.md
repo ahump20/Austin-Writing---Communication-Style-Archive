@@ -1,0 +1,62 @@
+# Austin Communication OS
+
+[verified] Created July 7, 2026 to reduce local skill sprawl and stale identity drift across Codex, Claude, Austin voice work, and living-brain routing.
+
+## Purpose
+
+This file explains the live operating shape. The repo remains the human-readable source. The local plugin is the active trigger surface.
+
+The goal is not to create another identity document. It is to keep future agents from loading five overlapping ideas before producing one usable sentence.
+
+North Star: the best communication changes the doorway, not the truth.
+
+## Live Shape
+
+| Surface | Role |
+|---|---|
+| `Voice-Style-Identity/SKILL.md` | Canonical full skill and human-readable source. |
+| `Voice-Style-Identity/cross-context-communication-system.md` | Full room router and source-grounded synthesis. |
+| `Voice-Style-Identity/austin-voice-consolidated-harness.md` | Top-level instruction pack for writing and communication. |
+| `Voice-Style-Identity/codex-self-persona-harness.md` | Codex behavior, repair, load order, and self/persona boundary. |
+| `Voice-Style-Identity/claude-self-persona-harness.md` | Claude behavior and cross-agent lane discipline. |
+| Local plugin `austin-communication-os` | Compact active router for Codex/plugin routing. |
+| Local `austin-voice` skill | Compatibility shim for voice/writing triggers. |
+| Local `codex-self-persona-harness` skill | Compatibility shim for Codex behavior and repair triggers. |
+| Living-brain skills | Private recall/sync boundary. They are routed to, not merged into voice. |
+
+## Why This Reduces Drift
+
+Before this cleanup, the same work could trigger Austin voice, Codex self-persona, normal-human reporting, communication polish, living-brain, Claude mirror notes, and subagent aliases. Most of those files were useful, but they could compete for first position.
+
+The corrected rule is load order:
+
+1. Current ask, newest correction, repo/live truth, and privacy constraints.
+2. Austin Communication OS router.
+3. Only the specific lane needed for the next output: writing, behavior/repair, recall, sync, reporting, or editing.
+4. Heavy source docs only when they change the answer.
+
+## Privacy Boundary
+
+The OS can use privacy-safe derived evidence from Snapchat, iMessage, and living-brain context. It must not publish or commit raw private messages, private names, handles, group names, media paths, filenames, private phrase lists, burner metadata, DMs, or relationship maps.
+
+Generated Austin-style prose is output. It is not source evidence.
+
+## Current Local Paths
+
+- Plugin root: `/Users/AustinHumphrey/plugins/austin-communication-os`
+- Plugin router skill: `/Users/AustinHumphrey/plugins/austin-communication-os/skills/austin-communication-router/SKILL.md`
+- Plugin source map: `/Users/AustinHumphrey/plugins/austin-communication-os/references/source-map.md`
+- Sprawl audit: `/Users/AustinHumphrey/plugins/austin-communication-os/scripts/audit_sprawl.py`
+
+These paths are local runtime infrastructure. The public repo documents their role without copying private raw data into the archive.
+
+## Maintenance Rule
+
+Update in this order when doctrine changes:
+
+1. Repo canonical docs.
+2. Local plugin router.
+3. Local compatibility shims.
+4. Living-brain bridge only when recall/sync routing changes.
+5. Memory note only when the change is durable and privacy-safe.
+

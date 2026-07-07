@@ -30,6 +30,7 @@ The goal is durable reuse:
 | Download the canonical pack | [Austin Communication Style Canonical Pack](dist/Austin-Communication-Style-Canonical-Pack-2026-07-07.zip) |
 | Load the reusable voice skill | [Voice-Style-Identity/SKILL.md](Voice-Style-Identity/SKILL.md) |
 | Read the canonical router | [Cross-Context Communication System](Voice-Style-Identity/cross-context-communication-system.md) |
+| Understand the live local router/plugin layer | [Austin Communication OS](Voice-Style-Identity/austin-communication-os.md) |
 | Load the Codex partner behavior layer | [Codex Self-Persona Harness](Voice-Style-Identity/codex-self-persona-harness.md) |
 | Load the Claude partner behavior layer | [Claude Self-Persona Harness](Voice-Style-Identity/claude-self-persona-harness.md) |
 | Read the visual delivery layer | [Visual Delivery Layer](Voice-Style-Identity/visual-delivery-layer.md) |
@@ -42,6 +43,7 @@ The goal is durable reuse:
 
 - Routes the voice by room: public long-form, brand/platform, X/social, AI partner, friend group, warm private, coordination, and repair.
 - Gives Codex a single behavior layer for Austin-facing collaboration: small active context, clear initiative, direct repair, privacy-safe memory, and golden-response checks.
+- Uses a local Austin Communication OS plugin as the compact trigger layer while keeping the full repo as the durable source of truth.
 - Preserves one canonical Austin reference instead of splitting him into fake platform identities.
 - Changes the doorway without changing the truth: same observation, audience-native entrance.
 - Treats strong metaphor as causal architecture, not surface resemblance: the source path, authority signal, failure point, and human consequence still have to match.
