@@ -88,6 +88,23 @@ def load_json(zf: zipfile.ZipFile, name: str) -> object:
         return json.loads(handle.read())
 
 
+def inspect_zip(zip_path: Path) -> dict:
+    with zipfile.ZipFile(zip_path) as zf:
+        top_dirs: Counter[str] = Counter()
+        json_files = 0
+        infos = zf.infolist()
+        for info in infos:
+            top_dirs[info.filename.split("/")[0]] += info.file_size
+            if info.filename.startswith("json/") and info.filename.endswith(".json"):
+                json_files += 1
+        return {
+            "archive_name": zip_path.name,
+            "entries": len(infos),
+            "json_files": json_files,
+            "top_dirs_mb": {name: round(size / 1024 / 1024, 2) for name, size in sorted(top_dirs.items())},
+        }
+
+
 def year_key(dt: datetime | None) -> str:
     return str(dt.year) if dt else "unknown"
 
@@ -326,30 +343,38 @@ def write_markdown(summary: dict, out_path: Path) -> None:
         f"- [verified] Chat date range: {chat['chat_date_range_utc']['first']} to {chat['chat_date_range_utc']['last']}.",
         f"- [verified] Conversations parsed: {contacts['conversation_count']:,}. Top conversation labels are anonymized as `contact_001`, `contact_002`, etc.",
         f"- [verified] Friends export sections: {json.dumps(aux.get('friends', {}), sort_keys=True)}.",
-        "",
-        "## What This Adds To The Voice Model",
-        "",
-        "[verified] Snapchat confirms the private register is shorter, more logistical, and more context-dependent than X. That matters because it stops the model from applying the public commentary voice to every room.",
-        "",
-        f"- [verified] Median sent private message length: {chat['word_count']['sent_median']} words. 75th percentile: {chat['word_count']['sent_p75']} words. 90th percentile: {chat['word_count']['sent_p90']} words.",
-        f"- [verified] Logistics markers appear in {marker_rates.get('logistics', 0.0)} of every 100 sent text rows.",
-        f"- [verified] Question/direct-ask markers appear in {marker_rates.get('question', 0.0)} of every 100 sent text rows.",
-        f"- [verified] Laughter markers appear in {marker_rates.get('laughter', 0.0)} of every 100 sent text rows.",
-        f"- [verified] Affection markers appear in {marker_rates.get('affection', 0.0)} of every 100 sent text rows.",
-        f"- [verified] Profanity markers appear in {marker_rates.get('profanity', 0.0)} of every 100 sent text rows.",
-        "",
-        "## Private-Register Rules",
-        "",
-        "1. [verified] Private chat defaults to quick coordination before performance: where, when, who is coming, what changed, and what needs to happen next.",
-        "2. [verified] Humor still exists, but it is more conversational than tweet-shaped. The private joke usually reacts to the shared situation instead of building a standalone public bit.",
-        "3. [reasoned] Warmth works best through specific attention and low-pressure play. The evidence supports a short-message private style; it does not support turning every warm note into polished romantic prose.",
-        "4. [verified] The AI voice should keep Austin's directness in private contexts but reduce the public-commentary escalation unless the room is clearly joking.",
-        "",
-        "## Anonymized Conversation Distribution",
-        "",
-        "| Label | Rows | Sent Rows | Sent Text Rows | First UTC | Last UTC |",
-        "|---|---:|---:|---:|---|---|",
     ]
+    for archive in summary["source"].get("additional_archives_inspected", []):
+        lines.append(
+            f"- [verified] Additional ZIP inspected: `{archive['archive_name']}` has {archive['entries']:,} entries, {archive['json_files']} JSON files, and top-level sizes {json.dumps(archive['top_dirs_mb'], sort_keys=True)} MB."
+        )
+    lines.extend(
+        [
+            "",
+            "## What This Adds To The Voice Model",
+            "",
+            "[verified] Snapchat confirms the private register is shorter, more logistical, and more context-dependent than X. That matters because it stops the model from applying the public commentary voice to every room.",
+            "",
+            f"- [verified] Median sent private message length: {chat['word_count']['sent_median']} words. 75th percentile: {chat['word_count']['sent_p75']} words. 90th percentile: {chat['word_count']['sent_p90']} words.",
+            f"- [verified] Logistics markers appear in {marker_rates.get('logistics', 0.0)} of every 100 sent text rows.",
+            f"- [verified] Question/direct-ask markers appear in {marker_rates.get('question', 0.0)} of every 100 sent text rows.",
+            f"- [verified] Laughter markers appear in {marker_rates.get('laughter', 0.0)} of every 100 sent text rows.",
+            f"- [verified] Affection markers appear in {marker_rates.get('affection', 0.0)} of every 100 sent text rows.",
+            f"- [verified] Profanity markers appear in {marker_rates.get('profanity', 0.0)} of every 100 sent text rows.",
+            "",
+            "## Private-Register Rules",
+            "",
+            "1. [verified] Private chat defaults to quick coordination before performance: where, when, who is coming, what changed, and what needs to happen next.",
+            "2. [verified] Humor still exists, but it is more conversational than tweet-shaped. The private joke usually reacts to the shared situation instead of building a standalone public bit.",
+            "3. [reasoned] Warmth works best through specific attention and low-pressure play. The evidence supports a short-message private style; it does not support turning every warm note into polished romantic prose.",
+            "4. [verified] The AI voice should keep Austin's directness in private contexts but reduce the public-commentary escalation unless the room is clearly joking.",
+            "",
+            "## Anonymized Conversation Distribution",
+            "",
+            "| Label | Rows | Sent Rows | Sent Text Rows | First UTC | Last UTC |",
+            "|---|---:|---:|---:|---|---|",
+        ]
+    )
 
     for row in contacts["top_conversations_anonymized"][:12]:
         lines.append(
@@ -382,7 +407,7 @@ def write_markdown(summary: dict, out_path: Path) -> None:
     out_path.write_text("\n".join(lines), encoding="utf-8")
 
 
-def parse_archive(zip_path: Path, out_dir: Path) -> dict:
+def parse_archive(zip_path: Path, out_dir: Path, media_zip: Path | None = None) -> dict:
     with zipfile.ZipFile(zip_path) as zf:
         chat_obj = load_json(zf, CHAT_FILE)
         if not isinstance(chat_obj, dict):
@@ -393,6 +418,7 @@ def parse_archive(zip_path: Path, out_dir: Path) -> dict:
                 "archive_name": zip_path.name,
                 "parsed_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
                 "privacy_boundary": "raw Snapchat message text, contact names, media URLs, and media files are not written to repo outputs",
+                "additional_archives_inspected": [inspect_zip(media_zip)] if media_zip else [],
             },
             "chat": summarize_texts(messages),
             "contacts": summarize_contacts(messages),
@@ -409,13 +435,14 @@ def parse_archive(zip_path: Path, out_dir: Path) -> dict:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Parse a Snapchat data export into privacy-safe voice signals.")
     parser.add_argument("--zip", required=True, type=Path, help="Path to the Snapchat mydata ZIP containing json/chat_history.json.")
+    parser.add_argument("--media-zip", type=Path, help="Optional additional Snapchat ZIP to inspect without extracting media.")
     parser.add_argument("--out", required=True, type=Path, help="Output directory for derived summaries.")
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
-    summary = parse_archive(args.zip, args.out)
+    summary = parse_archive(args.zip, args.out, media_zip=args.media_zip)
     counts = summary["chat"]["message_counts"]
     print(
         "Parsed Snapchat archive: "

@@ -15,8 +15,8 @@ This folder is the evidence lane for Austin's two-account X/Twitter voice analys
 
 [verified] Account coverage:
 
-- `@a_hump20`: 4,760 official rows, 4,033 authored voice rows, 727 retweet/context rows, July 2, 2011 to October 18, 2025.
-- `@TXTrickWhooper`: 1,540 official rows, 1,404 authored voice rows, 136 retweet/context rows, July 1, 2022 to July 5, 2026.
+- `@a_hump20`: 4,760 official rows, 4,033 authored voice rows, 727 retweet/context rows. Authored voice range: July 2, 2011 to October 18, 2025. Full official-row range including retweets/context: July 2, 2011 to December 15, 2025.
+- `@TXTrickWhooper`: 1,540 official rows, 1,404 authored voice rows, 136 retweet/context rows. Authored voice range: July 1, 2022 to July 5, 2026. Full official-row range including retweets/context: July 1, 2022 to July 6, 2026.
 
 [verified] The viewable artifact is `X-Twitter-Archive/x-twitter-archive-analysis-artifact.html`.
 

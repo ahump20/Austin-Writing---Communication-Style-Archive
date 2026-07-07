@@ -1,0 +1,36 @@
+# Cross-Context Austin Voice Source Manifest
+
+[verified] Created July 6, 2026 for the cross-context Austin voice and communication-style system.
+
+This manifest lists the evidence sources used by the current canonical router. It is intentionally source-linked and privacy-safe. Raw private exports stay local.
+
+North Star: these files are reusable reference/context/refresher material for future agents. The source manifest exists so the canonical voice system remains Austin-derived and does not drift into generic AI claims or unverified style lore.
+
+X/Twitter and Snapchat are treated as extension and revision layers for the singular Austin communication reference. They are not separate public/private appendices. Their job is to correct the model so future agents preserve Austin's actual language, tone, grammar, humor, and relationship context across platforms, services, social media, custom instructions, and future conversations.
+
+## Source Table
+
+| Source | Platform / account | Local source path | Items parsed | Authored / non-authored split | Date range | Fields extracted | Known gaps |
+|---|---|---|---:|---|---|---|---|
+| Official X export | `@a_hump20` | `/Users/AustinHumphrey/Downloads/Twitter:XSnapchat Metadata/twitter-2026-07-06 ahump20` | 4,760 official rows | 4,033 authored voice rows; 727 retweet/context rows; 0 duplicates removed | Authored: 2011-07-02 to 2025-10-18. Full rows: 2011-07-02 to 2025-12-15 | text, timestamps, local time, tweet IDs, source app, reply/conversation IDs, retweets, quote/reply classification, likes, reposts, replies, quotes, media/URL/mention/hashtag metadata, deleted-tweet rows when present | External parent/thread context exists only where archive metadata or Austin-authored rows include it. Direct messages, contacts, IP/device, ad, and Grok files excluded. Retweets are taste/context only. |
+| Official X export | `@TXTrickWhooper` | `/Users/AustinHumphrey/Downloads/Twitter:XSnapchat Metadata/twitter:X Metadata -2026-07-06` | 1,540 official rows | 1,404 authored voice rows; 136 retweet/context rows; 0 duplicates removed | Authored: 2022-07-01 to 2026-07-05. Full rows: 2022-07-01 to 2026-07-06 | text, timestamps, local time, tweet IDs, source app, reply/conversation IDs, retweets, quote/reply classification, likes, reposts, replies, quotes, views when present, media/URL/mention/hashtag metadata, deleted-tweet rows | Same X limitations as above. Public social voice is strong here; private communication cannot be inferred from this source alone. |
+| BirdClaw parser reference | X archive parsing best-practice reference | `https://github.com/steipete/birdclaw` at commit `be2761748f34d8437fd525fd73f66198e11901b7` | n/a | n/a | n/a | account identity anchoring, JavaScript assignment payload parsing, tweet-ID dedupe, reply/conversation metadata preservation, DM/privacy boundary separation | Reference only. Not Austin data. |
+| Snapchat primary export | Snapchat private metadata / chat export | `/Users/AustinHumphrey/Downloads/Snapchat Metadata 2026-07-06/mydata~1783376316584.zip` | 2,417 chat rows; 2,106 text rows; 1,139 sent rows; 1,052 sent text rows; 208 conversations | Sent/received split preserved in derived counts; contacts anonymized as `contact_001`, `contact_002`, etc. | Chat range: 2016-03-24 to 2026-07-04. Sent range: 2016-03-24 to 2026-07-04 | timestamps, sent/received direction, text/media row classification, anonymized conversation distribution, median/p75/p90 word counts, marker counts/rates for question/direct ask, logistics, laughter, affection, profanity, repair, sports/place, friends-section counts, memories/snaps/stories aggregate counts | Raw message text, contact names, media URLs, phone/email identifiers, locations, and media files are not committed. Marker analysis is derived and privacy-safe, not a substitute for quoting private text. |
+| Snapchat media-only export | Snapchat memories/media companion ZIP | `/Users/AustinHumphrey/Downloads/Snapchat Metadata 2026-07-06/mydata~1783376316584-2.zip` | 622 entries inspected | 0 JSON files; media archive only | n/a | top-level size summary: `memories` is 1472.17 MB | No chat or text evidence. Inspected to confirm it was not an unparsed metadata source. |
+| Writing archive / voice system | Austin long-form, professional, origin, and prior voice files | `Voice-Style-Identity/` inside this repository | 50+ existing writing/voice files referenced by the cross-context system | Human-authored writing and prior derived voice notes are used as separate evidence from generated analysis | Mostly ages 17-25 for old writing archive; current voice docs updated July 6, 2026 | long-form cadence, public brand/professional voice, systemic lens, origin/brand narrative, AI partner interaction preferences, anti-AI prose rules | Some files are older and can conflict with current BSI doctrine. Current AGENTS/memory rules win where brand facts changed. |
+| Living brain bridge | Obsidian/Codex/Claude neutral routing layer | `/Users/AustinHumphrey/brain/tools/codex-living-brain/` | bridge files and inbox captures only | Not a raw corpus. Source pointers, captures, and neutral routing notes only | current bridge refreshed July 6, 2026 | source pointers, local skill catalog, memory index, neutral bridge note for Austin voice router | Resurface, never generate. No raw exports, fake Austin prose, private messages, or bulky media are mirrored into Obsidian. |
+
+## Consolidated Coverage
+
+- [verified] Official X coverage: 6,300 official rows, 5,437 authored voice rows, 863 retweet/context rows, 4 deleted tweet rows included where present.
+- [verified] Snapchat coverage: 2,417 chat rows, 1,052 sent text rows, 208 anonymized conversations, median sent private text length of 5 words.
+- [verified] The X layer supports public casual social voice, reply posture, sports/fan identity, public humor, and account-level persona shifts, and revises the singular model on public/social presentation.
+- [verified] The Snapchat layer supports private-register calibration and revises the singular model on direct asks, logistics, short warmth, quick reactions, and less-performed shared-context communication.
+- [reasoned] Friend-group and flirt/warm one-on-one patterns are now better supported than before because Snapchat gives private cadence and marker evidence, but Apple Messages remains open for tapbacks, group-thread rhythm, and current iMessage distribution.
+- [reasoned] The consolidated reference should reduce AI tells and cross-session drift by routing from Austin-derived evidence instead of generic assistant prose.
+
+## Privacy Boundary
+
+- Raw X direct messages, raw Snapchat messages, contact identities, media URLs, personal identifiers, locations, browser/session logs, and media files are excluded from committed repo artifacts.
+- Reposts, likes, follows, viewed content, and media-only exports are not Austin-authored voice. They can inform taste and source coverage only.
+- Generated Austin-style examples belong in analysis or test prompts, not in Obsidian as Austin's own writing.

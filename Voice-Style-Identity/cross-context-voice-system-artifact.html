@@ -6,6 +6,54 @@
   <title>Austin Cross-Context Voice System</title>
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script>
+    (function () {
+      if (window.React && window.ReactDOM) return;
+      const state = [];
+      let cursor = 0;
+      let rootElement = null;
+      let rootVNode = null;
+      const flat = (items) => items.flat(Infinity).filter((item) => item !== null && item !== undefined && item !== false);
+      function createElement(type, props, ...children) {
+        return { type, props: { ...(props || {}), children: flat(children) } };
+      }
+      function setProp(el, name, value) {
+        if (name === "children" || name === "key" || value === null || value === undefined || value === false) return;
+        if (name === "className") { el.setAttribute("class", value); return; }
+        if (name === "htmlFor") { el.setAttribute("for", value); return; }
+        if (name === "style" && typeof value === "object") { Object.assign(el.style, value); return; }
+        if (name.startsWith("on") && typeof value === "function") { el.addEventListener(name.slice(2).toLowerCase(), value); return; }
+        if (name === "value" || name === "checked") { el[name] = value; return; }
+        if (value === true) { el.setAttribute(name, ""); return; }
+        el.setAttribute(name, value);
+      }
+      function renderVNode(vnode) {
+        if (vnode === null || vnode === undefined || vnode === false) return document.createTextNode("");
+        if (typeof vnode === "string" || typeof vnode === "number") return document.createTextNode(String(vnode));
+        if (typeof vnode.type === "function") return renderVNode(vnode.type(vnode.props || {}));
+        const el = document.createElement(vnode.type);
+        for (const child of flat((vnode.props && vnode.props.children) || [])) el.appendChild(renderVNode(child));
+        for (const [name, value] of Object.entries(vnode.props || {})) setProp(el, name, value);
+        return el;
+      }
+      function rerender() {
+        if (!rootElement || !rootVNode) return;
+        cursor = 0;
+        rootElement.replaceChildren(renderVNode(rootVNode));
+      }
+      function useState(initialValue) {
+        const index = cursor++;
+        if (state[index] === undefined) state[index] = initialValue;
+        const setState = (nextValue) => {
+          state[index] = typeof nextValue === "function" ? nextValue(state[index]) : nextValue;
+          rerender();
+        };
+        return [state[index], setState];
+      }
+      window.React = { createElement, useState };
+      window.ReactDOM = { createRoot: (el) => ({ render: (vnode) => { rootElement = el; rootVNode = vnode; rerender(); } }) };
+    })();
+  </script>
   <style>
     :root {
       --paper: #f6f3ec;
@@ -323,6 +371,7 @@
     ];
 
     const constants = [
+      ["North Star", "Reusable reference, context layer, and refresher. Not a throwaway report. The job is to keep Austin-derived language, thinking, humor, and relationship context from drifting across platforms and agents."],
       ["Specific first", "A named object, place, person, stat, team, or tool carries the point."],
       ["System behind event", "The surface event almost always points at incentives, institutions, product choices, or a larger causal chain."],
       ["Verdict early", "Austin enters at the claim and explains after the reader has something to hold."],
@@ -364,7 +413,7 @@
         name: "One-on-one AI partnership",
         status: "verified",
         use: "Codex and Claude collaboration, writing sessions, debugging, product judgment.",
-        shape: "Start with outcome, tag known/unknown/open, challenge weak premises, translate plumbing into what a user sees."
+        shape: "Start with outcome, tag known/unknown/open, challenge weak premises, translate plumbing into what a user sees. Use this automatically when speaking with Austin, not only when he asks for voice mode."
       },
       {
         name: "Friend-group / group chat",
@@ -418,6 +467,7 @@
       const sections = [
         ["overview", "Overview"],
         ["evidence", "Evidence"],
+        ["manifest", "Source Manifest"],
         ["private", "Private Signals"],
         ["constants", "Constants"],
         ["router", "Context Router"],
@@ -433,7 +483,7 @@
         React.createElement("div", { className: "shell" },
           React.createElement("aside", null,
             React.createElement("h1", null, "Austin Voice System"),
-            React.createElement("p", null, "A cross-context router for public prose, social jokes, one-on-one collaboration, group chat, warmth, repair, and basic communication."),
+            React.createElement("p", null, "A canonical router for how Austin communicates, thinks, synthesizes information, writes publicly, collaborates one-on-one, jokes socially, and preserves voice across platforms without AI drift."),
             React.createElement("div", null,
               React.createElement("span", { className: "tag" }, "[verified] X + writing archive"),
               React.createElement("span", { className: "tag" }, "[verified] Snapchat private signals"),
@@ -450,8 +500,8 @@
           React.createElement("main", null,
             React.createElement("section", { id: "overview", className: "hero" },
               React.createElement("div", { className: "hero-copy" },
-                React.createElement("h2", null, "One voice. Multiple rooms."),
-                React.createElement("p", { className: "lede" }, "The point is not to mimic Twitter everywhere. The point is to know which Austin shows up in which room, what stays constant underneath, and how an AI partner should mirror the thinking instead of copying the loudest surface.")
+                React.createElement("h2", null, "One reference. Multiple rooms."),
+                React.createElement("p", { className: "lede" }, "The point is not to mimic Twitter everywhere, split Austin into separate platform personas, or make a pretty report that gets forgotten. The point is to keep one Austin-derived reference, then route the language by audience, relationship, service, and job.")
               ),
               React.createElement("div", { className: "proof" },
                 evidence.map((item) => React.createElement("div", { className: "metric", key: item.label },
@@ -464,12 +514,12 @@
             React.createElement("section", { id: "evidence" },
               React.createElement("div", { className: "section-head" },
                 React.createElement("h3", null, "Evidence Boundary"),
-                React.createElement("p", { className: "section-note" }, "Strong public and long-form evidence is already in the repo. Private-message evidence is explicitly not proven yet.")
+                React.createElement("p", { className: "section-note" }, "X/Twitter, long-form writing, and Snapchat are all first-class evidence layers revising one canonical model. Apple Messages thread behavior remains open.")
               ),
               React.createElement("div", { className: "grid" },
                 React.createElement("div", { className: "card" },
                   React.createElement("h4", null, "[verified] X archive"),
-                  React.createElement("p", null, "6,300 official rows, 5,437 authored voice rows, 2011-2026. Best evidence for public social voice, replies, jokes, and persona.")
+                  React.createElement("p", null, "6,300 official rows, 5,437 authored voice rows, 2011-2026. First-class evidence that revises the singular model with public social voice, replies, jokes, and persona.")
                 ),
                 React.createElement("div", { className: "card" },
                   React.createElement("h4", null, "[verified] Writing archive"),
@@ -477,12 +527,36 @@
                 ),
                 React.createElement("div", { className: "card" },
                   React.createElement("h4", null, "[verified] Snapchat export"),
-                  React.createElement("p", null, "2,417 chat rows, 1,052 sent text rows, 208 conversations, 2016-2026. Best evidence for private compression, logistics, quick reactions, and warm short-form patterns.")
+                  React.createElement("p", null, "2,417 chat rows, 1,052 sent text rows, 208 conversations, 2016-2026. First-class evidence that revises the singular model with private compression, logistics, quick reactions, and warm short-form patterns.")
                 ),
                 React.createElement("div", { className: "card" },
                   React.createElement("h4", null, "[open] iMessage"),
                   React.createElement("p", null, "macOS privacy still blocks the Messages database. Apple-specific reactions, group-thread dynamics, and current iMessage distribution remain open.")
                 )
+              )
+            ),
+            React.createElement("section", { id: "manifest" },
+              React.createElement("div", { className: "section-head" },
+                React.createElement("h3", null, "Source Manifest"),
+                React.createElement("p", { className: "section-note" }, "The committed manifest explains what each source proves, what it cannot prove, what stays private, and how X/Twitter plus Snapchat update the singular reference.")
+              ),
+              React.createElement("div", { className: "grid" },
+                React.createElement("div", { className: "card" },
+                  React.createElement("h4", null, "X / public social"),
+                  React.createElement("p", null, "6,300 official rows. 5,437 authored voice rows. This layer updates the shared reference with public jokes, reply posture, sports/fan identity, and persona shifts.")
+                ),
+                React.createElement("div", { className: "card" },
+                  React.createElement("h4", null, "Snapchat / private register"),
+                  React.createElement("p", null, "2,417 chat rows. 1,052 sent text rows. This layer updates the shared reference with private compression, direct asks, logistics, short warmth, and quick-reaction cadence.")
+                ),
+                React.createElement("div", { className: "card" },
+                  React.createElement("h4", null, "Writing archive / public thought"),
+                  React.createElement("p", null, "50+ long-form and voice-system files support systemic analysis, founder/platform prose, and public narrative structure.")
+                )
+              ),
+              React.createElement("div", { className: "quote" },
+                "Verified source manifest: Voice-Style-Identity/cross-context-source-manifest.md",
+                React.createElement("small", null, "Raw private exports, contact identities, media URLs, and media files stay out of the repo and Obsidian.")
               )
             ),
             React.createElement("section", { id: "private" },
@@ -513,7 +587,7 @@
             React.createElement("section", { id: "router" },
               React.createElement("div", { className: "section-head" },
                 React.createElement("h3", null, "Context Router"),
-                React.createElement("p", { className: "section-note" }, "Choose the register from the job, not from a single favorite style.")
+                React.createElement("p", { className: "section-note" }, "Choose the register from the room, not from a single favorite style or whatever the platform last rewarded.")
               ),
               React.createElement("div", { className: "router" },
                 contexts.map((ctx) => React.createElement("div", { className: "router-row", key: ctx.name },
@@ -533,7 +607,7 @@
               ),
               React.createElement("div", { className: "split" },
                 React.createElement("div", { className: "quote" },
-                  "Concrete thing -> system behind it -> who benefits or pays -> hidden second-order effect -> blunt verdict -> funniest scale mismatch or next move.",
+                  "North Star: understand the concrete thing -> system behind it -> who benefits or pays -> hidden second-order effect -> blunt verdict -> funniest scale mismatch or next move.",
                   React.createElement("small", null, "[reasoned] synthesized from X plus long-form writing archive")
                 ),
                 React.createElement("div", { className: "card" },
@@ -542,7 +616,8 @@
                     React.createElement("li", null, "Start with what is known, what changed, and what is open."),
                     React.createElement("li", null, "Challenge weak premises instead of smoothing them over."),
                     React.createElement("li", null, "Use evidence tags so polished guesses do not sound proven."),
-                    React.createElement("li", null, "Keep warmth present, but do not turn companionship into agreement theater.")
+                    React.createElement("li", null, "Keep warmth present, but do not turn companionship into agreement theater."),
+                    React.createElement("li", null, "Use Austin-derived evidence to prevent generic AI tells, platform drift, and custom-instruction split-brain.")
                   )
                 )
               )
@@ -572,7 +647,7 @@
               )
             ),
             React.createElement("div", { className: "footer" },
-              "[verified] Public, analytical, brand, X/social, and Snapchat private-register patterns are backed by current repository evidence. [open] iMessage still needs access before Apple-specific private thread behavior can be treated as proven."
+              "[verified] Public, analytical, brand, X/social, AI-partnership, and Snapchat private-register patterns are backed by current repository evidence. [reasoned] Use this singular Austin reference automatically for future Austin-voice, Austin-communication, public presentation, and companion-context work. [open] iMessage still needs access before Apple-specific private thread behavior can be treated as proven."
             )
           )
         )

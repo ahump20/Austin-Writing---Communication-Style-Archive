@@ -4,7 +4,7 @@
     "TXTrickWhooper"
   ],
   "summary": {
-    "generated_at_utc": "2026-07-06T22:43:11.376156Z",
+    "generated_at_utc": "2026-07-06T23:38:54.624092Z",
     "timezone": "America/Chicago",
     "source_boundary": "Official X archive exports from /Users/AustinHumphrey/Downloads/Twitter:X Metadata. Tweets, community tweets, note tweets, and deleted tweets were parsed. Direct messages, contacts, IP/device logs, ad files, and Grok chats were excluded from this voice corpus.",
     "birdclaw_reference": {
@@ -43,6 +43,14 @@
         "date_range_ct": [
           "2011-07-02T11:50:11-05:00",
           "2025-10-18T21:24:56-05:00"
+        ],
+        "authored_date_range_ct": [
+          "2011-07-02T11:50:11-05:00",
+          "2025-10-18T21:24:56-05:00"
+        ],
+        "archive_date_range_ct": [
+          "2011-07-02T11:50:11-05:00",
+          "2025-12-15T22:57:13-06:00"
         ],
         "by_year": {
           "2011": 533,
@@ -2116,8 +2124,8 @@
           }
         ],
         "source_summary": {
-          "source_path": "/Users/AustinHumphrey/Downloads/Twitter:X Metadata/twitter-2026-07-06 ahump20",
-          "generated_at_utc": "2026-07-06T22:43:08.173955Z",
+          "source_path": "/Users/AustinHumphrey/Downloads/Twitter:XSnapchat Metadata/twitter-2026-07-06 ahump20",
+          "generated_at_utc": "2026-07-06T23:38:53.325717Z",
           "timezone": "America/Chicago",
           "account": {
             "account_id": "305387451",
@@ -2620,6 +2628,14 @@
         "date_range_ct": [
           "2022-07-01T20:58:29-05:00",
           "2026-07-05T21:06:59-05:00"
+        ],
+        "authored_date_range_ct": [
+          "2022-07-01T20:58:29-05:00",
+          "2026-07-05T21:06:59-05:00"
+        ],
+        "archive_date_range_ct": [
+          "2022-07-01T20:58:29-05:00",
+          "2026-07-06T15:45:12-05:00"
         ],
         "by_year": {
           "2022": 22,
@@ -4745,8 +4761,8 @@
           }
         ],
         "source_summary": {
-          "source_path": "/Users/AustinHumphrey/Downloads/Twitter:X Metadata/twitter:X Metadata -2026-07-06.zip",
-          "generated_at_utc": "2026-07-06T22:43:09.330246Z",
+          "source_path": "/Users/AustinHumphrey/Downloads/Twitter:XSnapchat Metadata/twitter:X Metadata -2026-07-06",
+          "generated_at_utc": "2026-07-06T23:38:53.886980Z",
           "timezone": "America/Chicago",
           "account": {
             "account_id": "1542810769905139713",
@@ -5226,6 +5242,14 @@
       "date_range_ct": [
         "2011-07-02T11:50:11-05:00",
         "2026-07-05T21:06:59-05:00"
+      ],
+      "authored_date_range_ct": [
+        "2011-07-02T11:50:11-05:00",
+        "2026-07-05T21:06:59-05:00"
+      ],
+      "archive_date_range_ct": [
+        "2011-07-02T11:50:11-05:00",
+        "2026-07-06T15:45:12-05:00"
       ]
     }
   },

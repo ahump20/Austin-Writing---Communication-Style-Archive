@@ -10,6 +10,7 @@
 - [verified] Chat date range: 2016-03-24T20:21:29Z to 2026-07-04T18:16:55Z.
 - [verified] Conversations parsed: 208. Top conversation labels are anonymized as `contact_001`, `contact_002`, etc.
 - [verified] Friends export sections: {"Blocked Users": 18, "Deleted Friends": 179, "Friend Requests Sent": 578, "Friends": 853, "Hidden Friend Suggestions": 163, "Ignored Snapchatters": 76, "Pending Requests": 0, "Shortcuts": 0}.
+- [verified] Additional ZIP inspected: `mydata~1783376316584-2.zip` has 622 entries, 0 JSON files, and top-level sizes {"memories": 1472.17} MB.
 
 ## What This Adds To The Voice Model
 

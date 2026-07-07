@@ -2,7 +2,8 @@
 
 [verified] Built from the official X archive exports parsed on 2026-07-06.
 [verified] Official rows: 6,300. Authored voice rows: 5,437. Retweet/context rows: 863. Deleted tweet rows included: 4.
-[verified] @a_hump20 covers 2011-07-02T11:50:11-05:00 to 2025-10-18T21:24:56-05:00. @TXTrickWhooper covers 2022-07-01T20:58:29-05:00 to 2026-07-05T21:06:59-05:00.
+[verified] Authored voice ranges: @a_hump20 covers 2011-07-02T11:50:11-05:00 to 2025-10-18T21:24:56-05:00; @TXTrickWhooper covers 2022-07-01T20:58:29-05:00 to 2026-07-05T21:06:59-05:00.
+[verified] Full official-row ranges including retweets/context: @a_hump20 covers 2011-07-02T11:50:11-05:00 to 2025-12-15T22:57:13-06:00; @TXTrickWhooper covers 2022-07-01T20:58:29-05:00 to 2026-07-06T15:45:12-05:00.
 [verified] Direct messages, contacts, IP/device files, and ad files were excluded from this voice corpus.
 
 ## A. Speech Patterns & Linguistic Style

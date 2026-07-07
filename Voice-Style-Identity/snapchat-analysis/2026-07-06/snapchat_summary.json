@@ -644,8 +644,18 @@
     ]
   },
   "source": {
+    "additional_archives_inspected": [
+      {
+        "archive_name": "mydata~1783376316584-2.zip",
+        "entries": 622,
+        "json_files": 0,
+        "top_dirs_mb": {
+          "memories": 1472.17
+        }
+      }
+    ],
     "archive_name": "mydata~1783376316584.zip",
-    "parsed_at_utc": "2026-07-06T23:14:38.193540Z",
+    "parsed_at_utc": "2026-07-06T23:43:07.293553Z",
     "privacy_boundary": "raw Snapchat message text, contact names, media URLs, and media files are not written to repo outputs"
   }
 }

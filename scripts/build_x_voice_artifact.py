@@ -488,7 +488,8 @@ def account_summary(rows: list[dict[str, Any]], all_rows: list[dict[str, Any]], 
     authored = [row for row in rows if row["type"] != "retweet"]
     retweets = [row for row in rows if row["type"] == "retweet"]
     word_counts = [row["words"] for row in authored]
-    dated = [row["date_ct"] for row in authored if row.get("date_ct")]
+    authored_dated = [row["date_ct"] for row in authored if row.get("date_ct")]
+    archive_dated = [row["date_ct"] for row in rows if row.get("date_ct")]
     theme_counts = Counter(theme for row in authored for theme in row.get("themes", []))
     humor_counts = Counter(tag for row in authored for tag in row.get("humor", []))
     return {
@@ -501,7 +502,9 @@ def account_summary(rows: list[dict[str, Any]], all_rows: list[dict[str, Any]], 
         "tweets": sum(1 for row in authored if not row.get("is_reply")),
         "self_thread_replies": sum(1 for row in authored if row.get("is_self_thread_reply")),
         "threads_or_conversations": raw_summary.get("counts", {}).get("threads_or_conversations"),
-        "date_range_ct": [min(dated) if dated else None, max(dated) if dated else None],
+        "date_range_ct": [min(authored_dated) if authored_dated else None, max(authored_dated) if authored_dated else None],
+        "authored_date_range_ct": [min(authored_dated) if authored_dated else None, max(authored_dated) if authored_dated else None],
+        "archive_date_range_ct": [min(archive_dated) if archive_dated else None, max(archive_dated) if archive_dated else None],
         "by_year": dict(sorted(Counter(str(row.get("year")) for row in authored).items())),
         "by_type": dict(sorted(Counter(row["type"] for row in rows).items())),
         "top_themes": theme_counts.most_common(12),
@@ -603,7 +606,8 @@ def build_markdown(data: dict[str, Any]) -> str:
         "",
         f"[verified] Built from the official X archive exports parsed on {DATE_LABEL}.",
         f"[verified] Official rows: {total['official_archive_rows']:,}. Authored voice rows: {total['authored_voice_tweets']:,}. Retweet/context rows: {total['retweets_context']:,}. Deleted tweet rows included: {total['deleted_tweets']:,}.",
-        f"[verified] @a_hump20 covers {counts['a_hump20']['date_range_ct'][0]} to {counts['a_hump20']['date_range_ct'][1]}. @TXTrickWhooper covers {counts['TXTrickWhooper']['date_range_ct'][0]} to {counts['TXTrickWhooper']['date_range_ct'][1]}.",
+        f"[verified] Authored voice ranges: @a_hump20 covers {counts['a_hump20']['authored_date_range_ct'][0]} to {counts['a_hump20']['authored_date_range_ct'][1]}; @TXTrickWhooper covers {counts['TXTrickWhooper']['authored_date_range_ct'][0]} to {counts['TXTrickWhooper']['authored_date_range_ct'][1]}.",
+        f"[verified] Full official-row ranges including retweets/context: @a_hump20 covers {counts['a_hump20']['archive_date_range_ct'][0]} to {counts['a_hump20']['archive_date_range_ct'][1]}; @TXTrickWhooper covers {counts['TXTrickWhooper']['archive_date_range_ct'][0]} to {counts['TXTrickWhooper']['archive_date_range_ct'][1]}.",
         "[verified] Direct messages, contacts, IP/device files, and ad files were excluded from this voice corpus.",
         "",
         "## A. Speech Patterns & Linguistic Style",
@@ -703,6 +707,54 @@ def build_markdown(data: dict[str, Any]) -> str:
 def build_html(data: dict[str, Any]) -> str:
     payload = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
     payload = payload.replace("</", "<\\/").replace("\u2028", "\\u2028").replace("\u2029", "\\u2029")
+    react_fallback = """<script>
+(function () {
+  if (window.React && window.ReactDOM) return;
+  const state = [];
+  let cursor = 0;
+  let rootElement = null;
+  let rootVNode = null;
+  const flat = (items) => items.flat(Infinity).filter((item) => item !== null && item !== undefined && item !== false);
+  function createElement(type, props, ...children) {
+    return { type, props: { ...(props || {}), children: flat(children) } };
+  }
+  function setProp(el, name, value) {
+    if (name === "children" || name === "key" || value === null || value === undefined || value === false) return;
+    if (name === "className") { el.setAttribute("class", value); return; }
+    if (name === "htmlFor") { el.setAttribute("for", value); return; }
+    if (name === "style" && typeof value === "object") { Object.assign(el.style, value); return; }
+    if (name.startsWith("on") && typeof value === "function") { el.addEventListener(name.slice(2).toLowerCase(), value); return; }
+    if (name === "value" || name === "checked") { el[name] = value; return; }
+    if (value === true) { el.setAttribute(name, ""); return; }
+    el.setAttribute(name, value);
+  }
+  function renderVNode(vnode) {
+    if (vnode === null || vnode === undefined || vnode === false) return document.createTextNode("");
+    if (typeof vnode === "string" || typeof vnode === "number") return document.createTextNode(String(vnode));
+    if (typeof vnode.type === "function") return renderVNode(vnode.type(vnode.props || {}));
+    const el = document.createElement(vnode.type);
+    for (const child of flat((vnode.props && vnode.props.children) || [])) el.appendChild(renderVNode(child));
+    for (const [name, value] of Object.entries(vnode.props || {})) setProp(el, name, value);
+    return el;
+  }
+  function rerender() {
+    if (!rootElement || !rootVNode) return;
+    cursor = 0;
+    rootElement.replaceChildren(renderVNode(rootVNode));
+  }
+  function useState(initialValue) {
+    const index = cursor++;
+    if (state[index] === undefined) state[index] = initialValue;
+    const setState = (nextValue) => {
+      state[index] = typeof nextValue === "function" ? nextValue(state[index]) : nextValue;
+      rerender();
+    };
+    return [state[index], setState];
+  }
+  window.React = { createElement, useState };
+  window.ReactDOM = { createRoot: (el) => ({ render: (vnode) => { rootElement = el; rootVNode = vnode; rerender(); } }) };
+})();
+</script>"""
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -711,6 +763,7 @@ def build_html(data: dict[str, Any]) -> str:
 <title>Austin X Voice Archive: Official Export Analysis</title>
 <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+{react_fallback}
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Oswald:wght@400;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
   :root {{
@@ -807,7 +860,7 @@ function AccountPanel({{handle}}) {{
   return h('div', {{className:'panel'}},
     h('h3', null, '@'+handle),
     h('p', null, h(Claim, null, '[verified]'), ' Official export rows: ', num(c.official_archive_rows), '. Authored voice rows: ', num(c.authored_voice_tweets), '. Retweet context rows: ', num(c.retweets_context), '.'),
-    h(PillRow, {{items:[`Range: ${{fmtDate(c.date_range_ct[0])}} to ${{fmtDate(c.date_range_ct[1])}}`, `Median words: ${{c.median_words}}`, `Replies: ${{num(c.replies)}}`, `Deleted rows: ${{num(c.deleted_tweets)}}`]}}),
+    h(PillRow, {{items:[`Authored range: ${{fmtDate(c.authored_date_range_ct[0])}} to ${{fmtDate(c.authored_date_range_ct[1])}}`, `Full row range: ${{fmtDate(c.archive_date_range_ct[0])}} to ${{fmtDate(c.archive_date_range_ct[1])}}`, `Median words: ${{c.median_words}}`, `Replies: ${{num(c.replies)}}`, `Deleted rows: ${{num(c.deleted_tweets)}}`]}}),
     h('div', {{className:'divider'}}),
     h('p', null, h('strong', null, 'Top themes: '), c.top_themes.slice(0,5).map(x=>`${{x[0]}} (${{x[1]}})`).join(', ')),
     h('p', null, h('strong', null, 'Humor tags: '), c.top_humor_tags.slice(0,5).map(x=>`${{x[0]}} (${{x[1]}})`).join(', '))
@@ -989,6 +1042,14 @@ def build_dataset(processed_root: Path) -> dict[str, Any]:
             "date_range_ct": [
                 min(row["date_ct"] for row in authored if row.get("date_ct")),
                 max(row["date_ct"] for row in authored if row.get("date_ct")),
+            ],
+            "authored_date_range_ct": [
+                min(row["date_ct"] for row in authored if row.get("date_ct")),
+                max(row["date_ct"] for row in authored if row.get("date_ct")),
+            ],
+            "archive_date_range_ct": [
+                min(row["date_ct"] for row in all_rows if row.get("date_ct")),
+                max(row["date_ct"] for row in all_rows if row.get("date_ct")),
             ],
         },
     }
