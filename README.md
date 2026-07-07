@@ -8,6 +8,8 @@
 
 This repo is the canonical communication router for Austin Humphrey's writing, public voice, private-register signals, and AI collaboration style. The archive matters because it proves the system. The system comes first.
 
+The operating premise is simple: there is not an X Austin, a texting Austin, and an essay Austin. There is one thought process translated through different rooms. This repo exists to preserve that movement with evidence, not to split it into fake platform identities.
+
 It is not a scrapbook, not a generic brand guide, and not a raw data landfill. It is a working voice skill backed by real source material across long-form writing, public social posts, professional documents, and privacy-safe derived analysis.
 
 The goal is durable reuse:
@@ -34,7 +36,8 @@ The goal is durable reuse:
 ## What This System Does
 
 - Routes the voice by room: public long-form, brand/platform, X/social, AI partner, friend group, warm private, coordination, and repair.
-- Preserves one canonical Austin reference instead of splitting him into fake platform personas.
+- Preserves one canonical Austin reference instead of splitting him into fake platform identities.
+- Runs a cold-read guardrail against flattering, vague, or mystical claims. If a claim cannot be sourced, it stays reasoned/open or gets cut.
 - Keeps claims tied to source evidence and source-status tags.
 - Gives future agents a reusable load order instead of a vague "write like me" request.
 
@@ -43,7 +46,7 @@ The goal is durable reuse:
 | Source lane | Status | What it contributes |
 |---|---:|---|
 | Long-form writing archive | [verified] | Academic, professional, strategic, sports, and business prose from 2014-2026. Best source for argument shape and public long-form voice. |
-| Official X/Twitter exports | [verified] | 6,300 official rows, 5,437 authored voice rows, public humor, replies, sports/fan identity, and persona shifts across `@a_hump20` and `@TXTrickWhooper`. |
+| Official X/Twitter exports | [verified] | 6,300 official rows, 5,437 authored voice rows, public humor, replies, sports/fan identity, and public-pressure translation across `@a_hump20` and `@TXTrickWhooper`. |
 | Snapchat metadata export | [verified] | Privacy-safe derived private-register signals: short coordination, direct asks, quick reactions, warm one-on-one compression. Raw private text is not committed. |
 | Living-brain bridge | [verified] | Durable routing note for agents and Obsidian context. Resurfaces Austin-derived language without filing generated prose as source truth. |
 | iMessage / Apple Messages | [verified/private derived] | Privacy-safe aggregate metadata and private-language signals from the local Messages database: 483,242 total rows, 435,735 base human-message rows, 179,882 decoded sent text rows, 632 active group chats, reactions/tapbacks, reply threads, attachment shape, private wording rates, anonymous relationship-room router, and purpose buckets. Raw private text, names, handles, and group names are not committed. |
