@@ -11,8 +11,8 @@ Web: AustinHumphrey.com · BlazeSportsIntel.com · linkedin.com/in/ahump20
 
 ## Experience
 
-**Founder & Builder — Blaze Sports Intel** (Boerne, TX, 2023–Present)
-Production sports intelligence platform covering MLB, NFL, NCAA football, NBA, and college baseball — entirely on Cloudflare infrastructure. Backend: 53 Workers, 12 D1 databases, 45 KV namespaces, 18 R2 buckets. Built real-time ingestion pipelines and mobile-first dashboards with ~30-second live refresh, AI-assisted forecasting modules, and the BlazeCraft reliability monitoring interface. Solo founder owning every layer: roadmap, architecture, release ops, content, stakeholder communication. Focused on markets that matter and don't get covered.
+**Owner/Founder — Blaze Sports Intel** (Boerne, TX, 2023–Present)
+Current public product scope: NCAA Division I college baseball only, under the tagline **Sports Intelligence Put Simply**. Earlier BSI and BlazeCraft build records include broader sports-intelligence experiments on Cloudflare infrastructure; use those as historical build evidence only when the source document supports the claim. Do not reuse old multi-sport or five-league language as current BSI positioning.
 
 **Advertising Account Executive — Spectrum Reach** (Austin, TX, Nov 2022–Dec 2025)
 Data-informed advertising strategies across linear TV, OTT/CTV, streaming, and digital for local and regional clients. Translated campaign performance into insights that drove client renewals and strategic upsells.
@@ -22,7 +22,8 @@ Top-5 ranked intern program, converted to full-time advising role. "Power of 10"
 
 ## What He's Built
 
-- 53-Worker serverless architecture serving multi-sport analytics across five leagues — zero to production as a solo builder
+- Current BSI positioning: college-baseball-only sports intelligence, with Austin owning product direction, source discipline, editorial framing, and release execution
+- Historical BSI/BlazeCraft build work: Cloudflare Workers, D1, KV, R2, real-time ingestion, dashboards, monitoring, and AI-assisted workflows. Use exact counts only when tied to the source document and date.
 - Two years designing Claude, Gemini, and ChatGPT workflows for sports data ingestion, forecasting, and editorial — deployed systems, not demos
 - Performance metrics → editorial content for college baseball, FCS football, and other markets mainstream media won't touch
 - Full-stack execution: architecture, frontend, content, ops, and stakeholder communication — every layer, one person
@@ -52,4 +53,4 @@ Consultative sales, account strategy, client development, financial planning, mu
 
 ## Voice-Writing Implications
 
-When writing professional content in Austin's voice, ground claims in these specifics rather than vague credentials. "53 Workers across five leagues" is stronger than "extensive infrastructure." "Top 10% nationally" is stronger than "high performer." The resume demonstrates the same voice principles: declarative confidence, evidence at point of need, no hype language, concrete over abstract.
+When writing professional content in Austin's voice, ground claims in specifics rather than vague credentials. "Owner/Founder of Blaze Sports Intel" is stronger than generic startup language. "Power of 10 Award — top 10% nationally" is stronger than "high performer." For BSI, current doctrine beats stale resume-era scope: use college baseball only unless Austin explicitly asks for historical multi-sport build context.

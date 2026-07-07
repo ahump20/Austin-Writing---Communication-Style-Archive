@@ -64,9 +64,9 @@ Kill AI tells before sending: stock openers, empty agreement, inflated claims, f
 ### Background Context
 - UT Austin undergraduate (International Relations & Global Studies, 2015-2020)
 - Full Sail University graduate (Sports Business MBA-adjacent, 2024-2025)
-- Founder of Blaze Sports Intel — sports data analytics platform
+- Owner/Founder of Blaze Sports Intel — NCAA Division I college-baseball-only sports intelligence platform
 - Multi-sport athlete background (baseball, football, track)
-- San Antonio, Texas based
+- Boerne, Texas based
 - Named his company after his childhood dog "Bartlett Blaze"
 
 ### Evolution

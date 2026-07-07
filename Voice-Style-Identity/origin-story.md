@@ -205,27 +205,22 @@ Best short version:
 
 Austin is the founder/operator behind a sports-intelligence and product ecosystem, including:
 
-- **Blaze Sports Intel / Blaze Intelligence** — sports intelligence umbrella.
+- **Blaze Sports Intel** — current public company, scoped to NCAA Division I college baseball. `Blaze Intelligence` is retired/historical public-parent-brand language and should not be revived in current copy.
 - **Pitch Atlas** — pitching grips, variants, feel cues, provenance, and field-note knowledge infrastructure.
 - **AustinHumphrey.com** — personal/founder platform.
 - **BlazeCraft.app** — emerging software/project surface.
 - **Blaze Sports Intel iOS/macOS apps** — app surfaces under development.
 - **Pitch Atlas iOS/macOS apps** — product-specific app surfaces under development.
 
-Do not collapse every project into BSI. BSI is the umbrella/lab. Pitch Atlas may be the sharper flagship wedge when the writing is about baseball knowledge, grip craft, sourcing, visual instruction, and field-manual design.
+Do not collapse every project into BSI. BSI is the current college-baseball intelligence company. Pitch Atlas is a separate baseball-knowledge surface and may be the sharper flagship wedge when the writing is about grips, variants, sourcing, visual instruction, and field-manual design.
 
 ## BSI Mission
 
 BSI exists to make sports intelligence more useful, more sourced, and less trapped inside the same few markets and storylines.
 
-Current sports scope:
+Current public BSI sports scope:
 
-- MLB
-- NFL
-- NBA
-- NCAA Football
-- NCAA Baseball
-- NCAA Basketball
+- NCAA Division I college baseball
 
 ## Positioning Principles
 

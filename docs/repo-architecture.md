@@ -1,0 +1,85 @@
+# Repo Architecture
+
+This repo has two jobs that need to stay separate:
+
+1. Preserve Austin's actual written record.
+2. Turn that record into a usable communication router for agents and people.
+
+When those jobs collapse into one README, the repo reads like a dump. The architecture below keeps the archive intact while making the reusable system easy to find.
+
+## Canonical Layer
+
+`Voice-Style-Identity/` is the control room.
+
+Use these files first:
+
+- `SKILL.md`: local reusable skill entry point.
+- `austin-voice-consolidated-harness.md`: top-level instruction file.
+- `cross-context-communication-system.md`: canonical room/router model.
+- `cross-context-source-manifest.md`: source coverage, exclusions, and open gaps.
+- `cross-context-voice-system-artifact.html`: viewable React dossier.
+
+If these files conflict with older archive documents, the canonical layer wins for current behavior.
+
+## Evidence Lanes
+
+`X-Twitter-Archive/` holds public/social evidence.
+
+- `processed/`: cleaned tweet rows by account and year.
+- `official-analysis/`: generated summaries and X-specific style guides.
+- `x-twitter-archive-analysis-artifact.html`: X-only evidence explorer.
+- `README.md`: parser status, counts, and source boundary.
+
+`Voice-Style-Identity/snapchat-analysis/` holds privacy-safe derived Snapchat summaries. Raw private text, names, media URLs, locations, and media files stay out of git.
+
+`Writing-Record/`, `UT-Austin-Coursework/`, `Full-Sail-Coursework/`, `Sports-Writing/`, and `Research/` hold the long-form record. These are source evidence, not current instruction files.
+
+## Historical Material
+
+Some archived documents contain outdated positioning, especially around BSI scope and the older `Blaze Intelligence` language. Do not rewrite historical documents just to make them current. Instead:
+
+- keep them as historical evidence;
+- mark stale claims in the canonical layer;
+- avoid using stale language in README, GitHub About, skills, and current public copy.
+
+Current public doctrine:
+
+- Blaze Sports Intel is the public brand.
+- Austin is Owner/Founder when a title is needed.
+- BSI is NCAA Division I college baseball only.
+- `Blaze Intelligence` is retired as public parent-brand language.
+- Multi-sport and five-league framing is historical/resume-era context, not current public positioning.
+
+## Generated Artifacts
+
+Generated artifacts stay only when they serve a distinct job.
+
+- The cross-context artifact is the canonical dossier.
+- The X artifact is retained because it is a tweet-level public/social evidence explorer.
+- Screenshots are retained as render proof for the dossier.
+- Empty duplicate-removal files in `processed/` are retained because they prove the parser found zero duplicate tweet IDs.
+
+## Duplicate Policy
+
+Delete or move files when they are pure copies, stale generated output with no separate role, or scratch output that can be regenerated and is not evidence.
+
+Keep files when they are:
+
+- source documents;
+- generated proof of a parser/build;
+- historical records with stale language but archival value;
+- current router/skill files;
+- privacy-safe derived summaries that update the canonical voice model.
+
+## Update Flow
+
+When a new archive or platform export lands:
+
+1. Parse it into a source-specific lane.
+2. Produce a privacy-safe summary if the source is private.
+3. Update `cross-context-source-manifest.md`.
+4. Update `cross-context-communication-system.md` only with durable changes.
+5. Rebuild `cross-context-voice-system-artifact.html`.
+6. Sync the durable instruction into local skills and living-brain bridge notes.
+
+Do not file generated Austin-style output as source evidence. It can be a useful draft. It is not Austin's record.

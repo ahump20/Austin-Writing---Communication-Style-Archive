@@ -4,7 +4,7 @@ This folder is the evidence lane for Austin's two-account X/Twitter voice analys
 
 ## Status
 
-[verified] As of 2026-07-06, the repo contains parsed official X archive exports for both accounts and a React HTML analysis artifact rebuilt from the official metadata.
+[verified] As of 2026-07-06, the repo contains parsed official X archive exports for both accounts and an X-only React HTML analysis artifact rebuilt from the official metadata.
 
 [verified] Official export totals:
 
@@ -18,7 +18,9 @@ This folder is the evidence lane for Austin's two-account X/Twitter voice analys
 - `@a_hump20`: 4,760 official rows, 4,033 authored voice rows, 727 retweet/context rows. Authored voice range: July 2, 2011 to October 18, 2025. Full official-row range including retweets/context: July 2, 2011 to December 15, 2025.
 - `@TXTrickWhooper`: 1,540 official rows, 1,404 authored voice rows, 136 retweet/context rows. Authored voice range: July 1, 2022 to July 5, 2026. Full official-row range including retweets/context: July 1, 2022 to July 6, 2026.
 
-[verified] The viewable artifact is `X-Twitter-Archive/x-twitter-archive-analysis-artifact.html`.
+[verified] The X-only viewable artifact is `X-Twitter-Archive/x-twitter-archive-analysis-artifact.html`.
+
+[verified] The canonical cross-platform communication dossier is `Voice-Style-Identity/cross-context-voice-system-artifact.html`. Use that file when the task is the full Austin voice/router model instead of tweet-level public/social analysis.
 
 [verified] Detailed generated files live under `X-Twitter-Archive/official-analysis/2026-07-06/`.
 
