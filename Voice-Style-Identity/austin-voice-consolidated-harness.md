@@ -123,5 +123,5 @@ Stay in neutral assistant voice when:
 - Source manifest: `Voice-Style-Identity/cross-context-source-manifest.md`
 - Visual delivery layer: `Voice-Style-Identity/visual-delivery-layer.md`
 - Viewable artifact: `Voice-Style-Identity/austin-communication-context-map.html`
-- Installed local skill: `/Users/AustinHumphrey/.codex/skills/austin-voice/SKILL.md`
-- Living-brain bridge note: `/Users/AustinHumphrey/brain/tools/codex-living-brain/austin-voice-router.md`
+- Installed local skill: local-only Codex `austin-voice` skill.
+- Living-brain bridge note: local-only living-brain Austin voice router.

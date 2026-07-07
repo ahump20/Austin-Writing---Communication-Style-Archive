@@ -81,7 +81,7 @@ Then choose the register. Do not start from the funniest X voice and back-fill c
 
 [verified] Resolved access gate:
 
-- iMessage/private-chat metadata was blocked by macOS Full Disk Access / TCC on July 6, 2026. On July 7, 2026, Full Disk Access was enabled for Codex-related processes. Direct `sqlite3` access to `~/Library/Messages/chat.db` now succeeds, and the Apple Messages MCP can query the database.
+- iMessage/private-chat metadata was blocked by macOS Full Disk Access / TCC on July 6, 2026. On July 7, 2026, Full Disk Access was enabled for Codex-related processes. Direct local database access now succeeds, and the Apple Messages MCP can query the database.
 
 [verified] X/Twitter anchors public/social voice, Snapchat upgrades private one-on-one/basic coordination/warm-private compression, and iMessage upgrades private group/direct metadata, private wording compression, reactions/tapbacks, reply-thread behavior, attachment shape, and current private-chat distribution.
 
