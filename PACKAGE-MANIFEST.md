@@ -8,6 +8,8 @@ This pack is the portable reference for Austin's communication system. It exists
 
 North Star: the best communication changes the doorway, not the truth.
 
+Truth-transfer rule: the mechanism has to survive translation. A strong bridge changes metaphor, rhythm, slang, grammar, image, silence, or proof shape without changing the causal architecture underneath.
+
 ## Canonical Contents
 
 - `README.md`
@@ -21,7 +23,9 @@ North Star: the best communication changes the doorway, not the truth.
 - `Voice-Style-Identity/cross-context-communication-system.md`
 - `Voice-Style-Identity/cross-context-source-manifest.md`
 - `Voice-Style-Identity/visual-delivery-layer.md`
-- `Voice-Style-Identity/visual-delivery-assets/*.svg`
+- `Voice-Style-Identity/visual-delivery-assets/doorway-translation-flow.svg`
+- `Voice-Style-Identity/visual-delivery-assets/error-recovery-flow.svg`
+- `Voice-Style-Identity/visual-delivery-assets/semantic-portability-map.svg`
 - `Voice-Style-Identity/voice-prompt.md`
 - `Voice-Style-Identity/austin-writing-style-prompt.md`
 - `Voice-Style-Identity/ai-voice-transfer.md`
@@ -50,4 +54,4 @@ North Star: the best communication changes the doorway, not the truth.
 
 Open `Voice-Style-Identity/austin-communication-context-map.html`.
 
-That is the canonical viewable React dossier.
+That is the canonical viewable React translation system: usable voice first, evidence receipts after.

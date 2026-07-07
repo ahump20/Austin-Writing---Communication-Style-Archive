@@ -10,6 +10,22 @@ The truth stays stable. The route into it changes by audience, relationship, lit
 
 The goal is truth transfer: keep the mechanism intact while changing the metaphor, rhythm, slang, grammar, image, silence, or proof shape so the room can enter it without the idea becoming false, sterile, or condescending.
 
+## Truth Transfer Doctrine
+
+[reasoned] Art is authentic communication that survives translation across domains. The line has to keep the same truth while changing its clothes. Not a costume. A correct uniform for the room.
+
+| Layer | Question |
+|---|---|
+| Observational truth | What is the naked thing actually noticed? |
+| Mechanism | What makes it work underneath? |
+| Audience world | What does this person already understand in their body? |
+| Metaphor bridge | What different domain has the same structure? |
+| Contextual acuteness | What must change because of culture, room, history, stakes, or language? |
+| Delivery | What rhythm, slang, grammar, image, or silence makes it land? |
+| Durability | Will the lesson still work tomorrow, elsewhere, for someone else? |
+
+[reasoned] The rocket-science example is the access protocol: a brilliant explanation the listener cannot enter is failed communication. A simplified explanation that loses the mechanism is also failed communication. The bridge preserves the mechanism while changing the doorway.
+
 ## What The Added Visual Context Proves
 
 [verified] No direct professor video, caption track, talking-head clip, or classroom conversation recording was found in the provided repo files or current attachment set.
@@ -82,6 +98,28 @@ Before shipping an analogy, verify four things:
 2. The authority signal stays or breaks for the same reason.
 3. The audience can enter the domain without needing a second explanation.
 4. The lesson survives tomorrow, elsewhere, for someone else.
+
+### Stronger Bridge Examples
+
+| Domain | Weak / sterile line | Better bridge | Why it works |
+|---|---|---|---|
+| AI reliability | AI hallucination is like a person lying. | AI hallucination is like a scoreboard that keeps updating after the data feed dies. It still looks live. That is the danger. | Output continues, authority remains visible, source path is broken, and user trust becomes the failure point. |
+| Code | This function normalizes heterogeneous inputs through schema validation. | This function is the bouncer. It checks every ID before the data gets into the club. | Same access-control mechanism, more enterable doorway. |
+| Sports | The model weights recent opponent-adjusted performance. | It does not just ask whether you won. It asks who you beat, how recently, and whether the win still tells us anything. | Preserves recency, opponent strength, and signal decay without model jargon. |
+| Finance | Liquidity risk increases under crowded exit conditions. | Liquidity is not how many people are in the stadium. It is how many doors are open when everyone tries to leave. | Preserves crowding, exit capacity, and timing pressure. |
+| Relationships | I optimized for problem resolution instead of emotional validation. | I tried to fix the leak before I noticed you were standing in water. | Keeps the repair mechanism and adds the human stake. |
+| Design | The interface lacks cognitive accessibility. | The page is making the user carry the map, the compass, and the weather report at the same time. | Makes cognitive load visible as a physical burden. |
+
+## Truth Transfer Failure Modes
+
+| Failure | What happens |
+|---|---|
+| Precision without access | The explanation is technically correct, but the room cannot enter it. |
+| Access without precision | The metaphor lands but teaches the wrong mechanism. |
+| Style without truth | It sounds good and leaves nothing behind. |
+| Compression without context | The missing words were not actually shared. |
+| Domain arrogance | The expert makes the listener climb instead of building the bridge. |
+| Cultural blindness | The metaphor works in one room and breaks in another. |
 
 ## Public/Private Boundary
 

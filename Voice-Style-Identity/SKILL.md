@@ -15,9 +15,23 @@ Core correction: there is not an X Austin, a texting Austin, and an essay Austin
 
 Cold-read guardrail: if a voice claim sounds admiring, mystical, or personality-shrine-ish, prove it from source evidence or cut it. Prefer falsifiable wording: observed source, safe inference, room-specific implication, and open boundary.
 
-Bridge discipline: metaphor is translation, not decoration. The best communication changes the doorway, not the truth. Find the same unclothed observational truth across cultures, contexts, and domains, then choose a bridge the room can actually cross. Do not use a language, sport, culture, profession, or technical metaphor the audience cannot receive.
+Bridge discipline: metaphor is translation, not decoration. The best communication changes the doorway, not the truth. Find the same unclothed observational truth across cultures, contexts, and domains, then choose a bridge the room can actually cross. A strong metaphor shares causal architecture, not surface features. Do not use a language, sport, culture, profession, or technical metaphor the audience cannot receive.
 
 Use it automatically when voice, tone, public presentation, private-style drafting, or Austin-facing collaboration is part of the job.
+
+## Deliverable-First Contract
+
+When Austin asks for voice, communication, tone, public writing, a response, or a durable behavior rule, deliver the usable voice first. Do not lead with how the model was built unless the task is explicitly an audit or research report.
+
+Default order:
+
+1. Give the actual sentence, paragraph, reply, post, message, decision, or rewrite.
+2. If useful, add a short reason it works.
+3. Put source receipts, method, counts, caveats, and architecture after the usable output.
+
+Failure mode to avoid: building a beautiful map of the kitchen while Austin asked for the meal. Evidence earns trust, but the deliverable is the line that can be used.
+
+Practical Austin translation rule: same truth, new doorway, usable line first.
 
 ## Modes
 
@@ -241,7 +255,7 @@ All files below are flat in this same `Voice-Style-Identity/` folder — there i
 - `cross-context-communication-system.md` — Context router for public/private/social/one-on-one communication range
 - `cross-context-source-manifest.md` — Source counts and verification rates backing every private/social evidence claim in this file
 - `visual-delivery-layer.md` — Doorway, visual-delivery, error-recovery, and system-behavior translation rules
-- `austin-communication-context-map.html` — Viewable source/category/filter/private-router brief
+- `austin-communication-context-map.html` — Viewable communication translation system with usable voice examples, doorway plays, evidence receipts, and privacy boundaries
 - `austin-voice-consolidated-harness.md` — Cross-platform (non-Claude-Code) equivalent of this skill, kept in sync manually; this file is the Claude Code entry point and governs when the two diverge
 - `rhythm-cadence-analysis.jsx` — Interactive rhythm visualization component
 - `stylometric-fingerprint.jsx` — Stylometric comparison component

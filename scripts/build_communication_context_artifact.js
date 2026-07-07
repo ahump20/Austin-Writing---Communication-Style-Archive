@@ -49,7 +49,7 @@ const markerRows = [
     label: "logistics",
     snapchat: snapchat.chat.marker_rates_per_100_sent_texts.logistics,
     imessage: imessageLanguage.overall.marker_rate_per_100.logistics,
-    implication: "Coordination is not a side register. It is a core voice mode.",
+    implication: "Coordination is not a side register. It is a core delivery condition.",
   },
   {
     label: "laughter/play",
@@ -126,7 +126,7 @@ const sourceRows = [
     kind: "private derived",
     rows: imessage.coverage.sent_base_rows,
     usable: imessageLanguage.coverage.decoded_sent_text_rows,
-    note: "Sent-text length, marker rates, anonymous room router, purpose buckets.",
+    note: "Sent-text length, marker rates, anonymous delivery shape, purpose buckets.",
     privacy: "Derived wording shape only. No phrases.",
     proof: "179,882 decoded sent text rows.",
     dateRange: "2014-2026",
@@ -553,6 +553,161 @@ const studyPrompts = [
   },
 ];
 
+const usableVoiceRows = [
+  {
+    lane: "With Austin",
+    useWhen: "Direct collaboration, corrections, decisions, execution.",
+    line: "[verified] The issue is not the artifact size. It is that the top explains the evidence before it gives you usable voice. I am moving the usable lines to the front and making the receipts prove them.",
+    why: "Outcome first, evidence tag, concrete miss, corrective action.",
+  },
+  {
+    lane: "Public social",
+    useWhen: "X/social, replies, quick public reaction.",
+    line: "Nothing humbles software faster than asking it to remember the point of the file it just made.",
+    why: "Concrete object, dry escalation, no explained punchline.",
+  },
+  {
+    lane: "Public long-form",
+    useWhen: "Essay, LinkedIn, public analysis, product critique.",
+    line: "The failure was not the error by itself. It was the absence of a recovery path after the user had already spent trust on the workflow.",
+    why: "Claim, mechanism, human cost, reusable lesson.",
+  },
+  {
+    lane: "Private coordination",
+    useWhen: "Text-like update, close room, practical next step.",
+    line: "I am fixing the top first. The page needs usable lines before receipts.",
+    why: "Short, useful, no ceremony, still specific.",
+  },
+  {
+    lane: "Repair",
+    useWhen: "Missed expectation, wrong artifact, overclaim, tone drift.",
+    line: "I overbuilt the map and underdelivered the voice. I am moving the actual outputs to the front and making the evidence secondary.",
+    why: "Owns the action, names the mechanism, states next behavior.",
+  },
+  {
+    lane: "Brand/platform",
+    useWhen: "BSI, portfolio, professional or public-facing product copy.",
+    line: "Trust is not earned by being impressive when the path is clean. It is earned when the system breaks and the user still knows what happened.",
+    why: "Vision over grievance, concrete user stake, no hype.",
+  },
+];
+
+const defaultDeliveryRules = [
+  {
+    rule: "Give the line first.",
+    detail: "If the task asks for writing, produce the usable sentence, paragraph, reply, post, or decision before explaining why it works.",
+  },
+  {
+    rule: "Keep the truth stable.",
+    detail: "The mechanism should survive every translation. Only the doorway changes: metaphor, cadence, slang, density, proof, or silence.",
+  },
+  {
+    rule: "Use receipts after the move.",
+    detail: "Evidence earns trust. It should not crowd out the thing the reader came to use.",
+  },
+  {
+    rule: "Cut fake taxonomy.",
+    detail: "Do not split Austin into platform identities. Source lanes prove pressure conditions, not separate selves.",
+  },
+];
+
+const truthTransferRows = [
+  {
+    layer: "Observational truth",
+    question: "What is the naked thing actually noticed?",
+  },
+  {
+    layer: "Mechanism",
+    question: "What makes it work underneath?",
+  },
+  {
+    layer: "Audience world",
+    question: "What does this person already understand in their body?",
+  },
+  {
+    layer: "Metaphor bridge",
+    question: "What different domain has the same structure?",
+  },
+  {
+    layer: "Contextual acuteness",
+    question: "What must change because of culture, room, history, stakes, or language?",
+  },
+  {
+    layer: "Delivery",
+    question: "What rhythm, slang, grammar, image, or silence makes it land?",
+  },
+  {
+    layer: "Durability",
+    question: "Will the lesson still work tomorrow, elsewhere, for someone else?",
+  },
+];
+
+const metaphorExampleRows = [
+  {
+    domain: "AI reliability",
+    weak: "AI hallucination is like a person lying.",
+    bridge: "AI hallucination is like a scoreboard that keeps updating after the data feed dies. It still looks live. That is the danger.",
+    why: "Output continues, authority remains visible, source path is broken, and user trust becomes the failure point.",
+  },
+  {
+    domain: "Code",
+    weak: "This function normalizes heterogeneous inputs through schema validation.",
+    bridge: "This function is the bouncer. It checks every ID before the data gets into the club.",
+    why: "Same access-control mechanism, more enterable doorway.",
+  },
+  {
+    domain: "Sports",
+    weak: "The model weights recent opponent-adjusted performance.",
+    bridge: "It does not just ask whether you won. It asks who you beat, how recently, and whether the win still tells us anything.",
+    why: "Preserves recency, opponent strength, and signal decay without model jargon.",
+  },
+  {
+    domain: "Finance",
+    weak: "Liquidity risk increases under crowded exit conditions.",
+    bridge: "Liquidity is not how many people are in the stadium. It is how many doors are open when everyone tries to leave.",
+    why: "Preserves crowding, exit capacity, and timing pressure.",
+  },
+  {
+    domain: "Relationships",
+    weak: "I optimized for problem resolution instead of emotional validation.",
+    bridge: "I tried to fix the leak before I noticed you were standing in water.",
+    why: "Keeps the repair mechanism and adds the human stake.",
+  },
+  {
+    domain: "Design",
+    weak: "The interface lacks cognitive accessibility.",
+    bridge: "The page is making the user carry the map, the compass, and the weather report at the same time.",
+    why: "Makes cognitive load visible as a physical burden.",
+  },
+];
+
+const transferFailureRows = [
+  {
+    failure: "Precision without access",
+    effect: "The explanation is technically correct, but the room cannot enter it.",
+  },
+  {
+    failure: "Access without precision",
+    effect: "The metaphor lands but teaches the wrong mechanism.",
+  },
+  {
+    failure: "Style without truth",
+    effect: "It sounds good and leaves nothing behind.",
+  },
+  {
+    failure: "Compression without context",
+    effect: "The missing words were not actually shared.",
+  },
+  {
+    failure: "Domain arrogance",
+    effect: "The expert makes the listener climb instead of building the bridge.",
+  },
+  {
+    failure: "Cultural blindness",
+    effect: "The metaphor works in one room and breaks in another.",
+  },
+];
+
 const reflectionChapters = [
   {
     title: "You think by turning the vague thing into a handled thing.",
@@ -620,7 +775,7 @@ const reflectionChapters = [
     evidence: [
       "Direct instructions emphasize evidence over agreement, durable memory, privacy boundaries, and execution.",
       "Public X examples show AI/tool complaints in the same blunt register as sports and service failures.",
-      "The repo now contains a skill, context map, source manifest, and rendered artifacts to reduce drift."
+      "The repo now contains a skill, translation system, source manifest, and rendered artifacts to reduce drift."
     ],
     selfStudy: "The useful version is high trust and high standards. The weaker version is impatience with the parts of collaboration that need slowing down before the right thing can be done.",
   },
@@ -877,6 +1032,11 @@ const visualAssetRows = [
     file: "visual-delivery-assets/error-recovery-flow.svg",
     note: "State visible, issue named, fix path, support path, retest. This abstracts the added App Store review visual without storing the raw screenshot.",
   },
+  {
+    title: "Semantic portability map",
+    file: "visual-delivery-assets/semantic-portability-map.svg",
+    note: "Observation, mechanism, audience world, bridge, contextual acuteness, delivery, durability, and metaphor test.",
+  },
 ];
 
 const data = {
@@ -898,6 +1058,11 @@ const data = {
   researchBoundaryRows,
   systemBehaviorRows,
   visualAssetRows,
+  usableVoiceRows,
+  defaultDeliveryRules,
+  truthTransferRows,
+  metaphorExampleRows,
+  transferFailureRows,
   filterCount: filterFamilies.reduce((sum, family) => sum + family.filters.length, 0),
   filterFamilies,
   sourceRows,
@@ -956,7 +1121,7 @@ const frontendContract = {
   design_read: data.design.read,
   audience: "Austin, future AI agents, and repo readers who need a privacy-safe voice reference.",
   surface_type: "editorial evidence dossier",
-  primary_job: "Help Austin read his own communication patterns and help future agents choose the right room before choosing voice.",
+  primary_job: "Help Austin and future agents preserve the same truth while choosing the doorway each audience can actually enter.",
   content_grain: "mixed narrative, aggregate evidence, public quotes, and custom SVG charts",
   seed: data.design.seed,
   drawn_coordinate: {
@@ -984,10 +1149,10 @@ const frontendContract = {
   DEPTH_INTEGRITY: data.design.dials.depth,
   signature_move: "A dossier where the operating premise leads, the doorway rule is explicit, and each chart is a receipt for the implication it supports.",
   layout_architecture: "sticky dossier rail plus long-form reading column and chart pairs",
-  information_flow: "summary, method, human read, bridge discipline, system behavior, visual delivery, deeper reflection, charts, trend arc, public examples, private router, recipes, filters, source boundaries",
-  section_or_zone_rhythm: "large thesis sections, long-form reflection chapters, paired evidence panels, recipes, and calmer source rows",
+  information_flow: "doorway rule, repeatable movement, method, system behavior, visual delivery, evidence receipts, public examples, private shape, doorway plays, source boundaries",
+  section_or_zone_rhythm: "one governing thesis, long-form reflection chapters, paired evidence panels, doorway plays, and calmer source rows",
   primary_visual_asset: "custom SVG evidence charts and annotated delivery-flow assets",
-  asset_job: "make private compression, room routing, strength/risk patterns, doorway translation, and error recovery readable without exposing raw private content",
+  asset_job: "make private compression, pressure conditions, strength/risk patterns, doorway translation, and error recovery readable without exposing raw private content",
   source_route: "local JSON summaries and official X public analysis data",
   prompt_or_query: "Redesign existing local React HTML communication dossier with D3 charts and privacy-safe evidence.",
   license_usage_state: "local authored data and public archive examples; no third-party media assets",
@@ -995,7 +1160,7 @@ const frontendContract = {
   fallback_if_unavailable: "HTML includes a no-script notice and the repository retains markdown/json privacy-safe summaries.",
   blend_strategy: "Flat DOM reading surface with data-bound SVG islands.",
   motion_grammar: "No autoplay motion; only hover/focus state changes and smooth anchor scroll with reduced-motion fallback.",
-  interaction_model: "section navigation, tabs for voice mode inspection, filter family selector, public source links",
+  interaction_model: "section navigation, tabs for delivery-condition inspection, translation-check selector, public source links",
   token_source: {
     basis: "archive paper, private dossier, Texas burnt orange, pine/cobalt evidence colors, neutral ink",
     derived_tokens: [
@@ -1057,8 +1222,8 @@ const html = String.raw`<!doctype html>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Austin Communication Context Map</title>
-  <meta name="description" content="Privacy-safe Austin communication dossier with public examples, private aggregate signals, and context routing guidance." />
+  <title>Austin Communication Translation System</title>
+  <meta name="description" content="Privacy-safe Austin communication translation system: one thought process, different doorways, source-backed evidence." />
   <script defer crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script defer crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script defer crossorigin src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
@@ -1403,8 +1568,8 @@ const html = String.raw`<!doctype html>
   <div id="root"></div>
   <noscript>
     <main style="padding:32px;font-family:Avenir Next, Helvetica Neue, Helvetica">
-      <h1>Austin Communication Context Map</h1>
-      <p>JavaScript is required to view the interactive dossier. The source data remains in the repository as privacy-safe summaries.</p>
+      <h1>Austin Communication Translation System</h1>
+      <p>The best communication changes the doorway, not the truth. JavaScript is required to view the interactive dossier; privacy-safe source summaries remain in the repository.</p>
     </main>
   </noscript>
   <script>
@@ -1453,6 +1618,33 @@ const html = String.raw`<!doctype html>
       return h("article", { className:"card" },
         h("div", { className:"card-header" }, h("h3", null, title), badge ? h(Badge, { kind:badge.kind }, badge.text) : null),
         h("div", { className:"card-content" }, children)
+      );
+    }
+    function UsableVoiceFirst() {
+      return h("div", { className:"grid-2" },
+        h("div", { className:"long-read" },
+          DATA.defaultDeliveryRules.map((item) =>
+            h(Card, { title:item.rule, badge:{ kind:"verified", text:"rule" }, key:item.rule },
+              h("p", null, item.detail)
+            )
+          )
+        ),
+        h("div", { className:"quote-grid", style:{ gridTemplateColumns:"1fr" } },
+          DATA.usableVoiceRows.map((row) =>
+            h("article", { className:"quote-card", key:row.lane },
+              h("div", { className:"card-header" },
+                h("h3", null, row.lane),
+                h(Badge, { kind:"reasoned" }, "generated example")
+              ),
+              h("blockquote", null, row.line),
+              h("p", { className:"quote-note" }, row.why),
+              h("div", { className:"quote-meta" },
+                h("span", null, row.useWhen),
+                h("span", null, "not a source quote")
+              )
+            )
+          )
+        )
       );
     }
     function BarList({ rows, color = "var(--accent)", suffix = "", maxValue }) {
@@ -1565,10 +1757,10 @@ const html = String.raw`<!doctype html>
       const closed = points.concat([points[0]]);
       return h("div", { className:"chart-card" },
         h("div", { className:"chart-title-row" },
-          h("h3", null, "Voice compass"),
-          h(Badge, { kind:"reasoned" }, "router values")
+          h("h3", null, "Delivery compass"),
+          h(Badge, { kind:"reasoned" }, "pressure values")
         ),
-        h("div", { className:"tabs", role:"tablist", "aria-label":"Voice mode selector" },
+        h("div", { className:"tabs", role:"tablist", "aria-label":"Delivery condition selector" },
           DATA.routerModes.map((item, index) =>
             h("button", {
               className:"tab-button",
@@ -1579,7 +1771,7 @@ const html = String.raw`<!doctype html>
             }, item.mode)
           )
         ),
-        h("svg", { viewBox:"0 0 " + width + " " + height, role:"img", "aria-label":"Voice compass for " + mode.mode },
+        h("svg", { viewBox:"0 0 " + width + " " + height, role:"img", "aria-label":"Delivery compass for " + mode.mode },
           [1,2,3,4,5].map((level) => {
             const pts = axes.map((axis, index) => polar(cx, cy, maxR * level / 5, -Math.PI / 2 + index * (Math.PI * 2 / axes.length)));
             return h("polygon", { key:level, points:pts.map((p) => p.join(",")).join(" "), fill:"none", stroke:"#d8dfdb", strokeWidth:.75 });
@@ -1699,7 +1891,7 @@ const html = String.raw`<!doctype html>
     function PrivateContextRouter() {
       return h("div", { className:"chart-card context-table-wrap" },
         h("div", { className:"chart-title-row" },
-          h("h3", null, "Anonymous private room router"),
+          h("h3", null, "Anonymous private delivery shape"),
           h(Badge, { kind:"verified" }, "local-only source")
         ),
         h("table", { className:"context-table" },
@@ -1766,6 +1958,43 @@ const html = String.raw`<!doctype html>
         h("div", null,
           h("blockquote", null, DATA.northStar.quote),
           h("blockquote", { style:{ marginTop:"12px" } }, DATA.northStar.doorway)
+        )
+      );
+    }
+    function TruthTransferDoctrine() {
+      return h("div", { className:"engine-grid" }, DATA.truthTransferRows.map((item, index) =>
+        h("article", { className:"engine-card", key:item.layer },
+          h("b", null, String(index + 1).padStart(2, "0")),
+          h("h3", null, item.layer),
+          h("p", null, item.question)
+        )
+      ));
+    }
+    function MetaphorExamples() {
+      return h("div", { className:"recipe-grid" }, DATA.metaphorExampleRows.map((item) =>
+        h("article", { className:"recipe-card", key:item.domain },
+          h("h3", null, item.domain),
+          h("dl", null,
+            h("div", null, h("dt", null, "Weak line"), h("dd", null, item.weak)),
+            h("div", null, h("dt", null, "Better bridge"), h("dd", null, item.bridge)),
+            h("div", null, h("dt", null, "Why it works"), h("dd", null, item.why))
+          )
+        )
+      ));
+    }
+    function TransferFailures() {
+      return h("div", { className:"matrix-table" },
+        h("table", null,
+          h("thead", null, h("tr", null,
+            h("th", null, "Failure"),
+            h("th", null, "What happens")
+          )),
+          h("tbody", null, DATA.transferFailureRows.map((row) =>
+            h("tr", { key:row.failure },
+              h("th", { scope:"row" }, row.failure),
+              h("td", null, row.effect)
+            )
+          ))
         )
       );
     }
@@ -1935,24 +2164,26 @@ const html = String.raw`<!doctype html>
     function App() {
       return h("div", { className:"shell" },
         h("aside", null,
-          h("p", { className:"eyebrow" }, "Austin voice system"),
-          h("h1", null, "One Thought Process"),
-          h("p", null, "A privacy-safe dossier for learning the movement underneath the voice, then translating it by room."),
+          h("p", { className:"eyebrow" }, "Austin translation system"),
+          h("h1", null, "Change The Doorway"),
+          h("p", null, "One thought process, different entrances. This is not an identity map."),
           h("nav", { "aria-label":"Artifact sections" }, [
             ["answer","Start"],
-            ["north-star","Correction"],
+            ["usable-voice","Usable voice"],
+            ["north-star","Doorway rule"],
+            ["truth-transfer","Truth transfer"],
             ["thought-engine","Movement"],
             ["behavior","System behavior"],
             ["visual-layer","Visual layer"],
             ["human-read","Human read"],
             ["deeper-read","Deeper read"],
-            ["charts","Charts"],
-            ["trends","Trends"],
+            ["charts","Evidence receipts"],
+            ["trends","Time pressure"],
             ["quotes","Public examples"],
-            ["private-router","Private router"],
-            ["recipes","Recipes"],
-            ["filters","Filters"],
-            ["sources","Sources"],
+            ["private-router","Private shape"],
+            ["recipes","Doorway plays"],
+            ["filters","Translation checks"],
+            ["sources","Source receipts"],
             ["boundaries","Boundaries"],
             ["privacy","Privacy"]
           ].map(([id,label]) => h("a", { href:"#"+id, key:id }, label))),
@@ -1961,36 +2192,56 @@ const html = String.raw`<!doctype html>
         h("main", { id:"main" },
           h("section", { className:"hero", id:"answer" },
             h("div", { className:"hero-copy" },
-              h("p", { className:"eyebrow" }, "Summary synthesis"),
-              h("h2", null, "Same thought. Different rooms."),
-              h("p", { className:"thesis" }, "This is not a map of separate Austins. It is a learning reference for the same thought process under different pressure, audience, intimacy, and risk."),
+              h("p", { className:"eyebrow" }, "Governing answer"),
+              h("h2", null, "The best communication changes the doorway, not the truth."),
+              h("p", { className:"thesis" }, "This is a translation system, not a personality map. The archive exists to learn the movement underneath the line, then choose the entrance an audience can actually walk through."),
               h("div", { className:"summary-strip" },
                 h("div", null, h("strong", null, "Core movement"), h("p", null, "Object, pressure, system, bridge, lesson, rhythm, room.")),
                 h("div", null, h("strong", null, "Humor pattern"), h("p", null, "Take a normal object and give it institutional stakes.")),
-                h("div", null, h("strong", null, "Doorway rule"), h("p", null, "Change the entrance. Keep the truth."))
+                h("div", null, h("strong", null, "Doorway rule"), h("p", null, "Change the entrance. Keep the mechanism."))
               ),
               h("div", { className:"stat-grid" },
                 h(Stat, { value:fmt.format(DATA.totals.officialX), label:"official X rows parsed" }),
                 h(Stat, { value:fmt.format(DATA.totals.authoredX), label:"authored public rows" }),
                 h(Stat, { value:fmt.format(DATA.totals.decodedMessages), label:"decoded private sent texts" }),
-                h(Stat, { value:DATA.filterCount, label:"usable context filters" })
+                h(Stat, { value:DATA.filterCount, label:"translation checks" })
               )
             ),
             h("div", { className:"hero-aside" },
-              h(Card, { title:"The practical answer", badge:{ kind:"verified", text:"updated" } },
-                h("p", null, "The artifact now treats rooms as translations, not identities. Future agents should learn the movement first, then choose the room.")
+              h(Card, { title:"What changed", badge:{ kind:"verified", text:"updated" } },
+                h("p", null, "Rooms are delivery conditions, not selves. The page now starts from the doorway rule before it shows any buckets, charts, or sources.")
               ),
-              h(Card, { title:"The human answer", badge:{ kind:"reasoned", text:"read" } },
+              h(Card, { title:"What stays stable", badge:{ kind:"reasoned", text:"read" } },
                 h("p", null, "The repeated move is pressure turned into a concrete object, a system read, a lesson, and a line with cadence.")
               ),
-              h(Card, { title:"The privacy answer", badge:{ kind:"verified", text:"bounded" } },
+              h(Card, { title:"What stays private", badge:{ kind:"verified", text:"bounded" } },
                 h("p", null, "Raw private messages, DMs, names, group names, handles, filenames, media paths, burner metadata, and private phrase lists stay out of the public repo.")
               )
             )
           ),
+          h("section", { id:"usable-voice" },
+            h(SectionHead, { title:"Usable Voice First", body:"This is the actual output layer. Use these lines, moves, and delivery rules before reading the evidence machinery underneath them." }),
+            h(UsableVoiceFirst, null)
+          ),
           h("section", { id:"north-star" },
-            h(SectionHead, { title:"Operating Correction", body:"This is the correction that keeps the whole project honest. The artifact should not sort Austin into platform selves. It should teach the single movement underneath the translations." }),
+            h(SectionHead, { title:"Doorway Rule", body:"This is the correction that keeps the whole project honest. Do not sort Austin into platform selves. Learn the single movement, then choose the doorway." }),
             h(NorthStarPanel, null)
+          ),
+          h("section", { id:"truth-transfer" },
+            h(SectionHead, { title:"Truth Transfer", body:"Same bones, different doorway. The mechanism survives while metaphor, rhythm, slang, grammar, image, silence, or proof changes for the room." }),
+            h(TruthTransferDoctrine, null),
+            h("div", { className:"reading-path" },
+              h("h3", null, "Causal architecture test"),
+              h("p", null, "Weak metaphors share surface features. Strong bridges preserve how the thing actually works: source path, authority signal, failure point, and human consequence.")
+            ),
+            h("div", { style:{ marginTop:"18px" } },
+              h(SectionHead, { title:"Stronger Bridges", body:"These examples change the doorway without changing the underlying mechanism." }),
+              h(MetaphorExamples, null)
+            ),
+            h("div", { style:{ marginTop:"18px" } },
+              h(SectionHead, { title:"Failure Modes", body:"These are the ways translation breaks when the doorway changes the truth or blocks the room." }),
+              h(TransferFailures, null)
+            )
           ),
           h("section", { id:"thought-engine" },
             h(SectionHead, { title:"The Repeatable Movement", body:"The durable part is the movement: the object carries feeling, the system explains pressure, and the room changes delivery." }),
@@ -2001,13 +2252,13 @@ const html = String.raw`<!doctype html>
             )
           ),
           h("section", { id:"method" },
-            h(SectionHead, { title:"Method, in plain English", body:"The goal was not to prove a personality theory. The goal was to build a reusable learning reference from Austin-derived evidence while keeping private people private." }),
+            h(SectionHead, { title:"Method, in plain English", body:"The goal was not to prove a personality theory. The goal was to build a reusable translation reference from Austin-derived evidence while keeping private people private." }),
             h("div", { className:"grid-2" }, DATA.methodSteps.map((step) =>
               h(Card, { title:step.title, badge:{ kind:"verified", text:"method" }, key:step.title }, h("p", null, step.body))
             )),
             h("div", { className:"reading-path" },
               h("h3", null, "How to read this"),
-              h("p", null, "Start with the correction and repeatable movement, then use the charts as receipts. The private sections prove shape, not private wording. Public examples show real phrasing because they were already public.")
+              h("p", null, "Start with the doorway rule and repeatable movement, then use the charts as receipts. The private sections prove shape, not private wording. Public examples show real phrasing because they were already public.")
             ),
             h("p", { className:"footer" }, "Design read: " + DATA.design.read + " Seed " + DATA.design.seed + ". " + DATA.design.note)
           ),
@@ -2036,7 +2287,7 @@ const html = String.raw`<!doctype html>
             )
           ),
           h("section", { id:"charts" },
-            h(SectionHead, { title:"Charts as receipts", body:"The charts do not define Austin. They show where the evidence supports the read: compression, private-room shape, source strength, and translation risk." }),
+            h(SectionHead, { title:"Evidence Receipts", body:"The charts do not define Austin. They show where the evidence supports the read: compression, private-room shape, source strength, and translation risk." }),
             h("div", { className:"grid-2" },
               h(MarkerComparisonChart, null),
               h(ContextBubbleChart, null)
@@ -2055,7 +2306,7 @@ const html = String.raw`<!doctype html>
             )
           ),
           h("section", { id:"trends" },
-            h(SectionHead, { title:"Trend Arc And Use Notes", body:"The pattern is not early, middle, recent as a maturity story. The stronger read is translation pressure: public heat, private compression, professional proof, and AI partnership." }),
+            h(SectionHead, { title:"Time Pressure And Use Notes", body:"The pattern is not early, middle, recent as a maturity story. The stronger read is translation pressure: public heat, private compression, professional proof, and AI partnership." }),
             h(TrendNarrative, null),
             h("div", { style:{ marginTop:"18px" } }, h(StudyPrompts, null))
           ),
@@ -2064,7 +2315,7 @@ const html = String.raw`<!doctype html>
             h(QuoteGallery, null)
           ),
           h("section", { id:"private-router" },
-            h(SectionHead, { title:"Private context without private exposure", body:"This is the executed local-only Messages pass in safe form: room shape, length, markers, and purpose buckets without names, quotes, or private phrases." }),
+            h(SectionHead, { title:"Private Shape Without Private Exposure", body:"This is the executed local-only Messages pass in safe form: room shape, length, markers, and purpose buckets without names, quotes, or private phrases." }),
             h("div", { className:"grid-2" },
               h(PrivateContextRouter, null),
               h("div", { className:"chart-card" },
@@ -2075,15 +2326,15 @@ const html = String.raw`<!doctype html>
             )
           ),
           h("section", { id:"recipes" },
-            h(SectionHead, { title:"Communication Translations", body:"This is the reusable part. Read the movement first. Then pick the room, the job, and the amount of heat, care, proof, or compression the room deserves." }),
+            h(SectionHead, { title:"Doorway Plays", body:"This is the reusable part. Read the movement first. Then pick the room, the job, and the amount of heat, care, proof, or compression the room deserves." }),
             h(CommunicationRecipes, null)
           ),
           h("section", { id:"filters" },
-            h(SectionHead, { title:"Translation filters", body:"These filters turn the archive into an operating system for future writing. The first question is not what sounds like Austin. It is what the thought is doing and which room receives it." }),
+            h(SectionHead, { title:"Translation Checks", body:"These checks turn the archive into an operating system for future writing. The first question is not what sounds like Austin. It is what the thought is doing and which doorway the room can receive." }),
             h(FilterAtlas, null)
           ),
           h("section", { id:"sources" },
-            h(SectionHead, { title:"Evidence universe", body:"Each source can teach a different pressure condition. The reference keeps those pressures from becoming fake separate identities." }),
+            h(SectionHead, { title:"Source Receipts", body:"Each source teaches a pressure condition. The reference keeps those pressures from becoming fake separate identities." }),
             h(SourceCards, null),
             h("div", { style:{ marginTop:"18px" } }, h(Matrix, null))
           ),
@@ -2092,7 +2343,7 @@ const html = String.raw`<!doctype html>
             h(ResearchBoundaries, null)
           ),
           h("section", { id:"soft" },
-            h(SectionHead, { title:"Soft layer", body:"This is the interpretation layer. The numbers keep it honest; the read is what makes it useful." }),
+            h(SectionHead, { title:"Interpretation Guardrail", body:"This is the interpretation layer. The numbers keep it honest; the read is what makes it useful." }),
             h("div", { className:"soft-grid" }, DATA.softAxes.map(([label, body]) =>
               h("article", { className:"soft-card", key:label }, h("h3", null, label), h("p", null, body))
             ))
@@ -2107,7 +2358,7 @@ const html = String.raw`<!doctype html>
               )
             )
           ),
-          h("p", { className:"footer" }, "This artifact is meant to be read and reused. It updates the earlier X-only view into a cross-platform reference for Austin, future agents, public writing, private tone, and AI-human partnership.")
+          h("p", { className:"footer" }, "This artifact is meant to be read and reused. It updates the earlier X-only view into a doorway-based translation reference for Austin, future agents, public writing, private tone, and AI-human partnership.")
         )
       );
     }

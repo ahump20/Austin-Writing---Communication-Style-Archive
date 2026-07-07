@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Semantic Portability Map</title>
+  <desc id="desc">A map of truth transfer: observation, mechanism, audience world, metaphor bridge, contextual acuteness, delivery, and durability.</desc>
+  <defs>
+    <style>
+      .bg { fill:#f2f4f0; }
+      .card { fill:#fffef9; stroke:#c9d1cd; stroke-width:2; rx:18; }
+      .test { fill:#f7efe4; stroke:#d9b59d; stroke-width:2; rx:18; }
+      .ink { fill:#17191a; font-family:Avenir Next, Helvetica Neue, Arial, sans-serif; }
+      .muted { fill:#596260; font-family:Avenir Next, Helvetica Neue, Arial, sans-serif; }
+      .title { font-weight:800; font-size:34px; }
+      .label { font-weight:800; font-size:22px; }
+      .note { font-size:16px; }
+      .small { font-size:12px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; }
+      .line { stroke:#9ea9a4; stroke-width:3; fill:none; marker-end:url(#arrow); }
+      .accent { fill:#b55322; }
+      .pine { fill:#2f5f55; }
+      .cobalt { fill:#2c638b; }
+      .gold { fill:#9b6f1f; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#9ea9a4"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1400" height="760"/>
+  <text x="70" y="62" class="ink title">Truth transfer: same bones, different doorway.</text>
+  <text x="70" y="94" class="muted note">A strong bridge preserves the mechanism while changing the metaphor, rhythm, slang, grammar, image, silence, or proof shape.</text>
+
+  <g transform="translate(70 150)">
+    <rect class="card" width="260" height="138"/>
+    <circle cx="36" cy="36" r="13" class="accent"/>
+    <text x="58" y="42" class="ink small">01</text>
+    <text x="28" y="78" class="ink label">Observation</text>
+    <text x="28" y="108" class="muted note">What is the naked thing</text>
+    <text x="28" y="130" class="muted note">actually noticed?</text>
+  </g>
+  <path d="M340 218 H405" class="line"/>
+  <g transform="translate(415 150)">
+    <rect class="card" width="260" height="138"/>
+    <circle cx="36" cy="36" r="13" class="pine"/>
+    <text x="58" y="42" class="ink small">02</text>
+    <text x="28" y="78" class="ink label">Mechanism</text>
+    <text x="28" y="108" class="muted note">What makes it work</text>
+    <text x="28" y="130" class="muted note">underneath?</text>
+  </g>
+  <path d="M685 218 H750" class="line"/>
+  <g transform="translate(760 150)">
+    <rect class="card" width="260" height="138"/>
+    <circle cx="36" cy="36" r="13" class="cobalt"/>
+    <text x="58" y="42" class="ink small">03</text>
+    <text x="28" y="78" class="ink label">Audience world</text>
+    <text x="28" y="108" class="muted note">What do they already</text>
+    <text x="28" y="130" class="muted note">understand in-body?</text>
+  </g>
+  <path d="M1030 218 H1095" class="line"/>
+  <g transform="translate(1105 150)">
+    <rect class="card" width="225" height="138"/>
+    <circle cx="36" cy="36" r="13" class="gold"/>
+    <text x="58" y="42" class="ink small">04</text>
+    <text x="28" y="78" class="ink label">Bridge</text>
+    <text x="28" y="108" class="muted note">Which domain has the</text>
+    <text x="28" y="130" class="muted note">same structure?</text>
+  </g>
+
+  <path d="M1218 298 V368" class="line"/>
+  <g transform="translate(1000 380)">
+    <rect class="card" width="330" height="138"/>
+    <circle cx="36" cy="36" r="13" class="accent"/>
+    <text x="58" y="42" class="ink small">05</text>
+    <text x="28" y="78" class="ink label">Contextual acuteness</text>
+    <text x="28" y="108" class="muted note">What must change because of</text>
+    <text x="28" y="130" class="muted note">culture, room, stakes, language?</text>
+  </g>
+  <path d="M990 450 H915" class="line"/>
+  <g transform="translate(630 380)">
+    <rect class="card" width="275" height="138"/>
+    <circle cx="36" cy="36" r="13" class="pine"/>
+    <text x="58" y="42" class="ink small">06</text>
+    <text x="28" y="78" class="ink label">Delivery</text>
+    <text x="28" y="108" class="muted note">Which rhythm, slang, grammar,</text>
+    <text x="28" y="130" class="muted note">image, or silence lands it?</text>
+  </g>
+  <path d="M620 450 H545" class="line"/>
+  <g transform="translate(260 380)">
+    <rect class="card" width="275" height="138"/>
+    <circle cx="36" cy="36" r="13" class="cobalt"/>
+    <text x="58" y="42" class="ink small">07</text>
+    <text x="28" y="78" class="ink label">Durability</text>
+    <text x="28" y="108" class="muted note">Will the lesson still work</text>
+    <text x="28" y="130" class="muted note">tomorrow, elsewhere?</text>
+  </g>
+
+  <g transform="translate(70 585)">
+    <rect class="test" width="1260" height="96"/>
+    <text x="28" y="38" class="ink label">Metaphor test</text>
+    <text x="28" y="68" class="muted note">Weak bridges share surface features. Strong bridges share causal architecture: source path, authority signal, failure point, and human consequence.</text>
+  </g>
+</svg>

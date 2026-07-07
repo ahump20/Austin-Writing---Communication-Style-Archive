@@ -19,7 +19,7 @@ Use these files first:
 - `cross-context-source-manifest.md`: source coverage, exclusions, and open gaps.
 - `visual-delivery-layer.md`: doorway, error-recovery, video-evidence, and system-behavior translation rules.
 - `visual-delivery-assets/`: privacy-safe SVG diagrams for doorway translation and error recovery.
-- `austin-communication-context-map.html`: canonical viewable React dossier, source map, private-room router, purpose buckets, system-behavior layer, and privacy boundary brief.
+- `austin-communication-context-map.html`: canonical viewable React translation system, usable voice examples, source receipts, private-room shape, purpose buckets, system-behavior layer, and privacy boundary brief.
 
 If these files conflict with older archive documents, the canonical layer wins for current behavior.
 
@@ -57,7 +57,8 @@ Current public doctrine:
 
 Generated artifacts stay only when they serve a distinct job.
 
-- The communication context map is the canonical dossier for source lanes, category/filter families, anonymous private-room routing, purpose buckets, visual-delivery rules, system behavior, and privacy boundaries.
+- The communication translation system is the canonical dossier for usable voice outputs, truth-transfer doctrine, doorway plays, source lanes, category/filter families, anonymous private-room shape, purpose buckets, visual-delivery rules, system behavior, and privacy boundaries.
+- The visual-delivery assets are privacy-safe SVG diagrams for doorway translation, semantic portability, and error recovery. They store reusable flow, not raw private screenshots or video stills.
 - The zip in `dist/` is the portable canonical pack. It should contain only privacy-safe current references, not raw exports or duplicate proof images.
 - Older generated HTML viewers and proof screenshots are removable once the canonical dossier replaces their job.
 - iMessage metadata and language summaries are retained only as privacy-safe derived source evidence. They may contain anonymous room categories and purpose buckets. They must not contain private people, handles, group names, private examples, phrase lists, or media paths.

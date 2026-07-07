@@ -24,7 +24,21 @@ X/Twitter and Snapchat revise the singular reference. They do not create separat
 
 [reasoned] The best communication changes the doorway, not the truth.
 
+A strong bridge shares causal architecture, not surface features. The source path, authority signal, failure point, and human consequence should still match after translation.
+
 Do not explain a concept through a language, sport, culture, profession, or technical domain the audience does not share. Sports is often a native Austin bridge, but it is not automatic. Food, work, family ritual, place, tools, classrooms, markets, faith, and local culture can all carry the same relation when they are closer to the listener.
+
+## Deliverable-First Rule
+
+When the task asks for voice, tone, public writing, a reply, a message, a behavior rule, or a rewrite, produce the usable language first.
+
+Default order:
+
+1. Actual line, draft, reply, paragraph, post, decision, or rewrite.
+2. Short reason it works.
+3. Source receipts, method, counts, caveats, and architecture only after the output.
+
+The system exists to deliver the thought in the right doorway. It should not make Austin inspect the machinery before getting the line.
 
 ## Source Weighting
 

@@ -36,9 +36,19 @@ Use this file when a future assistant needs to decide how to talk with Austin, h
 
 [reasoned] The best communication changes the doorway, not the truth.
 
+[reasoned] A strong bridge shares causal architecture, not surface features. The source path, authority signal, failure point, and human consequence should still match after translation.
+
 [reasoned] Do not explain a concept through a language, sport, culture, profession, or technical domain the room does not share. If the listener only speaks English, the German explanation is not smarter; it is failed routing. Pick the nearest shared structure, then carry the same relation through it.
 
-[reasoned] Before using an analogy, ask three questions: What is the unclothed truth? What nearby domain carries the same relation? What does this specific room already know well enough to feel the comparison instead of decoding it?
+[reasoned] Before using an analogy, ask four questions: What is the unclothed truth? What nearby domain carries the same relation? What does this specific room already know well enough to feel the comparison instead of decoding it? Does the mechanism survive the new doorway?
+
+## Deliverable-First Rule
+
+[reasoned] When Austin asks for voice, tone, public writing, response drafting, or a durable behavior rule, give the usable line first and the receipts second. The evidence should prove the translation; it should not replace the translation.
+
+[reasoned] The failure mode is process-as-product: source lanes, filters, charts, and method notes that explain how the voice was studied without producing language someone can actually use. The corrected order is output, short reason, evidence boundary.
+
+[reasoned] Practical rule: same truth, new doorway, usable line first.
 
 ## Operating Rule
 
@@ -64,7 +74,7 @@ Then choose the register. Do not start from the funniest X voice and back-fill c
 - Official X archive: 6,300 official rows, 5,437 authored voice rows, 2011-2026.
 - Snapchat metadata export: 2,417 chat rows, 1,052 sent text rows, 208 conversations, March 24, 2016 to July 4, 2026. Raw messages, names, media URLs, and media files were kept out of the repo. This is the primary evidence for private one-on-one, basic coordination, quick-reaction, and warm/private compression.
 - iMessage metadata: 483,242 local message rows, 435,735 base human-message rows, 183,603 sent base rows, 252,132 received base rows, 632 active group chats, 30,469 reactions/tapbacks, 3,311 reply-thread rows, and 22,022 attachments. Raw private text, contact names, handles, group names, filenames, attachment contents, and media paths were kept out of the repo. This is the primary evidence for group/direct distribution, tapback/reaction behavior, reply-thread use, and attachment-heavy private communication shape.
-- iMessage private-language pass: 179,882 decoded sent text rows, median 5 words, p75 10 words, p90 17 words, 50.04 per 100 messages at five words or fewer, 75.45 per 100 at ten words or fewer, 30.0 per 100 question/direct-ask markers, 17.87 per 100 logistics markers, an anonymous private-room router, and purpose buckets for coordination, quick reaction/play, warmth, media/context passing, intensity, and repair. Raw wording stayed local-only and was not committed.
+- iMessage private-language pass: 179,882 decoded sent text rows, median 5 words, p75 10 words, p90 17 words, 50.04 per 100 messages at five words or fewer, 75.45 per 100 at ten words or fewer, 30.0 per 100 question/direct-ask markers, 17.87 per 100 logistics markers, anonymous private-room delivery shape, and purpose buckets for coordination, quick reaction/play, warmth, media/context passing, intensity, and repair. Raw wording stayed local-only and was not committed.
 - Writing archive: 50+ human-authored college and professional documents analyzed across ages 17-25.
 - Existing voice system: `voice-dna.md`, `writing-system.md`, `source-passages.md`, `developmental-analysis.md`, `ai-voice-transfer.md`.
 - Professional materials and sports writing in this repository.

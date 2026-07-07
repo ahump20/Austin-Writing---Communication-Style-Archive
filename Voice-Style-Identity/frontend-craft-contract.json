@@ -2,7 +2,7 @@
   "design_read": "Editorial dossier for Austin and future agents, with source-backed reflection, calm focus, and privacy-safe evidence. The page teaches one thought process translated through different rooms and domains: change the doorway, not the truth.",
   "audience": "Austin, future AI agents, and repo readers who need a privacy-safe voice reference.",
   "surface_type": "editorial evidence dossier",
-  "primary_job": "Help Austin read his own communication patterns and help future agents choose the right room before choosing voice.",
+  "primary_job": "Help Austin and future agents preserve the same truth while choosing the doorway each audience can actually enter.",
   "content_grain": "mixed narrative, aggregate evidence, public quotes, and custom SVG charts",
   "seed": "109730533743205",
   "drawn_coordinate": {
@@ -30,10 +30,10 @@
   "DEPTH_INTEGRITY": 2,
   "signature_move": "A dossier where the operating premise leads, the doorway rule is explicit, and each chart is a receipt for the implication it supports.",
   "layout_architecture": "sticky dossier rail plus long-form reading column and chart pairs",
-  "information_flow": "summary, method, human read, bridge discipline, system behavior, visual delivery, deeper reflection, charts, trend arc, public examples, private router, recipes, filters, source boundaries",
-  "section_or_zone_rhythm": "large thesis sections, long-form reflection chapters, paired evidence panels, recipes, and calmer source rows",
+  "information_flow": "doorway rule, repeatable movement, method, system behavior, visual delivery, evidence receipts, public examples, private shape, doorway plays, source boundaries",
+  "section_or_zone_rhythm": "one governing thesis, long-form reflection chapters, paired evidence panels, doorway plays, and calmer source rows",
   "primary_visual_asset": "custom SVG evidence charts and annotated delivery-flow assets",
-  "asset_job": "make private compression, room routing, strength/risk patterns, doorway translation, and error recovery readable without exposing raw private content",
+  "asset_job": "make private compression, pressure conditions, strength/risk patterns, doorway translation, and error recovery readable without exposing raw private content",
   "source_route": "local JSON summaries and official X public analysis data",
   "prompt_or_query": "Redesign existing local React HTML communication dossier with D3 charts and privacy-safe evidence.",
   "license_usage_state": "local authored data and public archive examples; no third-party media assets",
@@ -41,7 +41,7 @@
   "fallback_if_unavailable": "HTML includes a no-script notice and the repository retains markdown/json privacy-safe summaries.",
   "blend_strategy": "Flat DOM reading surface with data-bound SVG islands.",
   "motion_grammar": "No autoplay motion; only hover/focus state changes and smooth anchor scroll with reduced-motion fallback.",
-  "interaction_model": "section navigation, tabs for voice mode inspection, filter family selector, public source links",
+  "interaction_model": "section navigation, tabs for delivery-condition inspection, translation-check selector, public source links",
   "token_source": {
     "basis": "archive paper, private dossier, Texas burnt orange, pine/cobalt evidence colors, neutral ink",
     "derived_tokens": [
