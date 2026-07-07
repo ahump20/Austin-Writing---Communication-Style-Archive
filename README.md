@@ -10,6 +10,8 @@ This repo is the canonical communication router for Austin Humphrey's writing, p
 
 The operating premise is simple: there is not an X Austin, a texting Austin, and an essay Austin. There is one thought process translated through different rooms. This repo exists to preserve that movement with evidence, not to split it into fake platform identities.
 
+The shortest rule is newer and cleaner: **the best communication changes the doorway, not the truth.**
+
 It is not a scrapbook, not a generic brand guide, and not a raw data landfill. It is a working voice skill backed by real source material across long-form writing, public social posts, professional documents, and privacy-safe derived analysis.
 
 The goal is durable reuse:
@@ -24,10 +26,11 @@ The goal is durable reuse:
 | Need | Open |
 |---|---|
 | Open the phone-friendly live preview | [GitHub Pages dossier](https://ahump20.github.io/Austin-Writing---Communication-Style-Archive/) |
-| View the current dossier | [Cross-Context Voice System Artifact](Voice-Style-Identity/cross-context-voice-system-artifact.html) |
-| View the category/filter map | [Austin Communication Context Map](Voice-Style-Identity/austin-communication-context-map.html) |
+| View the canonical dossier | [Austin Communication Context Map](Voice-Style-Identity/austin-communication-context-map.html) |
+| Download the canonical pack | [Austin Communication Style Canonical Pack](dist/Austin-Communication-Style-Canonical-Pack-2026-07-07.zip) |
 | Load the reusable voice skill | [Voice-Style-Identity/SKILL.md](Voice-Style-Identity/SKILL.md) |
 | Read the canonical router | [Cross-Context Communication System](Voice-Style-Identity/cross-context-communication-system.md) |
+| Read the visual delivery layer | [Visual Delivery Layer](Voice-Style-Identity/visual-delivery-layer.md) |
 | Check source coverage and gaps | [Cross-Context Source Manifest](Voice-Style-Identity/cross-context-source-manifest.md) |
 | Use the top-level instruction file | [Austin Voice Consolidated Harness](Voice-Style-Identity/austin-voice-consolidated-harness.md) |
 | Review the full archive inventory | [docs/archive-inventory.md](docs/archive-inventory.md) |
@@ -37,6 +40,7 @@ The goal is durable reuse:
 
 - Routes the voice by room: public long-form, brand/platform, X/social, AI partner, friend group, warm private, coordination, and repair.
 - Preserves one canonical Austin reference instead of splitting him into fake platform identities.
+- Changes the doorway without changing the truth: same observation, audience-native entrance.
 - Runs a cold-read guardrail against flattering, vague, or mystical claims. If a claim cannot be sourced, it stays reasoned/open or gets cut.
 - Treats metaphor as audience translation: the same truth should move across cultures, contexts, and domains without making the room decode a foreign reference.
 - Routes analogy by audience literacy, not Austin's default reference set. Sports, food, work, family ritual, place, tools, markets, faith, and school can all carry the same structure when the room shares the bridge.
@@ -100,7 +104,7 @@ Old documents may still contain historical language because this repo is an arch
 
 ```text
 Voice-Style-Identity/
-  Canonical voice system, router, source manifest, generated dossier, screenshots, privacy-safe Snapchat analysis, and privacy-safe iMessage metadata/language analysis.
+  Canonical voice system, router, source manifest, generated dossier, visual-delivery layer, privacy-safe Snapchat analysis, and privacy-safe iMessage metadata/language analysis.
 
 X-Twitter-Archive/
   Official X export parser outputs, X-only evidence artifact, tweet summaries, and public/social voice analysis.
@@ -134,13 +138,12 @@ docs/
 
 | Artifact | Purpose |
 |---|---|
-| [Voice-Style-Identity/cross-context-voice-system-artifact.html](Voice-Style-Identity/cross-context-voice-system-artifact.html) | Canonical React dossier for the cross-platform communication model. |
-| [Voice-Style-Identity/austin-communication-context-map.html](Voice-Style-Identity/austin-communication-context-map.html) | Visual React brief for source lanes, category/filter families, anonymous private-room routing, purpose buckets, evidence strength, and privacy boundaries. |
-| [X-Twitter-Archive/x-twitter-archive-analysis-artifact.html](X-Twitter-Archive/x-twitter-archive-analysis-artifact.html) | X-only generated evidence explorer. Useful for tweet-level public/social analysis, not the full voice system. |
+| [Voice-Style-Identity/austin-communication-context-map.html](Voice-Style-Identity/austin-communication-context-map.html) | Canonical React dossier for source lanes, room translation, system behavior, anonymous private-room routing, purpose buckets, evidence strength, and privacy boundaries. |
+| [dist/Austin-Communication-Style-Canonical-Pack-2026-07-07.zip](dist/Austin-Communication-Style-Canonical-Pack-2026-07-07.zip) | One portable, privacy-safe reference pack for the current communication system. |
+| [Voice-Style-Identity/visual-delivery-assets/doorway-translation-flow.svg](Voice-Style-Identity/visual-delivery-assets/doorway-translation-flow.svg) | Annotated doorway flow: truth core, room read, doorway, tone, proof, action. |
+| [Voice-Style-Identity/visual-delivery-assets/error-recovery-flow.svg](Voice-Style-Identity/visual-delivery-assets/error-recovery-flow.svg) | Annotated error-recovery flow derived from the added visual context without storing the raw screenshot. |
 | [Voice-Style-Identity/imessage-analysis/2026-07-07/imessage_private_context_summary.md](Voice-Style-Identity/imessage-analysis/2026-07-07/imessage_private_context_summary.md) | Privacy-safe iMessage metadata summary for private group/direct shape, tapbacks, replies, and attachments. |
 | [Voice-Style-Identity/imessage-analysis/2026-07-07/imessage_private_language_summary.md](Voice-Style-Identity/imessage-analysis/2026-07-07/imessage_private_language_summary.md) | Privacy-safe iMessage private-language summary for decoded sent-text length, marker rates, anonymous relationship-context router, and purpose buckets. |
-| [Voice-Style-Identity/cross-context-artifact-desktop.png](Voice-Style-Identity/cross-context-artifact-desktop.png) | Desktop render proof of the current dossier. |
-| [Voice-Style-Identity/cross-context-artifact-mobile.png](Voice-Style-Identity/cross-context-artifact-mobile.png) | Mobile render proof of the current dossier. |
 
 ## Privacy Rules
 

@@ -1,11 +1,13 @@
 # Python
 .DS_Store
+*.local.html
 __pycache__/
 *.pyc
 *.pyo
 
 # Local X/Twitter archive source files. Commit processed findings deliberately.
 *.zip
+!dist/Austin-Communication-Style-Canonical-Pack-2026-07-07.zip
 X-Twitter-Archive/source/*
 !X-Twitter-Archive/source/README.md
 

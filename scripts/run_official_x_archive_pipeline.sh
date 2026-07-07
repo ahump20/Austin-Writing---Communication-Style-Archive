@@ -27,13 +27,12 @@ EOF
 fi
 
 python3 "$repo_root/scripts/parse_x_archive.py" "${archives[@]}" --out "$out_dir"
-python3 "$repo_root/scripts/build_x_voice_artifact.py" --processed "$out_dir" --out "$analysis_dir" --html "$repo_root/X-Twitter-Archive/x-twitter-archive-analysis-artifact.html"
+python3 "$repo_root/scripts/build_x_voice_artifact.py" --processed "$out_dir" --out "$analysis_dir"
 
 cat <<EOF
 
-[verified] Official archive parsing and artifact build finished.
+[verified] Official archive parsing and analysis build finished.
 Output:
   $out_dir
   $analysis_dir
-  $repo_root/X-Twitter-Archive/x-twitter-archive-analysis-artifact.html
 EOF

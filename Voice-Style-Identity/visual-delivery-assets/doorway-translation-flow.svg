@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="520" viewBox="0 0 1400 520" role="img" aria-labelledby="title desc">
+  <title id="title">Doorway Translation Flow</title>
+  <desc id="desc">A six-step flow showing truth core, room read, doorway, tone, proof, and action.</desc>
+  <defs>
+    <style>
+      .bg { fill:#f2f4f0; }
+      .card { fill:#fffef9; stroke:#c9d1cd; stroke-width:2; rx:18; }
+      .accent { fill:#b55322; }
+      .pine { fill:#2f5f55; }
+      .cobalt { fill:#2c638b; }
+      .gold { fill:#9b6f1f; }
+      .ink { fill:#17191a; font-family:Avenir Next, Helvetica Neue, Arial, sans-serif; }
+      .muted { fill:#5f6866; font-family:Avenir Next, Helvetica Neue, Arial, sans-serif; }
+      .label { font-weight:800; font-size:26px; }
+      .note { font-size:17px; }
+      .small { font-size:14px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; }
+      .line { stroke:#9ea9a4; stroke-width:3; fill:none; marker-end:url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#9ea9a4"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1400" height="520"/>
+  <text x="70" y="62" class="ink label">The best communication changes the doorway, not the truth.</text>
+  <text x="70" y="93" class="muted note">Truth stays stable. The route into it changes by room, audience, emotion, and shared reference.</text>
+  <g transform="translate(70 145)">
+    <rect class="card" width="180" height="230"/>
+    <circle cx="40" cy="42" r="14" class="accent"/>
+    <text x="25" y="92" class="ink small">01</text>
+    <text x="25" y="126" class="ink label">Truth</text>
+    <text x="25" y="162" class="muted note">What remains true if</text>
+    <text x="25" y="188" class="muted note">the audience changes?</text>
+  </g>
+  <path d="M260 260 H330" class="line"/>
+  <g transform="translate(340 145)">
+    <rect class="card" width="180" height="230"/>
+    <circle cx="40" cy="42" r="14" class="pine"/>
+    <text x="25" y="92" class="ink small">02</text>
+    <text x="25" y="126" class="ink label">Room</text>
+    <text x="25" y="162" class="muted note">Who is receiving it?</text>
+    <text x="25" y="188" class="muted note">What do they know?</text>
+  </g>
+  <path d="M530 260 H600" class="line"/>
+  <g transform="translate(610 145)">
+    <rect class="card" width="180" height="230"/>
+    <circle cx="40" cy="42" r="14" class="cobalt"/>
+    <text x="25" y="92" class="ink small">03</text>
+    <text x="25" y="126" class="ink label">Doorway</text>
+    <text x="25" y="162" class="muted note">Pick the metaphor,</text>
+    <text x="25" y="188" class="muted note">object, or format.</text>
+  </g>
+  <path d="M800 260 H870" class="line"/>
+  <g transform="translate(880 145)">
+    <rect class="card" width="180" height="230"/>
+    <circle cx="40" cy="42" r="14" class="gold"/>
+    <text x="25" y="92" class="ink small">04</text>
+    <text x="25" y="126" class="ink label">Tone</text>
+    <text x="25" y="162" class="muted note">Choose heat, care,</text>
+    <text x="25" y="188" class="muted note">proof, speed, humor.</text>
+  </g>
+  <path d="M1070 260 H1140" class="line"/>
+  <g transform="translate(1150 145)">
+    <rect class="card" width="180" height="230"/>
+    <circle cx="40" cy="42" r="14" class="accent"/>
+    <text x="25" y="92" class="ink small">05</text>
+    <text x="25" y="126" class="ink label">Proof</text>
+    <text x="25" y="162" class="muted note">Use a source, object,</text>
+    <text x="25" y="188" class="muted note">metric, or example.</text>
+  </g>
+  <path d="M1240 384 C1190 455 250 455 205 386" class="line"/>
+  <text x="565" y="464" class="muted note">Action is the return loop: what the reader does, feels, repairs, understands, or remembers.</text>
+</svg>

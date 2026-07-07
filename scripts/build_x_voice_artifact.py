@@ -8,7 +8,7 @@ Inputs:
 
 Outputs:
 - X-Twitter-Archive/official-analysis/2026-07-06/*
-- X-Twitter-Archive/x-twitter-archive-analysis-artifact.html
+- optional local-only X HTML if --html is provided
 """
 
 from __future__ import annotations
@@ -1072,22 +1072,24 @@ def build_dataset(processed_root: Path) -> dict[str, Any]:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Build official X voice analysis files and HTML artifact.")
+    parser = argparse.ArgumentParser(description="Build official X voice analysis files and optional local HTML artifact.")
     parser.add_argument("--processed", default="X-Twitter-Archive/processed", help="Processed archive root")
     parser.add_argument("--out", default=f"X-Twitter-Archive/official-analysis/{DATE_LABEL}", help="Official analysis output dir")
-    parser.add_argument("--html", default="X-Twitter-Archive/x-twitter-archive-analysis-artifact.html", help="HTML artifact path")
+    parser.add_argument("--html", default="", help="Optional HTML artifact path. Leave empty to write analysis files only.")
     args = parser.parse_args()
 
     processed_root = Path(args.processed)
     out_dir = Path(args.out)
-    html_path = Path(args.html)
+    html_path = Path(args.html) if args.html else None
     data = build_dataset(processed_root)
 
     write_json(out_dir / "official_analysis_data.json", data)
     write_jsonl(out_dir / "official_authored_voice_tweets.jsonl", data["authored"])
     write_jsonl(out_dir / "official_retweets_context.jsonl", data["retweets"])
     (out_dir / "official_voice_synthesis.md").write_text(build_markdown(data), encoding="utf-8")
-    html_path.write_text(build_html(data), encoding="utf-8")
+    if html_path:
+        html_path.parent.mkdir(parents=True, exist_ok=True)
+        html_path.write_text(build_html(data), encoding="utf-8")
 
     totals = data["summary"]["totals"]
     print(
@@ -1096,6 +1098,10 @@ def main() -> int:
         f"retweets={totals['retweets_context']} "
         f"deleted={totals['deleted_tweets']}"
     )
+    if html_path:
+        print(f"[verified] wrote optional X-only HTML artifact: {html_path}")
+    else:
+        print("[verified] skipped optional X-only HTML artifact")
     return 0
 
 

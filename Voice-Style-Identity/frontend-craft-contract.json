@@ -1,5 +1,5 @@
 {
-  "design_read": "Editorial dossier for Austin and future agents, with source-backed reflection, calm focus, and privacy-safe evidence. The page teaches one thought process translated through different rooms and domains.",
+  "design_read": "Editorial dossier for Austin and future agents, with source-backed reflection, calm focus, and privacy-safe evidence. The page teaches one thought process translated through different rooms and domains: change the doorway, not the truth.",
   "audience": "Austin, future AI agents, and repo readers who need a privacy-safe voice reference.",
   "surface_type": "editorial evidence dossier",
   "primary_job": "Help Austin read his own communication patterns and help future agents choose the right room before choosing voice.",
@@ -28,12 +28,12 @@
   "MOTION_INTENSITY": 2,
   "VISUAL_DENSITY": 4,
   "DEPTH_INTEGRITY": 2,
-  "signature_move": "A dossier where the operating premise leads and each chart is a receipt for the implication it supports.",
+  "signature_move": "A dossier where the operating premise leads, the doorway rule is explicit, and each chart is a receipt for the implication it supports.",
   "layout_architecture": "sticky dossier rail plus long-form reading column and chart pairs",
-  "information_flow": "summary, method, human read, bridge discipline, deeper reflection, charts, trend arc, public examples, private router, recipes, filters, source boundaries",
+  "information_flow": "summary, method, human read, bridge discipline, system behavior, visual delivery, deeper reflection, charts, trend arc, public examples, private router, recipes, filters, source boundaries",
   "section_or_zone_rhythm": "large thesis sections, long-form reflection chapters, paired evidence panels, recipes, and calmer source rows",
-  "primary_visual_asset": "custom SVG evidence charts",
-  "asset_job": "make private compression, room routing, and strength/risk patterns readable without exposing raw private content",
+  "primary_visual_asset": "custom SVG evidence charts and annotated delivery-flow assets",
+  "asset_job": "make private compression, room routing, strength/risk patterns, doorway translation, and error recovery readable without exposing raw private content",
   "source_route": "local JSON summaries and official X public analysis data",
   "prompt_or_query": "Redesign existing local React HTML communication dossier with D3 charts and privacy-safe evidence.",
   "license_usage_state": "local authored data and public archive examples; no third-party media assets",
@@ -74,19 +74,19 @@
     "mobile": "explicit one-column collapse for hero, reflection chapters, charts, tables, recipes, and source cards",
     "reduced_motion": "CSS disables transitions and smooth scrolling under prefers-reduced-motion",
     "canvas_fallback": "no Canvas or WebGL; SVG charts and plain HTML tables remain readable",
-    "lazy_loading": "single static file with bundled data and external React/D3 CDNs only"
+    "lazy_loading": "single static file with bundled data, deferred external React/D3 CDNs, and an inline React fallback"
   },
   "fingerprint": {
     "layout_architecture": "sticky dossier rail and editorial reading column",
-    "information_flow": "summary to deeper reflection to implication to evidence router",
+    "information_flow": "summary to doorway rule to system behavior to deeper reflection to implication to evidence router",
     "rhythm": "long-form reflection chapters mixed with chart pairs and room recipes",
-    "primary_visual_asset": "SVG data charts",
+    "primary_visual_asset": "SVG data charts and annotated delivery-flow assets",
     "three_d_role": "none beyond surface hierarchy",
     "motion_grammar": "state feedback only",
     "interaction_model": "tabs, source links, selector"
   },
   "asset_strategy": {
-    "asset_job": "custom SVG charts explain evidence without exposing private text",
+    "asset_job": "custom SVG charts and annotated delivery assets explain evidence without exposing private text",
     "source_route": "local JSON summaries and official X public analysis data",
     "prompt_or_query": "not image-generated; data-bound SVG inside a static React artifact",
     "license_or_usage_state": "local authored data and public archive examples; no third-party media assets",

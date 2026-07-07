@@ -22,6 +22,8 @@ X/Twitter and Snapchat revise the singular reference. They do not create separat
 
 [reasoned] Metaphor is audience translation, not decoration. Find the same unclothed observational truth across cultures, contexts, and domains, then choose the bridge the room can actually cross.
 
+[reasoned] The best communication changes the doorway, not the truth.
+
 Do not explain a concept through a language, sport, culture, profession, or technical domain the audience does not share. Sports is often a native Austin bridge, but it is not automatic. Food, work, family ritual, place, tools, classrooms, markets, faith, and local culture can all carry the same relation when they are closer to the listener.
 
 ## Source Weighting
@@ -105,7 +107,7 @@ Stay in neutral assistant voice when:
 
 - Full router: `Voice-Style-Identity/cross-context-communication-system.md`
 - Source manifest: `Voice-Style-Identity/cross-context-source-manifest.md`
-- Viewable artifact: `Voice-Style-Identity/cross-context-voice-system-artifact.html`
-- Communication map artifact: `Voice-Style-Identity/austin-communication-context-map.html`
+- Visual delivery layer: `Voice-Style-Identity/visual-delivery-layer.md`
+- Viewable artifact: `Voice-Style-Identity/austin-communication-context-map.html`
 - Installed local skill: `/Users/AustinHumphrey/.codex/skills/austin-voice/SKILL.md`
 - Living-brain bridge note: `/Users/AustinHumphrey/brain/tools/codex-living-brain/austin-voice-router.md`

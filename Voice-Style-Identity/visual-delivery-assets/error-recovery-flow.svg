@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="620" viewBox="0 0 1400 620" role="img" aria-labelledby="title desc">
+  <title id="title">Error Recovery Flow</title>
+  <desc id="desc">An abstracted error recovery pattern derived from a review status screen: state, issue, fix path, support path, retest.</desc>
+  <defs>
+    <style>
+      .bg { fill:#f7f4ed; }
+      .panel { fill:#fffef9; stroke:#d0d7d2; stroke-width:2; rx:16; }
+      .status { fill:#f7e7dc; stroke:#d9b59d; stroke-width:2; rx:12; }
+      .issue { fill:#e9eff0; stroke:#b9c8c9; stroke-width:2; rx:12; }
+      .fix { fill:#e9f2ee; stroke:#adcbbf; stroke-width:2; rx:12; }
+      .support { fill:#fff4d8; stroke:#d9bf70; stroke-width:2; rx:12; }
+      .test { fill:#ece8f3; stroke:#b9aecb; stroke-width:2; rx:12; }
+      .ink { fill:#17191a; font-family:Avenir Next, Helvetica Neue, Arial, sans-serif; }
+      .muted { fill:#596260; font-family:Avenir Next, Helvetica Neue, Arial, sans-serif; }
+      .label { font-weight:800; font-size:25px; }
+      .note { font-size:17px; }
+      .small { font-size:13px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; }
+      .line { stroke:#8f9b96; stroke-width:3; fill:none; marker-end:url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#8f9b96"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1400" height="620"/>
+  <text x="72" y="66" class="ink label">Error recovery should teach the next move.</text>
+  <text x="72" y="98" class="muted note">Derived from a review-status screen as a reusable system-behavior pattern. The raw screenshot is not stored here.</text>
+  <rect x="70" y="145" width="1260" height="360" class="panel"/>
+  <g transform="translate(115 205)">
+    <rect class="status" width="190" height="190"/>
+    <text x="24" y="42" class="ink small">01 state visible</text>
+    <text x="24" y="86" class="ink label">Status</text>
+    <text x="24" y="123" class="muted note">Say what is actually</text>
+    <text x="24" y="149" class="muted note">blocked or broken.</text>
+  </g>
+  <path d="M320 300 H390" class="line"/>
+  <g transform="translate(405 205)">
+    <rect class="issue" width="190" height="190"/>
+    <text x="24" y="42" class="ink small">02 issue named</text>
+    <text x="24" y="86" class="ink label">Reason</text>
+    <text x="24" y="123" class="muted note">Name the failure</text>
+    <text x="24" y="149" class="muted note">without excuses.</text>
+  </g>
+  <path d="M610 300 H680" class="line"/>
+  <g transform="translate(695 205)">
+    <rect class="fix" width="190" height="190"/>
+    <text x="24" y="42" class="ink small">03 fix path</text>
+    <text x="24" y="86" class="ink label">Fix</text>
+    <text x="24" y="123" class="muted note">Give the concrete</text>
+    <text x="24" y="149" class="muted note">next action.</text>
+  </g>
+  <path d="M900 300 H970" class="line"/>
+  <g transform="translate(985 205)">
+    <rect class="support" width="190" height="190"/>
+    <text x="24" y="42" class="ink small">04 loop open</text>
+    <text x="24" y="86" class="ink label">Reply</text>
+    <text x="24" y="123" class="muted note">Keep support and</text>
+    <text x="24" y="149" class="muted note">escalation visible.</text>
+  </g>
+  <path d="M1080 408 C970 535 390 535 245 408" class="line"/>
+  <g transform="translate(548 430)">
+    <rect class="test" width="300" height="110"/>
+    <text x="24" y="38" class="ink small">05 retest</text>
+    <text x="24" y="72" class="ink label">Verify the surface again.</text>
+  </g>
+  <text x="72" y="570" class="muted note">Agent rule: do not call a plan finished until the user-facing state has changed and been checked.</text>
+</svg>

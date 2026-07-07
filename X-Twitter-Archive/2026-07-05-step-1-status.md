@@ -54,8 +54,8 @@ Then use the cleaned corpus for long-form voice, theme, humor, and style analysi
 - `X-Twitter-Archive/official-analysis/2026-07-06/official_authored_voice_tweets.jsonl`
 - `X-Twitter-Archive/official-analysis/2026-07-06/official_retweets_context.jsonl`
 - `X-Twitter-Archive/official-analysis/2026-07-06/official_voice_synthesis.md`
-- `X-Twitter-Archive/x-twitter-archive-analysis-artifact.html` (X-only public/social evidence explorer)
-- `Voice-Style-Identity/cross-context-voice-system-artifact.html` (canonical cross-platform communication dossier)
+- `X-Twitter-Archive/official-analysis/2026-07-06/official_voice_synthesis.md` (X-only public/social evidence synthesis)
+- `Voice-Style-Identity/austin-communication-context-map.html` (canonical cross-platform communication dossier)
 
 ## Source Boundary
 

@@ -732,7 +732,9 @@ const methodSteps = [
 const northStar = {
   statement: "Read the movement, then translate the room.",
   quote: "The mistake is thinking there's an X Austin, a texting Austin, and an essay Austin. There isn't. There's one thought process being translated into different rooms.",
-  implication: "The artifact should preserve how Austin reasons before it recommends a style. Evidence still matters, but the evidence should explain the movement behind the voice.",
+  doorway: "The best communication changes the doorway, not the truth.",
+  implication: "The artifact should preserve how Austin reasons before it recommends a style. Evidence still matters, but the evidence should explain the movement behind the voice and the doorway chosen for the room.",
+  truthTransfer: "Truth transfer means the mechanism survives while the metaphor, rhythm, slang, grammar, image, silence, or proof shape changes for the audience.",
   source: "Austin direct instruction, 2026-07-07",
 };
 
@@ -825,10 +827,62 @@ const researchBoundaryRows = [
   },
 ];
 
+const systemBehaviorRows = [
+  {
+    layer: "Tone calibration",
+    trigger: "Room, stakes, relationship, or emotional temperature changes.",
+    rule: "Keep the same person. Change delivery, density, heat, and proof.",
+    failure: "Tone whiplash, X voice everywhere, or polished public prose in a private room.",
+  },
+  {
+    layer: "Emotional design",
+    trigger: "Frustration, anger, fatigue, or confusion shows up.",
+    rule: "Acknowledge the state, simplify the path, change the approach, then fix the thing.",
+    failure: "Repeating the same failed explanation with warmer words.",
+  },
+  {
+    layer: "Error personality",
+    trigger: "The assistant missed, overclaimed, stalled, or made a bad artifact.",
+    rule: "Own the miss, correct it, name the prevention step, and verify the surface.",
+    failure: "Over-apology, excuse-making, or fake certainty.",
+  },
+  {
+    layer: "Cultural adaptation",
+    trigger: "The audience does not share Austin's default reference set.",
+    rule: "Change the doorway, not the truth.",
+    failure: "Stereotyping the room or forcing a foreign metaphor.",
+  },
+  {
+    layer: "Bias detection",
+    trigger: "A claim sounds flattering, totalizing, or group-based.",
+    rule: "Compare alternative reads and cut unsupported assumptions.",
+    failure: "Glazing, cold-reading, or reducing people to rooms.",
+  },
+  {
+    layer: "Visual delivery",
+    trigger: "A video, caption, image, or screen artifact arrives.",
+    rule: "Extract observable flow and reusable lesson. Do not infer private intent from absent evidence.",
+    failure: "Body-language determinism, screenshot dumping, or privacy bleed.",
+  },
+];
+
+const visualAssetRows = [
+  {
+    title: "Doorway translation flow",
+    file: "visual-delivery-assets/doorway-translation-flow.svg",
+    note: "Truth core, room read, doorway, tone, proof, action. This is the reusable bridge model.",
+  },
+  {
+    title: "Error recovery flow",
+    file: "visual-delivery-assets/error-recovery-flow.svg",
+    note: "State visible, issue named, fix path, support path, retest. This abstracts the added App Store review visual without storing the raw screenshot.",
+  },
+];
+
 const data = {
   generatedAt: "2026-07-07",
   design: {
-    read: "Editorial dossier for Austin and future agents, with source-backed reflection, calm focus, and privacy-safe evidence. The page teaches one thought process translated through different rooms and domains.",
+    read: "Editorial dossier for Austin and future agents, with source-backed reflection, calm focus, and privacy-safe evidence. The page teaches one thought process translated through different rooms and domains: change the doorway, not the truth.",
     seed: "109730533743205",
     dials: {
       variance: 5,
@@ -842,6 +896,8 @@ const data = {
   thoughtEngine,
   claimLadder,
   researchBoundaryRows,
+  systemBehaviorRows,
+  visualAssetRows,
   filterCount: filterFamilies.reduce((sum, family) => sum + family.filters.length, 0),
   filterFamilies,
   sourceRows,
@@ -926,12 +982,12 @@ const frontendContract = {
   MOTION_INTENSITY: data.design.dials.motion,
   VISUAL_DENSITY: data.design.dials.density,
   DEPTH_INTEGRITY: data.design.dials.depth,
-  signature_move: "A dossier where the operating premise leads and each chart is a receipt for the implication it supports.",
+  signature_move: "A dossier where the operating premise leads, the doorway rule is explicit, and each chart is a receipt for the implication it supports.",
   layout_architecture: "sticky dossier rail plus long-form reading column and chart pairs",
-  information_flow: "summary, method, human read, bridge discipline, deeper reflection, charts, trend arc, public examples, private router, recipes, filters, source boundaries",
+  information_flow: "summary, method, human read, bridge discipline, system behavior, visual delivery, deeper reflection, charts, trend arc, public examples, private router, recipes, filters, source boundaries",
   section_or_zone_rhythm: "large thesis sections, long-form reflection chapters, paired evidence panels, recipes, and calmer source rows",
-  primary_visual_asset: "custom SVG evidence charts",
-  asset_job: "make private compression, room routing, and strength/risk patterns readable without exposing raw private content",
+  primary_visual_asset: "custom SVG evidence charts and annotated delivery-flow assets",
+  asset_job: "make private compression, room routing, strength/risk patterns, doorway translation, and error recovery readable without exposing raw private content",
   source_route: "local JSON summaries and official X public analysis data",
   prompt_or_query: "Redesign existing local React HTML communication dossier with D3 charts and privacy-safe evidence.",
   license_usage_state: "local authored data and public archive examples; no third-party media assets",
@@ -972,19 +1028,19 @@ const frontendContract = {
     mobile: "explicit one-column collapse for hero, reflection chapters, charts, tables, recipes, and source cards",
     reduced_motion: "CSS disables transitions and smooth scrolling under prefers-reduced-motion",
     canvas_fallback: "no Canvas or WebGL; SVG charts and plain HTML tables remain readable",
-    lazy_loading: "single static file with bundled data and external React/D3 CDNs only"
+    lazy_loading: "single static file with bundled data, deferred external React/D3 CDNs, and an inline React fallback"
   },
   fingerprint: {
     layout_architecture: "sticky dossier rail and editorial reading column",
-    information_flow: "summary to deeper reflection to implication to evidence router",
+    information_flow: "summary to doorway rule to system behavior to deeper reflection to implication to evidence router",
     rhythm: "long-form reflection chapters mixed with chart pairs and room recipes",
-    primary_visual_asset: "SVG data charts",
+    primary_visual_asset: "SVG data charts and annotated delivery-flow assets",
     three_d_role: "none beyond surface hierarchy",
     motion_grammar: "state feedback only",
     interaction_model: "tabs, source links, selector"
   },
   asset_strategy: {
-    asset_job: "custom SVG charts explain evidence without exposing private text",
+    asset_job: "custom SVG charts and annotated delivery assets explain evidence without exposing private text",
     source_route: "local JSON summaries and official X public analysis data",
     prompt_or_query: "not image-generated; data-bound SVG inside a static React artifact",
     license_or_usage_state: "local authored data and public archive examples; no third-party media assets",
@@ -1003,9 +1059,9 @@ const html = String.raw`<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Austin Communication Context Map</title>
   <meta name="description" content="Privacy-safe Austin communication dossier with public examples, private aggregate signals, and context routing guidance." />
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script crossorigin src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script defer crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script defer crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script defer crossorigin src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
   <script>
     (function () {
       if (window.React && window.ReactDOM) return;
@@ -1176,17 +1232,23 @@ const html = String.raw`<!doctype html>
       margin:0; border-left:5px solid var(--accent); background:#fffaf0; border-radius:8px; padding:14px 16px;
       color:#252a28; font-size:17px;
     }
-    .engine-grid, .claim-grid, .boundary-grid { display:grid; gap:12px; }
+    .engine-grid, .claim-grid, .boundary-grid, .behavior-grid, .asset-grid { display:grid; gap:12px; }
     .engine-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
     .claim-grid { grid-template-columns:repeat(5,minmax(0,1fr)); }
-    .engine-card, .claim-card, .boundary-card {
+    .engine-card, .claim-card, .boundary-card, .behavior-card, .asset-card {
       border:1px solid var(--line); border-radius:8px; background:#fffef9; padding:15px; display:grid; gap:8px;
     }
     .engine-card b, .claim-card b { color:var(--accent-strong); font-size:12px; text-transform:uppercase; letter-spacing:.08em; }
     .engine-card h3, .claim-card h3 { margin:0; font-size:18px; line-height:1.14; }
-    .engine-card p, .claim-card p, .boundary-card p { margin:0; color:var(--muted); font-size:13px; }
+    .engine-card p, .claim-card p, .boundary-card p, .behavior-card p, .asset-card p { margin:0; color:var(--muted); font-size:13px; }
     .boundary-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
-    .boundary-card h3 { margin:0; font-size:16px; }
+    .behavior-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+    .asset-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .boundary-card h3, .behavior-card h3, .asset-card h3 { margin:0; font-size:16px; }
+    .asset-card img {
+      display:block; width:100%; height:auto; border:1px solid var(--line); border-radius:8px; background:#f7f4ed; margin:10px 0;
+    }
+    .asset-card a { color:var(--accent-strong); font-weight:800; }
     .grid-2 { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
     .grid-3 { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
     .callout { padding:18px; border-left:7px solid var(--pine); }
@@ -1317,13 +1379,13 @@ const html = String.raw`<!doctype html>
       aside { position:relative; height:auto; }
       .hero { grid-template-columns:1fr; min-height:auto; }
       .source-grid, .mode-grid, .soft-grid, .study-grid, .purpose-grid, .quote-grid, .summary-strip, .tension-grid, .recipe-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-      .engine-grid, .claim-grid, .boundary-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .engine-grid, .claim-grid, .boundary-grid, .behavior-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
     }
     @media (max-width: 760px) {
       main { padding:22px 14px 44px; }
       .hero-copy { padding:24px; }
       .section-head { grid-template-columns:1fr; gap:8px; }
-      .grid-2, .grid-3, .filter-layout, .source-grid, .mode-grid, .soft-grid, .study-grid, .purpose-grid, .quote-grid, .insight-grid, .summary-strip, .reflection-chapter, .reading-path, .north-star, .engine-grid, .claim-grid, .boundary-grid, .tension-grid, .recipe-grid { grid-template-columns:1fr; }
+      .grid-2, .grid-3, .filter-layout, .source-grid, .mode-grid, .soft-grid, .study-grid, .purpose-grid, .quote-grid, .insight-grid, .summary-strip, .reflection-chapter, .reading-path, .north-star, .engine-grid, .claim-grid, .boundary-grid, .behavior-grid, .asset-grid, .tension-grid, .recipe-grid { grid-template-columns:1fr; }
       .chapter-body .evidence-list { columns:1; }
       .phase-card { grid-template-columns:1fr; }
       .matrix table, .context-table { min-width:540px; }
@@ -1698,9 +1760,13 @@ const html = String.raw`<!doctype html>
           h("p", { className:"eyebrow" }, "Operating correction"),
           h("h3", null, DATA.northStar.statement),
           h("p", null, DATA.northStar.implication),
+          h("p", { className:"self-study" }, h("strong", null, "Truth transfer: "), DATA.northStar.truthTransfer),
           h("p", { className:"caption" }, DATA.northStar.source)
         ),
-        h("blockquote", null, DATA.northStar.quote)
+        h("div", null,
+          h("blockquote", null, DATA.northStar.quote),
+          h("blockquote", { style:{ marginTop:"12px" } }, DATA.northStar.doorway)
+        )
       );
     }
     function ThoughtEngine() {
@@ -1731,6 +1797,29 @@ const html = String.raw`<!doctype html>
             h(Badge, { kind:item.status === "usable" ? "verified" : "reasoned" }, item.status)
           ),
           h("p", null, item.note)
+        )
+      ));
+    }
+    function SystemBehaviorLayer() {
+      return h("div", { className:"behavior-grid" }, DATA.systemBehaviorRows.map((item) =>
+        h("article", { className:"behavior-card", key:item.layer },
+          h("div", { className:"card-header" },
+            h("h3", null, item.layer),
+            h(Badge, { kind:"reasoned" }, "rule")
+          ),
+          h("p", null, h("strong", null, "Trigger: "), item.trigger),
+          h("p", null, h("strong", null, "Rule: "), item.rule),
+          h("p", null, h("strong", null, "Failure mode: "), item.failure)
+        )
+      ));
+    }
+    function VisualDeliveryAssets() {
+      return h("div", { className:"asset-grid" }, DATA.visualAssetRows.map((item) =>
+        h("article", { className:"asset-card", key:item.title },
+          h("h3", null, item.title),
+          h("img", { src:item.file, alt:item.title + " diagram" }),
+          h("p", null, item.note),
+          h("p", null, h("a", { href:item.file }, "Open SVG"))
         )
       ));
     }
@@ -1853,6 +1942,8 @@ const html = String.raw`<!doctype html>
             ["answer","Start"],
             ["north-star","Correction"],
             ["thought-engine","Movement"],
+            ["behavior","System behavior"],
+            ["visual-layer","Visual layer"],
             ["human-read","Human read"],
             ["deeper-read","Deeper read"],
             ["charts","Charts"],
@@ -1876,7 +1967,7 @@ const html = String.raw`<!doctype html>
               h("div", { className:"summary-strip" },
                 h("div", null, h("strong", null, "Core movement"), h("p", null, "Object, pressure, system, bridge, lesson, rhythm, room.")),
                 h("div", null, h("strong", null, "Humor pattern"), h("p", null, "Take a normal object and give it institutional stakes.")),
-                h("div", null, h("strong", null, "Art standard"), h("p", null, "Compression matters. The lesson and feeling still matter."))
+                h("div", null, h("strong", null, "Doorway rule"), h("p", null, "Change the entrance. Keep the truth."))
               ),
               h("div", { className:"stat-grid" },
                 h(Stat, { value:fmt.format(DATA.totals.officialX), label:"official X rows parsed" }),
@@ -1919,6 +2010,18 @@ const html = String.raw`<!doctype html>
               h("p", null, "Start with the correction and repeatable movement, then use the charts as receipts. The private sections prove shape, not private wording. Public examples show real phrasing because they were already public.")
             ),
             h("p", { className:"footer" }, "Design read: " + DATA.design.read + " Seed " + DATA.design.seed + ". " + DATA.design.note)
+          ),
+          h("section", { id:"behavior" },
+            h(SectionHead, { title:"System Behavior Layer", body:"These rules make the model usable across agents, tools, errors, cultures, and emotional states. Same truth, different doorway." }),
+            h(SystemBehaviorLayer, null)
+          ),
+          h("section", { id:"visual-layer" },
+            h(SectionHead, { title:"Visual Delivery Layer", body:"The added visual context supported an error-recovery pattern, not body-language claims. Future video evidence should be reduced to observed flow and privacy-safe lessons." }),
+            h(VisualDeliveryAssets, null),
+            h("div", { className:"reading-path" },
+              h("h3", null, "Video status"),
+              h("p", null, "[verified] No direct professor video, caption track, or talking-head clip was available in the provided files. The attached still was used only to derive the error-state flow.")
+            )
           ),
           h("section", { id:"human-read" },
             h(SectionHead, { title:"The Human Read", body:"These are the main patterns worth keeping. Each one names the upside, the risk, and how it should change future writing or agent behavior." }),

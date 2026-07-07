@@ -17,8 +17,9 @@ Use these files first:
 - `austin-voice-consolidated-harness.md`: top-level instruction file.
 - `cross-context-communication-system.md`: canonical room/router model.
 - `cross-context-source-manifest.md`: source coverage, exclusions, and open gaps.
-- `cross-context-voice-system-artifact.html`: viewable React dossier.
-- `austin-communication-context-map.html`: visual category/filter map, private-room router, purpose buckets, and privacy boundary brief.
+- `visual-delivery-layer.md`: doorway, error-recovery, video-evidence, and system-behavior translation rules.
+- `visual-delivery-assets/`: privacy-safe SVG diagrams for doorway translation and error recovery.
+- `austin-communication-context-map.html`: canonical viewable React dossier, source map, private-room router, purpose buckets, system-behavior layer, and privacy boundary brief.
 
 If these files conflict with older archive documents, the canonical layer wins for current behavior.
 
@@ -28,7 +29,6 @@ If these files conflict with older archive documents, the canonical layer wins f
 
 - `processed/`: cleaned tweet rows by account and year.
 - `official-analysis/`: generated summaries and X-specific style guides.
-- `x-twitter-archive-analysis-artifact.html`: X-only evidence explorer.
 - `README.md`: parser status, counts, and source boundary.
 
 `Voice-Style-Identity/snapchat-analysis/` holds privacy-safe derived Snapchat summaries. Raw private text, names, media URLs, locations, and media files stay out of git.
@@ -57,10 +57,9 @@ Current public doctrine:
 
 Generated artifacts stay only when they serve a distinct job.
 
-- The cross-context artifact is the canonical dossier.
-- The communication context map is the visual brief for source lanes, category/filter families, anonymous private-room routing, purpose buckets, and privacy boundaries.
-- The X artifact is retained because it is a tweet-level public/social evidence explorer.
-- Screenshots are retained as render proof for the dossier.
+- The communication context map is the canonical dossier for source lanes, category/filter families, anonymous private-room routing, purpose buckets, visual-delivery rules, system behavior, and privacy boundaries.
+- The zip in `dist/` is the portable canonical pack. It should contain only privacy-safe current references, not raw exports or duplicate proof images.
+- Older generated HTML viewers and proof screenshots are removable once the canonical dossier replaces their job.
 - iMessage metadata and language summaries are retained only as privacy-safe derived source evidence. They may contain anonymous room categories and purpose buckets. They must not contain private people, handles, group names, private examples, phrase lists, or media paths.
 - Empty duplicate-removal files in `processed/` are retained because they prove the parser found zero duplicate tweet IDs.
 
