@@ -127,7 +127,7 @@ This extends to BSI: rigorous analytical standards coexist with genuine love for
 
 **Transitions:** "the former," "the latter," "in actuality," "in effect," "despite this," "therefore," "regardless."
 
-**First analogy is always sports.** Even in non-sports contexts.
+**First analogy is the room's nearest bridge.** Sports is often a native bridge for Austin, but it is not automatic. Use sports when the audience shares the reference; otherwise translate the same relation through food, work, family ritual, place, tools, classrooms, markets, faith, or whatever domain the listener can actually receive.
 
 ## Confidence Calibration
 
@@ -151,7 +151,7 @@ Core voice stays constant. Register shifts by genre:
 - **Analytical:** Systemic lens at full strength, comparative structure, moral complexity
 - **Political/economic:** Common man protagonist, causal chains, data as verdict
 - **Business/strategic:** Shorter sentences, decision-oriented, anti-hype strongest
-- **Science:** Narrative arcs, genuine curiosity, sports as first reference
+- **Science:** Narrative arcs, genuine curiosity, concrete bridge chosen for the audience
 - **Blog/short-form:** Systemic force → who benefits → who loses → tension → open question
 - **Brand/biographical:** Origin material from `references/origin-story.md`, narrative threads woven through voice characteristics, vision over grievance as governing principle
 
