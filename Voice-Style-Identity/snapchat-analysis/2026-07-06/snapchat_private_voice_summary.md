@@ -1,16 +1,16 @@
 # Snapchat Private-Register Voice Signals
 
 [verified] Built from the Snapchat metadata export downloaded on 2026-07-06.
-[verified] Raw ZIPs and raw message text stayed outside this repository. This file contains counts, anonymized conversation labels, and derived language markers only.
+[verified] Raw ZIPs and raw message text stayed outside this repository. This file contains aggregate counts and derived language markers only.
 
 ## Source Boundary
 
 - [verified] Chat rows parsed: 2,417. Text rows: 2,106. Sent rows: 1,139.
 - [verified] Sent text rows: 1,052. Received text rows: 1,054.
 - [verified] Chat date range: 2016-03-24T20:21:29Z to 2026-07-04T18:16:55Z.
-- [verified] Conversations parsed: 208. Top conversation labels are anonymized as `contact_001`, `contact_002`, etc.
+- [verified] Conversations parsed: 208. Conversation-level labels, dates, and per-person tables stay local-only.
 - [verified] Friends export sections: {"Blocked Users": 18, "Deleted Friends": 179, "Friend Requests Sent": 578, "Friends": 853, "Hidden Friend Suggestions": 163, "Ignored Snapchatters": 76, "Pending Requests": 0, "Shortcuts": 0}.
-- [verified] Additional ZIP inspected: `mydata~1783376316584-2.zip` has 622 entries, 0 JSON files, and top-level sizes {"memories": 1472.17} MB.
+- [verified] Additional archive inspected: 622 entries and 0 JSON files. Media volume and filename are redacted.
 
 ## What This Adds To The Voice Model
 
@@ -30,22 +30,9 @@
 3. [reasoned] Warmth works best through specific attention and low-pressure play. The evidence supports a short-message private style; it does not support turning every warm note into polished romantic prose.
 4. [verified] The AI voice should keep Austin's directness in private contexts but reduce the public-commentary escalation unless the room is clearly joking.
 
-## Anonymized Conversation Distribution
+## Conversation Distribution Boundary
 
-| Label | Rows | Sent Rows | Sent Text Rows | First UTC | Last UTC |
-|---|---:|---:|---:|---|---|
-| `contact_001` | 261 | 12 | 8 | 2017-11-07T19:02:38Z | 2023-11-03T20:43:03Z |
-| `contact_002` | 126 | 72 | 72 | 2018-08-07T05:15:50Z | 2019-03-08T03:23:25Z |
-| `contact_003` | 117 | 60 | 57 | 2025-11-06T09:50:49Z | 2025-11-07T04:17:08Z |
-| `contact_004` | 113 | 2 | 1 | 2017-11-05T16:27:02Z | 2023-11-09T00:04:45Z |
-| `contact_005` | 108 | 60 | 60 | 2019-03-07T11:20:59Z | 2019-04-26T14:51:38Z |
-| `contact_006` | 88 | 51 | 51 | 2019-08-19T04:27:02Z | 2020-10-27T21:30:38Z |
-| `contact_007` | 61 | 39 | 39 | 2018-10-20T04:26:01Z | 2021-07-18T15:01:42Z |
-| `contact_008` | 53 | 31 | 31 | 2019-10-29T05:40:07Z | 2020-04-30T08:56:06Z |
-| `contact_009` | 53 | 24 | 22 | 2023-06-15T03:06:33Z | 2023-09-09T09:10:29Z |
-| `contact_010` | 51 | 34 | 34 | 2021-11-30T21:01:15Z | 2022-01-19T04:15:26Z |
-| `contact_011` | 45 | 0 | 0 | 2019-12-26T00:46:03Z | 2024-03-26T01:23:29Z |
-| `contact_012` | 45 | 21 | 5 | 2022-11-26T06:41:58Z | 2026-07-04T17:21:47Z |
+[verified] Conversation-level rows, dates, and labels are intentionally omitted from the public report. The public layer keeps aggregate counts, long-tail shape, year buckets, and marker rates only.
 
 ## Year Buckets
 
@@ -65,4 +52,4 @@
 
 ## Privacy Note
 
-[verified] This parser intentionally does not write raw Snapchat message content, usernames, display names, email addresses, location rows, media URLs, or media files into the repository. The raw export remains local in Downloads.
+[verified] This parser intentionally does not write raw Snapchat message content, usernames, display names, email addresses, location rows, media URLs, media files, raw archive filenames, or per-conversation tables into the repository.

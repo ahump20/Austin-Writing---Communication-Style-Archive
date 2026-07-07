@@ -90,18 +90,16 @@ def load_json(zf: zipfile.ZipFile, name: str) -> object:
 
 def inspect_zip(zip_path: Path) -> dict:
     with zipfile.ZipFile(zip_path) as zf:
-        top_dirs: Counter[str] = Counter()
         json_files = 0
         infos = zf.infolist()
         for info in infos:
-            top_dirs[info.filename.split("/")[0]] += info.file_size
             if info.filename.startswith("json/") and info.filename.endswith(".json"):
                 json_files += 1
         return {
-            "archive_name": zip_path.name,
+            "archive_name": "redacted-local-snapchat-media-export",
             "entries": len(infos),
             "json_files": json_files,
-            "top_dirs_mb": {name: round(size / 1024 / 1024, 2) for name, size in sorted(top_dirs.items())},
+            "media_volume": "redacted",
         }
 
 
@@ -188,32 +186,21 @@ def summarize_contacts(messages: list[dict]) -> dict:
         contacts[message["conversation"]].append(message)
 
     ranked = []
-    for idx, (conversation, rows) in enumerate(sorted(contacts.items(), key=lambda item: len(item[1]), reverse=True), start=1):
+    for rows in sorted(contacts.values(), key=len, reverse=True):
         text_rows = [m for m in rows if m.get("content")]
         sent_text_rows = [m for m in text_rows if m["is_sender"]]
-        first_dt = min((m["created_dt"] for m in rows if m["created_dt"]), default=None)
-        last_dt = max((m["created_dt"] for m in rows if m["created_dt"]), default=None)
-        marker_counts = Counter()
-        for message in sent_text_rows:
-            for marker, pattern in MARKERS.items():
-                if pattern.search(message["content"]):
-                    marker_counts[marker] += 1
         ranked.append(
             {
-                "contact_label": f"contact_{idx:03d}",
                 "rows": len(rows),
                 "text_rows": len(text_rows),
                 "sent_rows": sum(1 for m in rows if m["is_sender"]),
                 "sent_text_rows": len(sent_text_rows),
-                "first_utc": iso_or_none(first_dt),
-                "last_utc": iso_or_none(last_dt),
-                "sent_marker_counts": dict(marker_counts),
             }
         )
 
     return {
         "conversation_count": len(contacts),
-        "top_conversations_anonymized": ranked[:20],
+        "top_conversation_shapes_redacted": ranked[:20],
         "long_tail": {
             "one_row_conversations": sum(1 for rows in contacts.values() if len(rows) == 1),
             "five_or_fewer_rows": sum(1 for rows in contacts.values() if len(rows) <= 5),
@@ -334,19 +321,19 @@ def write_markdown(summary: dict, out_path: Path) -> None:
         "# Snapchat Private-Register Voice Signals",
         "",
         "[verified] Built from the Snapchat metadata export downloaded on 2026-07-06.",
-        "[verified] Raw ZIPs and raw message text stayed outside this repository. This file contains counts, anonymized conversation labels, and derived language markers only.",
+        "[verified] Raw ZIPs and raw message text stayed outside this repository. This file contains aggregate counts and derived language markers only.",
         "",
         "## Source Boundary",
         "",
         f"- [verified] Chat rows parsed: {counts['all_chat_rows']:,}. Text rows: {counts['text_rows']:,}. Sent rows: {counts['sent_rows']:,}.",
         f"- [verified] Sent text rows: {counts['sent_text_rows']:,}. Received text rows: {counts['received_text_rows']:,}.",
         f"- [verified] Chat date range: {chat['chat_date_range_utc']['first']} to {chat['chat_date_range_utc']['last']}.",
-        f"- [verified] Conversations parsed: {contacts['conversation_count']:,}. Top conversation labels are anonymized as `contact_001`, `contact_002`, etc.",
+        f"- [verified] Conversations parsed: {contacts['conversation_count']:,}. Conversation-level labels, dates, and per-person tables stay local-only.",
         f"- [verified] Friends export sections: {json.dumps(aux.get('friends', {}), sort_keys=True)}.",
     ]
     for archive in summary["source"].get("additional_archives_inspected", []):
         lines.append(
-            f"- [verified] Additional ZIP inspected: `{archive['archive_name']}` has {archive['entries']:,} entries, {archive['json_files']} JSON files, and top-level sizes {json.dumps(archive['top_dirs_mb'], sort_keys=True)} MB."
+            f"- [verified] Additional archive inspected: {archive['entries']:,} entries and {archive['json_files']} JSON files. Media volume and filename are redacted."
         )
     lines.extend(
         [
@@ -369,17 +356,11 @@ def write_markdown(summary: dict, out_path: Path) -> None:
             "3. [reasoned] Warmth works best through specific attention and low-pressure play. The evidence supports a short-message private style; it does not support turning every warm note into polished romantic prose.",
             "4. [verified] The AI voice should keep Austin's directness in private contexts but reduce the public-commentary escalation unless the room is clearly joking.",
             "",
-            "## Anonymized Conversation Distribution",
+            "## Conversation Distribution Boundary",
             "",
-            "| Label | Rows | Sent Rows | Sent Text Rows | First UTC | Last UTC |",
-            "|---|---:|---:|---:|---|---|",
+            "[verified] Conversation-level rows, dates, and labels are intentionally omitted from the public report. The public layer keeps aggregate counts, long-tail shape, year buckets, and marker rates only.",
         ]
     )
-
-    for row in contacts["top_conversations_anonymized"][:12]:
-        lines.append(
-            f"| `{row['contact_label']}` | {row['rows']:,} | {row['sent_rows']:,} | {row['sent_text_rows']:,} | {row['first_utc'] or ''} | {row['last_utc'] or ''} |"
-        )
 
     lines.extend(
         [
@@ -400,7 +381,7 @@ def write_markdown(summary: dict, out_path: Path) -> None:
             "",
             "## Privacy Note",
             "",
-            "[verified] This parser intentionally does not write raw Snapchat message content, usernames, display names, email addresses, location rows, media URLs, or media files into the repository. The raw export remains local in Downloads.",
+            "[verified] This parser intentionally does not write raw Snapchat message content, usernames, display names, email addresses, location rows, media URLs, media files, raw archive filenames, or per-conversation tables into the repository.",
             "",
         ]
     )
@@ -415,7 +396,7 @@ def parse_archive(zip_path: Path, out_dir: Path, media_zip: Path | None = None) 
         messages = flatten_chat(chat_obj)
         summary = {
             "source": {
-                "archive_name": zip_path.name,
+                "archive_name": "redacted-local-snapchat-primary-export",
                 "parsed_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
                 "privacy_boundary": "raw Snapchat message text, contact names, media URLs, and media files are not written to repo outputs",
                 "additional_archives_inspected": [inspect_zip(media_zip)] if media_zip else [],

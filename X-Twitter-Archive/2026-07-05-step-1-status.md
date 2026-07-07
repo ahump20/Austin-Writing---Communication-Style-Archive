@@ -11,7 +11,7 @@ Then use the cleaned corpus for long-form voice, theme, humor, and style analysi
 
 ## Current State
 
-[verified] Step 1 is complete for the official X archive exports now available in `/Users/AustinHumphrey/Downloads/Twitter:X Metadata/`.
+[verified] Step 1 is complete for the official X archive exports parsed from local-only files with raw paths redacted.
 
 [verified] The official exports identify:
 

@@ -8,7 +8,7 @@ This file is privacy-safe by design. It contains aggregate metadata only. It doe
 
 ## Access Status
 
-[verified] iMessage access is now working from Codex after Full Disk Access was enabled for Codex-related processes. Direct SQLite access to `~/Library/Messages/chat.db` succeeds, and the Apple Messages MCP can search the database.
+[verified] iMessage access is now working from Codex after Full Disk Access was enabled for Codex-related processes. Direct local database access succeeds, and the Apple Messages MCP can search the database.
 
 ## Coverage
 

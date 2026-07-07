@@ -1386,7 +1386,7 @@
     "[privacy] Do not quote private messages, export n-grams, publish top contacts, or name private threads. Use only the derived patterns in this summary."
   ],
   "source": {
-    "database": "/Users/AustinHumphrey/Library/Messages/chat.db",
+    "database": "local-only Messages database; raw path redacted",
     "decoder_note": "Plain message.text is used when present. Otherwise the NSString payload is extracted from attributedBody. Rows that decode as archive residue or empty media-only content are rejected.",
     "privacy_boundary": "Local wording was read in-memory to compute aggregate patterns only. No message bodies, quotes, n-grams, contact names, handles, phone numbers, email addresses, group names, filenames, attachment contents, or media paths are exported."
   }

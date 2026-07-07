@@ -477,7 +477,7 @@ def main() -> int:
     summary = {
         "generated_at_utc": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "source": {
-            "database": str(db_path),
+            "database": "local-only Messages database; raw path redacted",
             "privacy_boundary": (
                 "Local wording was read in-memory to compute aggregate patterns only. "
                 "No message bodies, quotes, n-grams, contact names, handles, phone numbers, email addresses, "

@@ -941,7 +941,7 @@ function App() {{
     h('nav', {{className:'nav'}}, ['Known','A Style','B Themes','C Humor','D Brand','E Voice','F Synthesis','Evidence'].map((x,i)=>h('a', {{key:x, href:['#known','#style','#themes','#humor','#brand','#voice','#synthesis','#evidence'][i]}}, x))),
     h(Section, {{id:'known', title:'Known / Unknown / Open'}},
       h('div', {{className:'two-col'}},
-        h('div', {{className:'method'}}, h('h3', null, 'Known'), h('p', null, h(Claim, null, '[verified]'), ' Both official archive exports were parsed from the Downloads metadata folder.'), h('p', null, h(Claim, null, '[verified]'), ' BirdClaw guidance matches this parser: account.js anchors identity, JS assignment files are parsed as JSON payloads, tweet IDs drive dedupe, and reply/conversation IDs are preserved.'), h('p', null, h(Claim, null, '[verified]'), ' Cleaned official files now live under ', h('code', null, 'X-Twitter-Archive/processed/'), ' and the analysis layer lives under ', h('code', null, 'X-Twitter-Archive/official-analysis/2026-07-06/'), '.')),
+        h('div', {{className:'method'}}, h('h3', null, 'Known'), h('p', null, h(Claim, null, '[verified]'), ' Both official archive exports were parsed from local-only files with raw paths redacted.'), h('p', null, h(Claim, null, '[verified]'), ' BirdClaw guidance matches this parser: account.js anchors identity, JS assignment files are parsed as JSON payloads, tweet IDs drive dedupe, and reply/conversation IDs are preserved.'), h('p', null, h(Claim, null, '[verified]'), ' Cleaned official files now live under ', h('code', null, 'X-Twitter-Archive/processed/'), ' and the analysis layer lives under ', h('code', null, 'X-Twitter-Archive/official-analysis/2026-07-06/'), '.')),
         h('div', {{className:'method'}}, h('h3', null, 'Unknown / Open'), h('p', null, h(Claim, {{type:'open'}}, '[unknown/open]'), ' External thread context is limited to IDs unless X included the parent tweet in your own archive.'), h('p', null, h(Claim, {{type:'open'}}, '[privacy boundary]'), ' DMs were present in the export but intentionally excluded from this corpus.'))
       ),
       h('div', {{className:'account-grid'}}, DATA.accounts.map(handle=>h(AccountPanel, {{key:handle, handle}})))
@@ -1020,7 +1020,7 @@ def build_dataset(processed_root: Path) -> dict[str, Any]:
     summary = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "timezone": TIMEZONE,
-        "source_boundary": "Official X archive exports from /Users/AustinHumphrey/Downloads/Twitter:X Metadata. Tweets, community tweets, note tweets, and deleted tweets were parsed. Direct messages, contacts, IP/device logs, ad files, and Grok chats were excluded from this voice corpus.",
+        "source_boundary": "Official X archive exports were parsed from local-only files with raw paths redacted. Tweets, community tweets, note tweets, and deleted tweets were parsed. Direct messages, contacts, IP/device logs, ad files, and Grok chats were excluded from this voice corpus.",
         "birdclaw_reference": {
             "repo": "https://github.com/steipete/birdclaw",
             "commit": "be2761748f34d8437fd525fd73f66198e11901b7",

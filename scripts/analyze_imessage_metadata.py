@@ -297,7 +297,7 @@ def main() -> int:
     metadata = {
         "generated_at_utc": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "source": {
-            "database": str(db_path),
+            "database": "local-only Messages database; raw path redacted",
             "privacy_boundary": "Aggregate metadata only. No message text, contact names, handles, phone numbers, email addresses, group names, filenames, or media exported.",
             "date_conversion": "Apple nanosecond timestamp converted from 2001-01-01 epoch to local time.",
         },
@@ -368,7 +368,7 @@ This file is privacy-safe by design. It contains aggregate metadata only. It doe
 
 ## Access Status
 
-[verified] iMessage access is now working from Codex after Full Disk Access was enabled for Codex-related processes. Direct SQLite access to `~/Library/Messages/chat.db` succeeds, and the Apple Messages MCP can search the database.
+[verified] iMessage access is now working from Codex after Full Disk Access was enabled for Codex-related processes. Direct local database access succeeds, and the Apple Messages MCP can search the database.
 
 ## Coverage
 

@@ -185,7 +185,7 @@
     }
   ],
   "source": {
-    "database": "/Users/AustinHumphrey/Library/Messages/chat.db",
+    "database": "local-only Messages database; raw path redacted",
     "date_conversion": "Apple nanosecond timestamp converted from 2001-01-01 epoch to local time.",
     "privacy_boundary": "Aggregate metadata only. No message text, contact names, handles, phone numbers, email addresses, group names, filenames, or media exported."
   },

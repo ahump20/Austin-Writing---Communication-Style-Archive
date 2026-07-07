@@ -518,7 +518,7 @@ def summarize(
         if isinstance(item, dict) and item.get("screen_name")
     )
     return {
-        "source_path": str(source_path),
+        "source_path": "local-only official archive export; raw path redacted",
         "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "timezone": "America/Chicago",
         "account": account,

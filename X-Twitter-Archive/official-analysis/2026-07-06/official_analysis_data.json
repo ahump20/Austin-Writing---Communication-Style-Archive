@@ -6,7 +6,7 @@
   "summary": {
     "generated_at_utc": "2026-07-06T23:38:54.624092Z",
     "timezone": "America/Chicago",
-    "source_boundary": "Official X archive exports from /Users/AustinHumphrey/Downloads/Twitter:X Metadata. Tweets, community tweets, note tweets, and deleted tweets were parsed. Direct messages, contacts, IP/device logs, ad files, and Grok chats were excluded from this voice corpus.",
+    "source_boundary": "Official X archive exports were parsed from local-only files with raw paths redacted. Tweets, community tweets, note tweets, and deleted tweets were parsed. Direct messages, contacts, IP/device logs, ad files, and Grok chats were excluded from this voice corpus.",
     "birdclaw_reference": {
       "repo": "https://github.com/steipete/birdclaw",
       "commit": "be2761748f34d8437fd525fd73f66198e11901b7",
@@ -2124,7 +2124,7 @@
           }
         ],
         "source_summary": {
-          "source_path": "/Users/AustinHumphrey/Downloads/Twitter:XSnapchat Metadata/twitter-2026-07-06 ahump20",
+          "source_path": "local-only official archive export; raw path redacted",
           "generated_at_utc": "2026-07-06T23:38:53.325717Z",
           "timezone": "America/Chicago",
           "account": {
@@ -4761,7 +4761,7 @@
           }
         ],
         "source_summary": {
-          "source_path": "/Users/AustinHumphrey/Downloads/Twitter:XSnapchat Metadata/twitter:X Metadata -2026-07-06",
+          "source_path": "local-only official archive export; raw path redacted",
           "generated_at_utc": "2026-07-06T23:38:53.886980Z",
           "timezone": "America/Chicago",
           "account": {
