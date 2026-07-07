@@ -1,0 +1,97 @@
+{
+  "design_read": "Editorial self-study dossier for Austin and future agents, with source-backed reflection, calm focus, and privacy-safe evidence.",
+  "audience": "Austin, future AI agents, and repo readers who need a privacy-safe voice reference.",
+  "surface_type": "editorial self-study dossier",
+  "primary_job": "Help Austin read his own communication patterns and help future agents choose the right room before choosing voice.",
+  "content_grain": "mixed narrative, aggregate evidence, public quotes, and custom SVG charts",
+  "seed": "109730533743205",
+  "drawn_coordinate": {
+    "layout_archetype": "terminal-monospace-brutalist",
+    "aesthetic_movement": "vaporwave-y2k",
+    "color_strategy": "complementary-tension",
+    "type_pairing_strategy": "system-stack-with-character",
+    "motion_language": "fluid-elastic",
+    "depth_strategy": "webgl-focal-object-dom-annotations"
+  },
+  "keep_override_reasons": [
+    "Kept the draw's tension and system-stack-with-character idea.",
+    "Overrode vaporwave and WebGL because the artifact needs calm reading, privacy trust, and local-file reliability.",
+    "Used shadcn-style composition as a pattern language because this repo is a standalone static artifact, not a shadcn project."
+  ],
+  "dials": {
+    "DESIGN_VARIANCE": 5,
+    "MOTION_INTENSITY": 2,
+    "VISUAL_DENSITY": 4,
+    "DEPTH_INTEGRITY": 2
+  },
+  "DESIGN_VARIANCE": 5,
+  "MOTION_INTENSITY": 2,
+  "VISUAL_DENSITY": 4,
+  "DEPTH_INTEGRITY": 2,
+  "signature_move": "A self-study dossier where reflection leads and each chart is a receipt for the human implication it supports.",
+  "layout_architecture": "sticky dossier rail plus long-form reading column and chart pairs",
+  "information_flow": "summary, method, human read, deeper reflection, charts, trend arc, public examples, private router, recipes, filters, source boundaries",
+  "section_or_zone_rhythm": "large thesis sections, long-form reflection chapters, paired evidence panels, recipes, and calmer source rows",
+  "primary_visual_asset": "custom SVG evidence charts",
+  "asset_job": "make private compression, room routing, and strength/risk patterns readable without exposing raw private content",
+  "source_route": "local JSON summaries and official X public analysis data",
+  "prompt_or_query": "Redesign existing local React HTML communication dossier for human self-study with D3 charts and privacy-safe evidence.",
+  "license_usage_state": "local authored data and public archive examples; no third-party media assets",
+  "final_repo_path": "Voice-Style-Identity/austin-communication-context-map.html",
+  "fallback_if_unavailable": "HTML includes a no-script notice and the repository retains markdown/json privacy-safe summaries.",
+  "blend_strategy": "Flat DOM reading surface with data-bound SVG islands.",
+  "motion_grammar": "No autoplay motion; only hover/focus state changes and smooth anchor scroll with reduced-motion fallback.",
+  "interaction_model": "section navigation, tabs for voice mode inspection, filter family selector, public source links",
+  "token_source": {
+    "basis": "archive paper, private dossier, Texas burnt orange, pine/cobalt evidence colors, neutral ink",
+    "derived_tokens": [
+      "--surface-page",
+      "--surface-panel",
+      "--surface-soft",
+      "--accent",
+      "--pine",
+      "--cobalt",
+      "--gold"
+    ],
+    "existing_brand_constraints": "Austin voice archive and privacy-safe dossier, not a public BSI product surface."
+  },
+  "forbidden_repeats": [
+    "metric-only dashboard",
+    "purple AI glow",
+    "generic card farm",
+    "numbers without interpretation",
+    "private quote dump",
+    "public persona everywhere"
+  ],
+  "state_model": {
+    "populated": "static local data rendered into the artifact",
+    "loading": "not applicable because data is bundled at build time",
+    "empty": "privacy boundaries intentionally omit private quotes",
+    "error": "no-script notice covers missing JS",
+    "stale": "generated_at and source dates are visible"
+  },
+  "performance_budget": {
+    "mobile": "explicit one-column collapse for hero, reflection chapters, charts, tables, recipes, and source cards",
+    "reduced_motion": "CSS disables transitions and smooth scrolling under prefers-reduced-motion",
+    "canvas_fallback": "no Canvas or WebGL; SVG charts and plain HTML tables remain readable",
+    "lazy_loading": "single static file with bundled data and external React/D3 CDNs only"
+  },
+  "fingerprint": {
+    "layout_architecture": "sticky dossier rail and editorial reading column",
+    "information_flow": "summary to deeper reflection to implication to evidence router",
+    "rhythm": "long-form reflection chapters mixed with chart pairs and room recipes",
+    "primary_visual_asset": "SVG data charts",
+    "three_d_role": "none beyond surface hierarchy",
+    "motion_grammar": "state feedback only",
+    "interaction_model": "tabs, source links, selector"
+  },
+  "asset_strategy": {
+    "asset_job": "custom SVG charts explain evidence without exposing private text",
+    "source_route": "local JSON summaries and official X public analysis data",
+    "prompt_or_query": "not image-generated; data-bound SVG inside a static React artifact",
+    "license_or_usage_state": "local authored data and public archive examples; no third-party media assets",
+    "final_repo_path": "Voice-Style-Identity/austin-communication-context-map.html",
+    "fallback_if_unavailable": "plain HTML tables and no-script message remain in the artifact"
+  },
+  "restraint_clause": "Numbers are evidence, not the center of the artifact. Private data stays aggregate-only. The artifact should feel useful to read, not merely impressive to audit."
+}

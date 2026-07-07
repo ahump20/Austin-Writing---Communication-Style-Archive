@@ -12,6 +12,7 @@ const imessage = JSON.parse(fs.readFileSync(path.join(ROOT, "Voice-Style-Identit
 const imessageLanguage = JSON.parse(fs.readFileSync(path.join(ROOT, "Voice-Style-Identity/imessage-analysis/2026-07-07/imessage_private_language_summary.json"), "utf8"));
 
 const outPath = path.join(ROOT, "Voice-Style-Identity/austin-communication-context-map.html");
+const contractPath = path.join(ROOT, "Voice-Style-Identity/frontend-craft-contract.json");
 
 const xCounts = xData.summary.counts;
 const totalOfficialX = xCounts.a_hump20.official_archive_rows + xCounts.TXTrickWhooper.official_archive_rows;
@@ -30,39 +31,49 @@ function combinePairs(pairs) {
   return Array.from(map.entries()).sort((a, b) => b[1] - a[1]).map(([label, value]) => ({ label, value }));
 }
 
-const combinedThemes = combinePairs([xCounts.a_hump20.top_themes, xCounts.TXTrickWhooper.top_themes]).slice(0, 10);
-const combinedHumor = combinePairs([xCounts.a_hump20.top_humor_tags, xCounts.TXTrickWhooper.top_humor_tags]).slice(0, 10);
+function firstSentence(text) {
+  return text.split(". ")[0].trim();
+}
+
+const combinedThemes = combinePairs([xCounts.a_hump20.top_themes, xCounts.TXTrickWhooper.top_themes]).slice(0, 9);
+const combinedHumor = combinePairs([xCounts.a_hump20.top_humor_tags, xCounts.TXTrickWhooper.top_humor_tags]).slice(0, 9);
 
 const markerRows = [
   {
     label: "question/direct ask",
     snapchat: snapchat.chat.marker_rates_per_100_sent_texts.question,
     imessage: imessageLanguage.overall.marker_rate_per_100.question_or_direct_ask,
+    implication: "Your private language starts by finding the next move.",
   },
   {
     label: "logistics",
     snapchat: snapchat.chat.marker_rates_per_100_sent_texts.logistics,
     imessage: imessageLanguage.overall.marker_rate_per_100.logistics,
+    implication: "Coordination is not a side register. It is a core voice mode.",
   },
   {
     label: "laughter/play",
     snapchat: snapchat.chat.marker_rates_per_100_sent_texts.laughter,
     imessage: imessageLanguage.overall.marker_rate_per_100.laughter_or_play,
+    implication: "Private humor is quick reaction more than staged performance.",
   },
   {
     label: "affection/warmth",
     snapchat: snapchat.chat.marker_rates_per_100_sent_texts.affection,
     imessage: imessageLanguage.overall.marker_rate_per_100.affection_or_warmth,
+    implication: "Warmth usually rides inside a practical or specific line.",
   },
   {
     label: "sports/place",
     snapchat: snapchat.chat.marker_rates_per_100_sent_texts.sports_place,
     imessage: imessageLanguage.overall.marker_rate_per_100.sports_or_place_shorthand,
+    implication: "Place and sports act like shared keys, not just topics.",
   },
   {
     label: "repair/accountability",
     snapchat: snapchat.chat.marker_rates_per_100_sent_texts.repair,
     imessage: imessageLanguage.overall.marker_rate_per_100.repair_or_accountability,
+    implication: "Repair is rarer, so it needs plain wording when it appears.",
   },
 ];
 
@@ -75,69 +86,75 @@ const sourceRows = [
     kind: "public",
     rows: totalOfficialX,
     usable: totalAuthoredX,
-    note: "public social voice, replies, humor, sports/fan identity",
-    privacy: "public quotes allowed with context",
+    note: "Public social voice, reply timing, humor mechanics, sports identity, persona shift.",
+    privacy: "Public quotes allowed with context.",
+    proof: "6,300 official rows, 5,437 authored voice rows.",
   },
   {
     label: "Snapchat derived",
     kind: "private derived",
     rows: snapchat.chat.message_counts.all_chat_rows,
     usable: snapchat.chat.message_counts.sent_text_rows,
-    note: "private compression, asks, logistics, warmth markers",
-    privacy: "derived only; no raw private text",
+    note: "Private compression, quick asks, logistics, warmth markers, reaction speed.",
+    privacy: "Rates only. No raw private text.",
+    proof: "2,417 chat rows, 1,052 sent text rows.",
   },
   {
     label: "iMessage metadata",
     kind: "private derived",
     rows: imessage.coverage.all_message_rows,
     usable: imessage.coverage.base_message_rows,
-    note: "group/direct shape, tapbacks, replies, attachments",
-    privacy: "aggregate metadata only",
+    note: "Direct/group shape, tapbacks, replies, attachments, long-run relationship routing.",
+    privacy: "Aggregate metadata only.",
+    proof: "483,242 local rows, 435,735 base human-message rows.",
   },
   {
     label: "iMessage language",
     kind: "private derived",
     rows: imessage.coverage.sent_base_rows,
     usable: imessageLanguage.coverage.decoded_sent_text_rows,
-    note: "sent-text length, marker rates, context router, purpose buckets",
-    privacy: "rates only; no phrases or quotes",
+    note: "Sent-text length, marker rates, anonymous room router, purpose buckets.",
+    privacy: "Derived wording shape only. No phrases.",
+    proof: "179,882 decoded sent text rows.",
   },
   {
     label: "Long-form writing",
     kind: "authored archive",
     rows: 50,
     usable: 50,
-    note: "systemic lens, public prose, philosophical structure",
-    privacy: "source-linked archive",
+    note: "Claim building, systems thinking, education/professional voice, moral framing.",
+    privacy: "Source-linked authored archive.",
+    proof: "50+ coursework, sports, and professional writing files.",
     suffix: "+",
   },
   {
-    label: "Living brain / instructions",
+    label: "Living brain and instructions",
     kind: "routing context",
     rows: 1,
     usable: 1,
-    note: "agent behavior, partnership expectations, guardrails",
-    privacy: "resurface, never generate raw private source",
+    note: "How agents should work with Austin: evidence tags, continuity, directness, privacy.",
+    privacy: "Resurface the signal, never dump raw private source.",
+    proof: "Current Codex/brain routing files and direct instructions.",
   },
 ];
 
 const filterFamilies = [
   {
-    family: "Source & Provenance",
+    family: "Source and Provenance",
     claim: "Where did this signal come from, and can it be quoted?",
     filters: ["platform", "account/source lane", "authored vs context", "public vs private-derived", "evidence status", "source date range"],
     evidence: "X rows, Snapchat summaries, iMessage summaries, writing archive, living-brain routing.",
-    use: "Prevents a future agent from treating a private derived signal like a public quote.",
+    use: "Prevents a future agent from treating private derived shape like public wording.",
   },
   {
-    family: "Time & Evolution",
+    family: "Time and Evolution",
     claim: "Which era or pressure stage produced the voice?",
     filters: ["year", "phase", "life stage", "pre/post commentary account", "recent vs historical", "platform era"],
     evidence: "X phase rows, iMessage date range, Snapchat year buckets, writing-development files.",
     use: "Separates early social voice from current AI/tooling and commentary voice.",
   },
   {
-    family: "Audience & Relationship",
+    family: "Audience and Relationship",
     claim: "Who is in the room?",
     filters: ["public follower", "reply target", "direct private", "small group", "medium group", "large group", "AI partner", "professional reader"],
     evidence: "iMessage anonymous context buckets, X reply rates, Codex instructions, writing archive.",
@@ -172,17 +189,17 @@ const filterFamilies = [
     use: "Maps psychology and philosophy without pretending private messages are public evidence.",
   },
   {
-    family: "Privacy & Consent",
+    family: "Privacy and Consent",
     claim: "What is allowed to leave the machine?",
     filters: ["public quote allowed", "derived-only", "local-only", "no names/handles", "no private phrases", "no burner metadata", "no raw exports"],
     evidence: "Repo guardrails, .gitignore, secret guard, source manifest.",
-    use: "Protects Austin and everyone else while keeping the model useful.",
+    use: "Protects Austin and other people while keeping the model useful.",
   },
   {
     family: "Output Routing",
     claim: "What should the assistant produce?",
     filters: ["speak with Austin", "public long-form", "brand/platform", "X/social", "friend group", "warm one-on-one", "coordination", "repair"],
-    evidence: "Consolidated harness, skill, source manifest, rendered artifacts.",
+    evidence: "Consolidated voice files, skill, source manifest, rendered artifacts.",
     use: "Converts evidence into the right voice for the room.",
   },
 ];
@@ -190,59 +207,67 @@ const filterFamilies = [
 const routerModes = [
   {
     mode: "With Austin",
-    evidence: "instructions + living brain + execution history",
-    shape: "outcome first, known/unknown/open, direct warmth, push back with evidence",
-    avoid: "generic assistant politeness and process theater",
+    evidence: "direct instructions + living brain + execution history",
+    shape: "Outcome first, known/unknown/open, warm directness, push back with evidence.",
+    avoid: "Generic assistant politeness and process theater.",
     score: 5,
+    values: [5, 4, 3, 4, 5, 4],
   },
   {
     mode: "Public long-form",
     evidence: "50+ writing files",
-    shape: "claim, system, evidence, implication",
-    avoid: "neutrality theater and inflated conclusions",
+    shape: "Claim, system, evidence, implication. Fewer vibes, more cause and effect.",
+    avoid: "Inflated conclusions and tidy thought-leader endings.",
     score: 5,
+    values: [4, 2, 1, 2, 5, 3],
   },
   {
     mode: "Brand/platform",
-    evidence: "professional docs + current doctrine",
-    shape: "vision over grievance, concrete proof, current BSI guardrails",
-    avoid: "stale multi-sport or Blaze Intelligence framing",
+    evidence: "professional docs + current BSI doctrine",
+    shape: "Vision over grievance, concrete proof, current guardrails.",
+    avoid: "Stale multi-sport or Blaze Intelligence framing.",
     score: 4,
+    values: [4, 3, 2, 3, 4, 3],
   },
   {
     mode: "X/social",
-    evidence: `${totalAuthoredX.toLocaleString()} authored public rows`,
-    shape: "concrete noun, blunt verdict, absurd escalation, stop",
-    avoid: "explaining the punchline",
+    evidence: totalAuthoredX.toLocaleString() + " authored public rows",
+    shape: "Concrete noun, blunt verdict, absurd escalation, stop.",
+    avoid: "Explaining the punchline.",
     score: 5,
+    values: [5, 5, 5, 2, 2, 1],
   },
   {
     mode: "Friend group",
-    evidence: "iMessage context buckets + Snapchat compression",
-    shape: "short, teasing through specifics, shared shorthand, self-own if needed",
-    avoid: "public persona overkill",
+    evidence: "iMessage buckets + Snapchat compression",
+    shape: "Short, teasing through specifics, shared shorthand, quick self-own if needed.",
+    avoid: "Public persona overkill.",
     score: 4,
+    values: [4, 5, 4, 3, 2, 2],
   },
   {
     mode: "Warm private",
     evidence: "Snapchat + iMessage derived markers",
-    shape: "specific attention, playful challenge, low pressure, brief",
-    avoid: "generic romantic essay voice",
+    shape: "Specific attention, playful challenge, low pressure, brief.",
+    avoid: "Generic romantic essay voice.",
     score: 3,
+    values: [4, 5, 3, 5, 1, 2],
   },
   {
     mode: "Coordination",
     evidence: "30.0 per 100 iMessage ask markers; 17.87 logistics",
-    shape: "direct ask, one useful detail, no ceremony",
-    avoid: "inflated politeness",
+    shape: "Direct ask, one useful detail, no ceremony.",
+    avoid: "Inflated politeness.",
     score: 5,
+    values: [5, 5, 1, 2, 2, 2],
   },
   {
     mode: "Repair",
-    evidence: "voice system + sparse private markers",
-    shape: "own the action, explain mechanism without excuse, next behavior",
-    avoid: "therapy-script language",
+    evidence: "voice files + sparse private marker rates",
+    shape: "Own the action, explain mechanism without excuse, state next behavior.",
+    avoid: "Therapy-script phrasing.",
     score: 3,
+    values: [4, 3, 1, 4, 4, 5],
   },
 ];
 
@@ -269,17 +294,406 @@ const phaseRows = [
     value: phase.count,
     lane: "X/social",
     note: phase.top_themes.slice(0, 2).map(([label]) => label).join(" + "),
+    dateRange: phase.date_range_ct,
+    sample: phase.sample.slice(0, 2).map((tweet) => ({
+      text: tweet.text,
+      date: tweet.date_ct.slice(0, 10),
+      account: tweet.account,
+      likes: tweet.likes,
+      url: tweet.url,
+    })),
   })),
   ...Object.entries(imessageLanguage.by_phase).map(([label, row]) => ({
     label,
     value: row.messages,
     lane: "private language",
-    note: `${row.median_words} word median`,
+    note: row.median_words + " word median",
   })),
+];
+
+const publicExampleLabels = [
+  "Waffle House as civil-defense institution",
+  "Vape charger mock PSA",
+  "Reading code punchline",
+  "Claude model complaint",
+  "Waffle House San Antonio origin",
+  "Chick-fil-A acceptance speech",
+  "Camera operator meltdown",
+  "Old Facebook self-awareness",
+  "Sleep as operating system",
+];
+
+const publicExamples = xData.examples
+  .filter((example) => publicExampleLabels.includes(example.label))
+  .map((example) => ({
+    label: example.label,
+    note: example.note,
+    account: example.tweet.account,
+    date: example.tweet.date_ct.slice(0, 10),
+    likes: example.tweet.likes,
+    reposts: example.tweet.reposts,
+    text: example.tweet.text,
+    url: example.tweet.url,
+    humor: example.tweet.humor,
+  }));
+
+const humanSynthesis = [
+  {
+    title: "The strongest pattern is pressure turned into a useful line.",
+    status: "reasoned",
+    summary: "Across sources, Austin keeps trying to collapse noise into the next usable move. In public, that becomes a verdict. In private, it becomes a direct ask. In long-form, it becomes a system explanation.",
+    evidence: [
+      "5,437 authored public X rows show a reply-native voice with short public posts.",
+      "179,882 decoded sent Messages texts show a 5-word private median and 75.45 per 100 at 10 words or fewer.",
+      "Long-form files keep returning to cause, institution, tradeoff, and next action.",
+    ],
+    implication: "The voice feels best when it starts from the thing itself. Name the object, name the pressure, then say what it means.",
+    strength: "Fast compression makes you useful in messy rooms.",
+    watch: "The same compression can read harsher than intended when the room needs care first.",
+  },
+  {
+    title: "Humor works by making ordinary stakes sound institutional.",
+    status: "verified + reasoned",
+    summary: "The repeat bit is not randomness. It is a stable move: breakfast, vapes, camera work, tools, food, and sports mistakes get framed as public infrastructure, constitutional rights, dynasties, or professional malpractice.",
+    evidence: [
+      "Public X examples include Waffle House as a last line of defense, Chick-fil-A as championship dynasty, and a camera miss as one-job failure.",
+      "Combined X humor tags put short deadpan, self-involving aside, reply volley, and overstated stakes at the top.",
+    ],
+    implication: "The joke needs a specific object and a bigger frame. Without the object, it turns into generic internet sarcasm.",
+    strength: "You can make small things memorable without making them abstract.",
+    watch: "If every irritation gets emergency language, the true emergency has less headroom.",
+  },
+  {
+    title: "Private warmth is specific, compressed, and often practical.",
+    status: "verified",
+    summary: "The private layer does not look like polished affection. It looks like quick context, a concrete detail, a direct ask, a check-in, or a joke that only works because the room already has history.",
+    evidence: [
+      "Direct/low-member private rooms: 161,446 decoded sent texts, median 5 words.",
+      "Question/direct ask markers: 30.0 per 100 in iMessage and 34.41 per 100 in Snapchat sent texts.",
+      "Affection/warmth markers exist, but they are lower than coordination markers.",
+    ],
+    implication: "When writing privately as Austin, do not start with a grand emotional paragraph. Start with the real detail and let warmth ride inside it.",
+    strength: "This keeps private voice human, grounded, and low-pressure.",
+    watch: "People who need explicit reassurance may miss warmth if it stays too compressed.",
+  },
+  {
+    title: "The public persona is a dial, not the whole person.",
+    status: "verified",
+    summary: "Stallion is not fake, but it is amplified. It turns older instincts up: sports certainty, Texas/place nouns, mock ceremony, bluntness, AI-tool anger, and self-owning asides.",
+    evidence: [
+      "@a_hump20 supplies the older identity layer from 2011-2025.",
+      "@TXTrickWhooper supplies the commentary layer from 2022-2026.",
+      "The account split lines up with a clearer public costume and faster reply posture.",
+    ],
+    implication: "Future agents should not use Stallion tone everywhere. Choose it only when the room rewards public-performance heat.",
+    strength: "The persona is memorable because it is rooted in older Austin, not pasted on.",
+    watch: "Overusing it in private, professional, or repair contexts makes the voice feel like a mask.",
+  },
+  {
+    title: "Your thinking is object-led, then system-led.",
+    status: "reasoned",
+    summary: "A small concrete thing usually comes first. Then the larger mechanism appears: platform design, sports incentives, institutional failure, customer experience, model access, public trust.",
+    evidence: [
+      "Public examples repeatedly anchor in named things: Waffle House, Chick-fil-A, Claude, Grok, San Antonio, camera work.",
+      "Long-form writing shows the same movement at slower speed: claim, mechanism, stake, implication.",
+    ],
+    implication: "The best Austin-style analysis should not start at the theory layer. It should start with the object that makes the theory unavoidable.",
+    strength: "It makes abstract analysis feel lived-in.",
+    watch: "If the object is too personal or too private, publish the pattern without exposing the person.",
+  },
+];
+
+const trendNarrative = [
+  {
+    phase: "2011-2014",
+    title: "identity, rivalry, belonging",
+    read: "The early voice is social, local, competitive, and more openly earnest. It is already specific: school, town, team, sleep, Facebook messages, game-day life.",
+    proof: "3,562 authored public rows in the early X phase. Top themes include question/reply energy, sports/Texas, everyday observation, family/life, and school/social life.",
+    implication: "The later edge did not appear from nowhere. It grew out of belonging to rooms where a line had to land fast.",
+  },
+  {
+    phase: "2015-2019",
+    title: "lower-volume bridge",
+    read: "The posting slows down, but the adult version appears: customer experience, Austin/Sixth Street, sports decisions, and dry self-incrimination.",
+    proof: "50 authored public rows in this bridge phase, with sports/Texas and question/reply energy still leading.",
+    implication: "The voice gets less performative by volume, but more portable. It can aim at products, systems, and sports choices.",
+  },
+  {
+    phase: "2020-2023",
+    title: "adult-life commentary",
+    read: "The line gets cleaner. Everyday objects become jokes, sports stress becomes melodrama, and place-food institutions become part of the mythology.",
+    proof: "502 public rows in the phase. Waffle House San Antonio appears in 2022, before the 2026 Stallion pin.",
+    implication: "The best jokes increasingly depend on recurring objects. That is a brand asset, but only if it stays concrete.",
+  },
+  {
+    phase: "2024-2026",
+    title: "commentary costume and AI/tool pressure",
+    read: "The Stallion layer turns the voice up. AI tools become the new sports-radio call-in topic: model access, agents, platform feeds, broken UX, and rights language.",
+    proof: "The official archive adds a 2022-2026 commentary account with 1,377 authored voice rows and high reply density.",
+    implication: "Your current public voice is fastest when it treats tools like coaches, refs, and front offices: useful only if they perform.",
+  },
+  {
+    phase: "Private 2014-2026",
+    title: "compression as relationship memory",
+    read: "Private wording stays shorter than public performance. The room already holds context, so the message can carry less scaffolding.",
+    proof: "179,882 decoded sent Messages texts, median 5 words, 50.04 per 100 at five words or fewer.",
+    implication: "A future agent should not mistake short private lines for lack of care. Often, the care is in knowing what can stay unsaid.",
+  },
+];
+
+const strengthRisk = [
+  {
+    name: "Specificity",
+    x: 4.8,
+    y: 4.6,
+    strength: "Makes the voice hard to fake.",
+    risk: "Can over-index on the object and skip the softer need underneath.",
+  },
+  {
+    name: "Compression",
+    x: 4.6,
+    y: 4.1,
+    strength: "Gets to the point fast.",
+    risk: "Can sound colder than intended in repair or reassurance.",
+  },
+  {
+    name: "Heat",
+    x: 3.8,
+    y: 3.4,
+    strength: "Adds life, stakes, and truth.",
+    risk: "Can crowd out trust if the other person needs steadiness.",
+  },
+  {
+    name: "Systems lens",
+    x: 4.4,
+    y: 4.7,
+    strength: "Turns anecdotes into analysis.",
+    risk: "Can outrun the immediate human feeling.",
+  },
+  {
+    name: "Self-own",
+    x: 4.2,
+    y: 3.8,
+    strength: "Keeps confidence from becoming pure arrogance.",
+    risk: "Can hide the real ask behind a bit.",
+  },
+  {
+    name: "Room sensitivity",
+    x: 3.7,
+    y: 4.3,
+    strength: "Allows one voice to adapt across platforms.",
+    risk: "Fails when public persona bleeds into private care.",
+  },
+];
+
+const studyPrompts = [
+  {
+    title: "When am I funniest?",
+    body: "When the joke has a real object, a shared room, and a scale mismatch. The weak version is heat without object.",
+  },
+  {
+    title: "When am I clearest?",
+    body: "When I say the verdict first, then show the mechanism. The weak version is stacking context before the reader knows why.",
+  },
+  {
+    title: "When do I sound most like myself?",
+    body: "When specificity, bluntness, self-awareness, and ordinary stakes all show up in the same line.",
+  },
+  {
+    title: "Where can I grow?",
+    body: "Repair and reassurance need more explicit care than my default compression gives them. Short can still be warm, but it has to name the care.",
+  },
+];
+
+const reflectionChapters = [
+  {
+    title: "You think by turning the vague thing into a handled thing.",
+    status: "reasoned",
+    read: [
+      "The recurring movement is not just directness. It is conversion. A loose annoyance, platform failure, sports decision, school memory, or private logistics problem gets converted into something you can point at and act on.",
+      "That is why your voice rarely feels abstract when it is working. It grabs a thing: Waffle House, Chick-fil-A, a camera operator, a model picker, a phone, a town, a coach, a bad feed. Then it asks what that thing reveals about a larger system."
+    ],
+    evidence: [
+      "Public examples keep using concrete objects as the hook.",
+      "Long-form writing keeps turning those hooks into cause, mechanism, and stake.",
+      "Private text shape shows the same compression under lower public pressure: 5-word median, 75.45 per 100 at 10 words or fewer."
+    ],
+    selfStudy: "This is a strength when the room is messy and needs a line. It can become a weakness when someone needs you to stay with the feeling before you solve the shape of it.",
+  },
+  {
+    title: "Your humor is a pressure valve with a civic filing cabinet behind it.",
+    status: "verified + reasoned",
+    read: [
+      "The joke pattern is not mostly wordplay. It is category abuse. You take a normal object and promote it to an institution, a defense system, a dynasty, a constitutional right, or a front-office fireable offense.",
+      "That move makes the joke sound like you because the bit has a real noun and a weirdly serious frame. It is not random internet sarcasm. It is mock seriousness applied to breakfast, vapes, AI models, and sports stress."
+    ],
+    evidence: [
+      "Top public humor tags include short deadpan, reply volley, self-involving aside, and overstated stakes.",
+      "Public examples include Waffle House as defense infrastructure, Chick-fil-A as dynasty, and camera work as professional malpractice.",
+      "The Stallion account turns the heat up, but the same mechanics already appear in the older personal account."
+    ],
+    selfStudy: "The gift is memorability. The risk is escalation becoming the default emotional setting. The best version keeps the object specific and lets the seriousness be the joke.",
+  },
+  {
+    title: "Private care often shows up as usefulness, not ceremony.",
+    status: "verified",
+    read: [
+      "The private layer does not read like long emotional explanation. It reads like quick asks, coordination, context passing, short reactions, and small warmth inside practical language.",
+      "That does not mean low care. It means the room already carries history. The message can be shorter because the relationship is doing some of the work."
+    ],
+    evidence: [
+      "iMessage question/direct-ask markers: 30.0 per 100 decoded sent texts.",
+      "Snapchat question markers: 34.41 per 100 sent texts.",
+      "Direct/private room shape: 161,446 decoded sent texts with a 5-word median."
+    ],
+    selfStudy: "This is efficient and often kind. It can miss when the other person needs the care named out loud. Future agents should add explicit warmth in repair, reassurance, or high-stakes private contexts.",
+  },
+  {
+    title: "Your biggest voice risk is not being too much. It is using the wrong room.",
+    status: "reasoned",
+    read: [
+      "Stallion heat, private compression, professional analysis, and direct agent-partner talk are all real. The failure mode is flattening them into one voice and dragging that voice everywhere.",
+      "The archive argues for routing before writing. Who is in the room? What job is the message doing? Can this source be quoted? Does the situation need heat, care, repair, clarity, or proof?"
+    ],
+    evidence: [
+      "The X archive can prove public voice and humor mechanics.",
+      "Private sources can prove shape and context, not quotable wording.",
+      "Current instructions repeatedly ask for known, unknown, open, evidence tags, and direct execution."
+    ],
+    selfStudy: "The public persona is a dial. It is strong because it is rooted in you. It gets weird when it walks into a room that asked for steadiness.",
+  },
+  {
+    title: "The AI partnership lane is its own voice now.",
+    status: "verified + reasoned",
+    read: [
+      "A newer register has formed around agents, tools, broken UX, context drift, and the desire for durable continuity. It borrows from sports and operator language: prove it, run it, show me the result, stop making fake progress.",
+      "This is not only a preference for productivity. It is a relationship expectation. You want a partner that remembers the room, protects the source, challenges weak premises, and still gets the work done."
+    ],
+    evidence: [
+      "Direct instructions emphasize evidence over agreement, durable memory, privacy boundaries, and execution.",
+      "Public X examples show AI/tool complaints in the same blunt register as sports and service failures.",
+      "The repo now contains a skill, context map, source manifest, and rendered artifacts to reduce drift."
+    ],
+    selfStudy: "The useful version is high trust and high standards. The weaker version is impatience with the parts of collaboration that need slowing down before the right thing can be done.",
+  },
+];
+
+const tensionPairs = [
+  {
+    trait: "compression",
+    gift: "You get to the usable line fast.",
+    shadow: "You can sound colder than you feel.",
+    route: "Add one explicit care sentence in repair or reassurance.",
+  },
+  {
+    trait: "heat",
+    gift: "You make low-stakes things feel alive.",
+    shadow: "Intensity can outrun trust.",
+    route: "Use heat for public jokes and shared rooms; use steadiness for private repair.",
+  },
+  {
+    trait: "specificity",
+    gift: "Your writing has nouns, place, and texture.",
+    shadow: "The object can hide the softer emotional need.",
+    route: "After naming the object, name the human stake.",
+  },
+  {
+    trait: "systems lens",
+    gift: "You can turn a small event into a useful read.",
+    shadow: "You may solve the mechanism before the moment is felt.",
+    route: "In close rooms, reflect the feeling before the theory.",
+  },
+  {
+    trait: "self-own",
+    gift: "It keeps confidence from getting stiff.",
+    shadow: "The bit can cover the actual ask.",
+    route: "Use the self-own as seasoning, not the whole meal.",
+  },
+  {
+    trait: "room sensitivity",
+    gift: "You have more than one real register.",
+    shadow: "Misrouting is the main AI tell.",
+    route: "Pick room and job before drafting tone.",
+  },
+];
+
+const communicationRecipes = [
+  {
+    room: "Talking with Austin",
+    start: "Lead with what changed, what is known, what is unknown, and what is open.",
+    proof: "Direct instructions and living-brain routing.",
+    add: "Warmth through attention, not fluff.",
+    avoid: "Process theater, fake certainty, and generic assistant smoothing.",
+  },
+  {
+    room: "Public social post",
+    start: "Start with the concrete object or absurd situation.",
+    proof: "5,437 authored X rows and public humor tags.",
+    add: "One scale jump: institution, dynasty, civic failure, professional malpractice.",
+    avoid: "Explaining why the joke is funny.",
+  },
+  {
+    room: "Long-form public argument",
+    start: "State the claim, then show the mechanism that makes it true.",
+    proof: "Coursework, sports writing, professional archive.",
+    add: "A real-world object, source, or stake early.",
+    avoid: "Thought-leader fog and tidy endings that were not earned.",
+  },
+  {
+    room: "Private coordination",
+    start: "Ask the actual question or give the next useful detail.",
+    proof: "30.0 iMessage ask markers per 100 and 17.87 logistics markers per 100.",
+    add: "A short personal note when the topic carries emotion.",
+    avoid: "Long background before the person knows what you need.",
+  },
+  {
+    room: "Repair or apology",
+    start: "Name the action, own the miss, explain the mechanism without excuse.",
+    proof: "Repair markers are rarer, so the wording must be cleaner when used.",
+    add: "One concrete next behavior.",
+    avoid: "Therapy-script language and defensive systems analysis.",
+  },
+  {
+    room: "AI-agent collaboration",
+    start: "Restate the goal and assumptions, then execute with proof.",
+    proof: "Current repo instructions and skill files.",
+    add: "Evidence tags: verified, reasoned, guess.",
+    avoid: "Making artifacts that are impressive once and useless later.",
+  },
+];
+
+const methodSteps = [
+  {
+    title: "Parsed the public archive",
+    body: "Used official X archive rows, preserved public dates and engagement fields, separated authored posts from retweets/context, then grouped by account and phase.",
+  },
+  {
+    title: "Converted private archives into shape",
+    body: "Snapchat and Messages were reduced to counts, rates, anonymous room types, and purpose buckets. No private text, names, group names, handles, filenames, or media paths are published.",
+  },
+  {
+    title: "Cross-read the registers",
+    body: "Compared public social voice, private compression, long-form writing, professional material, living-brain rules, and direct instructions as one voice system.",
+  },
+  {
+    title: "Built a router",
+    body: "Converted the evidence into decisions future agents can use: room, purpose, privacy, strength, risk, and output mode.",
+  },
 ];
 
 const data = {
   generatedAt: "2026-07-07",
+  design: {
+    read: "Editorial self-study dossier for Austin and future agents, with source-backed reflection, calm focus, and privacy-safe evidence.",
+    seed: "109730533743205",
+    dials: {
+      variance: 5,
+      motion: 2,
+      density: 4,
+      depth: 2,
+    },
+    note: "D3 owns chart geometry. React owns the reading structure. shadcn rules inform the card, badge, tab, alert, and separator composition without forcing a framework install into a static artifact. The deeper sections lead with human implications and use numbers as receipts.",
+  },
   filterCount: filterFamilies.reduce((sum, family) => sum + family.filters.length, 0),
   filterFamilies,
   sourceRows,
@@ -293,6 +707,15 @@ const data = {
   combinedThemes,
   combinedHumor,
   phaseRows,
+  publicExamples,
+  humanSynthesis,
+  reflectionChapters,
+  tensionPairs,
+  communicationRecipes,
+  trendNarrative,
+  strengthRisk,
+  studyPrompts,
+  methodSteps,
   totals: {
     officialX: totalOfficialX,
     authoredX: totalAuthoredX,
@@ -316,30 +739,111 @@ const data = {
     ask: imessageLanguage.overall.marker_rate_per_100.question_or_direct_ask,
     logistics: imessageLanguage.overall.marker_rate_per_100.logistics,
   },
-  answer: [
-    {
-      label: "Helpful for me",
-      status: "verified",
-      body: "Yes. The source work gives future runs a reusable map instead of asking an agent to infer Austin from one chat, one tweet style, or one polished writing sample.",
-    },
-    {
-      label: "Helpful for writing as Austin",
-      status: "verified",
-      body: "The system now distinguishes public social, long-form, brand, direct private, group, coordination, repair, and AI-partner contexts before choosing tone.",
-    },
-    {
-      label: "Helpful without leaking",
-      status: "verified",
-      body: "Private sources are reduced to counts, marker rates, anonymous relationship buckets, purpose buckets, and guardrails. The model learns shape without exporting private wording.",
-    },
-  ],
   softAxes: [
-    ["psychological", "specific object first, self-awareness as pressure valve, strong preference for directness under stress"],
-    ["interpersonal", "relationship context before tone; private language compresses into asks, timing, warmth, quick reaction, media/context passing, and plain repair"],
-    ["philosophical", "surface event points at system; who benefits, who pays, what mechanism is hiding underneath"],
-    ["humor", "minor inconvenience becomes civic emergency, mock ceremony, reply correction, self-incriminating aside"],
-    ["agent partnership", "execution partner over note-taker; evidence tags; challenge weak premises; preserve continuity"],
+    ["psychological", "Specific object first, self-awareness as pressure valve, directness under stress."],
+    ["interpersonal", "Relationship context before tone; practical help often carries warmth."],
+    ["philosophical", "A surface event points at the system: who benefits, who pays, what mechanism hides underneath."],
+    ["humor", "Minor inconvenience becomes public infrastructure, civic failure, or mock ceremony."],
+    ["agent partnership", "Execution partner over note-taker; evidence tags, challenge weak premises, preserve continuity."],
   ],
+};
+
+const frontendContract = {
+  design_read: data.design.read,
+  audience: "Austin, future AI agents, and repo readers who need a privacy-safe voice reference.",
+  surface_type: "editorial self-study dossier",
+  primary_job: "Help Austin read his own communication patterns and help future agents choose the right room before choosing voice.",
+  content_grain: "mixed narrative, aggregate evidence, public quotes, and custom SVG charts",
+  seed: data.design.seed,
+  drawn_coordinate: {
+    layout_archetype: "terminal-monospace-brutalist",
+    aesthetic_movement: "vaporwave-y2k",
+    color_strategy: "complementary-tension",
+    type_pairing_strategy: "system-stack-with-character",
+    motion_language: "fluid-elastic",
+    depth_strategy: "webgl-focal-object-dom-annotations"
+  },
+  keep_override_reasons: [
+    "Kept the draw's tension and system-stack-with-character idea.",
+    "Overrode vaporwave and WebGL because the artifact needs calm reading, privacy trust, and local-file reliability.",
+    "Used shadcn-style composition as a pattern language because this repo is a standalone static artifact, not a shadcn project."
+  ],
+  dials: {
+    DESIGN_VARIANCE: data.design.dials.variance,
+    MOTION_INTENSITY: data.design.dials.motion,
+    VISUAL_DENSITY: data.design.dials.density,
+    DEPTH_INTEGRITY: data.design.dials.depth,
+  },
+  DESIGN_VARIANCE: data.design.dials.variance,
+  MOTION_INTENSITY: data.design.dials.motion,
+  VISUAL_DENSITY: data.design.dials.density,
+  DEPTH_INTEGRITY: data.design.dials.depth,
+  signature_move: "A self-study dossier where reflection leads and each chart is a receipt for the human implication it supports.",
+  layout_architecture: "sticky dossier rail plus long-form reading column and chart pairs",
+  information_flow: "summary, method, human read, deeper reflection, charts, trend arc, public examples, private router, recipes, filters, source boundaries",
+  section_or_zone_rhythm: "large thesis sections, long-form reflection chapters, paired evidence panels, recipes, and calmer source rows",
+  primary_visual_asset: "custom SVG evidence charts",
+  asset_job: "make private compression, room routing, and strength/risk patterns readable without exposing raw private content",
+  source_route: "local JSON summaries and official X public analysis data",
+  prompt_or_query: "Redesign existing local React HTML communication dossier for human self-study with D3 charts and privacy-safe evidence.",
+  license_usage_state: "local authored data and public archive examples; no third-party media assets",
+  final_repo_path: "Voice-Style-Identity/austin-communication-context-map.html",
+  fallback_if_unavailable: "HTML includes a no-script notice and the repository retains markdown/json privacy-safe summaries.",
+  blend_strategy: "Flat DOM reading surface with data-bound SVG islands.",
+  motion_grammar: "No autoplay motion; only hover/focus state changes and smooth anchor scroll with reduced-motion fallback.",
+  interaction_model: "section navigation, tabs for voice mode inspection, filter family selector, public source links",
+  token_source: {
+    basis: "archive paper, private dossier, Texas burnt orange, pine/cobalt evidence colors, neutral ink",
+    derived_tokens: [
+      "--surface-page",
+      "--surface-panel",
+      "--surface-soft",
+      "--accent",
+      "--pine",
+      "--cobalt",
+      "--gold"
+    ],
+    existing_brand_constraints: "Austin voice archive and privacy-safe dossier, not a public BSI product surface."
+  },
+  forbidden_repeats: [
+    "metric-only dashboard",
+    "purple AI glow",
+    "generic card farm",
+    "numbers without interpretation",
+    "private quote dump",
+    "public persona everywhere"
+  ],
+  state_model: {
+    populated: "static local data rendered into the artifact",
+    loading: "not applicable because data is bundled at build time",
+    empty: "privacy boundaries intentionally omit private quotes",
+    error: "no-script notice covers missing JS",
+    stale: "generated_at and source dates are visible"
+  },
+  performance_budget: {
+    mobile: "explicit one-column collapse for hero, reflection chapters, charts, tables, recipes, and source cards",
+    reduced_motion: "CSS disables transitions and smooth scrolling under prefers-reduced-motion",
+    canvas_fallback: "no Canvas or WebGL; SVG charts and plain HTML tables remain readable",
+    lazy_loading: "single static file with bundled data and external React/D3 CDNs only"
+  },
+  fingerprint: {
+    layout_architecture: "sticky dossier rail and editorial reading column",
+    information_flow: "summary to deeper reflection to implication to evidence router",
+    rhythm: "long-form reflection chapters mixed with chart pairs and room recipes",
+    primary_visual_asset: "SVG data charts",
+    three_d_role: "none beyond surface hierarchy",
+    motion_grammar: "state feedback only",
+    interaction_model: "tabs, source links, selector"
+  },
+  asset_strategy: {
+    asset_job: "custom SVG charts explain evidence without exposing private text",
+    source_route: "local JSON summaries and official X public analysis data",
+    prompt_or_query: "not image-generated; data-bound SVG inside a static React artifact",
+    license_or_usage_state: "local authored data and public archive examples; no third-party media assets",
+    final_repo_path: "Voice-Style-Identity/austin-communication-context-map.html",
+    fallback_if_unavailable: "plain HTML tables and no-script message remain in the artifact"
+  },
+  restraint_clause: "Numbers are evidence, not the center of the artifact. Private data stays aggregate-only. The artifact should feel useful to read, not merely impressive to audit."
 };
 
 const dataJSON = JSON.stringify(data).replace(/</g, "\\u003c");
@@ -350,8 +854,10 @@ const html = String.raw`<!doctype html>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Austin Communication Context Map</title>
+  <meta name="description" content="Privacy-safe Austin communication dossier with public examples, private aggregate signals, and context routing guidance." />
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script crossorigin src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
   <script>
     (function () {
       if (window.React && window.ReactDOM) return;
@@ -359,6 +865,7 @@ const html = String.raw`<!doctype html>
       let cursor = 0;
       let rootElement = null;
       let rootVNode = null;
+      const svgTags = new Set(["svg","g","path","circle","rect","line","text","tspan","polygon","polyline","defs","marker"]);
       const flat = (items) => items.flat(Infinity).filter((item) => item !== null && item !== undefined && item !== false);
       function createElement(type, props, ...children) {
         return { type, props: { ...(props || {}), children: flat(children) } };
@@ -366,6 +873,7 @@ const html = String.raw`<!doctype html>
       function setProp(el, name, value) {
         if (name === "children" || name === "key" || value === null || value === undefined || value === false) return;
         if (name === "className") { el.setAttribute("class", value); return; }
+        if (name === "htmlFor") { el.setAttribute("for", value); return; }
         if (name === "style" && typeof value === "object") { Object.assign(el.style, value); return; }
         if (name.startsWith("on") && typeof value === "function") { el.addEventListener(name.slice(2).toLowerCase(), value); return; }
         if (value === true) { el.setAttribute(name, ""); return; }
@@ -375,7 +883,9 @@ const html = String.raw`<!doctype html>
         if (vnode === null || vnode === undefined || vnode === false) return document.createTextNode("");
         if (typeof vnode === "string" || typeof vnode === "number") return document.createTextNode(String(vnode));
         if (typeof vnode.type === "function") return renderVNode(vnode.type(vnode.props || {}));
-        const el = document.createElement(vnode.type);
+        const el = svgTags.has(vnode.type)
+          ? document.createElementNS("http://www.w3.org/2000/svg", vnode.type)
+          : document.createElement(vnode.type);
         for (const child of flat((vnode.props && vnode.props.children) || [])) el.appendChild(renderVNode(child));
         for (const [name, value] of Object.entries(vnode.props || {})) setProp(el, name, value);
         return el;
@@ -400,179 +910,521 @@ const html = String.raw`<!doctype html>
   </script>
   <style>
     :root {
-      --paper:#f6f1e8;
-      --ink:#171412;
-      --muted:#655d52;
-      --line:#d6c9b9;
-      --panel:#fffaf1;
-      --panel2:#ebe0cf;
-      --burnt:#bf5700;
-      --green:#2e6b5d;
-      --blue:#245f86;
-      --gold:#aa7a22;
-      --red:#99402f;
-      --dark:#171512;
-      --shadow:0 18px 42px rgba(29,22,12,.12);
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color-scheme: light;
+      --surface-page:#f2f4f0;
+      --surface-ink:#17191a;
+      --surface-panel:#fffef9;
+      --surface-soft:#e8eef0;
+      --surface-tint:#f6efe5;
+      --ink:#17191a;
+      --ink-soft:#434849;
+      --muted:#6d7473;
+      --line:#d3d9d5;
+      --line-strong:#b7c0bc;
+      --accent:#b55322;
+      --accent-strong:#8d3c18;
+      --pine:#2f5f55;
+      --cobalt:#2c638b;
+      --gold:#9b6f1f;
+      --danger:#8d3f34;
+      --radius:10px;
+      --shadow:0 22px 48px rgba(23,25,26,.10);
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      --sans: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+      font-family: var(--sans);
     }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--paper); color:var(--ink); line-height:1.5; }
+    body { margin:0; background:var(--surface-page); color:var(--ink); line-height:1.55; }
+    body:before {
+      content:""; position:fixed; inset:0; pointer-events:none; opacity:.23;
+      background-image:radial-gradient(circle at 1px 1px, rgba(23,25,26,.13) 1px, transparent 0);
+      background-size:22px 22px;
+    }
     a { color:inherit; }
     button { font:inherit; }
-    .shell { display:grid; grid-template-columns: 300px minmax(0,1fr); min-height:100vh; }
-    aside {
-      position:sticky; top:0; height:100vh; padding:28px 24px;
-      background:var(--dark); color:#fff7e8; display:flex; flex-direction:column; gap:22px;
+    .skip-link {
+      position:absolute; left:12px; top:12px; z-index:5; transform:translateY(-140%);
+      background:var(--surface-panel); color:var(--ink); border:1px solid var(--line); border-radius:8px; padding:10px 12px;
     }
-    aside h1 { margin:0; font-size:28px; line-height:1.02; letter-spacing:0; }
-    aside p { margin:0; color:#cbbda7; font-size:14px; }
-    .eyebrow { text-transform:uppercase; letter-spacing:.12em; font-size:11px; font-weight:800; color:var(--burnt); }
-    aside .eyebrow { color:#dca160; }
+    .skip-link:focus { transform:translateY(0); outline:2px solid var(--accent); outline-offset:3px; }
+    .shell { display:grid; grid-template-columns: 312px minmax(0,1fr); min-height:100dvh; position:relative; }
+    aside {
+      position:sticky; top:0; height:100dvh; padding:28px 24px;
+      background:linear-gradient(180deg,#17191a,#232321); color:#fbf6eb; display:flex; flex-direction:column; gap:22px;
+      border-right:1px solid rgba(255,255,255,.10);
+    }
+    aside h1 { margin:0; font-size:28px; line-height:1.02; letter-spacing:0; text-wrap:balance; }
+    aside p { margin:0; color:#cfc8bb; font-size:14px; }
+    .eyebrow { text-transform:uppercase; letter-spacing:.12em; font-size:11px; font-weight:800; color:var(--accent-strong); }
+    aside .eyebrow { color:#d79762; }
     nav { display:grid; gap:8px; }
-    nav a { text-decoration:none; border:1px solid rgba(255,255,255,.12); border-radius:8px; padding:9px 10px; color:#f8eddc; font-size:13px; }
-    nav a:hover, nav a:focus-visible { outline:2px solid #dca160; outline-offset:2px; }
-    main { padding:34px clamp(18px,4vw,58px) 64px; max-width:1560px; }
-    section { margin-bottom:44px; scroll-margin-top:24px; }
-    .hero { min-height:calc(100vh - 68px); display:grid; grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr); gap:24px; align-items:stretch; }
-    .hero-copy, .panel, .answer-card, .filter-detail, .mode-card {
-      border:1px solid var(--line); border-radius:8px; background:var(--panel); box-shadow:var(--shadow);
+    nav a {
+      text-decoration:none; border:1px solid rgba(255,255,255,.12); border-radius:8px; padding:9px 10px;
+      color:#fbf6eb; font-size:13px; transition:background .18s ease, border-color .18s ease;
+    }
+    nav a:hover { background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.26); }
+    a:focus-visible, button:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+    main { padding:34px clamp(18px,4vw,58px) 70px; max-width:1580px; }
+    section { margin-bottom:56px; scroll-margin-top:24px; }
+    .hero {
+      min-height:calc(100dvh - 68px); display:grid; grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);
+      gap:20px; align-items:stretch;
+    }
+    .hero-copy, .card, .callout, .quote-card, .filter-detail, .mode-card, .chart-card {
+      border:1px solid var(--line); border-radius:var(--radius); background:var(--surface-panel); box-shadow:var(--shadow);
     }
     .hero-copy { padding:clamp(28px,5vw,62px); display:flex; flex-direction:column; justify-content:center; }
-    .hero h2 { font-size:clamp(42px,7vw,82px); line-height:.96; letter-spacing:0; margin:10px 0 18px; max-width:940px; }
-    .thesis { max-width:840px; color:#383229; font-size:clamp(17px,2vw,22px); margin:0 0 24px; }
-    .metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; }
-    .metric { border:1px solid var(--line); background:#fffdf8; border-radius:8px; padding:15px; }
-    .metric b { display:block; font-size:clamp(26px,3vw,42px); line-height:1; color:var(--burnt); margin-bottom:6px; }
-    .metric span { display:block; color:var(--muted); font-size:12px; }
-    .answer-stack { display:grid; gap:12px; }
-    .answer-card { padding:16px; border-left:7px solid var(--green); }
-    .answer-card h3 { display:flex; justify-content:space-between; gap:12px; margin:0 0 8px; font-size:16px; }
-    .answer-card h3 span:last-child { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.1em; white-space:nowrap; }
-    .answer-card p { margin:0; color:var(--muted); font-size:14px; }
-    .section-head { display:flex; justify-content:space-between; align-items:end; gap:20px; margin-bottom:18px; }
-    .section-head h2 { margin:0; font-size:clamp(28px,4vw,48px); line-height:1.02; letter-spacing:0; }
-    .section-head p { margin:0; max-width:650px; color:var(--muted); }
+    .hero h2 { font-size:clamp(40px,6.8vw,78px); line-height:.98; letter-spacing:0; margin:10px 0 18px; max-width:920px; text-wrap:balance; }
+    .thesis { max-width:780px; color:#333837; font-size:clamp(17px,2vw,21px); margin:0 0 24px; }
+    .hero-aside { display:grid; gap:12px; align-content:stretch; }
+    .stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }
+    .stat {
+      border:1px solid var(--line); background:#fffef9; border-radius:8px; padding:14px; min-height:92px;
+    }
+    .stat b { display:block; font-size:clamp(25px,3vw,40px); line-height:1; color:var(--accent-strong); margin-bottom:7px; font-variant-numeric:tabular-nums; }
+    .stat span { display:block; color:var(--muted); font-size:12px; }
+    .card { padding:18px; box-shadow:none; }
+    .card-header { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:12px; }
+    .card-content { display:grid; gap:12px; }
+    .card h3, .chart-card h3 { margin:0; font-size:18px; line-height:1.18; text-wrap:balance; }
+    .card p, .chart-card p { margin:0; color:var(--muted); }
+    .badge {
+      display:inline-flex; align-items:center; gap:6px; border:1px solid var(--line); border-radius:999px; padding:5px 8px;
+      color:var(--ink-soft); background:#f6f8f6; font-size:11px; font-weight:700; white-space:nowrap;
+    }
+    .badge.verified { color:#1f5149; background:#edf6f2; border-color:#b8d5cb; }
+    .badge.reasoned { color:#743c16; background:#fff0e3; border-color:#e3c2a8; }
+    .tabs { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0; }
+    .tab-button {
+      border:1px solid var(--line); background:var(--surface-panel); border-radius:999px; color:var(--ink);
+      padding:9px 12px; cursor:pointer; min-height:38px;
+    }
+    .tab-button[aria-selected="true"] { background:var(--surface-ink); color:#fbf6eb; border-color:var(--surface-ink); }
+    .section-head { display:grid; grid-template-columns:minmax(0,1fr) minmax(250px,520px); gap:24px; align-items:end; margin-bottom:18px; }
+    .section-head h2 { margin:0; font-size:clamp(30px,4vw,50px); line-height:1.03; letter-spacing:0; text-wrap:balance; }
+    .section-head p { margin:0; color:var(--muted); max-width:66ch; }
+    .summary-strip {
+      display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:8px 0 24px;
+    }
+    .summary-strip div {
+      border:1px solid var(--line); border-radius:8px; padding:13px; background:#f9f7f0;
+    }
+    .summary-strip strong { display:block; margin-bottom:4px; color:var(--accent-strong); }
+    .summary-strip p { margin:0; color:var(--ink-soft); font-size:13px; }
+    .reading-path {
+      border:1px solid var(--line); border-radius:var(--radius); background:#fffaf0; padding:18px; margin-top:18px;
+      display:grid; grid-template-columns:180px minmax(0,1fr); gap:18px; align-items:start;
+    }
+    .reading-path h3 { margin:0; font-size:16px; color:var(--accent-strong); }
+    .reading-path p { margin:0; color:var(--ink-soft); max-width:85ch; }
     .grid-2 { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
     .grid-3 { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
-    .panel { padding:18px; }
-    .panel h3 { margin:0 0 12px; font-size:17px; }
+    .callout { padding:18px; border-left:7px solid var(--pine); }
+    .callout p { margin:0; color:var(--ink-soft); max-width:72ch; }
+    .long-read { display:grid; gap:18px; }
+    .insight-card {
+      background:var(--surface-panel); border:1px solid var(--line); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow);
+    }
+    .insight-card h3 { margin:0 0 10px; font-size:clamp(21px,2.7vw,30px); line-height:1.08; text-wrap:balance; }
+    .insight-card p { max-width:74ch; }
+    .insight-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:16px; align-items:start; margin-top:16px; }
+    .evidence-list { margin:0; padding-left:18px; color:var(--ink-soft); }
+    .evidence-list li { margin:7px 0; }
+    .reflection-stack { display:grid; gap:18px; }
+    .reflection-chapter {
+      display:grid; grid-template-columns:180px minmax(0,1fr); gap:22px; padding:24px;
+      border:1px solid var(--line); border-radius:var(--radius); background:var(--surface-panel); box-shadow:var(--shadow);
+    }
+    .chapter-index { display:grid; align-content:start; gap:10px; }
+    .chapter-index b { font-family:var(--mono); font-size:44px; line-height:.9; color:var(--accent-strong); font-variant-numeric:tabular-nums; }
+    .chapter-body { display:grid; gap:14px; }
+    .chapter-body h3 { margin:0; font-size:clamp(24px,3vw,38px); line-height:1.05; text-wrap:balance; }
+    .chapter-body p { margin:0; color:var(--ink-soft); max-width:82ch; }
+    .chapter-body .evidence-list { columns:2; column-gap:26px; }
+    .self-study {
+      border-left:5px solid var(--accent); background:#f7efe4; border-radius:8px; padding:14px 16px; color:#282d2b;
+    }
+    .self-study strong { color:var(--accent-strong); }
+    .implication {
+      border:1px solid var(--line); border-radius:8px; padding:14px; background:var(--surface-soft);
+      display:grid; gap:12px;
+    }
+    .implication strong { color:var(--ink); }
+    .chart-card { padding:18px; overflow:hidden; }
+    .chart-card svg { width:100%; height:auto; display:block; }
+    .chart-title-row { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:8px; }
     .caption { color:var(--muted); font-size:13px; margin:12px 0 0; }
-    .bar-list { display:grid; gap:10px; }
-    .bar-row { display:grid; grid-template-columns:minmax(128px,.9fr) minmax(120px,2fr) 76px; gap:10px; align-items:center; }
-    .bar-label { font-size:13px; color:#2b2721; }
-    .track { height:12px; border-radius:999px; background:#eadfce; overflow:hidden; }
-    .fill { height:100%; border-radius:999px; background:var(--burnt); }
-    .fill.green { background:var(--green); }
-    .fill.blue { background:var(--blue); }
-    .fill.gold { background:var(--gold); }
-    .bar-value { text-align:right; color:var(--muted); font-size:12px; font-variant-numeric:tabular-nums; }
-    .dual-row { display:grid; grid-template-columns:minmax(140px,1fr) 1.2fr 1.2fr; gap:10px; align-items:center; margin-bottom:10px; }
-    .dual-track { height:12px; border-radius:999px; background:#eadfce; position:relative; overflow:hidden; }
-    .dual-track span { position:absolute; inset:0 auto 0 0; border-radius:999px; background:var(--green); }
-    .dual-track.im span { background:var(--blue); }
-    .small-label { font-size:12px; color:var(--muted); }
+    .source-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .source-card {
+      border:1px solid var(--line); border-radius:var(--radius); padding:16px; background:var(--surface-panel);
+      display:grid; gap:12px;
+    }
+    .source-card h3 { margin:0; font-size:17px; display:flex; justify-content:space-between; gap:12px; }
+    .source-card h3 span:last-child { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.08em; white-space:nowrap; }
+    .source-card .proof { color:var(--accent-strong); font-weight:700; font-size:13px; }
+    .quote-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .quote-card { padding:16px; box-shadow:none; display:grid; gap:12px; }
+    blockquote { margin:0; font-size:16px; line-height:1.38; color:#202524; }
+    .quote-meta { display:flex; flex-wrap:wrap; gap:8px; align-items:center; color:var(--muted); font-size:12px; }
+    .quote-note { color:var(--ink-soft); font-size:13px; margin:0; }
     .filter-layout { display:grid; grid-template-columns:minmax(240px,.9fr) minmax(0,1.3fr); gap:18px; align-items:start; }
     .filter-buttons { display:grid; gap:8px; }
     .filter-buttons button {
-      text-align:left; border:1px solid var(--line); background:var(--panel); border-radius:8px; padding:11px 12px; cursor:pointer;
+      text-align:left; border:1px solid var(--line); background:var(--surface-panel); border-radius:8px; padding:11px 12px; cursor:pointer;
       display:flex; justify-content:space-between; gap:12px; color:var(--ink);
     }
-    .filter-buttons button.active { background:var(--dark); color:#fff7e8; border-color:var(--dark); }
-    .filter-buttons button:focus-visible { outline:2px solid var(--burnt); outline-offset:2px; }
+    .filter-buttons button.active { background:var(--surface-ink); color:#fbf6eb; border-color:var(--surface-ink); }
     .filter-detail { padding:20px; }
-    .filter-detail h3 { margin:0 0 6px; font-size:24px; }
+    .filter-detail h3 { margin:0 0 8px; font-size:24px; }
     .chips { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0; }
-    .chip { border:1px solid var(--line); background:#fffdf8; border-radius:999px; padding:7px 10px; font-size:12px; color:#383129; }
+    .chip { border:1px solid var(--line); background:#fffef9; border-radius:999px; padding:7px 10px; font-size:12px; color:#383f3e; }
     .matrix { overflow:auto; }
     .matrix table, .context-table { width:100%; border-collapse:collapse; min-width:650px; }
     th, td { border-bottom:1px solid var(--line); padding:9px 10px; font-size:13px; text-align:left; }
-    th { color:#4d463d; background:#f3eadc; position:sticky; top:0; }
+    th { color:#454b4a; background:#e7ece8; position:sticky; top:0; }
     .heat { text-align:center; color:#fff; font-weight:800; border-radius:6px; min-width:44px; }
-    .heat[data-v="1"] { background:#c9bca8; color:#261f18; }
-    .heat[data-v="2"] { background:#b99a72; }
-    .heat[data-v="3"] { background:#a8783f; }
-    .heat[data-v="4"] { background:#80683e; }
-    .heat[data-v="5"] { background:#2f6b5f; }
+    .heat[data-v="1"] { background:#c6ceca; color:#1f2322; }
+    .heat[data-v="2"] { background:#a8b7b5; color:#1f2322; }
+    .heat[data-v="3"] { background:#7e9894; }
+    .heat[data-v="4"] { background:#4f756f; }
+    .heat[data-v="5"] { background:#2f5f55; }
     .mode-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
     .mode-card { padding:15px; box-shadow:none; }
     .mode-card h3 { margin:0 0 8px; font-size:16px; }
     .mode-card p { margin:0 0 8px; color:var(--muted); font-size:13px; }
     .dots { display:flex; gap:4px; margin-top:10px; }
-    .dots span { width:10px; height:10px; border-radius:999px; background:#d4c8b8; }
-    .dots span.on { background:var(--burnt); }
-    .soft-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px; }
-    .soft-card { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fffdf8; }
-    .soft-card h3 { margin:0 0 8px; font-size:14px; color:var(--burnt); text-transform:capitalize; }
-    .soft-card p { margin:0; color:var(--muted); font-size:13px; }
-    .timeline { display:grid; gap:10px; }
-    .phase-row { display:grid; grid-template-columns:130px minmax(180px,1fr) 90px; gap:10px; align-items:center; }
-    .phase-row strong { font-size:12px; color:var(--muted); }
-    .source-card { display:grid; gap:10px; border:1px solid var(--line); border-radius:8px; padding:15px; background:#fffdf8; }
-    .source-card h3 { margin:0; display:flex; justify-content:space-between; gap:12px; font-size:16px; }
-    .source-card h3 span:last-child { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.08em; white-space:nowrap; }
-    .privacy { border-left:7px solid var(--blue); }
+    .dots span { width:10px; height:10px; border-radius:999px; background:#d4dbd7; }
+    .dots span.on { background:var(--accent); }
+    .soft-grid, .study-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+    .tension-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .tension-card {
+      border:1px solid var(--line); border-radius:var(--radius); padding:16px; background:#fffef9; display:grid; gap:10px;
+    }
+    .tension-card h3 { margin:0; font-size:17px; color:var(--surface-ink); text-transform:capitalize; }
+    .tension-card p { margin:0; color:var(--muted); font-size:13px; }
+    .tension-card strong { color:var(--accent-strong); }
+    .recipe-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .recipe-card {
+      border:1px solid var(--line); border-radius:var(--radius); padding:16px; background:#fffef9; display:grid; gap:10px;
+    }
+    .recipe-card h3 { margin:0; font-size:18px; line-height:1.15; }
+    .recipe-card dl { margin:0; display:grid; gap:8px; }
+    .recipe-card dt { font-weight:800; color:var(--accent-strong); font-size:12px; text-transform:uppercase; letter-spacing:.08em; }
+    .recipe-card dd { margin:2px 0 0; color:var(--ink-soft); font-size:13px; }
+    .soft-card, .study-card {
+      border:1px solid var(--line); border-radius:8px; padding:15px; background:#fffef9;
+    }
+    .soft-card h3, .study-card h3 { margin:0 0 8px; font-size:14px; color:var(--accent-strong); text-transform:capitalize; }
+    .soft-card p, .study-card p { margin:0; color:var(--muted); font-size:13px; }
+    .timeline { display:grid; gap:14px; }
+    .phase-card {
+      display:grid; grid-template-columns:160px minmax(0,1fr); gap:18px; border:1px solid var(--line); background:var(--surface-panel);
+      border-radius:var(--radius); padding:16px;
+    }
+    .phase-card h3 { margin:0; font-size:15px; color:var(--accent-strong); }
+    .phase-card h4 { margin:0 0 8px; font-size:20px; line-height:1.12; }
+    .phase-card p { margin:0 0 8px; color:var(--muted); }
     .context-table-wrap { overflow:auto; }
     .purpose-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
-    .purpose-card { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fffdf8; }
+    .purpose-card { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fffef9; }
     .purpose-card h3 { margin:0 0 8px; font-size:16px; }
     .purpose-card p { margin:0 0 8px; color:var(--muted); font-size:13px; }
-    .purpose-card ul { margin:8px 0 0; padding-left:18px; color:#383129; font-size:13px; }
+    .purpose-card ul { margin:8px 0 0; padding-left:18px; color:#383f3e; font-size:13px; }
     .purpose-card li { margin:3px 0; }
-    .footer { margin-top:28px; color:var(--muted); font-size:13px; }
-    @media (max-width: 1050px) {
+    .privacy-band {
+      border:1px solid var(--line); background:linear-gradient(135deg,#fffef9,#e8eef0); border-radius:var(--radius); padding:20px;
+    }
+    .footer { margin-top:28px; color:var(--muted); font-size:13px; max-width:86ch; }
+    .svg-label { font-family:var(--sans); fill:#343938; font-size:12px; }
+    .svg-note { font-family:var(--sans); fill:#67716f; font-size:11px; }
+    .svg-axis { stroke:#c3ccc8; stroke-width:.75; shape-rendering:crispEdges; }
+    .svg-grid { stroke:#d8dfdb; stroke-width:.75; shape-rendering:crispEdges; }
+    .svg-focus { fill:var(--accent); stroke:#fffef9; stroke-width:1.25; vector-effect:non-scaling-stroke; }
+    .svg-muted { fill:#dfe6e2; stroke:#b7c0bc; stroke-width:1; vector-effect:non-scaling-stroke; }
+    .svg-line { fill:none; stroke:var(--accent); stroke-width:2.25; vector-effect:non-scaling-stroke; }
+    @media (max-width: 1120px) {
       .shell { grid-template-columns:1fr; }
       aside { position:relative; height:auto; }
       .hero { grid-template-columns:1fr; min-height:auto; }
-      .mode-grid, .soft-grid, .purpose-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .source-grid, .mode-grid, .soft-grid, .study-grid, .purpose-grid, .quote-grid, .summary-strip, .tension-grid, .recipe-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
     }
-    @media (max-width: 720px) {
+    @media (max-width: 760px) {
       main { padding:22px 14px 44px; }
       .hero-copy { padding:24px; }
-      .section-head { display:block; }
-      .section-head p { margin-top:8px; }
-      .grid-2, .grid-3, .filter-layout, .mode-grid, .soft-grid, .purpose-grid { grid-template-columns:1fr; }
-      .bar-row, .dual-row, .phase-row { grid-template-columns:1fr; gap:6px; }
-      .bar-value { text-align:left; }
+      .section-head { grid-template-columns:1fr; gap:8px; }
+      .grid-2, .grid-3, .filter-layout, .source-grid, .mode-grid, .soft-grid, .study-grid, .purpose-grid, .quote-grid, .insight-grid, .summary-strip, .reflection-chapter, .reading-path, .tension-grid, .recipe-grid { grid-template-columns:1fr; }
+      .chapter-body .evidence-list { columns:1; }
+      .phase-card { grid-template-columns:1fr; }
       .matrix table, .context-table { min-width:540px; }
+      aside nav { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      blockquote { font-size:15px; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior:auto; }
+      * { transition:none !important; animation:none !important; }
     }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to dossier</a>
   <div id="root"></div>
+  <noscript>
+    <main style="padding:32px;font-family:Avenir Next, Helvetica Neue, Helvetica">
+      <h1>Austin Communication Context Map</h1>
+      <p>JavaScript is required to view the interactive dossier. The source data remains in the repository as privacy-safe summaries.</p>
+    </main>
+  </noscript>
   <script>
     const DATA = ${dataJSON};
     const h = React.createElement;
     const fmt = new Intl.NumberFormat("en-US");
+    const D3 = window.d3 || null;
+    const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+    function linear(domain, range) {
+      if (D3) return D3.scaleLinear(domain, range);
+      return function (value) {
+        const t = (value - domain[0]) / (domain[1] - domain[0] || 1);
+        return range[0] + t * (range[1] - range[0]);
+      };
+    }
+    function sqrtScale(domain, range) {
+      if (D3) return D3.scaleSqrt(domain, range);
+      const base = linear(domain.map(Math.sqrt), range);
+      return function (value) { return base(Math.sqrt(value)); };
+    }
+    function point(domain, range) {
+      if (D3) return D3.scalePoint(domain, range).padding(.35);
+      return function (value) {
+        const idx = domain.indexOf(value);
+        return range[0] + (idx / Math.max(1, domain.length - 1)) * (range[1] - range[0]);
+      };
+    }
+    function pathLine(points) {
+      if (D3) return D3.line()(points);
+      return points.map((p, i) => (i ? "L" : "M") + p[0] + "," + p[1]).join(" ");
+    }
+    function polar(cx, cy, r, angle) {
+      return [cx + Math.cos(angle) * r, cy + Math.sin(angle) * r];
+    }
 
-    function Metric({ value, label }) {
-      return h("div", { className:"metric" }, h("b", null, value), h("span", null, label));
+    function Badge({ kind, children }) {
+      return h("span", { className:"badge " + (kind || "") }, children);
     }
-    function BarList({ rows, color = "burnt", suffix = "", maxValue }) {
+    function Stat({ value, label }) {
+      return h("div", { className:"stat" }, h("b", null, value), h("span", null, label));
+    }
+    function SectionHead({ title, body }) {
+      return h("div", { className:"section-head" }, h("h2", null, title), h("p", null, body));
+    }
+    function Card({ title, badge, children }) {
+      return h("article", { className:"card" },
+        h("div", { className:"card-header" }, h("h3", null, title), badge ? h(Badge, { kind:badge.kind }, badge.text) : null),
+        h("div", { className:"card-content" }, children)
+      );
+    }
+    function BarList({ rows, color = "var(--accent)", suffix = "", maxValue }) {
       const max = maxValue || Math.max(...rows.map((row) => row.value), 1);
-      const colorClass = color === "green" ? " green" : color === "blue" ? " blue" : color === "gold" ? " gold" : "";
-      return h("div", { className:"bar-list" }, rows.map((row) =>
-        h("div", { className:"bar-row", key:row.label },
-          h("div", { className:"bar-label" }, row.label),
-          h("div", { className:"track" }, h("div", { className:"fill" + colorClass, style:{ width: Math.max(2, (row.value / max) * 100) + "%" } })),
-          h("div", { className:"bar-value" }, typeof row.value === "number" ? fmt.format(row.value) + suffix : row.value)
+      return h("div", { className:"chart-card" },
+        h("svg", { viewBox:"0 0 760 " + (rows.length * 40 + 36), role:"img", "aria-label":"Horizontal bar chart" },
+          rows.map((row, index) => {
+            const y = 24 + index * 40;
+            const w = Math.max(8, (row.value / max) * 430);
+            return h("g", { key:row.label },
+              h("text", { x:0, y:y + 14, className:"svg-label" }, row.label),
+              h("rect", { x:190, y:y, width:430, height:14, rx:7, className:"svg-muted" }),
+              h("rect", { x:190, y:y, width:w, height:14, rx:7, fill:color }),
+              h("text", { x:638, y:y + 13, className:"svg-note" }, typeof row.value === "number" ? fmt.format(row.value) + suffix : row.value)
+            );
+          })
         )
-      ));
+      );
     }
-    function DualBars({ rows }) {
+    function MarkerComparisonChart() {
+      const rows = DATA.markerRows;
+      const width = 760;
+      const rowH = 54;
+      const height = 58 + rows.length * rowH;
       const max = Math.max(...rows.flatMap((row) => [row.snapchat, row.imessage]), 1);
-      return h("div", null,
-        h("div", { className:"dual-row small-label" }, h("strong", null, "marker"), h("strong", null, "Snapchat"), h("strong", null, "iMessage")),
-        rows.map((row) =>
-          h("div", { className:"dual-row", key:row.label },
-            h("div", { className:"bar-label" }, row.label),
-            h("div", null, h("div", { className:"dual-track" }, h("span", { style:{ width: (row.snapchat / max) * 100 + "%" } })), h("div", { className:"small-label" }, row.snapchat + " / 100")),
-            h("div", null, h("div", { className:"dual-track im" }, h("span", { style:{ width: (row.imessage / max) * 100 + "%" } })), h("div", { className:"small-label" }, row.imessage + " / 100"))
+      const x = linear([0, max], [230, 650]);
+      return h("div", { className:"chart-card" },
+        h("div", { className:"chart-title-row" },
+          h("h3", null, "Private marker rates"),
+          h(Badge, { kind:"verified" }, "per 100 sent texts")
+        ),
+        h("svg", { viewBox:"0 0 " + width + " " + height, role:"img", "aria-label":"Snapchat and iMessage private marker rates" },
+          [0, 10, 20, 30].map((tick) =>
+            h("g", { key:"tick-" + tick },
+              h("line", { x1:x(tick), x2:x(tick), y1:28, y2:height - 28, className:"svg-grid" }),
+              h("text", { x:x(tick), y:20, textAnchor:"middle", className:"svg-note" }, tick)
+            )
+          ),
+          rows.map((row, index) => {
+            const y = 45 + index * rowH;
+            return h("g", { key:row.label },
+              h("text", { x:0, y:y + 12, className:"svg-label" }, row.label),
+              h("line", { x1:230, x2:650, y1:y + 2, y2:y + 2, className:"svg-axis" }),
+              h("rect", { x:230, y:y - 8, width:x(row.snapchat) - 230, height:12, rx:6, fill:"var(--pine)" }),
+              h("rect", { x:230, y:y + 9, width:x(row.imessage) - 230, height:12, rx:6, fill:"var(--cobalt)" }),
+              h("text", { x:x(row.snapchat) + 7, y:y + 2, className:"svg-note" }, row.snapchat),
+              h("text", { x:x(row.imessage) + 7, y:y + 19, className:"svg-note" }, row.imessage)
+            );
+          }),
+          h("text", { x:230, y:height - 4, className:"svg-note" }, "green = Snapchat, blue = iMessage")
+        ),
+        h("p", { className:"caption" }, "The highest private signals are ask and logistics. That backs the human read: the private voice is practical first, then warm through specificity.")
+      );
+    }
+    function ContextBubbleChart() {
+      const rows = DATA.privateContextRows;
+      const width = 760;
+      const height = 380;
+      const x = linear([4.5, 7.5], [90, 660]);
+      const y = linear([38, 53], [300, 70]);
+      const r = sqrtScale([0, Math.max(...rows.map((row) => row.messages))], [12, 46]);
+      return h("div", { className:"chart-card" },
+        h("div", { className:"chart-title-row" },
+          h("h3", null, "Room shape changes the voice"),
+          h(Badge, { kind:"verified" }, "Messages aggregate")
+        ),
+        h("svg", { viewBox:"0 0 " + width + " " + height, role:"img", "aria-label":"Private room context bubble chart" },
+          [40,45,50].map((tick) =>
+            h("g", { key:"y-" + tick },
+              h("line", { x1:78, x2:680, y1:y(tick), y2:y(tick), className:"svg-grid" }),
+              h("text", { x:52, y:y(tick) + 4, textAnchor:"end", className:"svg-note" }, tick)
+            )
+          ),
+          [5,6,7].map((tick) =>
+            h("g", { key:"x-" + tick },
+              h("line", { x1:x(tick), x2:x(tick), y1:60, y2:306, className:"svg-grid" }),
+              h("text", { x:x(tick), y:336, textAnchor:"middle", className:"svg-note" }, tick + " words")
+            )
+          ),
+          h("text", { x:90, y:30, className:"svg-label" }, "Higher = more five-word-or-less messages"),
+          h("text", { x:412, y:365, textAnchor:"middle", className:"svg-label" }, "Median words"),
+          rows.map((row, index) => {
+            const cx = x(row.median_words);
+            const cy = y(row.short5_per_100);
+            const color = ["var(--accent)","var(--pine)","var(--cobalt)","var(--gold)"][index % 4];
+            return h("g", { key:row.key },
+              h("circle", { cx, cy, r:r(row.messages), fill:color, opacity:.78, stroke:"#fffef9", strokeWidth:1.4 }),
+              h("text", { x:cx + r(row.messages) + 8, y:cy - 2, className:"svg-label" }, row.label),
+              h("text", { x:cx + r(row.messages) + 8, y:cy + 14, className:"svg-note" }, fmt.format(row.messages) + " texts")
+            );
+          })
+        ),
+        h("p", { className:"caption" }, "Direct rooms carry the biggest sample and the tightest compression. Medium rooms stretch a little longer, which suggests more context has to be made explicit.")
+      );
+    }
+    function VoiceCompass() {
+      const [modeIndex, setModeIndex] = React.useState(0);
+      const mode = DATA.routerModes[modeIndex];
+      const axes = ["direct", "brief", "humor", "warm", "analysis", "repair"];
+      const width = 560;
+      const height = 420;
+      const cx = 280;
+      const cy = 210;
+      const maxR = 135;
+      const points = axes.map((axis, index) => {
+        const angle = -Math.PI / 2 + index * (Math.PI * 2 / axes.length);
+        const value = mode.values[index] / 5;
+        return polar(cx, cy, maxR * value, angle);
+      });
+      const closed = points.concat([points[0]]);
+      return h("div", { className:"chart-card" },
+        h("div", { className:"chart-title-row" },
+          h("h3", null, "Voice compass"),
+          h(Badge, { kind:"reasoned" }, "router values")
+        ),
+        h("div", { className:"tabs", role:"tablist", "aria-label":"Voice mode selector" },
+          DATA.routerModes.map((item, index) =>
+            h("button", {
+              className:"tab-button",
+              role:"tab",
+              "aria-selected": index === modeIndex ? "true" : "false",
+              onClick:() => setModeIndex(index),
+              key:item.mode,
+            }, item.mode)
           )
-        )
+        ),
+        h("svg", { viewBox:"0 0 " + width + " " + height, role:"img", "aria-label":"Voice compass for " + mode.mode },
+          [1,2,3,4,5].map((level) => {
+            const pts = axes.map((axis, index) => polar(cx, cy, maxR * level / 5, -Math.PI / 2 + index * (Math.PI * 2 / axes.length)));
+            return h("polygon", { key:level, points:pts.map((p) => p.join(",")).join(" "), fill:"none", stroke:"#d8dfdb", strokeWidth:.75 });
+          }),
+          axes.map((axis, index) => {
+            const angle = -Math.PI / 2 + index * (Math.PI * 2 / axes.length);
+            const end = polar(cx, cy, maxR + 22, angle);
+            const lineEnd = polar(cx, cy, maxR, angle);
+            return h("g", { key:axis },
+              h("line", { x1:cx, y1:cy, x2:lineEnd[0], y2:lineEnd[1], className:"svg-grid" }),
+              h("text", { x:end[0], y:end[1], textAnchor:end[0] < cx - 5 ? "end" : end[0] > cx + 5 ? "start" : "middle", className:"svg-label" }, axis)
+            );
+          }),
+          h("path", { d:pathLine(closed) + "Z", fill:"rgba(181,83,34,.22)", stroke:"var(--accent)", strokeWidth:2.25 }),
+          points.map((p, index) => h("circle", { key:index, cx:p[0], cy:p[1], r:4, className:"svg-focus" })),
+          h("text", { x:24, y:34, className:"svg-label" }, mode.mode),
+          h("text", { x:24, y:54, className:"svg-note" }, mode.evidence)
+        ),
+        h("p", { className:"caption" }, mode.shape + " Avoid: " + mode.avoid)
+      );
+    }
+    function PhaseVolumeChart() {
+      const rows = DATA.trendNarrative.map((item, index) => {
+        const source = DATA.phaseRows[index];
+        return { ...item, value: source ? source.value : 0 };
+      });
+      const width = 760;
+      const height = 310;
+      const x = point(rows.map((row) => row.phase), [80, 680]);
+      const y = sqrtScale([0, Math.max(...rows.map((row) => row.value))], [250, 70]);
+      const points = rows.map((row) => [x(row.phase), y(row.value)]);
+      return h("div", { className:"chart-card" },
+        h("div", { className:"chart-title-row" },
+          h("h3", null, "Trend arc"),
+          h(Badge, { kind:"verified" }, "volume and phase")
+        ),
+        h("svg", { viewBox:"0 0 " + width + " " + height, role:"img", "aria-label":"Communication phase trend arc" },
+          h("line", { x1:80, x2:680, y1:250, y2:250, className:"svg-axis" }),
+          h("path", { d:pathLine(points), className:"svg-line" }),
+          rows.map((row) => {
+            const px = x(row.phase);
+            const py = y(row.value);
+            return h("g", { key:row.phase },
+              h("circle", { cx:px, cy:py, r:7, className:"svg-focus" }),
+              h("text", { x:px, y:274, textAnchor:"middle", className:"svg-note" }, row.phase),
+              h("text", { x:px, y:py - 13, textAnchor:"middle", className:"svg-label" }, fmt.format(row.value)),
+              h("text", { x:px, y:py + 24, textAnchor:"middle", className:"svg-note" }, row.title)
+            );
+          })
+        ),
+        h("p", { className:"caption" }, "The visible story is not a straight maturity ladder. It is channel separation: early public identity, lower-volume bridge, adult commentary, commentary costume, private compression.")
+      );
+    }
+    function StrengthRiskChart() {
+      const width = 720;
+      const height = 410;
+      const x = linear([2.8, 5], [84, 650]);
+      const y = linear([2.8, 5], [318, 70]);
+      return h("div", { className:"chart-card" },
+        h("div", { className:"chart-title-row" },
+          h("h3", null, "Strengths that can turn into friction"),
+          h(Badge, { kind:"reasoned" }, "interpretive map")
+        ),
+        h("svg", { viewBox:"0 0 " + width + " " + height, role:"img", "aria-label":"Strength and risk interpretive map" },
+          h("line", { x1:x(3.8), x2:x(3.8), y1:58, y2:330, className:"svg-grid" }),
+          h("line", { x1:72, x2:665, y1:y(3.8), y2:y(3.8), className:"svg-grid" }),
+          h("text", { x:80, y:36, className:"svg-label" }, "More useful when aimed well"),
+          h("text", { x:530, y:358, className:"svg-label" }, "More likely to bite when misrouted"),
+          DATA.strengthRisk.map((row, index) => {
+            const color = ["var(--accent)","var(--pine)","var(--cobalt)","var(--gold)","var(--danger)","#5f6c70"][index % 6];
+            return h("g", { key:row.name },
+              h("circle", { cx:x(row.x), cy:y(row.y), r:8, fill:color, stroke:"#fffef9", strokeWidth:1.5 }),
+              h("text", { x:x(row.x) + 12, y:y(row.y) + 4, className:"svg-label" }, row.name)
+            );
+          })
+        ),
+        h("p", { className:"caption" }, "This chart is a reading lens, not a measurement. The point is to show where the same trait can help or hurt depending on the room.")
       );
     }
     function FilterAtlas() {
@@ -586,7 +1438,7 @@ const html = String.raw`<!doctype html>
           )
         )),
         h("div", { className:"filter-detail" },
-          h("p", { className:"eyebrow" }, "Filter family"),
+          h(Badge, { kind:"verified" }, "filter family"),
           h("h3", null, item.family),
           h("p", null, item.claim),
           h("div", { className:"chips" }, item.filters.map((filter) => h("span", { className:"chip", key:filter }, filter))),
@@ -596,8 +1448,11 @@ const html = String.raw`<!doctype html>
       );
     }
     function Matrix() {
-      return h("div", { className:"matrix panel" },
-        h("h3", null, "Source Strength Matrix"),
+      return h("div", { className:"matrix chart-card" },
+        h("div", { className:"chart-title-row" },
+          h("h3", null, "What each source can prove"),
+          h(Badge, { kind:"reasoned" }, "1 to 5")
+        ),
         h("table", null,
           h("thead", null, h("tr", null, h("th", null, "source"), DATA.matrixColumns.map((col) => h("th", { key:col }, col)))),
           h("tbody", null, DATA.matrixRows.map((row) =>
@@ -606,15 +1461,18 @@ const html = String.raw`<!doctype html>
             ))
           ))
         ),
-        h("p", { className:"caption" }, "Scores are a router-strength map, not a psychological diagnosis: 1 means weak evidence for that mode, 5 means strong source support.")
+        h("p", { className:"caption" }, "Scores route evidence. They are not personality scores.")
       );
     }
     function PrivateContextRouter() {
-      return h("div", { className:"panel context-table-wrap" },
-        h("h3", null, "Anonymous Private Room Router"),
+      return h("div", { className:"chart-card context-table-wrap" },
+        h("div", { className:"chart-title-row" },
+          h("h3", null, "Anonymous private room router"),
+          h(Badge, { kind:"verified" }, "local-only source")
+        ),
         h("table", { className:"context-table" },
           h("thead", null, h("tr", null,
-            ["context","texts","median","<=5 words","ask","logistics","routing"].map((head) => h("th", { key:head }, head))
+            ["context","texts","median","five words or fewer","ask","logistics","routing"].map((head) => h("th", { key:head }, head))
           )),
           h("tbody", null, DATA.privateContextRows.map((row) =>
             h("tr", { key:row.key },
@@ -628,7 +1486,7 @@ const html = String.raw`<!doctype html>
             )
           ))
         ),
-        h("p", { className:"caption" }, "This is the new local-only Messages layer in public-safe form: relationship shape without relationship identity.")
+        h("p", { className:"caption" }, "Relationship shape is useful. Relationship identity stays private.")
       );
     }
     function PurposeBuckets() {
@@ -645,12 +1503,13 @@ const html = String.raw`<!doctype html>
       ));
     }
     function SourceCards() {
-      return h("div", { className:"grid-3" }, DATA.sourceRows.map((row) =>
-        h("article", { className:"source-card privacy", key:row.label },
+      return h("div", { className:"source-grid" }, DATA.sourceRows.map((row) =>
+        h("article", { className:"source-card", key:row.label },
           h("h3", null, h("span", null, row.label), h("span", null, row.kind)),
-          h("div", { className:"metrics" },
-            h(Metric, { value: fmt.format(row.rows) + (row.suffix || ""), label:"source rows/items" }),
-            h(Metric, { value: fmt.format(row.usable) + (row.suffix || ""), label:"usable signal" })
+          h("p", { className:"proof" }, row.proof),
+          h("div", { className:"stat-grid" },
+            h(Stat, { value: fmt.format(row.rows) + (row.suffix || ""), label:"source rows/items" }),
+            h(Stat, { value: fmt.format(row.usable) + (row.suffix || ""), label:"usable signal" })
           ),
           h("p", { className:"caption" }, row.note),
           h("p", { className:"caption" }, h("strong", null, "Privacy: "), row.privacy)
@@ -670,112 +1529,245 @@ const html = String.raw`<!doctype html>
         )
       ));
     }
-    function Timeline() {
-      const max = Math.max(...DATA.phaseRows.map((row) => row.value), 1);
-      return h("div", { className:"timeline" }, DATA.phaseRows.map((row) =>
-        h("div", { className:"phase-row", key:row.lane + row.label },
-          h("strong", null, row.lane),
-          h("div", null,
-            h("div", { className:"bar-label" }, row.label),
-            h("div", { className:"track" }, h("div", { className:"fill " + (row.lane === "private language" ? "green" : "blue"), style:{ width: Math.max(2, row.value / max * 100) + "%" } }))
+    function InsightCards() {
+      return h("div", { className:"long-read" }, DATA.humanSynthesis.map((item) =>
+        h("article", { className:"insight-card", key:item.title },
+          h("div", { className:"card-header" },
+            h("h3", null, item.title),
+            h(Badge, { kind:item.status.includes("verified") ? "verified" : "reasoned" }, item.status)
           ),
-          h("div", { className:"bar-value" }, fmt.format(row.value))
+          h("p", null, item.summary),
+          h("div", { className:"insight-grid" },
+            h("div", null,
+              h("p", { className:"eyebrow" }, "receipts"),
+              h("ul", { className:"evidence-list" }, item.evidence.map((line) => h("li", { key:line }, line)))
+            ),
+            h("div", { className:"implication" },
+              h("p", null, h("strong", null, "Implication: "), item.implication),
+              h("p", null, h("strong", null, "Strength: "), item.strength),
+              h("p", null, h("strong", null, "Watch: "), item.watch)
+            )
+          )
         )
+      ));
+    }
+    function ReflectionChapters() {
+      return h("div", { className:"reflection-stack" }, DATA.reflectionChapters.map((item, index) =>
+        h("article", { className:"reflection-chapter", key:item.title },
+          h("div", { className:"chapter-index" },
+            h("b", null, String(index + 1).padStart(2, "0")),
+            h(Badge, { kind:item.status.includes("verified") ? "verified" : "reasoned" }, item.status)
+          ),
+          h("div", { className:"chapter-body" },
+            h("h3", null, item.title),
+            item.read.map((paragraph) => h("p", { key:paragraph }, paragraph)),
+            h("ul", { className:"evidence-list" }, item.evidence.map((line) => h("li", { key:line }, line))),
+            h("p", { className:"self-study" }, h("strong", null, "Self-study: "), item.selfStudy)
+          )
+        )
+      ));
+    }
+    function TensionPairs() {
+      return h("div", { className:"tension-grid" }, DATA.tensionPairs.map((item) =>
+        h("article", { className:"tension-card", key:item.trait },
+          h("h3", null, item.trait),
+          h("p", null, h("strong", null, "Gift: "), item.gift),
+          h("p", null, h("strong", null, "Shadow: "), item.shadow),
+          h("p", null, h("strong", null, "Route: "), item.route)
+        )
+      ));
+    }
+    function CommunicationRecipes() {
+      return h("div", { className:"recipe-grid" }, DATA.communicationRecipes.map((item) =>
+        h("article", { className:"recipe-card", key:item.room },
+          h("h3", null, item.room),
+          h("dl", null,
+            h("div", null, h("dt", null, "Start"), h("dd", null, item.start)),
+            h("div", null, h("dt", null, "Evidence"), h("dd", null, item.proof)),
+            h("div", null, h("dt", null, "Add"), h("dd", null, item.add)),
+            h("div", null, h("dt", null, "Avoid"), h("dd", null, item.avoid))
+          )
+        )
+      ));
+    }
+    function TrendNarrative() {
+      return h("div", { className:"timeline" }, DATA.trendNarrative.map((item) =>
+        h("article", { className:"phase-card", key:item.phase },
+          h("div", null, h("h3", null, item.phase)),
+          h("div", null,
+            h("h4", null, item.title),
+            h("p", null, item.read),
+            h("p", null, h("strong", null, "Proof: "), item.proof),
+            h("p", null, h("strong", null, "Implication: "), item.implication)
+          )
+        )
+      ));
+    }
+    function QuoteGallery() {
+      return h("div", { className:"quote-grid" }, DATA.publicExamples.map((example) =>
+        h("article", { className:"quote-card", key:example.label },
+          h("div", { className:"card-header" },
+            h("h3", null, example.label),
+            h(Badge, { kind:"verified" }, example.date)
+          ),
+          h("blockquote", null, example.text),
+          h("p", { className:"quote-note" }, example.note),
+          h("div", { className:"quote-meta" },
+            h("span", null, example.account),
+            h("span", null, example.likes + " likes"),
+            h("a", { href:example.url }, "source")
+          )
+        )
+      ));
+    }
+    function StudyPrompts() {
+      return h("div", { className:"study-grid" }, DATA.studyPrompts.map((item) =>
+        h("article", { className:"study-card", key:item.title }, h("h3", null, item.title), h("p", null, item.body))
       ));
     }
     function App() {
       return h("div", { className:"shell" },
         h("aside", null,
-          h("p", { className:"eyebrow" }, "Austin Voice System"),
+          h("p", { className:"eyebrow" }, "Austin voice system"),
           h("h1", null, "Communication Context Map"),
-          h("p", null, "A visual answer to whether the archive work helps, and which filters now exist across platforms."),
+          h("p", null, "A privacy-safe dossier for reading your voice across public, private, long-form, and AI-partner contexts."),
           h("nav", { "aria-label":"Artifact sections" }, [
-            ["answer","Answer"],
-            ["sources","Sources"],
+            ["answer","Start"],
+            ["human-read","Human read"],
+            ["deeper-read","Deeper read"],
+            ["charts","Charts"],
+            ["trends","Trends"],
+            ["quotes","Public examples"],
+            ["private-router","Private router"],
+            ["recipes","Recipes"],
             ["filters","Filters"],
-            ["signals","Signals"],
-            ["private-router","Private Router"],
-            ["matrix","Matrix"],
-            ["router","Room Router"],
-            ["soft","Soft Layer"],
+            ["sources","Sources"],
             ["privacy","Privacy"]
-          ].map(([id,label]) =>
-            h("a", { href:"#"+id, key:id }, label)
-          )),
-          h("p", null, "Generated " + DATA.generatedAt + ". Private sources are derived-only.")
+          ].map(([id,label]) => h("a", { href:"#"+id, key:id }, label))),
+          h("p", null, "Generated " + DATA.generatedAt + ". Private sources are aggregate-only.")
         ),
-        h("main", null,
+        h("main", { id:"main" },
           h("section", { className:"hero", id:"answer" },
             h("div", { className:"hero-copy" },
-              h("p", { className:"eyebrow" }, "Short answer"),
-              h("h2", null, "Yes. This is now useful as a map, not just a memory."),
-              h("p", { className:"thesis" }, "The work turns platform archives into " + DATA.filterFamilies.length + " category families and " + DATA.filterCount + " reusable filters for choosing audience, privacy, purpose, tone, evidence, and output mode."),
-              h("div", { className:"metrics" },
-                h(Metric, { value:fmt.format(DATA.totals.officialX), label:"official X rows parsed" }),
-                h(Metric, { value:fmt.format(DATA.totals.authoredX), label:"authored public rows" }),
-                h(Metric, { value:fmt.format(DATA.totals.decodedMessages), label:"decoded private sent texts" }),
-                h(Metric, { value:DATA.filterCount, label:"usable filters identified" })
+              h("p", { className:"eyebrow" }, "Summary synthesis"),
+              h("h2", null, "This is a mirror with receipts, not a metric dump."),
+              h("p", { className:"thesis" }, "The archive now shows how Austin thinks, jokes, asks, repairs, and changes voice by room. Numbers support the read. They do not replace the human read."),
+              h("div", { className:"summary-strip" },
+                h("div", null, h("strong", null, "Core engine"), h("p", null, "Turn a messy thing into a concrete line someone can use.")),
+                h("div", null, h("strong", null, "Best humor"), h("p", null, "Take a normal object and give it institutional stakes.")),
+                h("div", null, h("strong", null, "Growth edge"), h("p", null, "Name care directly when compression would hide it."))
+              ),
+              h("div", { className:"stat-grid" },
+                h(Stat, { value:fmt.format(DATA.totals.officialX), label:"official X rows parsed" }),
+                h(Stat, { value:fmt.format(DATA.totals.authoredX), label:"authored public rows" }),
+                h(Stat, { value:fmt.format(DATA.totals.decodedMessages), label:"decoded private sent texts" }),
+                h(Stat, { value:DATA.filterCount, label:"usable context filters" })
               )
             ),
-            h("div", { className:"answer-stack" }, DATA.answer.map((item) =>
-              h("article", { className:"answer-card", key:item.label },
-                h("h3", null, h("span", null, item.label), h("span", null, item.status)),
-                h("p", null, item.body)
+            h("div", { className:"hero-aside" },
+              h(Card, { title:"The practical answer", badge:{ kind:"verified", text:"done" } },
+                h("p", null, "The artifact now routes by room, purpose, privacy, and evidence strength. It is built to help future agents write with you, write as you when asked, and avoid flattening every context into one public persona.")
+              ),
+              h(Card, { title:"The human answer", badge:{ kind:"reasoned", text:"read" } },
+                h("p", null, "Your strongest communication pattern is pressure converted into a specific, usable line. Publicly that line often becomes a joke. Privately it often becomes a direct ask. In long-form it becomes a system.")
+              ),
+              h(Card, { title:"The privacy answer", badge:{ kind:"verified", text:"bounded" } },
+                h("p", null, "Raw private messages, DMs, names, group names, handles, filenames, media paths, burner metadata, and private phrase lists stay out of the public repo.")
               )
-            ))
-          ),
-          h("section", { id:"sources" },
-            h("div", { className:"section-head" }, h("h2", null, "Evidence Universe"), h("p", null, "The old X artifact was one lane. This view shows the broader source map and what each lane is allowed to contribute.")),
-            h(SourceCards, null)
-          ),
-          h("section", { id:"filters" },
-            h("div", { className:"section-head" }, h("h2", null, "Category And Filter Atlas"), h("p", null, "These are the practical lenses that now exist for future writing, replies, analysis, and agent behavior.")),
-            h(FilterAtlas, null)
-          ),
-          h("section", { id:"signals" },
-            h("div", { className:"section-head" }, h("h2", null, "Signal Charts"), h("p", null, "Hard numbers behind the soft read: compression, reply gravity, marker rates, topics, and joke mechanics.")),
-            h("div", { className:"grid-2" },
-              h("div", { className:"panel" }, h("h3", null, "Compression Ladder"), h(BarList, { rows:DATA.compressionRows, color:"green", suffix:" words" }), h("p", { className:"caption" }, "Private language compresses hard: both Snapchat and iMessage land at a 5-word median. Public social is still short, but it has more stage lighting.")),
-              h("div", { className:"panel" }, h("h3", null, "Private Marker Rates"), h(DualBars, { rows:DATA.markerRows }), h("p", { className:"caption" }, "Questions and logistics dominate private communication. Warmth exists, but it usually rides inside practical context instead of announcing itself."))
-            ),
-            h("div", { className:"grid-2", style:{ marginTop:"18px" } },
-              h("div", { className:"panel" }, h("h3", null, "Combined X Themes"), h(BarList, { rows:DATA.combinedThemes, color:"blue" }), h("p", { className:"caption" }, "Public gravity clusters around replies, sports/Texas, everyday observation, tools, family/life, and platform context.")),
-              h("div", { className:"panel" }, h("h3", null, "Combined X Humor Mechanics"), h(BarList, { rows:DATA.combinedHumor, color:"gold" }), h("p", { className:"caption" }, "Humor is most often deadpan, self-involving, reply-native, and built from overstated stakes. The bit ends before it explains itself."))
-            ),
-            h("div", { className:"panel", style:{ marginTop:"18px" } }, h("h3", null, "Phase Volume Map"), h(Timeline, null), h("p", { className:"caption" }, "The public record shows persona evolution. The private record shows long-run compression and relationship-context density. They answer different questions."))
-          ),
-          h("section", { id:"private-router" },
-            h("div", { className:"section-head" }, h("h2", null, "Private Context Router"), h("p", null, "This is the executed Messages wording pass: anonymous relationship-room signals and purpose buckets, not private examples.")),
-            h(PrivateContextRouter, null),
-            h("div", { className:"panel", style:{ marginTop:"18px" } },
-              h("h3", null, "Purpose Buckets"),
-              h("p", { className:"caption" }, "These buckets tell future agents what job the private message is doing before choosing tone."),
-              h("div", { style:{ marginTop:"14px" } }, h(PurposeBuckets, null))
             )
           ),
-          h("section", { id:"matrix" },
-            h("div", { className:"section-head" }, h("h2", null, "What Each Source Proves"), h("p", null, "A compact source-by-context heatmap for deciding which evidence to trust for which communication mode.")),
-            h(Matrix, null)
+          h("section", { id:"method" },
+            h(SectionHead, { title:"Method, in plain English", body:"The goal was not to prove a personality theory. The goal was to build a useful, reusable context map from Austin-derived evidence while keeping private people private." }),
+            h("div", { className:"grid-2" }, DATA.methodSteps.map((step) =>
+              h(Card, { title:step.title, badge:{ kind:"verified", text:"method" }, key:step.title }, h("p", null, step.body))
+            )),
+            h("div", { className:"reading-path" },
+              h("h3", null, "How to read this"),
+              h("p", null, "Start with the human read, then use the charts as receipts. The private sections prove shape, not private wording. The public examples show real phrasing because they were already public. The recipes are the part future agents should reuse before drafting.")
+            ),
+            h("p", { className:"footer" }, "Design read: " + DATA.design.read + " Seed " + DATA.design.seed + ". " + DATA.design.note)
           ),
-          h("section", { id:"router" },
-            h("div", { className:"section-head" }, h("h2", null, "Room Router"), h("p", null, "This is the actual payoff: choose the room before choosing the voice.")),
-            h(RouterModes, null)
+          h("section", { id:"human-read" },
+            h(SectionHead, { title:"The human read", body:"These are the main patterns I would want you to sit with. Each one includes the upside, the risk, and how it should change future writing or agent behavior." }),
+            h(InsightCards, null)
+          ),
+          h("section", { id:"deeper-read" },
+            h(SectionHead, { title:"Deeper pattern read", body:"This is the slower layer: what the archive suggests about how you process pressure, use humor, show care, split personas, and work with AI partners." }),
+            h(ReflectionChapters, null),
+            h("div", { style:{ marginTop:"18px" } },
+              h(SectionHead, { title:"Strengths and shadows", body:"The same traits that make the voice strong can create friction when they are routed into the wrong room." }),
+              h(TensionPairs, null)
+            )
+          ),
+          h("section", { id:"charts" },
+            h(SectionHead, { title:"Charts that explain the read", body:"Each chart has a point. D3-style SVG geometry is used where a custom label, annotation, or scale explains the story better than a canned card." }),
+            h("div", { className:"grid-2" },
+              h(MarkerComparisonChart, null),
+              h(ContextBubbleChart, null)
+            ),
+            h("div", { className:"grid-2", style:{ marginTop:"18px" } },
+              h(VoiceCompass, null),
+              h(StrengthRiskChart, null)
+            ),
+            h("div", { className:"grid-2", style:{ marginTop:"18px" } },
+              h("div", { className:"chart-card" },
+                h("div", { className:"chart-title-row" }, h("h3", null, "Compression ladder"), h(Badge, { kind:"verified" }, "median words")),
+                h(BarList, { rows:DATA.compressionRows, color:"var(--pine)", suffix:" words", maxValue:14 }),
+                h("p", { className:"caption" }, "Private contexts sit at a 5-word median. Public social is still short, but it has more stage lighting.")
+              ),
+              h(PhaseVolumeChart, null)
+            )
+          ),
+          h("section", { id:"trends" },
+            h(SectionHead, { title:"Trend arc and self-study", body:"The pattern is not just early, middle, recent. The deeper move is channel separation: public persona, private compression, professional analysis, and AI partnership each get their own register." }),
+            h(TrendNarrative, null),
+            h("div", { style:{ marginTop:"18px" } }, h(StudyPrompts, null))
+          ),
+          h("section", { id:"quotes" },
+            h(SectionHead, { title:"Public examples with context", body:"These are public X examples only. They are included because they show the mechanics: deadpan, mock ceremony, self-own, tool anger, sports melodrama, and ordinary-object escalation." }),
+            h(QuoteGallery, null)
+          ),
+          h("section", { id:"private-router" },
+            h(SectionHead, { title:"Private context without private exposure", body:"This is the executed local-only Messages pass in safe form: room shape, length, markers, and purpose buckets without names, quotes, or private phrases." }),
+            h("div", { className:"grid-2" },
+              h(PrivateContextRouter, null),
+              h("div", { className:"chart-card" },
+                h("div", { className:"chart-title-row" }, h("h3", null, "Purpose buckets"), h(Badge, { kind:"verified" }, "derived only")),
+                h("p", { className:"caption" }, "Future agents should identify the job first: coordination, play, warmth, context passing, intensity, or repair."),
+                h("div", { style:{ marginTop:"14px" } }, h(PurposeBuckets, null))
+              )
+            )
+          ),
+          h("section", { id:"recipes" },
+            h(SectionHead, { title:"Communication recipes", body:"This is the reusable part. Pick the room first, then the job, then the tone. That order is what keeps the voice from drifting into AI copy or one-note persona." }),
+            h(CommunicationRecipes, null)
+          ),
+          h("section", { id:"filters" },
+            h(SectionHead, { title:"Category and filter atlas", body:"These filters turn the archive into an operating system for future writing. The first question is not what sounds like Austin. It is which Austin room this is." }),
+            h(FilterAtlas, null)
+          ),
+          h("section", { id:"sources" },
+            h(SectionHead, { title:"Evidence universe", body:"Each source can teach a different part of the voice. The router keeps them from being overused in the wrong room." }),
+            h(SourceCards, null),
+            h("div", { style:{ marginTop:"18px" } }, h(Matrix, null))
           ),
           h("section", { id:"soft" },
-            h("div", { className:"section-head" }, h("h2", null, "Soft Context Layer"), h("p", null, "The numbers are the guardrail. The soft layer is the interpretation that makes the system feel like Austin instead of a spreadsheet wearing boots.")),
+            h(SectionHead, { title:"Soft layer", body:"This is the interpretation layer. The numbers keep it honest; the read is what makes it useful." }),
             h("div", { className:"soft-grid" }, DATA.softAxes.map(([label, body]) =>
               h("article", { className:"soft-card", key:label }, h("h3", null, label), h("p", null, body))
             ))
           ),
           h("section", { id:"privacy" },
-            h("div", { className:"section-head" }, h("h2", null, "Privacy Boundary"), h("p", null, "The model can get smarter without making private people or private accounts part of the public artifact.")),
-            h("div", { className:"grid-3" },
-              h("div", { className:"panel" }, h("h3", null, "Public"), h("p", null, "Official X posts and long-form writing can be used as public evidence when context is preserved.")),
-              h("div", { className:"panel" }, h("h3", null, "Derived"), h("p", null, "Snapchat and iMessage contribute counts, rates, buckets, and router corrections. No raw text or private names.")),
-              h("div", { className:"panel" }, h("h3", null, "Local-only"), h("p", null, "Raw Messages, DMs, private phrases, contact identities, burner metadata, filenames, and media paths stay off GitHub."))
+            h(SectionHead, { title:"Privacy boundary", body:"The model can get smarter without making private people, burner metadata, or private rooms part of the public artifact." }),
+            h("div", { className:"privacy-band" },
+              h("div", { className:"grid-3" },
+                h(Card, { title:"Public evidence", badge:{ kind:"verified", text:"quote allowed" } }, h("p", null, "Official X posts and authored long-form writing can be cited when source context is preserved.")),
+                h(Card, { title:"Derived evidence", badge:{ kind:"verified", text:"safe shape" } }, h("p", null, "Snapchat and Messages contribute counts, rates, purpose buckets, and anonymous room shape. No raw private wording.")),
+                h(Card, { title:"Local-only evidence", badge:{ kind:"verified", text:"do not publish" } }, h("p", null, "Raw Messages, DMs, contact identities, group names, handles, burner metadata, filenames, and media paths stay off GitHub."))
+              )
             )
           ),
-          h("p", { className:"footer" }, "This artifact expands the X-only view into a cross-platform communication map. It is meant to help future agents choose context before voice, and to keep privacy boundaries visible while still preserving the useful signal.")
+          h("p", { className:"footer" }, "This artifact is meant to be read and reused. It updates the earlier X-only view into a cross-platform communication map for Austin, future agents, public writing, private tone, and AI-human partnership.")
         )
       );
     }
@@ -786,4 +1778,6 @@ const html = String.raw`<!doctype html>
 `;
 
 fs.writeFileSync(outPath, html, "utf8");
-console.log(`Wrote ${outPath}`);
+fs.writeFileSync(contractPath, JSON.stringify(frontendContract, null, 2) + "\n", "utf8");
+console.log("Wrote " + outPath);
+console.log("Wrote " + contractPath);
