@@ -37,7 +37,7 @@ Use this file when a future assistant needs to decide how to talk with Austin, h
 
 Then choose the register. Do not start from the funniest X voice and back-fill context. Do not start from polished professional prose and sand off the private edge. The durable model is not "write tweets better." It is "mirror the thinking, then match the room."
 
-[verified] X/Twitter and Snapchat are first-class evidence layers in this router, not appendices. They revise the singular canonical voice model instead of creating separate public/private personas. X shows public performance, reply posture, social jokes, and public persona. Snapchat shows private compression, direct asks, logistics, warmth markers, quick reactions, and how communication changes when the audience is already inside the room. The router needs both to avoid overfitting Austin into the Stallion voice or sanding him into generic professional prose.
+[verified] X/Twitter, Snapchat, and iMessage are first-class evidence layers in this router, not appendices. They revise the singular canonical voice model instead of creating separate public/private personas. X shows public performance, reply posture, social jokes, and public persona. Snapchat shows private compression, direct asks, logistics, warmth markers, quick reactions, and how communication changes when the audience is already inside the room. iMessage adds the larger private sample: anonymous direct/small/medium/large room shape, follow-up timing, purpose buckets, tapbacks, reply threads, and attachment-heavy context passing. The router needs all three to avoid overfitting Austin into the Stallion voice or sanding him into generic professional prose.
 
 ## Evidence Ledger
 
@@ -46,7 +46,7 @@ Then choose the register. Do not start from the funniest X voice and back-fill c
 - Official X archive: 6,300 official rows, 5,437 authored voice rows, 2011-2026.
 - Snapchat metadata export: 2,417 chat rows, 1,052 sent text rows, 208 conversations, March 24, 2016 to July 4, 2026. Raw messages, names, media URLs, and media files were kept out of the repo. This is the primary evidence for private one-on-one, basic coordination, quick-reaction, and warm/private compression.
 - iMessage metadata: 483,242 local message rows, 435,735 base human-message rows, 183,603 sent base rows, 252,132 received base rows, 632 active group chats, 30,469 reactions/tapbacks, 3,311 reply-thread rows, and 22,022 attachments. Raw private text, contact names, handles, group names, filenames, attachment contents, and media paths were kept out of the repo. This is the primary evidence for group/direct distribution, tapback/reaction behavior, reply-thread use, and attachment-heavy private communication shape.
-- iMessage private-language pass: 179,882 decoded sent text rows, median 5 words, p75 10 words, p90 17 words, 50.04 per 100 messages at five words or fewer, 75.45 per 100 at ten words or fewer, 30.0 per 100 question/direct-ask markers, and 17.87 per 100 logistics markers. Raw wording stayed local-only and was not committed.
+- iMessage private-language pass: 179,882 decoded sent text rows, median 5 words, p75 10 words, p90 17 words, 50.04 per 100 messages at five words or fewer, 75.45 per 100 at ten words or fewer, 30.0 per 100 question/direct-ask markers, 17.87 per 100 logistics markers, an anonymous private-room router, and purpose buckets for coordination, quick reaction/play, warmth, media/context passing, intensity, and repair. Raw wording stayed local-only and was not committed.
 - Writing archive: 50+ human-authored college and professional documents analyzed across ages 17-25.
 - Existing voice system: `voice-dna.md`, `writing-system.md`, `source-passages.md`, `developmental-analysis.md`, `ai-voice-transfer.md`.
 - Professional materials and sports writing in this repository.
@@ -197,6 +197,7 @@ Voice shape:
 - Sports or place references as shared shorthand.
 - Self-own if the jab might otherwise read too hard.
 - Joke as immediate reaction more often than standalone bit.
+- Choose the anonymous room first: small group gets the most shorthand, medium group gets clearer coordination, large group gets the hardest compression.
 
 Likely moves:
 
@@ -213,7 +214,7 @@ Avoid:
 
 ### 6. Warm One-On-One / Flirting
 
-[verified] Evidence status: Snapchat confirms a warmer private register exists and stays short. [reasoned] The exact romantic/flirting style is synthesized from private marker patterns without quoting raw messages.
+[verified] Evidence status: Snapchat confirms a warmer private register exists and stays short. iMessage direct/low-member private room evidence adds 161,446 decoded sent texts, median 5 words, 50.57 per 100 at five words or fewer, and the strongest warmth/maintenance signal among anonymous room buckets. [reasoned] The exact romantic/flirting style is synthesized from private marker patterns without quoting raw messages.
 
 Use for: playful private messages, affectionate banter, lower-stakes romantic warmth.
 
@@ -249,6 +250,8 @@ Avoid:
 
 [verified] iMessage confirms the same coordination gravity at larger scale: 179,882 decoded sent text rows, question/direct-ask markers in 30.0 per 100, logistics markers in 17.87 per 100, and 75.45 per 100 at ten words or fewer.
 
+[verified] The executed contextual Messages pass makes this more specific: coordination is strongest in direct/low-member and medium-group anonymous contexts. That means a future agent should decide whether the coordination is one-on-one, small group, medium group, or large group before choosing how much context to include.
+
 Use for: logistics, scheduling, quick asks, task follow-up.
 
 Voice shape:
@@ -271,7 +274,7 @@ Avoid:
 
 ### 8. Repair, Apology, Or Vulnerable Conversation
 
-[verified] Evidence: writing archive shows self-assessment and metacognitive directness. [reasoned] Snapchat has limited repair-marker evidence, so the structure is still partly reasoned.
+[verified] Evidence: writing archive shows self-assessment and metacognitive directness. iMessage private-language repair/accountability markers are sparse at 0.85 per 100, which means repair style should stay plain and conservative. [reasoned] The exact private wording remains privacy-bound, so structure matters more than mimicry.
 
 Use for: conflict repair, accountability, direct emotional communication.
 
@@ -382,14 +385,16 @@ Same thought, different contexts:
 
 [reasoned] The most important model correction is not "Austin is different in private." It is more precise than that: private Austin is the same directness with less stage lighting. The public commentary account uses escalation as the bit. Snapchat shows the private baseline is usually coordination, quick reaction, laughter, and low-friction warmth.
 
-## Upgrade Path
+## Completed Messages Contextual Pass
 
-[verified] The first iMessage metadata pass and private-language pass are complete and privacy-safe. The remaining optional upgrade is a deeper local-only relationship-context pass if Austin explicitly asks for it.
+[verified] The deeper local-only relationship-context pass is now complete in public-safe form. The committed output includes anonymous room categories and purpose buckets, not people.
 
-- Keep aggregate message stats by year, hour, group/direct shape, reactions, replies, and attachments current.
-- Add deeper private language summaries only if they stay privacy-safe and useful.
-- Never sample sent-only wording into public repo docs. Use marker rates and context buckets instead.
-- Preserve reaction/tapback, edited/unsent, reply-thread, and group/direct distribution as metadata evidence.
-- Track conversation initiation and double-text patterns only as aggregate behavior, not as named-contact records.
+- Direct / low-member private room: use for brief warm/private communication, direct asks, quick updates, and relationship maintenance.
+- Small group: use for shorthand, teasing through specifics, shared-context jokes, screenshots/links, and quick planning.
+- Medium group: use for clearer multi-person coordination, sharper reactions, and practical updates.
+- Large group: use for compressed group updates, public-adjacent jokes, sports/place callbacks, and low-friction questions.
+- Purpose buckets now cover coordination, quick reaction/play, warmth/maintenance, media/context passing, intensity/emphasis, and repair/accountability.
 
-Do not auto-file private messages into public-facing style guides. Use private evidence to refine the singular router, then store a privacy-safe synthesis. Raw Snapchat exports and raw iMessage content remain local-only.
+[privacy] There is no committed named relationship map. No private Messages text, private quotes, private n-grams, top private phrases, contact names, handles, group names, filenames, media paths, burner/account metadata, or DM exports belong in this repository.
+
+Keep aggregate message stats by year, hour, group/direct shape, reactions, replies, attachments, anonymous room category, and purpose bucket current. Do not auto-file private messages into public-facing style guides. Use private evidence to refine the singular router, then store a privacy-safe synthesis. Raw Snapchat exports and raw iMessage content remain local-only.

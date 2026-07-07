@@ -112,6 +112,14 @@ const privateLanguageContexts = Object.entries(imessageLanguage.by_context)
   }))
   .sort((a, b) => b.value - a.value);
 
+const privateLanguagePurposes = imessageLanguage.purpose_buckets.map((row) => ({
+  label: row.label,
+  shape: row.shape,
+  use: row.use,
+  avoid: row.avoid,
+  signals: row.overall_signals_per_100.map((signal) => `${signal.label}: ${signal.per_100}`).join("; "),
+}));
+
 const quoteLabels = [
   "Waffle House as civil-defense institution",
   "Vape charger mock PSA",
@@ -194,7 +202,7 @@ const methodSteps = [
   },
   {
     label: "6. Derive private-language signals",
-    detail: "Decoded sent Messages text in memory to compute length distributions, marker rates, and anonymous relationship buckets. The analyzer writes no quotes, n-grams, handles, names, chat titles, filenames, media paths, or transcript samples.",
+    detail: "Decoded sent Messages text in memory to compute length distributions, marker rates, anonymous relationship buckets, private-room routing, and purpose buckets. The analyzer writes no quotes, n-grams, handles, names, chat titles, filenames, media paths, burner/account metadata, DM exports, or transcript samples.",
   },
   {
     label: "7. Reconcile with long-form writing",
@@ -202,7 +210,7 @@ const methodSteps = [
   },
   {
     label: "8. Route into one canonical model",
-    detail: "X, Snapchat, iMessage metadata, and iMessage private-language rates are treated as extension layers for one Austin reference, not separate personas. The output is a room router: public social, long-form, brand, private, coordination, repair, and partner interaction.",
+    detail: "X, Snapchat, iMessage metadata, and iMessage private-language rates are treated as extension layers for one Austin reference, not separate personas. The output is a room router: public social, long-form, brand, anonymous private rooms, coordination, repair, and partner interaction.",
   },
 ];
 
@@ -268,13 +276,14 @@ const dossier = {
     repairRate: imessageLanguage.overall.marker_rate_per_100.repair_or_accountability,
     markerRows: privateLanguageMarkers,
     contextRows: privateLanguageContexts,
+    purposeRows: privateLanguagePurposes,
   },
   sourceStatus: [
     { label: "X/Twitter", status: "verified", detail: "Official archive exports parsed and deduped. Public quotes are allowed in this artifact." },
     { label: "Snapchat", status: "verified/private", detail: "Parsed into privacy-safe derived markers. No raw private messages are quoted." },
     { label: "Long-form writing", status: "verified", detail: "Source passages and existing voice files used for thinking style, structure, and public prose." },
     { label: "Living brain", status: "verified bridge", detail: "Neutral routing note points future agents back to this canonical system." },
-    { label: "iMessage", status: "verified/private derived", detail: "Local Messages metadata and sent-text language parsed into aggregate group/direct, reaction, reply-thread, attachment, length, and marker-rate shape. No raw private text, names, handles, group names, filenames, phrases, or media paths are quoted." },
+    { label: "iMessage", status: "verified/private derived", detail: "Local Messages metadata and sent-text language parsed into aggregate group/direct, reaction, reply-thread, attachment, length, marker-rate, anonymous room, and purpose-bucket shape. No raw private text, names, handles, group names, filenames, phrases, burner/account metadata, DM exports, or media paths are quoted." },
   ],
   synthesisRules: [
     ["Specific first", "Name the object, place, team, person, tool, or failure before making the claim."],
@@ -284,7 +293,7 @@ const dossier = {
     ["Scale mismatch", "Small inconvenience becomes civic infrastructure, malpractice, birthright, or sports theology."],
     ["Self-own valve", "Confidence lands better when Austin gets the first joke at his own expense."],
     ["Private contraction", "In private contexts, the same mind gets shorter, more logistical, warmer, and less performed."],
-    ["Private context shape", "Snapchat gives wording/cadence markers; iMessage gives group/direct distribution, tapbacks, reply threads, attachments, and sent-text compression without exposing raw private text."],
+    ["Private context shape", "Snapchat gives wording/cadence markers; iMessage gives anonymous room categories, purpose buckets, group/direct distribution, tapbacks, reply threads, attachments, and sent-text compression without exposing raw private text."],
   ],
 };
 
@@ -958,7 +967,20 @@ const html = String.raw`<!doctype html>
             )
           )
         ),
-        h("p", { className: "caption" }, h("strong", null, "Implication: "), "The private-language pass proves the compression without exposing the wording: half of decoded sent texts are five words or fewer, and the dominant private jobs are questions, logistics, quick reactions, and relationship maintenance.")
+        h("div", { style: { marginTop: "18px" } },
+          h("h3", null, "Purpose Buckets"),
+          h("table", { className: "small-table" },
+            h("thead", null, h("tr", null, h("th", null, "Purpose"), h("th", null, "Signals"), h("th", null, "Shape"))),
+            h("tbody", null, DATA.privateLanguage.purposeRows.map((row) =>
+              h("tr", { key: row.label },
+                h("td", null, row.label),
+                h("td", null, row.signals),
+                h("td", null, row.shape)
+              )
+            ))
+          )
+        ),
+        h("p", { className: "caption" }, h("strong", null, "Implication: "), "The private-language pass proves the compression without exposing the wording: half of decoded sent texts are five words or fewer, and the dominant private jobs are questions, logistics, quick reactions, context passing, and relationship maintenance.")
       );
     }
     function App() {
@@ -1081,9 +1103,9 @@ const html = String.raw`<!doctype html>
                 h("p", null, "X/Twitter public voice, Snapchat private compression, iMessage private metadata, long-form systemic writing, and current partner-mode instructions are all backed by parsed or source-linked evidence.")
               ),
               h("div", { className: "open-gate" },
-                h("h3", null, "Open: Private-Language Pass"),
-                h("p", null, "Messages access is fixed and the first private-language pass is complete. What remains open is whether Austin wants a deeper local-only relationship-context pass by anonymous cohort or time period."),
-                h("p", null, "Current boundary: public repo gets aggregate metadata and derived synthesis only. Raw private Messages text, names, handles, group names, filenames, attachment contents, and media paths stay local.")
+                h("h3", null, "Open: Named Private Maps"),
+                h("p", null, "Messages access is fixed, the private-language pass is complete, and anonymous relationship-room routing is now included. What remains intentionally open is any named relationship map, which is not committed by design."),
+                h("p", null, "Current boundary: public repo gets aggregate metadata, anonymous rooms, purpose buckets, and derived synthesis only. Raw private Messages text, names, handles, group names, filenames, attachment contents, burner/account metadata, DM exports, and media paths stay local.")
               )
             )
           ),

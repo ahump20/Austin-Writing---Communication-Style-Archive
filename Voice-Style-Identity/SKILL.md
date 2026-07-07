@@ -25,7 +25,7 @@ Use it automatically when voice, tone, public presentation, private-style drafti
 
 **Interact:** When speaking with Austin, use the router without being asked again. Start with the real outcome, name known/unknown/open when stakes justify it, challenge weak premises, and keep the tone direct, warm, and evidence-led.
 
-**Context-route:** Default for any task involving Austin's voice, communication style, thinking style, public-facing prose, social posts, service/platform tone, private-style messages, friend-group tone, one-on-one voice, flirting, or AI companionship/partnership. Load `references/cross-context-communication-system.md` if installed there, otherwise load `cross-context-communication-system.md` from this folder. Do not apply the X/social register everywhere. X/Twitter, Snapchat-derived signals, iMessage aggregate metadata, and iMessage private-language rates revise the singular canonical reference by verifying public/social baselines, short private-register baselines, private group/direct interaction shape, and private wording compression.
+**Context-route:** Default for any task involving Austin's voice, communication style, thinking style, public-facing prose, social posts, service/platform tone, private-style messages, friend-group tone, one-on-one voice, flirting, or AI companionship/partnership. Load `references/cross-context-communication-system.md` if installed there, otherwise load `cross-context-communication-system.md` from this folder. Do not apply the X/social register everywhere. X/Twitter, Snapchat-derived signals, iMessage aggregate metadata, and iMessage private-language rates revise the singular canonical reference by verifying public/social baselines, short private-register baselines, private group/direct interaction shape, private wording compression, anonymous private-room routing, and purpose buckets.
 
 ## Instruction Hierarchy
 
@@ -162,7 +162,7 @@ X/Twitter and Snapchat are extension and revision layers for the single Austin r
 - Basic coordination: direct ask, one useful detail, no ceremony. Snapchat shows high question/direct-ask and logistics marker density.
 - Repair/vulnerable: own the specific action, explain mechanism without excuse, state next behavior. Repair style remains partly reasoned because Snapchat repair markers are sparse.
 
-Snapchat private-register evidence is verified from a privacy-safe derived summary: 2,417 chat rows, 1,052 sent text rows, 208 conversations, 2016-2026, median sent text 5 words. iMessage private group/direct metadata is verified from a privacy-safe derived summary: 483,242 local message rows, 435,735 base human-message rows, 632 active group chats, 30,469 reactions/tapbacks, 3,311 reply-thread rows, and 22,022 attachments. iMessage private-language evidence is verified from 179,882 decoded sent text rows: median 5 words, 50.04 per 100 at five words or fewer, 30.0 per 100 question/direct-ask markers, and 17.87 per 100 logistics markers. Raw private text, names, handles, group names, filenames, attachment contents, private n-grams, top private phrases, and media paths are not part of this repository.
+Snapchat private-register evidence is verified from a privacy-safe derived summary: 2,417 chat rows, 1,052 sent text rows, 208 conversations, 2016-2026, median sent text 5 words. iMessage private group/direct metadata is verified from a privacy-safe derived summary: 483,242 local message rows, 435,735 base human-message rows, 632 active group chats, 30,469 reactions/tapbacks, 3,311 reply-thread rows, and 22,022 attachments. iMessage private-language evidence is verified from 179,882 decoded sent text rows: median 5 words, 50.04 per 100 at five words or fewer, 30.0 per 100 question/direct-ask markers, 17.87 per 100 logistics markers, anonymous private-room routing, and purpose buckets for coordination, quick reaction/play, warmth, media/context passing, intensity, and repair. Raw private text, names, handles, group names, filenames, attachment contents, private n-grams, top private phrases, named relationship maps, burner/account metadata, DM exports, and media paths are not part of this repository.
 
 ## Automatic-Use Contract
 
@@ -226,6 +226,7 @@ Do not flag these. Just fix them.
 - `references/professional-context.md` — Resume, credentials, technical stack, and career history for grounding professional content
 - `references/origin-story.md` — Biographical narrative, BSI origin, Texas covenant, family legacy, and brand storytelling material
 - `cross-context-communication-system.md` — Context router for public/private/social/one-on-one communication range
+- `austin-communication-context-map.html` — Viewable source/category/filter/private-router brief
 - `assets/rhythm-cadence-analysis.jsx` — Interactive rhythm visualization component
 - `assets/stylometric-fingerprint.jsx` — Stylometric comparison component
 

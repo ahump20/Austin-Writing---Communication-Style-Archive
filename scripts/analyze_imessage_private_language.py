@@ -155,6 +155,165 @@ def phase_for(year: int | None) -> str:
     return "2024-2026"
 
 
+CONTEXT_ROUTER = {
+    "direct_or_low_member": {
+        "label": "Direct / low-member private room",
+        "relationship_shape": "one-on-one or low-participant private context, anonymized",
+        "use_for": "warm private, direct asks, quick updates, low-ceremony relationship maintenance",
+        "routing_implication": "Start specific and short. Put the ask, timing, or actual concern first.",
+        "avoid": "public performance voice, long setup, named-contact assumptions",
+    },
+    "small_group": {
+        "label": "Small-group room",
+        "relationship_shape": "close or semi-close group context, anonymized",
+        "use_for": "friend-group banter, shared-context jokes, screenshots/links, quick planning",
+        "routing_implication": "Use shorthand and teasing through specifics, but keep the line easy to answer.",
+        "avoid": "performing the Stallion account at full volume or explaining the joke",
+    },
+    "medium_group": {
+        "label": "Medium-group room",
+        "relationship_shape": "multi-person group context, anonymized",
+        "use_for": "group coordination, sports/place references, sharper reactions, practical updates",
+        "routing_implication": "Treat the room as shared-context but not intimate. Be clear, quick, and concrete.",
+        "avoid": "private one-on-one warmth or long analytical paragraphs",
+    },
+    "large_group": {
+        "label": "Large-group room",
+        "relationship_shape": "large group or broad shared thread, anonymized",
+        "use_for": "brief group updates, public-adjacent jokes, sports/place callbacks, low-friction questions",
+        "routing_implication": "Compress hard. A single concrete hook beats a full explanation.",
+        "avoid": "naming the group, over-personal detail, or private emotional inference",
+    },
+}
+
+
+PURPOSE_BUCKETS = [
+    {
+        "key": "coordination",
+        "label": "Coordination",
+        "signals": [
+            ("question/direct ask", "marker_rate_per_100", "question_or_direct_ask"),
+            ("logistics", "marker_rate_per_100", "logistics"),
+        ],
+        "use": "scheduling, task follow-up, practical asks, status checks",
+        "shape": "direct ask, one useful detail, no ceremony",
+        "avoid": "inflated politeness or background nobody needs yet",
+    },
+    {
+        "key": "quick_reaction_play",
+        "label": "Quick Reaction / Play",
+        "signals": [
+            ("laughter/play", "marker_rate_per_100", "laughter_or_play"),
+            ("within 2 minutes", "follow_up_rate_per_100", "within_2min"),
+        ],
+        "use": "friend-group replies, immediate jokes, low-stakes social reaction",
+        "shape": "fast response, specific jab, stop before the bit gets explained",
+        "avoid": "turning every message into a public post",
+    },
+    {
+        "key": "warmth_maintenance",
+        "label": "Warmth / Maintenance",
+        "signals": [
+            ("affection/warmth", "marker_rate_per_100", "affection_or_warmth"),
+            ("exclamation", "punctuation_rate_per_100", "has_exclamation"),
+        ],
+        "use": "care, encouragement, appreciation, birthday/congratulation/check-in energy",
+        "shape": "specific attention, brief warmth, low pressure",
+        "avoid": "generic affection language or polished romantic essays",
+    },
+    {
+        "key": "media_context",
+        "label": "Media / Context Passing",
+        "signals": [
+            ("link/media reference", "marker_rate_per_100", "link_or_media_reference"),
+            ("within 10 minutes", "follow_up_rate_per_100", "within_10min"),
+        ],
+        "use": "screenshots, links, photos, posts, references that carry the context",
+        "shape": "let the artifact do some work; add the verdict or ask",
+        "avoid": "committing filenames, media paths, or private attachment details",
+    },
+    {
+        "key": "intensity_emphasis",
+        "label": "Intensity / Emphasis",
+        "signals": [
+            ("profanity/intensity", "marker_rate_per_100", "profanity_or_intensity"),
+            ("all caps", "punctuation_rate_per_100", "all_caps_message"),
+        ],
+        "use": "sports arguments, frustration, urgency, emphatic private reaction",
+        "shape": "short pressure release attached to a concrete object",
+        "avoid": "using heat where the job is trust or repair",
+    },
+    {
+        "key": "repair_accountability",
+        "label": "Repair / Accountability",
+        "signals": [
+            ("repair/accountability", "marker_rate_per_100", "repair_or_accountability"),
+            ("question/direct ask", "marker_rate_per_100", "question_or_direct_ask"),
+        ],
+        "use": "apology, clarification, owning a miss, resetting a conversation",
+        "shape": "name the action, own it, explain the mechanism without excuse, state next behavior",
+        "avoid": "therapy-script phrasing or publishing private examples",
+    },
+]
+
+
+def nested_rate(data: dict, group: str, key: str) -> float:
+    return float(data.get(group, {}).get(key, 0) or 0)
+
+
+def build_private_context_router(by_context: dict[str, dict]) -> list[dict]:
+    rows = []
+    for key, guidance in CONTEXT_ROUTER.items():
+        data = by_context.get(key, {})
+        rows.append(
+            {
+                "key": key,
+                **guidance,
+                "messages": data.get("messages", 0),
+                "median_words": data.get("median_words"),
+                "short5_per_100": nested_rate(data, "punctuation_rate_per_100", "one_liner_5_words_or_less"),
+                "short10_per_100": nested_rate(data, "punctuation_rate_per_100", "short_message_10_words_or_less"),
+                "question_per_100": nested_rate(data, "marker_rate_per_100", "question_or_direct_ask"),
+                "logistics_per_100": nested_rate(data, "marker_rate_per_100", "logistics"),
+                "laughter_per_100": nested_rate(data, "marker_rate_per_100", "laughter_or_play"),
+                "warmth_per_100": nested_rate(data, "marker_rate_per_100", "affection_or_warmth"),
+                "sports_place_per_100": nested_rate(data, "marker_rate_per_100", "sports_or_place_shorthand"),
+                "repair_per_100": nested_rate(data, "marker_rate_per_100", "repair_or_accountability"),
+                "follow_up_2min_per_100": nested_rate(data, "follow_up_rate_per_100", "within_2min"),
+                "follow_up_10min_per_100": nested_rate(data, "follow_up_rate_per_100", "within_10min"),
+            }
+        )
+    return rows
+
+
+def build_purpose_buckets(overall: dict, by_context: dict[str, dict]) -> list[dict]:
+    rows = []
+    for purpose in PURPOSE_BUCKETS:
+        overall_signals = [
+            {"label": label, "per_100": nested_rate(overall, group, key)}
+            for label, group, key in purpose["signals"]
+        ]
+        context_scores = []
+        for context_key, context_data in by_context.items():
+            score = sum(nested_rate(context_data, group, key) for _, group, key in purpose["signals"])
+            context_scores.append((context_key, round(score, 2)))
+        context_scores.sort(key=lambda item: item[1], reverse=True)
+        rows.append(
+            {
+                "key": purpose["key"],
+                "label": purpose["label"],
+                "use": purpose["use"],
+                "shape": purpose["shape"],
+                "avoid": purpose["avoid"],
+                "overall_signals_per_100": overall_signals,
+                "strongest_anonymous_contexts": [
+                    {"context": context, "score": score} for context, score in context_scores[:2]
+                ],
+            }
+        )
+    return rows
+
+
 @dataclass
 class Bucket:
     messages: int = 0
@@ -308,6 +467,13 @@ def main() -> int:
         earliest = row["local_datetime"] if earliest is None else min(earliest, row["local_datetime"])
         latest = row["local_datetime"] if latest is None else max(latest, row["local_datetime"])
 
+    by_context_json = {key: bucket.to_json() for key, bucket in sorted(by_context.items())}
+    by_phase_json = {key: bucket.to_json() for key, bucket in sorted(by_phase.items())}
+    by_context_phase_json = {
+        key: bucket.to_json() for key, bucket in sorted(by_context_phase.items()) if bucket.messages >= 100
+    }
+    overall_json = overall.to_json()
+
     summary = {
         "generated_at_utc": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "source": {
@@ -330,14 +496,17 @@ def main() -> int:
             "rejected_empty_or_media_rows": rejected_empty,
             "date_range_local": {"earliest": earliest, "latest": latest},
         },
-        "overall": overall.to_json(),
-        "by_context": {key: bucket.to_json() for key, bucket in sorted(by_context.items())},
-        "by_phase": {key: bucket.to_json() for key, bucket in sorted(by_phase.items())},
-        "by_context_phase": {key: bucket.to_json() for key, bucket in sorted(by_context_phase.items()) if bucket.messages >= 100},
+        "overall": overall_json,
+        "by_context": by_context_json,
+        "by_phase": by_phase_json,
+        "by_context_phase": by_context_phase_json,
+        "private_context_router": build_private_context_router(by_context_json),
+        "purpose_buckets": build_purpose_buckets(overall_json, by_context_json),
         "router_implications": [
             "[verified] Private iMessage wording is short by default: median sent decoded text is 5 words.",
             "[verified] Direct/logistics/question markers are the dominant private-language signals, so the private router should prioritize action, timing, and context before performance.",
             "[verified] Group-chat and direct-message buckets differ in density and marker mix, so future agents should route by relationship context instead of treating all private writing as one voice.",
+            "[verified] The contextual private-language pass adds purpose buckets for coordination, play, warmth, media/context passing, intensity, and repair without exporting examples.",
             "[reasoned] The private-language layer strengthens friend-group, warm one-on-one, coordination, and repair modes without just copying private messages.",
             "[privacy] Do not quote private messages, export n-grams, publish top contacts, or name private threads. Use only the derived patterns in this summary.",
         ],
@@ -362,6 +531,35 @@ def main() -> int:
             f"question/direct-ask markers {data['marker_rate_per_100'].get('question_or_direct_ask', 0)} per 100; "
             f"logistics markers {data['marker_rate_per_100'].get('logistics', 0)} per 100."
         )
+
+    def router_table() -> str:
+        lines = [
+            "| Context | Evidence | Routing implication | Privacy boundary |",
+            "|---|---:|---|---|",
+        ]
+        for row in summary["private_context_router"]:
+            evidence = (
+                f"{row['messages']:,} texts; median {row['median_words']} words; "
+                f"{row['short5_per_100']} per 100 at five words or fewer"
+            )
+            lines.append(
+                f"| {row['label']} | {evidence} | {row['routing_implication']} | "
+                "No names, handles, group names, or private examples. |"
+            )
+        return "\n".join(lines)
+
+    def purpose_table() -> str:
+        lines = [
+            "| Purpose | Strongest signals | Strongest anonymous contexts | Use | Avoid |",
+            "|---|---|---|---|---|",
+        ]
+        for row in summary["purpose_buckets"]:
+            signals = "; ".join(f"{item['label']}: {item['per_100']} per 100" for item in row["overall_signals_per_100"])
+            contexts = "; ".join(
+                f"{item['context']} ({item['score']})" for item in row["strongest_anonymous_contexts"]
+            )
+            lines.append(f"| {row['label']} | {signals} | {contexts} | {row['shape']} | {row['avoid']} |")
+        return "\n".join(lines)
 
     md = f"""# iMessage Private Language Summary
 
@@ -402,11 +600,24 @@ This is the local-only private-language pass Austin requested, exported as a pri
 {context_line('Medium-group contexts', medium_group)}
 {context_line('Large-group contexts', large_group)}
 
+## Contextual Relationship Router
+
+[verified] This pass adds relationship-context routing without publishing relationship identities. The committed artifact uses anonymous room shapes rather than names.
+
+{router_table()}
+
+## Purpose Buckets Across Private Messages
+
+[verified] Purpose buckets are derived from marker rates and follow-up timing. They are not quotes, n-grams, or contact-specific records.
+
+{purpose_table()}
+
 ## Router Implications
 
 - [verified] Private Messages language is compressed by default. The private voice should start shorter than public prose and usually shorter than X.
 - [verified] The main private job is coordination plus context: questions, timing, plans, quick reactions, and relationship maintenance.
 - [verified] Relationship context matters. Direct, small-group, medium-group, and large-group contexts have different density and marker mixes, so future agents should route by audience and situation instead of using one generic private voice.
+- [verified] Purpose context matters too. Coordination, quick reaction/play, warmth, media/context passing, intensity, and repair each need different output behavior.
 - [reasoned] Warm/private and friend-group modes should use specific attention, shorthand, quick reaction, and low ceremony. They should not import the full public Stallion performance unless the user explicitly wants that bit.
 - [reasoned] Repair mode should stay plain and specific: own the action, explain the mechanism without excuse, and state the next behavior. Do not turn it into a therapy-script paragraph.
 

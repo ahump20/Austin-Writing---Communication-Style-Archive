@@ -18,6 +18,7 @@ Use these files first:
 - `cross-context-communication-system.md`: canonical room/router model.
 - `cross-context-source-manifest.md`: source coverage, exclusions, and open gaps.
 - `cross-context-voice-system-artifact.html`: viewable React dossier.
+- `austin-communication-context-map.html`: visual category/filter map, private-room router, purpose buckets, and privacy boundary brief.
 
 If these files conflict with older archive documents, the canonical layer wins for current behavior.
 
@@ -57,9 +58,10 @@ Current public doctrine:
 Generated artifacts stay only when they serve a distinct job.
 
 - The cross-context artifact is the canonical dossier.
+- The communication context map is the visual brief for source lanes, category/filter families, anonymous private-room routing, purpose buckets, and privacy boundaries.
 - The X artifact is retained because it is a tweet-level public/social evidence explorer.
 - Screenshots are retained as render proof for the dossier.
-- iMessage metadata and language summaries are retained only as privacy-safe derived source evidence.
+- iMessage metadata and language summaries are retained only as privacy-safe derived source evidence. They may contain anonymous room categories and purpose buckets. They must not contain private people, handles, group names, private examples, phrase lists, or media paths.
 - Empty duplicate-removal files in `processed/` are retained because they prove the parser found zero duplicate tweet IDs.
 
 ## Duplicate Policy
@@ -82,9 +84,9 @@ When a new archive or platform export lands:
 2. Produce a privacy-safe summary if the source is private.
 3. Update `cross-context-source-manifest.md`.
 4. Update `cross-context-communication-system.md` only with durable changes.
-5. Rebuild `cross-context-voice-system-artifact.html`.
+5. Rebuild the viewable artifacts when the canonical communication model changes.
 6. Sync the durable instruction into local skills and living-brain bridge notes.
 
 Do not file generated Austin-style output as source evidence. It can be a useful draft. It is not Austin's record.
 
-For private communications, never commit raw message bodies, transcripts, handles, chat titles, thread names, filenames, media paths, or phrase lists. Commit derived patterns only.
+For private communications, never commit raw message bodies, transcripts, handles, chat titles, thread names, filenames, media paths, private relationship maps, burner/account metadata, DM exports, or phrase lists. Commit derived patterns only.

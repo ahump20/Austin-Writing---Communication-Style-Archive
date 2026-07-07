@@ -1,4 +1,5 @@
 # Python
+.DS_Store
 __pycache__/
 *.pyc
 *.pyo
@@ -20,7 +21,13 @@ X-Twitter-Archive/live-capture/**/*-capture-summary.json
 # Private communication source material and local-only audits. Commit only
 # privacy-safe aggregate summaries.
 Voice-Style-Identity/imessage-analysis/local-private/
+Voice-Style-Identity/private-local/
 Voice-Style-Identity/imessage-analysis/**/*raw*
 Voice-Style-Identity/imessage-analysis/**/*verbatim*
 Voice-Style-Identity/imessage-analysis/**/*samples*
 Voice-Style-Identity/imessage-analysis/**/*transcript*
+Voice-Style-Identity/**/*relationship-map*
+Voice-Style-Identity/**/*contact-map*
+Voice-Style-Identity/**/*dm-export*
+Voice-Style-Identity/**/*direct-message*
+Voice-Style-Identity/**/*burner*

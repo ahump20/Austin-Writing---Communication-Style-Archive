@@ -25,7 +25,7 @@ BLOCKED_FILE_PATTERNS = (
     (
         "raw private communications export",
         re.compile(
-            r"(^|/)Voice-Style-Identity/imessage-analysis/(?:local-private/|.*(?:raw|verbatim|samples|transcript).*)",
+            r"(^|/)Voice-Style-Identity/(?:private-local/|imessage-analysis/local-private/|.*(?:raw|verbatim|samples|transcript|relationship-map|contact-map|dm-export|direct-message|burner).*)",
             re.IGNORECASE,
         ),
     ),

@@ -22,6 +22,7 @@ The goal is durable reuse:
 | Need | Open |
 |---|---|
 | View the current dossier | [Cross-Context Voice System Artifact](Voice-Style-Identity/cross-context-voice-system-artifact.html) |
+| View the category/filter map | [Austin Communication Context Map](Voice-Style-Identity/austin-communication-context-map.html) |
 | Load the reusable voice skill | [Voice-Style-Identity/SKILL.md](Voice-Style-Identity/SKILL.md) |
 | Read the canonical router | [Cross-Context Communication System](Voice-Style-Identity/cross-context-communication-system.md) |
 | Check source coverage and gaps | [Cross-Context Source Manifest](Voice-Style-Identity/cross-context-source-manifest.md) |
@@ -44,7 +45,7 @@ The goal is durable reuse:
 | Official X/Twitter exports | [verified] | 6,300 official rows, 5,437 authored voice rows, public humor, replies, sports/fan identity, and persona shifts across `@a_hump20` and `@TXTrickWhooper`. |
 | Snapchat metadata export | [verified] | Privacy-safe derived private-register signals: short coordination, direct asks, quick reactions, warm one-on-one compression. Raw private text is not committed. |
 | Living-brain bridge | [verified] | Durable routing note for agents and Obsidian context. Resurfaces Austin-derived language without filing generated prose as source truth. |
-| iMessage / Apple Messages | [verified/private derived] | Privacy-safe aggregate metadata and private-language signals from the local Messages database: 483,242 total rows, 435,735 base human-message rows, 179,882 decoded sent text rows, 632 active group chats, reactions/tapbacks, reply threads, attachment shape, and private wording rates. Raw private text, names, handles, and group names are not committed. |
+| iMessage / Apple Messages | [verified/private derived] | Privacy-safe aggregate metadata and private-language signals from the local Messages database: 483,242 total rows, 435,735 base human-message rows, 179,882 decoded sent text rows, 632 active group chats, reactions/tapbacks, reply threads, attachment shape, private wording rates, anonymous relationship-room router, and purpose buckets. Raw private text, names, handles, and group names are not committed. |
 
 ## How To Use This Repo
 
@@ -127,16 +128,17 @@ docs/
 | Artifact | Purpose |
 |---|---|
 | [Voice-Style-Identity/cross-context-voice-system-artifact.html](Voice-Style-Identity/cross-context-voice-system-artifact.html) | Canonical React dossier for the cross-platform communication model. |
+| [Voice-Style-Identity/austin-communication-context-map.html](Voice-Style-Identity/austin-communication-context-map.html) | Visual React brief for source lanes, category/filter families, anonymous private-room routing, purpose buckets, evidence strength, and privacy boundaries. |
 | [X-Twitter-Archive/x-twitter-archive-analysis-artifact.html](X-Twitter-Archive/x-twitter-archive-analysis-artifact.html) | X-only generated evidence explorer. Useful for tweet-level public/social analysis, not the full voice system. |
 | [Voice-Style-Identity/imessage-analysis/2026-07-07/imessage_private_context_summary.md](Voice-Style-Identity/imessage-analysis/2026-07-07/imessage_private_context_summary.md) | Privacy-safe iMessage metadata summary for private group/direct shape, tapbacks, replies, and attachments. |
-| [Voice-Style-Identity/imessage-analysis/2026-07-07/imessage_private_language_summary.md](Voice-Style-Identity/imessage-analysis/2026-07-07/imessage_private_language_summary.md) | Privacy-safe iMessage private-language summary for decoded sent-text length, marker rates, and relationship-context buckets. |
+| [Voice-Style-Identity/imessage-analysis/2026-07-07/imessage_private_language_summary.md](Voice-Style-Identity/imessage-analysis/2026-07-07/imessage_private_language_summary.md) | Privacy-safe iMessage private-language summary for decoded sent-text length, marker rates, anonymous relationship-context router, and purpose buckets. |
 | [Voice-Style-Identity/cross-context-artifact-desktop.png](Voice-Style-Identity/cross-context-artifact-desktop.png) | Desktop render proof of the current dossier. |
 | [Voice-Style-Identity/cross-context-artifact-mobile.png](Voice-Style-Identity/cross-context-artifact-mobile.png) | Mobile render proof of the current dossier. |
 
 ## Privacy Rules
 
 - Do not commit raw Snapchat private text, contact names, media URLs, location data, phone/email identifiers, or media files.
-- Do not commit raw iMessage private text, contact names, handles, group names, filenames, attachment contents, or media paths. Commit only privacy-safe aggregate summaries; keep raw/private audits in ignored local-only paths.
+- Do not commit raw iMessage private text, contact names, handles, group names, filenames, attachment contents, media paths, private relationship maps, burner/account metadata, or DM exports. Commit only privacy-safe aggregate summaries; keep raw/private audits in ignored local-only paths.
 - Do not treat reposts, likes, follows, viewed content, or generated Austin-style prose as Austin-authored voice.
 - Keep private-source material as summaries, marker counts, source manifests, and router corrections unless the user asks otherwise.
 
