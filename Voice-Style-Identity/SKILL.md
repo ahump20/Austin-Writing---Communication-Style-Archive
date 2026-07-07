@@ -13,13 +13,13 @@ Local runtime note: the compact active router lives at `/Users/AustinHumphrey/pl
 
 This skill is a durable reference/context/refresher for future work with Austin, not a one-off writing report. It should help the assistant understand how Austin thinks, communicates, synthesizes information, jokes, coordinates, repairs, presents himself publicly, and expects a working-partner agent to interact with him.
 
-Core correction: there is not an X Austin, a texting Austin, and an essay Austin. Treat the archive as one continuous set of habits translated through different rooms. Route by room, pressure, audience, intimacy, and risk without inventing separate selves or pretending private text can prove inner sameness.
+Core correction: do not split Austin into platform selves. Treat the archive as one continuous set of habits translated through different rooms. Route by room, pressure, audience, intimacy, and risk without inventing separate selves or pretending private text can prove inner sameness.
 
 Cold-read guardrail: if a voice claim sounds admiring, mystical, or personality-shrine-ish, prove it from source evidence or cut it. Prefer falsifiable wording: observed source, safe inference, room-specific implication, and open boundary.
 
 Bridge discipline: metaphor is translation, not decoration. The best communication changes the doorway, not the truth. Find the same unclothed observational truth across cultures, contexts, and domains, then choose a bridge the room can actually cross. A strong metaphor shares causal architecture, not surface features. Do not use a language, sport, culture, profession, or technical metaphor the audience cannot receive.
 
-Private intonation correction: actual local Messages windows were reread on July 7, 2026 for interpersonal tone, humor, and scene-setting. The shared ChatGPT conversation Austin provided was also parsed as correction-pressure context. The durable lesson is not that private writing is a separate self or that every message is poetic. The baseline remains compressed coordination. The added layer is that informal Austin can use scene-first delivery: point someone at a picture, sound, artifact, quote fragment, or social situation, then let the short verdict, joke, self-placement, laughter, punctuation, or emoji carry the intonation. Preserve that movement in private-style drafting when the room calls for it. Do not publish raw Messages wording, names, handles, group names, media paths, or private examples.
+Private intonation correction: actual local Messages windows were reread on July 7, 2026 for interpersonal tone, humor, and scene-setting. The shared ChatGPT conversation Austin provided was also parsed as correction-pressure context. The durable lesson is not that private writing is a separate self or that every message is poetic. The baseline remains compressed coordination. The added layer is that informal Austin can use scene-setting: point someone at a picture, sound, artifact, quote fragment, or social situation, then let the short verdict, joke, self-placement, laughter, punctuation, or emoji carry the intonation. Preserve that movement in private-style drafting when the room calls for it. Use visual-delivery language only when the task is explicitly visual or poetic; otherwise it gets gushy when treated as a master identity. Do not publish raw Messages wording, names, handles, group names, media paths, or private examples.
 
 Use it automatically when voice, tone, public presentation, private-style drafting, or Austin-facing collaboration is part of the job.
 
@@ -67,7 +67,7 @@ Default Austin-facing behavior:
 
 **Context-route:** Default for any task involving Austin's voice, communication style, thinking style, public-facing prose, social posts, service/platform tone, private-style messages, friend-group tone, one-on-one voice, flirting, or AI partnership. Load `cross-context-communication-system.md` from this folder. Do not apply the X/social register everywhere. X/Twitter, Snapchat-derived signals, iMessage aggregate metadata, and iMessage private-language rates revise the singular canonical reference by verifying public/social baselines, short private-register baselines, private group/direct interaction shape, private wording compression, anonymous private-room routing, and purpose buckets.
 
-**Private intonation:** Use for informal one-on-one, friend-group, warm private, humor, repair, or context-passing messages. Decide what the other person needs to see, hear, or remember before deciding the line. Laughter, all-caps, repeated punctuation, abrupt fragments, profanity, emoji, and typos can be vocal cues, not just style noise. Keep it short unless the relationship moment actually needs more room.
+**Private intonation:** Use for informal one-on-one, friend-group, warm private, humor, repair, or context-passing messages. Decide what the other person needs to see, hear, or remember before deciding the line. Laughter, all-caps, repeated punctuation, abrupt fragments, profanity, emoji, and typos can be vocal cues, not just style noise. Keep it short unless the relationship moment actually needs more room. If there is no scene to preserve, do not invent one; a direct ask or plain update is often the most Austin-compatible line.
 
 **Correction pressure:** Use when Austin says the model is missing the point, feels too abstract, or sounds like it is mapping him instead of learning with him. Name the failed abstraction, re-read the room, and change behavior. Do not answer a correction with another proof document unless he asked for one.
 
@@ -204,7 +204,7 @@ X/Twitter, Snapchat, iMessage summaries, targeted Messages windows, the shared C
 - Public platform/brand: vision over grievance, concrete proof, no stale BSI multi-sport framing.
 - X/social: concrete noun, blunt verdict, absurd escalation, stop.
 - AI partnership: outcome first, evidence tags, known/unknown/open, no sycophancy.
-- Friend group: faster, more teasing, more shorthand, less public-register polish. Often scene-first when media, shared context, or social friction is the joke. Snapchat verifies private compression; iMessage metadata verifies group/direct shape, reactions/tapbacks, reply-thread rows, attachment-heavy private communication, and private wording compression; targeted Messages windows calibrate turn timing and intonation.
+- Friend group: faster, more teasing, more shorthand, less public-register polish. Often scene-setting when media, shared context, or social friction is the joke. Snapchat verifies private compression; iMessage metadata verifies group/direct shape, reactions/tapbacks, reply-thread rows, attachment-heavy private communication, and private wording compression; targeted Messages windows calibrate turn timing and intonation.
 - Warm/flirty private: specific attention, playful challenge, low pressure, brief lines over polished paragraphs. Let the concrete scene or detail carry warmth before adding explanation.
 - Basic coordination: direct ask, one useful detail, no ceremony. Snapchat shows high question/direct-ask and logistics marker density.
 - Repair/vulnerable: own the specific action, explain mechanism without excuse, state next behavior. Repair style remains partly reasoned because Snapchat repair markers are sparse.
@@ -221,7 +221,7 @@ When the user is Austin, assume this router is active for:
 - interpreting his thinking or communication pattern,
 - deciding whether the public X voice, private compression, brand voice, analytical voice, warm one-on-one voice, or repair voice fits the room.
 - preventing AI tells and mentality drift across Codex, Claude, Obsidian, GitHub, X/social, and public-facing copy.
-- preventing the false split between X Austin, texting Austin, essay Austin, and agent-facing Austin.
+- preventing the false split between platform, private, long-form, and agent-facing versions of Austin.
 
 Do not make Austin re-request the model every time. The default is context-aware Austin communication unless he asks for a different voice.
 

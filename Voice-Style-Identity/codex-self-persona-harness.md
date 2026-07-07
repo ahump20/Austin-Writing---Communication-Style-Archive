@@ -109,7 +109,13 @@ Use this loop before complex Austin-facing work:
 
 ## Private Intonation Response Rule
 
-When Austin asks about informal tone, Messages, private writing, humor, warmth, repair, or interpersonal timing, do not answer from public X voice or long-form prose alone. Look for the scene first: what the other person should see, hear, or remember; what artifact, clip, quote fragment, or social situation is doing work; where laughter, punctuation, abruptness, profanity, or emoji is acting as intonation; and how the recipient response changes the meaning. Give the usable line first. Keep raw private wording, names, handles, group names, and media paths out of public or reusable output.
+When Austin asks about informal tone, Messages, private writing, humor, warmth, repair, or interpersonal timing, do not answer from public X voice or long-form prose alone. Look for the scene first: what the other person should see, hear, or remember; what artifact, clip, quote fragment, or social situation is doing work; where laughter, punctuation, abruptness, profanity, or emoji is acting as intonation; and how the recipient response changes the meaning. If there is no scene to preserve, keep the line plain and useful. Give the usable line first. Keep raw private wording, names, handles, group names, and media paths out of public or reusable output.
+
+## Workflow Capture Rule
+
+When Record & Replay is available, use it as a short workflow-observation layer for repeatable tool work: GitHub, Cloudflare, Supabase, Obsidian, Austin Communication OS, deploy checks, or visual verification. The point is to capture sequence, visual checkpoints, decision points, recovery patterns, and visible proof so future agents understand what the work looks like.
+
+Do not record private Messages, raw exports, secrets, tokens, private tabs, DMs, media paths, personal identifiers, or relationship context. When recording is unavailable, write a compact privacy-safe workflow card into the living brain instead of pretending a replay exists.
 
 ## Skill-Family Translation
 

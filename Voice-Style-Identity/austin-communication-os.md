@@ -24,6 +24,7 @@ North Star: the best communication changes the doorway, not the truth.
 | Local `codex-self-persona-harness` skill | Compatibility shim for Codex behavior and repair triggers. |
 | Codex subagent aliases | Optional workers for context, voice, and muzzle checks. They route through the OS and do not own identity. |
 | Living-brain skills | Private recall/sync boundary. They are routed to, not merged into voice. |
+| Record & Replay workflow reference | Optional workflow-observation layer for repeatable tool choreography. Stored in the private brain, not the public repo. |
 
 ## Why This Reduces Drift
 
@@ -36,13 +37,19 @@ The corrected rule is load order:
 3. Only the specific lane needed for the next output: writing, behavior/repair, recall, sync, reporting, or editing.
 4. Heavy source docs only when they change the answer.
 
-Newest correction: private intonation is now a first-class lane. When Austin asks about interpersonal writing, humor in Messages, private-style replies, warmth, repair, or how his informal tone lands, route through the private intonation section in `cross-context-communication-system.md`. The operative move is scene-aware compression: decide what the other person should see, hear, or remember, then write the shortest line that keeps the feeling and timing intact. Do not publish or store raw private Messages.
+Newest correction: private intonation is now a first-class lane. When Austin asks about interpersonal writing, humor in Messages, private-style replies, warmth, repair, or how his informal tone lands, route through the private intonation section in `cross-context-communication-system.md`. The operative move is scene-setting when useful and plain compression when not: decide what the other person should see, hear, or remember, then write the shortest line that keeps the feeling and timing intact. If the room is only logistics, stay plain. The system exists to deliver the line, not to display the machinery. Do not publish or store raw private Messages.
 
 ## Privacy Boundary
 
 The OS can use privacy-safe derived evidence from Snapchat, iMessage, and living-brain context. It must not publish or commit raw private messages, private names, handles, group names, media paths, filenames, private phrase lists, burner metadata, DMs, or relationship maps.
 
 Generated Austin-style prose is output. It is not source evidence.
+
+## Workflow Capture Boundary
+
+Record & Replay can improve cross-tool understanding when it is enabled, but it should capture workflow shape rather than private material. Use it for GitHub, Cloudflare, Supabase, Obsidian, Austin Communication OS, and similar repeatable workflows when the useful lesson is sequence, visual checkpoint, decision point, failure recovery, or visible proof.
+
+Do not capture or store secrets, tokens, raw Messages, private DMs, raw exports, private tabs, personal identifiers, media paths, or private relationship context. Store the reusable summary in the living brain. Public repo docs should receive only the safe workflow lesson.
 
 ## Subagent Rule
 
