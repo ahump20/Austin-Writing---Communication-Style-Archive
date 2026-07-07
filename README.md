@@ -21,6 +21,7 @@ The goal is durable reuse:
 
 | Need | Open |
 |---|---|
+| Open the phone-friendly live preview | [GitHub Pages dossier](https://ahump20.github.io/Austin-Writing---Communication-Style-Archive/) |
 | View the current dossier | [Cross-Context Voice System Artifact](Voice-Style-Identity/cross-context-voice-system-artifact.html) |
 | View the category/filter map | [Austin Communication Context Map](Voice-Style-Identity/austin-communication-context-map.html) |
 | Load the reusable voice skill | [Voice-Style-Identity/SKILL.md](Voice-Style-Identity/SKILL.md) |
