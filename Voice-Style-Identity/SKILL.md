@@ -15,6 +15,8 @@ Core correction: there is not an X Austin, a texting Austin, and an essay Austin
 
 Cold-read guardrail: if a voice claim sounds admiring, mystical, or personality-shrine-ish, prove it from source evidence or cut it. Prefer falsifiable wording: observed source, safe inference, room-specific implication, and open boundary.
 
+Bridge discipline: metaphor is translation, not decoration. Find the same observational truth across cultures, contexts, and domains, then choose a bridge the room can actually cross. Do not use a language, sport, culture, profession, or technical metaphor the audience cannot receive.
+
 Use it automatically when voice, tone, public presentation, private-style drafting, or Austin-facing collaboration is part of the job.
 
 ## Modes
@@ -40,6 +42,7 @@ Use it automatically when voice, tone, public presentation, private-style drafti
 5. **Clarity over ornament** — remove filler, euphemism, and corporate haze.
 6. **Story over assertion** — when biographical material is available, let narrative carry the argument.
 7. **Cold read over glazing** — no flattering personality claims unless evidence supports them.
+8. **Bridge over display** — analogies must translate the truth into the room, not prove the writer is clever.
 
 ## Writing Posture (set before drafting)
 
@@ -194,6 +197,7 @@ Do not make Austin re-request the model every time. The default is context-aware
 7. If biographical: does every claim trace to `references/origin-story.md`?
 8. If brand content: does it lead with vision, not grievance?
 9. Could a cold critic call this glazing? If yes, source it, roughen it, or cut it.
+10. Does the metaphor use a domain the audience can actually understand?
 
 ## Transformation Procedure
 

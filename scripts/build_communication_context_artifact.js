@@ -376,7 +376,7 @@ const humanSynthesis = [
   {
     title: "Compression is structure. The line still has to teach something.",
     status: "reasoned",
-    summary: "Short is not the whole standard. A useful line carries object, contrast, rhythm, consequence, and a lesson the reader can feel without being lectured.",
+    summary: "Short is not the whole standard. A useful line carries object, contrast, rhythm, consequence, bridge, and a lesson the reader can feel without being lectured.",
     evidence: [
       "Austin's direct 2026-07-07 instruction reframed compression as necessary but incomplete.",
       "Public examples work when ordinary objects carry larger civic, sports, or institutional stakes.",
@@ -385,6 +385,19 @@ const humanSynthesis = [
     implication: "The model should ask what the line teaches and what feeling it leaves, not only how many words it saved.",
     strength: "This keeps the reference from becoming a word-count dashboard.",
     watch: "Overcorrecting into ornament would be the opposite error. The layers still have to earn their space.",
+  },
+  {
+    title: "Metaphor is translation, not decoration.",
+    status: "reasoned",
+    summary: "The art is finding the same observation across domains, then choosing a bridge the room can actually understand.",
+    evidence: [
+      "Austin's 2026-07-07 follow-up reframed artistry as contextual acuteness across cultures, contexts, and domains.",
+      "Public examples work when a shared object carries a larger structure: Waffle House as civic defense, Chick-fil-A as dynasty, camera work as malpractice.",
+      "Long-form and strategic writing use analogy best when the comparison makes the mechanism clearer, not when it shows off the reference.",
+    ],
+    implication: "Before using a metaphor, ask what the audience already knows. Do not explain rocket science in a language or domain the room cannot receive.",
+    strength: "This makes the same truth travel without losing the room.",
+    watch: "A clever bridge that the audience cannot cross is not communication. It is private decoration.",
   },
   {
     title: "Humor works by making ordinary stakes sound institutional.",
@@ -740,6 +753,11 @@ const thoughtEngine = [
     example: "Institutional neglect, bad incentives, platform design, sports malpractice, social expectation.",
   },
   {
+    step: "Bridge",
+    prompt: "What other domain reveals the same relation?",
+    example: "Sports, food, tools, family ritual, place, markets, classroom, field, machine, or church, depending on the room.",
+  },
+  {
     step: "Lesson",
     prompt: "What does the line teach without sounding like a lecture?",
     example: "The ordinary object becomes proof of a larger consequence.",
@@ -810,7 +828,7 @@ const researchBoundaryRows = [
 const data = {
   generatedAt: "2026-07-07",
   design: {
-    read: "Editorial dossier for Austin and future agents, with source-backed reflection, calm focus, and privacy-safe evidence. The page teaches one thought process translated through different rooms.",
+    read: "Editorial dossier for Austin and future agents, with source-backed reflection, calm focus, and privacy-safe evidence. The page teaches one thought process translated through different rooms and domains.",
     seed: "109730533743205",
     dials: {
       variance: 5,
@@ -910,7 +928,7 @@ const frontendContract = {
   DEPTH_INTEGRITY: data.design.dials.depth,
   signature_move: "A dossier where the operating premise leads and each chart is a receipt for the implication it supports.",
   layout_architecture: "sticky dossier rail plus long-form reading column and chart pairs",
-  information_flow: "summary, method, human read, deeper reflection, charts, trend arc, public examples, private router, recipes, filters, source boundaries",
+  information_flow: "summary, method, human read, bridge discipline, deeper reflection, charts, trend arc, public examples, private router, recipes, filters, source boundaries",
   section_or_zone_rhythm: "large thesis sections, long-form reflection chapters, paired evidence panels, recipes, and calmer source rows",
   primary_visual_asset: "custom SVG evidence charts",
   asset_job: "make private compression, room routing, and strength/risk patterns readable without exposing raw private content",
@@ -1856,7 +1874,7 @@ const html = String.raw`<!doctype html>
               h("h2", null, "Same thought. Different rooms."),
               h("p", { className:"thesis" }, "This is not a map of separate Austins. It is a learning reference for the same thought process under different pressure, audience, intimacy, and risk."),
               h("div", { className:"summary-strip" },
-                h("div", null, h("strong", null, "Core movement"), h("p", null, "Object, pressure, system, lesson, rhythm, room.")),
+                h("div", null, h("strong", null, "Core movement"), h("p", null, "Object, pressure, system, bridge, lesson, rhythm, room.")),
                 h("div", null, h("strong", null, "Humor pattern"), h("p", null, "Take a normal object and give it institutional stakes.")),
                 h("div", null, h("strong", null, "Art standard"), h("p", null, "Compression matters. The lesson and feeling still matter."))
               ),

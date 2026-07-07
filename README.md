@@ -38,6 +38,7 @@ The goal is durable reuse:
 - Routes the voice by room: public long-form, brand/platform, X/social, AI partner, friend group, warm private, coordination, and repair.
 - Preserves one canonical Austin reference instead of splitting him into fake platform identities.
 - Runs a cold-read guardrail against flattering, vague, or mystical claims. If a claim cannot be sourced, it stays reasoned/open or gets cut.
+- Treats metaphor as audience translation: the same truth should move across cultures, contexts, and domains without making the room decode a foreign reference.
 - Keeps claims tied to source evidence and source-status tags.
 - Gives future agents a reusable load order instead of a vague "write like me" request.
 

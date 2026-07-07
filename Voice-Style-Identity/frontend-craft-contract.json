@@ -1,5 +1,5 @@
 {
-  "design_read": "Editorial dossier for Austin and future agents, with source-backed reflection, calm focus, and privacy-safe evidence. The page teaches one thought process translated through different rooms.",
+  "design_read": "Editorial dossier for Austin and future agents, with source-backed reflection, calm focus, and privacy-safe evidence. The page teaches one thought process translated through different rooms and domains.",
   "audience": "Austin, future AI agents, and repo readers who need a privacy-safe voice reference.",
   "surface_type": "editorial evidence dossier",
   "primary_job": "Help Austin read his own communication patterns and help future agents choose the right room before choosing voice.",
@@ -30,7 +30,7 @@
   "DEPTH_INTEGRITY": 2,
   "signature_move": "A dossier where the operating premise leads and each chart is a receipt for the implication it supports.",
   "layout_architecture": "sticky dossier rail plus long-form reading column and chart pairs",
-  "information_flow": "summary, method, human read, deeper reflection, charts, trend arc, public examples, private router, recipes, filters, source boundaries",
+  "information_flow": "summary, method, human read, bridge discipline, deeper reflection, charts, trend arc, public examples, private router, recipes, filters, source boundaries",
   "section_or_zone_rhythm": "large thesis sections, long-form reflection chapters, paired evidence panels, recipes, and calmer source rows",
   "primary_visual_asset": "custom SVG evidence charts",
   "asset_job": "make private compression, room routing, and strength/risk patterns readable without exposing raw private content",
