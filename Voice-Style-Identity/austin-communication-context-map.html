@@ -742,6 +742,43 @@
         )
       );
     }
+    function TruthTransferDoctrine() {
+      return h("div", { className:"engine-grid" }, DATA.truthTransferRows.map((item, index) =>
+        h("article", { className:"engine-card", key:item.layer },
+          h("b", null, String(index + 1).padStart(2, "0")),
+          h("h3", null, item.layer),
+          h("p", null, item.question)
+        )
+      ));
+    }
+    function MetaphorExamples() {
+      return h("div", { className:"recipe-grid" }, DATA.metaphorExampleRows.map((item) =>
+        h("article", { className:"recipe-card", key:item.domain },
+          h("h3", null, item.domain),
+          h("dl", null,
+            h("div", null, h("dt", null, "Weak line"), h("dd", null, item.weak)),
+            h("div", null, h("dt", null, "Better bridge"), h("dd", null, item.bridge)),
+            h("div", null, h("dt", null, "Why it works"), h("dd", null, item.why))
+          )
+        )
+      ));
+    }
+    function TransferFailures() {
+      return h("div", { className:"matrix-table" },
+        h("table", null,
+          h("thead", null, h("tr", null,
+            h("th", null, "Failure"),
+            h("th", null, "What happens")
+          )),
+          h("tbody", null, DATA.transferFailureRows.map((row) =>
+            h("tr", { key:row.failure },
+              h("th", { scope:"row" }, row.failure),
+              h("td", null, row.effect)
+            )
+          ))
+        )
+      );
+    }
     function ThoughtEngine() {
       return h("div", { className:"engine-grid" }, DATA.thoughtEngine.map((item, index) =>
         h("article", { className:"engine-card", key:item.step },
@@ -915,6 +952,7 @@
             ["answer","Start"],
             ["usable-voice","Usable voice"],
             ["north-star","Doorway rule"],
+            ["truth-transfer","Truth transfer"],
             ["thought-engine","Movement"],
             ["behavior","System behavior"],
             ["visual-layer","Visual layer"],
@@ -969,6 +1007,22 @@
           h("section", { id:"north-star" },
             h(SectionHead, { title:"Doorway Rule", body:"This is the correction that keeps the whole project honest. Do not sort Austin into platform selves. Learn the single movement, then choose the doorway." }),
             h(NorthStarPanel, null)
+          ),
+          h("section", { id:"truth-transfer" },
+            h(SectionHead, { title:"Truth Transfer", body:"Same bones, different doorway. The mechanism survives while metaphor, rhythm, slang, grammar, image, silence, or proof changes for the room." }),
+            h(TruthTransferDoctrine, null),
+            h("div", { className:"reading-path" },
+              h("h3", null, "Causal architecture test"),
+              h("p", null, "Weak metaphors share surface features. Strong bridges preserve how the thing actually works: source path, authority signal, failure point, and human consequence.")
+            ),
+            h("div", { style:{ marginTop:"18px" } },
+              h(SectionHead, { title:"Stronger Bridges", body:"These examples change the doorway without changing the underlying mechanism." }),
+              h(MetaphorExamples, null)
+            ),
+            h("div", { style:{ marginTop:"18px" } },
+              h(SectionHead, { title:"Failure Modes", body:"These are the ways translation breaks when the doorway changes the truth or blocks the room." }),
+              h(TransferFailures, null)
+            )
           ),
           h("section", { id:"thought-engine" },
             h(SectionHead, { title:"The Repeatable Movement", body:"The durable part is the movement: the object carries feeling, the system explains pressure, and the room changes delivery." }),
