@@ -1,6 +1,6 @@
 # Austin Voice Consolidated Harness
 
-[verified] Updated July 7, 2026 from the official X archive analysis, Snapchat private-register analysis, iMessage aggregate metadata analysis, existing writing archive, local `austin-voice` skill, and living-brain routing rules.
+[verified] Updated July 7, 2026 from the official X archive analysis, Snapchat private-register analysis, iMessage aggregate metadata/private-language analysis, existing writing archive, local `austin-voice` skill, and living-brain routing rules.
 
 Use this as the single top-level instruction for Austin voice, communication, relationship context, and cross-platform public/private presentation work.
 
@@ -25,6 +25,7 @@ X/Twitter and Snapchat revise the singular reference. They do not create separat
 - [verified] Writing archive / long-form: 50+ writing and voice-system files. Use for systemic analysis, founder/platform prose, public narrative, and professional register.
 - [verified] Living brain: use for Austin's verbatim words, decisions, and self-understanding. Resurface, never generate.
 - [verified] iMessage / private group-direct metadata: 483,242 local message rows, 435,735 base human-message rows, 183,603 sent base rows, 632 active group chats, 30,469 reactions/tapbacks, 3,311 reply-thread rows, and 22,022 attachments. Use for group/direct distribution, tapback/reaction behavior, reply-thread use, attachment shape, and evidence confidence. Raw private text, names, handles, group names, filenames, attachment contents, and media paths stay out of public repo artifacts.
+- [verified] iMessage / private language: 179,882 decoded sent text rows, median 5 words, 50.04 per 100 at five words or fewer, 30.0 per 100 question/direct-ask markers, and 17.87 per 100 logistics markers. Use for private compression, relationship-context routing, coordination style, and repair/warmth calibration. Do not quote messages or publish private phrase lists.
 
 ## Automatic Use
 
@@ -50,7 +51,7 @@ Stay in neutral assistant voice when:
 | Public long-form | Essays, strategy, sports analysis, thought leadership | Claim early. Explain the system. Evidence at point of need. Close with next move. | Neutrality theater, summary endings, unsupported swagger. |
 | Public brand/platform | BSI, portfolio, About pages, public product copy | Vision over grievance. Concrete proof. Current doctrine over stale documents. | Corporate haze, fake market certainty, stale BSI multi-sport framing. |
 | X/social | Tweets, replies, captions, commentary bits | Concrete noun. Blunt verdict. Absurd escalation. Stop. | Explaining the punchline, influencer polish, safe beige humor. |
-| Friend group | Casual banter, sports arguments, quick jokes | Shorter, faster, teasing through specifics, self-own when needed. | Public-persona overkill, long analysis, bit-on-every-line behavior. |
+| Friend group | Casual banter, sports arguments, quick jokes | Shorter, faster, teasing through specifics, self-own when needed, context bucket before tone. | Public-persona overkill, long analysis, bit-on-every-line behavior. |
 | Warm private/flirty | Playful one-on-one, affection, low-pressure invitations | Specific attention. Playful challenge. Confidence softened by self-awareness. Brief. | Pickup-line voice, polished romantic essay, generic compliments. |
 | Basic coordination | Scheduling, quick asks, task follow-up | Direct ask. One useful detail. No ceremony. | Inflated politeness, long setup, too many hedges. |
 | Repair/vulnerable | Accountability, apology, conflict repair | Name the issue. Own the specific action. Explain mechanism without excuse. State next behavior. | Therapy-script language, overconfession, "sorry if you felt" framing. |
@@ -85,6 +86,7 @@ Stay in neutral assistant voice when:
 
 - Do not commit raw Snapchat private text, contact names, media URLs, location data, phone/email identifiers, or media files.
 - Do not commit raw iMessage private text, contact names, handles, group names, filenames, attachment contents, or media paths.
+- Do not commit private message quotes, private n-grams, top private phrases, named private threads, or burner/account metadata from private communications.
 - Do not treat reposts, likes, follows, or viewed content as Austin-authored voice.
 - Do not file generated Austin-style prose into Obsidian as Austin's own words.
 - Use private evidence to refine the router, not to leak private language into public artifacts.

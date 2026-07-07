@@ -1,6 +1,6 @@
 # Austin Cross-Context Communication System
 
-[verified] Built on 2026-07-06 and updated on 2026-07-07 from the current writing archive, official X archive analysis, Snapchat metadata export analysis, iMessage aggregate metadata analysis, and existing voice system files.
+[verified] Built on 2026-07-06 and updated on 2026-07-07 from the current writing archive, official X archive analysis, Snapchat metadata export analysis, iMessage aggregate metadata/private-language analysis, and existing voice system files.
 
 ## Why This Exists
 
@@ -46,6 +46,7 @@ Then choose the register. Do not start from the funniest X voice and back-fill c
 - Official X archive: 6,300 official rows, 5,437 authored voice rows, 2011-2026.
 - Snapchat metadata export: 2,417 chat rows, 1,052 sent text rows, 208 conversations, March 24, 2016 to July 4, 2026. Raw messages, names, media URLs, and media files were kept out of the repo. This is the primary evidence for private one-on-one, basic coordination, quick-reaction, and warm/private compression.
 - iMessage metadata: 483,242 local message rows, 435,735 base human-message rows, 183,603 sent base rows, 252,132 received base rows, 632 active group chats, 30,469 reactions/tapbacks, 3,311 reply-thread rows, and 22,022 attachments. Raw private text, contact names, handles, group names, filenames, attachment contents, and media paths were kept out of the repo. This is the primary evidence for group/direct distribution, tapback/reaction behavior, reply-thread use, and attachment-heavy private communication shape.
+- iMessage private-language pass: 179,882 decoded sent text rows, median 5 words, p75 10 words, p90 17 words, 50.04 per 100 messages at five words or fewer, 75.45 per 100 at ten words or fewer, 30.0 per 100 question/direct-ask markers, and 17.87 per 100 logistics markers. Raw wording stayed local-only and was not committed.
 - Writing archive: 50+ human-authored college and professional documents analyzed across ages 17-25.
 - Existing voice system: `voice-dna.md`, `writing-system.md`, `source-passages.md`, `developmental-analysis.md`, `ai-voice-transfer.md`.
 - Professional materials and sports writing in this repository.
@@ -54,7 +55,7 @@ Then choose the register. Do not start from the funniest X voice and back-fill c
 
 - iMessage/private-chat metadata was blocked by macOS Full Disk Access / TCC on July 6, 2026. On July 7, 2026, Full Disk Access was enabled for Codex-related processes. Direct `sqlite3` access to `~/Library/Messages/chat.db` now succeeds, and the Apple Messages MCP can query the database.
 
-[verified] X/Twitter anchors public/social voice, Snapchat upgrades private one-on-one/basic coordination/warm-private compression, and iMessage upgrades private group/direct metadata, reactions/tapbacks, reply-thread behavior, attachment shape, and current private-chat distribution.
+[verified] X/Twitter anchors public/social voice, Snapchat upgrades private one-on-one/basic coordination/warm-private compression, and iMessage upgrades private group/direct metadata, private wording compression, reactions/tapbacks, reply-thread behavior, attachment shape, and current private-chat distribution.
 
 See `cross-context-source-manifest.md` for the consolidated source manifest.
 
@@ -184,13 +185,13 @@ Avoid:
 
 ### 5. Friend-Group / Group Chat
 
-[verified] Evidence status: Snapchat verifies private-chat compression and casual marker families. iMessage verifies group/direct metadata, reaction/tapback volume, reply-thread rows, and attachment-heavy private communication shape. [reasoned] Exact private wording remains privacy-bound because raw Messages text is not quoted or committed.
+[verified] Evidence status: Snapchat verifies private-chat compression and casual marker families. iMessage verifies group/direct metadata, reaction/tapback volume, reply-thread rows, attachment-heavy private communication shape, and sent private-language compression. [reasoned] Exact private wording remains privacy-bound because raw Messages text is not quoted or committed.
 
 Use for: group chats, casual replies, sports arguments, quick jokes, low-stakes social coordination.
 
 Voice shape:
 
-- Faster than X, less polished than public social. Median sent Snapchat text is 5 words; 75th percentile is 8 words.
+- Faster than X, less polished than public social. Median sent Snapchat text is 5 words; median decoded sent iMessage text is also 5 words.
 - Short lines.
 - Teasing through specifics.
 - Sports or place references as shared shorthand.
@@ -245,6 +246,8 @@ Avoid:
 ### 7. Basic Coordination
 
 [verified] Evidence: Snapchat sent-text markers show high direct-ask and logistics density: question/direct-ask markers in 34.41 per 100 sent text rows, logistics markers in 17.87 per 100.
+
+[verified] iMessage confirms the same coordination gravity at larger scale: 179,882 decoded sent text rows, question/direct-ask markers in 30.0 per 100, logistics markers in 17.87 per 100, and 75.45 per 100 at ten words or fewer.
 
 Use for: logistics, scheduling, quick asks, task follow-up.
 
@@ -381,11 +384,11 @@ Same thought, different contexts:
 
 ## Upgrade Path
 
-[verified] The first iMessage metadata pass is complete and privacy-safe. The remaining optional upgrade is a local-only private-language pass if Austin explicitly asks for it.
+[verified] The first iMessage metadata pass and private-language pass are complete and privacy-safe. The remaining optional upgrade is a deeper local-only relationship-context pass if Austin explicitly asks for it.
 
 - Keep aggregate message stats by year, hour, group/direct shape, reactions, replies, and attachments current.
-- Add private language summaries only if they can stay privacy-safe and useful.
-- Sample sent-only wording for affection, apology, logistics, jokes, and argument repair only in a private local pass, not in public repo docs.
+- Add deeper private language summaries only if they stay privacy-safe and useful.
+- Never sample sent-only wording into public repo docs. Use marker rates and context buckets instead.
 - Preserve reaction/tapback, edited/unsent, reply-thread, and group/direct distribution as metadata evidence.
 - Track conversation initiation and double-text patterns only as aggregate behavior, not as named-contact records.
 

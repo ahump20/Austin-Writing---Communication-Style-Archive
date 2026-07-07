@@ -22,6 +22,13 @@ BLOCKED_FILE_PATTERNS = (
     ("private key", re.compile(r"\.(pem|p12|pfx)$", re.IGNORECASE)),
     ("private key", re.compile(r"(^|/).*private.*\.key$", re.IGNORECASE)),
     ("credentials dump", re.compile(r"(^|/)(credentials|secrets?)\.(json|ya?ml|toml|txt)$", re.IGNORECASE)),
+    (
+        "raw private communications export",
+        re.compile(
+            r"(^|/)Voice-Style-Identity/imessage-analysis/(?:local-private/|.*(?:raw|verbatim|samples|transcript).*)",
+            re.IGNORECASE,
+        ),
+    ),
 )
 SECRET_PATTERNS = (
     ("OpenAI key", re.compile(r"\bsk-(?:proj-|live-|test-)?[A-Za-z0-9_-]{20,}\b")),

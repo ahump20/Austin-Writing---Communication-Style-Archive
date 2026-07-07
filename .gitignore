@@ -16,3 +16,11 @@ X-Twitter-Archive/live-capture/**/*.endpoint.json
 X-Twitter-Archive/live-capture/**/capture-state.json
 X-Twitter-Archive/live-capture/**/*-capture-tweets.json
 X-Twitter-Archive/live-capture/**/*-capture-summary.json
+
+# Private communication source material and local-only audits. Commit only
+# privacy-safe aggregate summaries.
+Voice-Style-Identity/imessage-analysis/local-private/
+Voice-Style-Identity/imessage-analysis/**/*raw*
+Voice-Style-Identity/imessage-analysis/**/*verbatim*
+Voice-Style-Identity/imessage-analysis/**/*samples*
+Voice-Style-Identity/imessage-analysis/**/*transcript*

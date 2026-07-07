@@ -32,6 +32,8 @@ If these files conflict with older archive documents, the canonical layer wins f
 
 `Voice-Style-Identity/snapchat-analysis/` holds privacy-safe derived Snapchat summaries. Raw private text, names, media URLs, locations, and media files stay out of git.
 
+`Voice-Style-Identity/imessage-analysis/` holds privacy-safe derived iMessage summaries. The committed files may include aggregate counts, marker rates, decoded sent-text length distributions, and anonymous relationship-context buckets. They must not include raw Messages text, contact names, handles, group names, filenames, attachment contents, media paths, transcript exports, or top private phrases.
+
 `Writing-Record/`, `UT-Austin-Coursework/`, `Full-Sail-Coursework/`, `Sports-Writing/`, and `Research/` hold the long-form record. These are source evidence, not current instruction files.
 
 ## Historical Material
@@ -57,6 +59,7 @@ Generated artifacts stay only when they serve a distinct job.
 - The cross-context artifact is the canonical dossier.
 - The X artifact is retained because it is a tweet-level public/social evidence explorer.
 - Screenshots are retained as render proof for the dossier.
+- iMessage metadata and language summaries are retained only as privacy-safe derived source evidence.
 - Empty duplicate-removal files in `processed/` are retained because they prove the parser found zero duplicate tweet IDs.
 
 ## Duplicate Policy
@@ -83,3 +86,5 @@ When a new archive or platform export lands:
 6. Sync the durable instruction into local skills and living-brain bridge notes.
 
 Do not file generated Austin-style output as source evidence. It can be a useful draft. It is not Austin's record.
+
+For private communications, never commit raw message bodies, transcripts, handles, chat titles, thread names, filenames, media paths, or phrase lists. Commit derived patterns only.

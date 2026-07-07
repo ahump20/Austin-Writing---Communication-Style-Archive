@@ -1,0 +1,1146 @@
+{
+  "by_context": {
+    "direct_or_low_member": {
+      "average_words": 8.62,
+      "follow_up_rate_per_100": {
+        "within_10min": 46.23,
+        "within_2min": 34.53
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 17.77,
+        "one_word": 6.87,
+        "over_twenty_words": 6.96,
+        "six_to_ten_words": 24.7,
+        "two_to_five_words": 43.69
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 28693,
+        "one_word": 11099,
+        "over_twenty_words": 11235,
+        "six_to_ten_words": 39876,
+        "two_to_five_words": 70543
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 3.6,
+        "laughter_or_play": 5.64,
+        "link_or_media_reference": 0.8,
+        "logistics": 18.33,
+        "profanity_or_intensity": 1.87,
+        "question_or_direct_ask": 30.07,
+        "repair_or_accountability": 0.91,
+        "sports_or_place_shorthand": 3.28
+      },
+      "median_characters": 22.0,
+      "median_words": 5.0,
+      "messages": 161446,
+      "p75_words": 10.0,
+      "p90_words": 17.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 0.31,
+        "has_ellipsis": 0.4,
+        "has_emoji": 0.83,
+        "has_exclamation": 5.9,
+        "has_question_mark": 3.58,
+        "one_liner_5_words_or_less": 50.57,
+        "short_message_10_words_or_less": 75.27
+      }
+    },
+    "large_group": {
+      "average_words": 7.59,
+      "follow_up_rate_per_100": {
+        "within_10min": 54.32,
+        "within_2min": 42.94
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 17.72,
+        "one_word": 4.55,
+        "over_twenty_words": 2.54,
+        "six_to_ten_words": 32.22,
+        "two_to_five_words": 42.97
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 790,
+        "one_word": 203,
+        "over_twenty_words": 113,
+        "six_to_ten_words": 1436,
+        "two_to_five_words": 1915
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 1.32,
+        "laughter_or_play": 1.05,
+        "link_or_media_reference": 1.1,
+        "logistics": 11.76,
+        "profanity_or_intensity": 2.69,
+        "question_or_direct_ask": 27.93,
+        "repair_or_accountability": 0.27,
+        "sports_or_place_shorthand": 5.77
+      },
+      "median_characters": 24,
+      "median_words": 6,
+      "messages": 4457,
+      "p75_words": 10.0,
+      "p90_words": 14.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 0.74,
+        "has_ellipsis": 0.09,
+        "has_emoji": 0.13,
+        "has_exclamation": 0.34,
+        "has_question_mark": 1.93,
+        "one_liner_5_words_or_less": 47.52,
+        "short_message_10_words_or_less": 79.74
+      }
+    },
+    "medium_group": {
+      "average_words": 8.58,
+      "follow_up_rate_per_100": {
+        "within_10min": 57.98,
+        "within_2min": 44.1
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 21.15,
+        "one_word": 4.47,
+        "over_twenty_words": 5.33,
+        "six_to_ten_words": 32.55,
+        "two_to_five_words": 36.5
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 846,
+        "one_word": 179,
+        "over_twenty_words": 213,
+        "six_to_ten_words": 1302,
+        "two_to_five_words": 1460
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 1.27,
+        "laughter_or_play": 1.45,
+        "link_or_media_reference": 1.18,
+        "logistics": 15.45,
+        "profanity_or_intensity": 3.6,
+        "question_or_direct_ask": 30.98,
+        "repair_or_accountability": 0.22,
+        "sports_or_place_shorthand": 2.93
+      },
+      "median_characters": 29.0,
+      "median_words": 7.0,
+      "messages": 4000,
+      "p75_words": 11.0,
+      "p90_words": 16.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 0.3,
+        "has_ellipsis": 0.05,
+        "has_emoji": 0.07,
+        "has_exclamation": 0.45,
+        "has_question_mark": 2.77,
+        "one_liner_5_words_or_less": 40.98,
+        "short_message_10_words_or_less": 73.52
+      }
+    },
+    "small_group": {
+      "average_words": 8.07,
+      "follow_up_rate_per_100": {
+        "within_10min": 55.85,
+        "within_2min": 43.53
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 18.31,
+        "one_word": 6.52,
+        "over_twenty_words": 4.54,
+        "six_to_ten_words": 30.84,
+        "two_to_five_words": 39.78
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 1827,
+        "one_word": 651,
+        "over_twenty_words": 453,
+        "six_to_ten_words": 3078,
+        "two_to_five_words": 3970
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 1.61,
+        "laughter_or_play": 2.13,
+        "link_or_media_reference": 2.25,
+        "logistics": 14.04,
+        "profanity_or_intensity": 2.9,
+        "question_or_direct_ask": 29.33,
+        "repair_or_accountability": 0.32,
+        "sports_or_place_shorthand": 4.05
+      },
+      "median_characters": 25,
+      "median_words": 6,
+      "messages": 9979,
+      "p75_words": 10.0,
+      "p90_words": 15.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 0.69,
+        "has_ellipsis": 0.18,
+        "has_emoji": 0.22,
+        "has_exclamation": 1.32,
+        "has_question_mark": 4.6,
+        "one_liner_5_words_or_less": 46.31,
+        "short_message_10_words_or_less": 77.15
+      }
+    }
+  },
+  "by_context_phase": {
+    "direct_or_low_member / 2014-2017": {
+      "average_words": 9.34,
+      "follow_up_rate_per_100": {
+        "within_10min": 42.25,
+        "within_2min": 26.69
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 19.45,
+        "one_word": 6.52,
+        "over_twenty_words": 9.6,
+        "six_to_ten_words": 24.92,
+        "two_to_five_words": 39.52
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 10814,
+        "one_word": 3622,
+        "over_twenty_words": 5335,
+        "six_to_ten_words": 13853,
+        "two_to_five_words": 21970
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 5.16,
+        "laughter_or_play": 7.49,
+        "link_or_media_reference": 0.48,
+        "logistics": 21.03,
+        "profanity_or_intensity": 1.52,
+        "question_or_direct_ask": 34.27,
+        "repair_or_accountability": 1.48,
+        "sports_or_place_shorthand": 2.62
+      },
+      "median_characters": 26.0,
+      "median_words": 6.0,
+      "messages": 55594,
+      "p75_words": 12.0,
+      "p90_words": 20.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 0.37,
+        "has_ellipsis": 0.92,
+        "has_emoji": 1.83,
+        "has_exclamation": 7.86,
+        "has_question_mark": 4.12,
+        "one_liner_5_words_or_less": 46.03,
+        "short_message_10_words_or_less": 70.95
+      }
+    },
+    "direct_or_low_member / 2018-2020": {
+      "average_words": 7.22,
+      "follow_up_rate_per_100": {
+        "within_10min": 53.72,
+        "within_2min": 40.68
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 16.33,
+        "one_word": 6.04,
+        "over_twenty_words": 4.5,
+        "six_to_ten_words": 25.79,
+        "two_to_five_words": 47.35
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 5744,
+        "one_word": 2123,
+        "over_twenty_words": 1583,
+        "six_to_ten_words": 9072,
+        "two_to_five_words": 16656
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 2.48,
+        "laughter_or_play": 4.49,
+        "link_or_media_reference": 0.47,
+        "logistics": 15.68,
+        "profanity_or_intensity": 2.11,
+        "question_or_direct_ask": 26.64,
+        "repair_or_accountability": 0.66,
+        "sports_or_place_shorthand": 3.14
+      },
+      "median_characters": 20.0,
+      "median_words": 5.0,
+      "messages": 35178,
+      "p75_words": 9.0,
+      "p90_words": 15.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 0.19,
+        "has_ellipsis": 0.06,
+        "has_emoji": 0.11,
+        "has_exclamation": 3.22,
+        "has_question_mark": 2.65,
+        "one_liner_5_words_or_less": 53.38,
+        "short_message_10_words_or_less": 79.17
+      }
+    },
+    "direct_or_low_member / 2021-2023": {
+      "average_words": 8.23,
+      "follow_up_rate_per_100": {
+        "within_10min": 47.99,
+        "within_2min": 39.76
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 18.84,
+        "one_word": 6.86,
+        "over_twenty_words": 7.04,
+        "six_to_ten_words": 24.06,
+        "two_to_five_words": 43.2
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 9346,
+        "one_word": 3402,
+        "over_twenty_words": 3494,
+        "six_to_ten_words": 11933,
+        "two_to_five_words": 21430
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 3.24,
+        "laughter_or_play": 5.03,
+        "link_or_media_reference": 1.13,
+        "logistics": 19.52,
+        "profanity_or_intensity": 2.03,
+        "question_or_direct_ask": 29.79,
+        "repair_or_accountability": 0.66,
+        "sports_or_place_shorthand": 4.19
+      },
+      "median_characters": 23,
+      "median_words": 5,
+      "messages": 49605,
+      "p75_words": 11.0,
+      "p90_words": 18.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 0.24,
+        "has_ellipsis": 0.16,
+        "has_emoji": 0.36,
+        "has_exclamation": 7.04,
+        "has_question_mark": 3.43,
+        "one_liner_5_words_or_less": 50.06,
+        "short_message_10_words_or_less": 74.12
+      }
+    },
+    "direct_or_low_member / 2024-2026": {
+      "average_words": 9.96,
+      "follow_up_rate_per_100": {
+        "within_10min": 40.06,
+        "within_2min": 32.63
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 13.24,
+        "one_word": 9.26,
+        "over_twenty_words": 3.91,
+        "six_to_ten_words": 23.82,
+        "two_to_five_words": 49.77
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 2789,
+        "one_word": 1952,
+        "over_twenty_words": 823,
+        "six_to_ten_words": 5018,
+        "two_to_five_words": 10487
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 2.22,
+        "laughter_or_play": 4.12,
+        "link_or_media_reference": 1.38,
+        "logistics": 12.84,
+        "profanity_or_intensity": 2.05,
+        "question_or_direct_ask": 25.37,
+        "repair_or_accountability": 0.44,
+        "sports_or_place_shorthand": 3.11
+      },
+      "median_characters": 18,
+      "median_words": 5,
+      "messages": 21069,
+      "p75_words": 8.0,
+      "p90_words": 14.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 0.54,
+        "has_ellipsis": 0.16,
+        "has_emoji": 0.53,
+        "has_exclamation": 2.55,
+        "has_question_mark": 4.08,
+        "one_liner_5_words_or_less": 59.04,
+        "short_message_10_words_or_less": 82.86
+      }
+    },
+    "large_group / 2014-2017": {
+      "average_words": 7.15,
+      "follow_up_rate_per_100": {
+        "within_10min": 51.44,
+        "within_2min": 41.83
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 16.83,
+        "one_word": 4.57,
+        "over_twenty_words": 3.12,
+        "six_to_ten_words": 28.85,
+        "two_to_five_words": 46.63
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 70,
+        "one_word": 19,
+        "over_twenty_words": 13,
+        "six_to_ten_words": 120,
+        "two_to_five_words": 194
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 1.2,
+        "laughter_or_play": 0.72,
+        "link_or_media_reference": 0.48,
+        "logistics": 13.22,
+        "profanity_or_intensity": 0.96,
+        "question_or_direct_ask": 22.6,
+        "repair_or_accountability": 0.48,
+        "sports_or_place_shorthand": 6.25
+      },
+      "median_characters": 24.5,
+      "median_words": 5.0,
+      "messages": 416,
+      "p75_words": 10.0,
+      "p90_words": 14.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 0.48,
+        "has_question_mark": 1.92,
+        "one_liner_5_words_or_less": 51.2,
+        "short_message_10_words_or_less": 80.05
+      }
+    },
+    "large_group / 2018-2020": {
+      "average_words": 6.89,
+      "follow_up_rate_per_100": {
+        "within_10min": 56.45,
+        "within_2min": 44.05
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 15.95,
+        "one_word": 4.22,
+        "over_twenty_words": 1.38,
+        "six_to_ten_words": 32.19,
+        "two_to_five_words": 46.26
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 382,
+        "one_word": 101,
+        "over_twenty_words": 33,
+        "six_to_ten_words": 771,
+        "two_to_five_words": 1108
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 0.96,
+        "laughter_or_play": 1.09,
+        "link_or_media_reference": 0.63,
+        "logistics": 12.86,
+        "profanity_or_intensity": 3.05,
+        "question_or_direct_ask": 26.72,
+        "repair_or_accountability": 0.13,
+        "sports_or_place_shorthand": 5.26
+      },
+      "median_characters": 23,
+      "median_words": 5,
+      "messages": 2395,
+      "p75_words": 9.0,
+      "p90_words": 13.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 0.29,
+        "has_ellipsis": 0.08,
+        "has_emoji": 0.08,
+        "has_exclamation": 0.21,
+        "has_question_mark": 1.0,
+        "one_liner_5_words_or_less": 50.48,
+        "short_message_10_words_or_less": 82.67
+      }
+    },
+    "large_group / 2021-2023": {
+      "average_words": 8.55,
+      "follow_up_rate_per_100": {
+        "within_10min": 51.36,
+        "within_2min": 40.79
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 20.81,
+        "one_word": 5.12,
+        "over_twenty_words": 3.88,
+        "six_to_ten_words": 32.95,
+        "two_to_five_words": 37.24
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 252,
+        "one_word": 62,
+        "over_twenty_words": 47,
+        "six_to_ten_words": 399,
+        "two_to_five_words": 451
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 1.73,
+        "laughter_or_play": 1.32,
+        "link_or_media_reference": 1.9,
+        "logistics": 10.57,
+        "profanity_or_intensity": 2.73,
+        "question_or_direct_ask": 30.14,
+        "repair_or_accountability": 0.25,
+        "sports_or_place_shorthand": 6.61
+      },
+      "median_characters": 28,
+      "median_words": 6,
+      "messages": 1211,
+      "p75_words": 10.0,
+      "p90_words": 15.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 1.49,
+        "has_ellipsis": 0.08,
+        "has_emoji": 0.17,
+        "has_exclamation": 0.58,
+        "has_question_mark": 3.06,
+        "one_liner_5_words_or_less": 42.36,
+        "short_message_10_words_or_less": 75.31
+      }
+    },
+    "large_group / 2024-2026": {
+      "average_words": 9.15,
+      "follow_up_rate_per_100": {
+        "within_10min": 53.56,
+        "within_2min": 43.91
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 19.77,
+        "one_word": 4.83,
+        "over_twenty_words": 4.6,
+        "six_to_ten_words": 33.56,
+        "two_to_five_words": 37.24
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 86,
+        "one_word": 21,
+        "over_twenty_words": 20,
+        "six_to_ten_words": 146,
+        "two_to_five_words": 162
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 2.3,
+        "laughter_or_play": 0.46,
+        "link_or_media_reference": 2.07,
+        "logistics": 7.59,
+        "profanity_or_intensity": 2.3,
+        "question_or_direct_ask": 33.56,
+        "repair_or_accountability": 0.92,
+        "sports_or_place_shorthand": 5.75
+      },
+      "median_characters": 27,
+      "median_words": 6,
+      "messages": 435,
+      "p75_words": 10.0,
+      "p90_words": 16.6,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 1.38,
+        "has_ellipsis": 0.23,
+        "has_emoji": 0.46,
+        "has_exclamation": 0.69,
+        "has_question_mark": 3.91,
+        "one_liner_5_words_or_less": 42.07,
+        "short_message_10_words_or_less": 75.63
+      }
+    },
+    "medium_group / 2014-2017": {
+      "average_words": 9.0,
+      "follow_up_rate_per_100": {
+        "within_10min": 55.95,
+        "within_2min": 41.71
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 19.13,
+        "one_word": 3.99,
+        "over_twenty_words": 7.16,
+        "six_to_ten_words": 33.72,
+        "two_to_five_words": 35.99
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 278,
+        "one_word": 58,
+        "over_twenty_words": 104,
+        "six_to_ten_words": 490,
+        "two_to_five_words": 523
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 1.03,
+        "laughter_or_play": 1.17,
+        "link_or_media_reference": 0.41,
+        "logistics": 18.31,
+        "profanity_or_intensity": 3.3,
+        "question_or_direct_ask": 33.24,
+        "repair_or_accountability": 0.41,
+        "sports_or_place_shorthand": 1.79
+      },
+      "median_characters": 30,
+      "median_words": 7,
+      "messages": 1453,
+      "p75_words": 11.0,
+      "p90_words": 18.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 0.14,
+        "has_exclamation": 0.28,
+        "has_question_mark": 2.62,
+        "one_liner_5_words_or_less": 39.99,
+        "short_message_10_words_or_less": 73.71
+      }
+    },
+    "medium_group / 2018-2020": {
+      "average_words": 9.32,
+      "follow_up_rate_per_100": {
+        "within_10min": 59.08,
+        "within_2min": 44.31
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 22.94,
+        "one_word": 2.64,
+        "over_twenty_words": 6.68,
+        "six_to_ten_words": 30.2,
+        "two_to_five_words": 37.54
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 278,
+        "one_word": 32,
+        "over_twenty_words": 81,
+        "six_to_ten_words": 366,
+        "two_to_five_words": 455
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 1.16,
+        "laughter_or_play": 1.4,
+        "link_or_media_reference": 0.5,
+        "logistics": 16.67,
+        "profanity_or_intensity": 3.3,
+        "question_or_direct_ask": 30.2,
+        "repair_or_accountability": 0.17,
+        "sports_or_place_shorthand": 2.89
+      },
+      "median_characters": 29.0,
+      "median_words": 7.0,
+      "messages": 1212,
+      "p75_words": 11.0,
+      "p90_words": 17.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 0.08,
+        "has_ellipsis": 0.08,
+        "has_emoji": 0.08,
+        "has_exclamation": 0.25,
+        "has_question_mark": 0.91,
+        "one_liner_5_words_or_less": 40.18,
+        "short_message_10_words_or_less": 70.38
+      }
+    },
+    "medium_group / 2021-2023": {
+      "average_words": 7.42,
+      "follow_up_rate_per_100": {
+        "within_10min": 60.41,
+        "within_2min": 47.85
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 21.18,
+        "one_word": 6.1,
+        "over_twenty_words": 1.97,
+        "six_to_ten_words": 33.93,
+        "two_to_five_words": 36.8
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 236,
+        "one_word": 68,
+        "over_twenty_words": 22,
+        "six_to_ten_words": 378,
+        "two_to_five_words": 410
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 1.35,
+        "laughter_or_play": 2.15,
+        "link_or_media_reference": 2.6,
+        "logistics": 11.85,
+        "profanity_or_intensity": 4.22,
+        "question_or_direct_ask": 29.62,
+        "sports_or_place_shorthand": 4.58
+      },
+      "median_characters": 26.0,
+      "median_words": 6.0,
+      "messages": 1114,
+      "p75_words": 10.0,
+      "p90_words": 14.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 0.45,
+        "has_ellipsis": 0.09,
+        "has_emoji": 0.09,
+        "has_exclamation": 0.9,
+        "has_question_mark": 5.03,
+        "one_liner_5_words_or_less": 42.91,
+        "short_message_10_words_or_less": 76.84
+      }
+    },
+    "medium_group / 2024-2026": {
+      "average_words": 7.61,
+      "follow_up_rate_per_100": {
+        "within_10min": 52.94,
+        "within_2min": 39.82
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 24.43,
+        "one_word": 9.5,
+        "over_twenty_words": 2.71,
+        "six_to_ten_words": 30.77,
+        "two_to_five_words": 32.58
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 54,
+        "one_word": 21,
+        "over_twenty_words": 6,
+        "six_to_ten_words": 68,
+        "two_to_five_words": 72
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 3.17,
+        "link_or_media_reference": 2.71,
+        "logistics": 8.14,
+        "profanity_or_intensity": 4.07,
+        "question_or_direct_ask": 27.15,
+        "repair_or_accountability": 0.45,
+        "sports_or_place_shorthand": 2.26
+      },
+      "median_characters": 28,
+      "median_words": 6,
+      "messages": 221,
+      "p75_words": 11.0,
+      "p90_words": 15.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 1.81,
+        "has_emoji": 0.45,
+        "has_exclamation": 0.45,
+        "has_question_mark": 2.71,
+        "one_liner_5_words_or_less": 42.08,
+        "short_message_10_words_or_less": 72.85
+      }
+    },
+    "small_group / 2014-2017": {
+      "average_words": 9.33,
+      "follow_up_rate_per_100": {
+        "within_10min": 49.81,
+        "within_2min": 33.23
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 22.41,
+        "one_word": 5.44,
+        "over_twenty_words": 7.43,
+        "six_to_ten_words": 26.63,
+        "two_to_five_words": 38.09
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 350,
+        "one_word": 85,
+        "over_twenty_words": 116,
+        "six_to_ten_words": 416,
+        "two_to_five_words": 595
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 3.01,
+        "laughter_or_play": 3.01,
+        "link_or_media_reference": 1.47,
+        "logistics": 20.23,
+        "profanity_or_intensity": 2.24,
+        "question_or_direct_ask": 33.03,
+        "repair_or_accountability": 0.38,
+        "sports_or_place_shorthand": 1.92
+      },
+      "median_characters": 29.0,
+      "median_words": 7.0,
+      "messages": 1562,
+      "p75_words": 12.0,
+      "p90_words": 18.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 0.64,
+        "has_ellipsis": 0.19,
+        "has_emoji": 0.26,
+        "has_exclamation": 0.64,
+        "has_question_mark": 2.18,
+        "one_liner_5_words_or_less": 43.53,
+        "short_message_10_words_or_less": 70.17
+      }
+    },
+    "small_group / 2018-2020": {
+      "average_words": 7.69,
+      "follow_up_rate_per_100": {
+        "within_10min": 57.27,
+        "within_2min": 45.09
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 18.61,
+        "one_word": 4.44,
+        "over_twenty_words": 4.12,
+        "six_to_ten_words": 30.87,
+        "two_to_five_words": 41.96
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 411,
+        "one_word": 98,
+        "over_twenty_words": 91,
+        "six_to_ten_words": 682,
+        "two_to_five_words": 927
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 0.81,
+        "laughter_or_play": 1.86,
+        "link_or_media_reference": 0.59,
+        "logistics": 14.98,
+        "profanity_or_intensity": 3.03,
+        "question_or_direct_ask": 27.34,
+        "repair_or_accountability": 0.41,
+        "sports_or_place_shorthand": 2.31
+      },
+      "median_characters": 24,
+      "median_words": 6,
+      "messages": 2209,
+      "p75_words": 10.0,
+      "p90_words": 15.0,
+      "punctuation_rate_per_100": {
+        "has_exclamation": 0.45,
+        "has_question_mark": 1.81,
+        "one_liner_5_words_or_less": 46.4,
+        "short_message_10_words_or_less": 77.27
+      }
+    },
+    "small_group / 2021-2023": {
+      "average_words": 7.91,
+      "follow_up_rate_per_100": {
+        "within_10min": 59.94,
+        "within_2min": 48.16
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 19.86,
+        "one_word": 5.53,
+        "over_twenty_words": 4.71,
+        "six_to_ten_words": 30.24,
+        "two_to_five_words": 39.66
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 797,
+        "one_word": 222,
+        "over_twenty_words": 189,
+        "six_to_ten_words": 1214,
+        "two_to_five_words": 1592
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 1.54,
+        "laughter_or_play": 2.22,
+        "link_or_media_reference": 1.92,
+        "logistics": 14.15,
+        "profanity_or_intensity": 3.49,
+        "question_or_direct_ask": 30.84,
+        "repair_or_accountability": 0.32,
+        "sports_or_place_shorthand": 6.2
+      },
+      "median_characters": 25.0,
+      "median_words": 6.0,
+      "messages": 4014,
+      "p75_words": 10.0,
+      "p90_words": 16.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 0.85,
+        "has_ellipsis": 0.22,
+        "has_emoji": 0.25,
+        "has_exclamation": 2.22,
+        "has_question_mark": 6.38,
+        "one_liner_5_words_or_less": 45.19,
+        "short_message_10_words_or_less": 75.44
+      }
+    },
+    "small_group / 2024-2026": {
+      "average_words": 7.86,
+      "follow_up_rate_per_100": {
+        "within_10min": 51.23,
+        "within_2min": 40.84
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 12.26,
+        "one_word": 11.21,
+        "over_twenty_words": 2.6,
+        "six_to_ten_words": 34.91,
+        "two_to_five_words": 39.02
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 269,
+        "one_word": 246,
+        "over_twenty_words": 57,
+        "six_to_ten_words": 766,
+        "two_to_five_words": 856
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 1.55,
+        "laughter_or_play": 1.64,
+        "link_or_media_reference": 5.1,
+        "logistics": 8.48,
+        "profanity_or_intensity": 2.14,
+        "question_or_direct_ask": 25.93,
+        "repair_or_accountability": 0.18,
+        "sports_or_place_shorthand": 3.37
+      },
+      "median_characters": 23.0,
+      "median_words": 5.0,
+      "messages": 2194,
+      "p75_words": 8.0,
+      "p90_words": 13.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 1.14,
+        "has_ellipsis": 0.27,
+        "has_emoji": 0.36,
+        "has_exclamation": 1.05,
+        "has_question_mark": 5.88,
+        "one_liner_5_words_or_less": 50.23,
+        "short_message_10_words_or_less": 85.14
+      }
+    }
+  },
+  "by_phase": {
+    "2014-2017": {
+      "average_words": 9.32,
+      "follow_up_rate_per_100": {
+        "within_10min": 42.85,
+        "within_2min": 27.34
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 19.5,
+        "one_word": 6.41,
+        "over_twenty_words": 9.43,
+        "six_to_ten_words": 25.21,
+        "two_to_five_words": 39.44
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 11512,
+        "one_word": 3784,
+        "over_twenty_words": 5568,
+        "six_to_ten_words": 14879,
+        "two_to_five_words": 23282
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 4.98,
+        "laughter_or_play": 7.17,
+        "link_or_media_reference": 0.5,
+        "logistics": 20.89,
+        "profanity_or_intensity": 1.58,
+        "question_or_direct_ask": 34.13,
+        "repair_or_accountability": 1.41,
+        "sports_or_place_shorthand": 2.61
+      },
+      "median_characters": 27,
+      "median_words": 6,
+      "messages": 59025,
+      "p75_words": 12.0,
+      "p90_words": 20.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 0.37,
+        "has_ellipsis": 0.87,
+        "has_emoji": 1.73,
+        "has_exclamation": 7.43,
+        "has_question_mark": 4.02,
+        "one_liner_5_words_or_less": 45.86,
+        "short_message_10_words_or_less": 71.06
+      }
+    },
+    "2018-2020": {
+      "average_words": 7.29,
+      "follow_up_rate_per_100": {
+        "within_10min": 54.23,
+        "within_2min": 41.22
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 16.62,
+        "one_word": 5.74,
+        "over_twenty_words": 4.36,
+        "six_to_ten_words": 26.57,
+        "two_to_five_words": 46.7
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 6815,
+        "one_word": 2354,
+        "over_twenty_words": 1788,
+        "six_to_ten_words": 10891,
+        "two_to_five_words": 19146
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 2.27,
+        "laughter_or_play": 4.06,
+        "link_or_media_reference": 0.49,
+        "logistics": 15.51,
+        "profanity_or_intensity": 2.25,
+        "question_or_direct_ask": 26.78,
+        "repair_or_accountability": 0.6,
+        "sports_or_place_shorthand": 3.21
+      },
+      "median_characters": 21.0,
+      "median_words": 5.0,
+      "messages": 40994,
+      "p75_words": 9.0,
+      "p90_words": 15.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 0.18,
+        "has_ellipsis": 0.06,
+        "has_emoji": 0.1,
+        "has_exclamation": 2.8,
+        "has_question_mark": 2.46,
+        "one_liner_5_words_or_less": 52.45,
+        "short_message_10_words_or_less": 79.01
+      }
+    },
+    "2021-2023": {
+      "average_words": 8.2,
+      "follow_up_rate_per_100": {
+        "within_10min": 49.17,
+        "within_2min": 40.55
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 19.0,
+        "one_word": 6.71,
+        "over_twenty_words": 6.71,
+        "six_to_ten_words": 24.89,
+        "two_to_five_words": 42.69
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 10631,
+        "one_word": 3754,
+        "over_twenty_words": 3752,
+        "six_to_ten_words": 13924,
+        "two_to_five_words": 23883
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 3.04,
+        "laughter_or_play": 4.69,
+        "link_or_media_reference": 1.24,
+        "logistics": 18.79,
+        "profanity_or_intensity": 2.19,
+        "question_or_direct_ask": 29.87,
+        "repair_or_accountability": 0.61,
+        "sports_or_place_shorthand": 4.39
+      },
+      "median_characters": 23.0,
+      "median_words": 6.0,
+      "messages": 55944,
+      "p75_words": 11.0,
+      "p90_words": 18.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 0.31,
+        "has_ellipsis": 0.16,
+        "has_emoji": 0.34,
+        "has_exclamation": 6.43,
+        "has_question_mark": 3.66,
+        "one_liner_5_words_or_less": 49.4,
+        "short_message_10_words_or_less": 74.29
+      }
+    },
+    "2024-2026": {
+      "average_words": 9.73,
+      "follow_up_rate_per_100": {
+        "within_10min": 41.45,
+        "within_2min": 33.65
+      },
+      "length_bucket_pct": {
+        "eleven_to_twenty_words": 13.37,
+        "one_word": 9.36,
+        "over_twenty_words": 3.79,
+        "six_to_ten_words": 25.08,
+        "two_to_five_words": 48.4
+      },
+      "length_buckets": {
+        "eleven_to_twenty_words": 3198,
+        "one_word": 2240,
+        "over_twenty_words": 906,
+        "six_to_ten_words": 5998,
+        "two_to_five_words": 11577
+      },
+      "marker_rate_per_100": {
+        "affection_or_warmth": 2.17,
+        "laughter_or_play": 3.79,
+        "link_or_media_reference": 1.75,
+        "logistics": 12.3,
+        "profanity_or_intensity": 2.08,
+        "question_or_direct_ask": 25.59,
+        "repair_or_accountability": 0.43,
+        "sports_or_place_shorthand": 3.18
+      },
+      "median_characters": 19,
+      "median_words": 5,
+      "messages": 23919,
+      "p75_words": 8.0,
+      "p90_words": 14.0,
+      "punctuation_rate_per_100": {
+        "all_caps_message": 0.62,
+        "has_ellipsis": 0.17,
+        "has_emoji": 0.51,
+        "has_exclamation": 2.36,
+        "has_question_mark": 4.23,
+        "one_liner_5_words_or_less": 57.77,
+        "short_message_10_words_or_less": 82.84
+      }
+    }
+  },
+  "coverage": {
+    "date_range_local": {
+      "earliest": "2014-06-07 20:44:32",
+      "latest": "2026-07-06 02:50:18"
+    },
+    "decoded_from_attributed_body": 179804,
+    "decoded_from_plain_text_column": 234,
+    "decoded_sent_text_rows": 179882,
+    "rejected_empty_or_media_rows": 3721,
+    "sent_base_rows_scanned": 183603
+  },
+  "generated_at_utc": "2026-07-07T03:05:26+00:00",
+  "overall": {
+    "average_words": 8.56,
+    "follow_up_rate_per_100": {
+      "within_10min": 47.22,
+      "within_2min": 35.45
+    },
+    "length_bucket_pct": {
+      "eleven_to_twenty_words": 17.88,
+      "one_word": 6.74,
+      "over_twenty_words": 6.68,
+      "six_to_ten_words": 25.4,
+      "two_to_five_words": 43.3
+    },
+    "length_buckets": {
+      "eleven_to_twenty_words": 32156,
+      "one_word": 12132,
+      "over_twenty_words": 12014,
+      "six_to_ten_words": 45692,
+      "two_to_five_words": 77888
+    },
+    "marker_rate_per_100": {
+      "affection_or_warmth": 3.38,
+      "laughter_or_play": 5.24,
+      "link_or_media_reference": 0.89,
+      "logistics": 17.87,
+      "profanity_or_intensity": 1.99,
+      "question_or_direct_ask": 30.0,
+      "repair_or_accountability": 0.85,
+      "sports_or_place_shorthand": 3.38
+    },
+    "median_characters": 23.0,
+    "median_words": 5.0,
+    "messages": 179882,
+    "p75_words": 10.0,
+    "p90_words": 17.0,
+    "punctuation_rate_per_100": {
+      "all_caps_message": 0.34,
+      "has_ellipsis": 0.37,
+      "has_emoji": 0.77,
+      "has_exclamation": 5.39,
+      "has_question_mark": 3.58,
+      "one_liner_5_words_or_less": 50.04,
+      "short_message_10_words_or_less": 75.45
+    }
+  },
+  "router_implications": [
+    "[verified] Private iMessage wording is short by default: median sent decoded text is 5 words.",
+    "[verified] Direct/logistics/question markers are the dominant private-language signals, so the private router should prioritize action, timing, and context before performance.",
+    "[verified] Group-chat and direct-message buckets differ in density and marker mix, so future agents should route by relationship context instead of treating all private writing as one voice.",
+    "[reasoned] The private-language layer strengthens friend-group, warm one-on-one, coordination, and repair modes without just copying private messages.",
+    "[privacy] Do not quote private messages, export n-grams, publish top contacts, or name private threads. Use only the derived patterns in this summary."
+  ],
+  "source": {
+    "database": "/Users/AustinHumphrey/Library/Messages/chat.db",
+    "decoder_note": "Plain message.text is used when present. Otherwise the NSString payload is extracted from attributedBody. Rows that decode as archive residue or empty media-only content are rejected.",
+    "privacy_boundary": "Local wording was read in-memory to compute aggregate patterns only. No message bodies, quotes, n-grams, contact names, handles, phone numbers, email addresses, group names, filenames, attachment contents, or media paths are exported."
+  }
+}

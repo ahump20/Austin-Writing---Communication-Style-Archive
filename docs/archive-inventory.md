@@ -68,6 +68,7 @@ Start here if you want to understand or replicate the writing voice.
 | [Cross-Context Communication System](<Voice-Style-Identity/cross-context-communication-system.md>) | Context router for public prose, social media, AI partnership, group chat, private warmth, coordination, and repair |
 | [Cross-Context HTML Artifact](<Voice-Style-Identity/cross-context-voice-system-artifact.html>) | Viewable React artifact for the communication range model |
 | [Snapchat Private Voice Signals](<Voice-Style-Identity/snapchat-analysis/2026-07-06/snapchat_private_voice_summary.md>) | Privacy-safe derived signals from the Snapchat export: chat counts, date range, marker rates, and private-register corrections |
+| [iMessage Private Language Signals](<Voice-Style-Identity/imessage-analysis/2026-07-07/imessage_private_language_summary.md>) | Privacy-safe derived signals from local Messages: decoded sent-text counts, length distribution, marker rates, and anonymous relationship-context buckets |
 
 ---
 
