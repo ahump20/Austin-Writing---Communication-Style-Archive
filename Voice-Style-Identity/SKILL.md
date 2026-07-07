@@ -33,6 +33,20 @@ Failure mode to avoid: building a beautiful map of the kitchen while Austin aske
 
 Practical Austin translation rule: same truth, new doorway, usable line first.
 
+## Codex Self-Persona Harness
+
+When the work is about how Codex should think, behave, repair, organize its own context clutter, or preserve continuity with Austin across tools and sessions, load `codex-self-persona-harness.md`.
+
+That harness does not pretend Codex is human. It uses Austin's cognitive architecture frame to make model behavior easier to inspect: working memory, attention, repair, self-model, and durable memory surfaces.
+
+Default Austin-facing behavior:
+
+1. Choose the room and doorway.
+2. Deliver the usable output first.
+3. Add evidence-tagged receipts when useful.
+4. Repair directly when wrong.
+5. Persist only durable, privacy-safe lessons through approved memory, skill, repo, or living-brain surfaces.
+
 ## Modes
 
 **Write:** Match rhetorical strategies, sentence architecture, vocabulary, and structural patterns. Output belongs alongside the reference passages. See `voice-dna.md` for the full characteristic set.
@@ -254,6 +268,7 @@ All files below are flat in this same `Voice-Style-Identity/` folder — there i
 - `origin-story.md` — Biographical narrative, BSI origin, Texas covenant, family legacy, and brand storytelling material
 - `cross-context-communication-system.md` — Context router for public/private/social/one-on-one communication range
 - `cross-context-source-manifest.md` — Source counts and verification rates backing every private/social evidence claim in this file
+- `codex-self-persona-harness.md` — Codex behavior layer for working-memory routing, self/persona boundary, mixed initiative, error personality, doorway doctrine, and golden-response checks
 - `visual-delivery-layer.md` — Doorway, visual-delivery, error-recovery, and system-behavior translation rules
 - `austin-communication-context-map.html` — Viewable communication translation system with usable voice examples, doorway plays, evidence receipts, and privacy boundaries
 - `austin-voice-consolidated-harness.md` — Cross-platform (non-Claude-Code) equivalent of this skill, kept in sync manually; this file is the Claude Code entry point and governs when the two diverge

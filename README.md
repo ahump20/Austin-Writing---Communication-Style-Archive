@@ -30,6 +30,7 @@ The goal is durable reuse:
 | Download the canonical pack | [Austin Communication Style Canonical Pack](dist/Austin-Communication-Style-Canonical-Pack-2026-07-07.zip) |
 | Load the reusable voice skill | [Voice-Style-Identity/SKILL.md](Voice-Style-Identity/SKILL.md) |
 | Read the canonical router | [Cross-Context Communication System](Voice-Style-Identity/cross-context-communication-system.md) |
+| Load the Codex partner behavior layer | [Codex Self-Persona Harness](Voice-Style-Identity/codex-self-persona-harness.md) |
 | Read the visual delivery layer | [Visual Delivery Layer](Voice-Style-Identity/visual-delivery-layer.md) |
 | Check source coverage and gaps | [Cross-Context Source Manifest](Voice-Style-Identity/cross-context-source-manifest.md) |
 | Use the top-level instruction file | [Austin Voice Consolidated Harness](Voice-Style-Identity/austin-voice-consolidated-harness.md) |
@@ -39,12 +40,14 @@ The goal is durable reuse:
 ## What This System Does
 
 - Routes the voice by room: public long-form, brand/platform, X/social, AI partner, friend group, warm private, coordination, and repair.
+- Gives Codex a single behavior layer for Austin-facing collaboration: small active context, clear initiative, direct repair, privacy-safe memory, and golden-response checks.
 - Preserves one canonical Austin reference instead of splitting him into fake platform identities.
 - Changes the doorway without changing the truth: same observation, audience-native entrance.
 - Treats strong metaphor as causal architecture, not surface resemblance: the source path, authority signal, failure point, and human consequence still have to match.
 - Runs a cold-read guardrail against flattering, vague, or mystical claims. If a claim cannot be sourced, it stays reasoned/open or gets cut.
 - Treats metaphor as audience translation: the same truth should move across cultures, contexts, and domains without making the room decode a foreign reference.
 - Routes analogy by audience literacy, not Austin's default reference set. Sports, food, work, family ritual, place, tools, markets, faith, and school can all carry the same structure when the room shares the bridge.
+- Gives Codex a self/persona operating layer for Austin-facing work: less context clutter, clearer working memory, direct error recovery, and usable output before process.
 - Keeps claims tied to source evidence and source-status tags.
 - Gives future agents a reusable load order instead of a vague "write like me" request.
 
@@ -140,6 +143,7 @@ docs/
 | Artifact | Purpose |
 |---|---|
 | [Voice-Style-Identity/austin-communication-context-map.html](Voice-Style-Identity/austin-communication-context-map.html) | Canonical React translation system for usable voice outputs, doorway plays, system behavior, anonymous private-room shape, purpose buckets, evidence strength, and privacy boundaries. |
+| [Voice-Style-Identity/codex-self-persona-harness.md](Voice-Style-Identity/codex-self-persona-harness.md) | Codex partner behavior layer: self/persona boundary, working-memory routing, error personality, doorway doctrine, and regression checks. |
 | [dist/Austin-Communication-Style-Canonical-Pack-2026-07-07.zip](dist/Austin-Communication-Style-Canonical-Pack-2026-07-07.zip) | One portable, privacy-safe reference pack for the current communication system. |
 | [Voice-Style-Identity/visual-delivery-assets/doorway-translation-flow.svg](Voice-Style-Identity/visual-delivery-assets/doorway-translation-flow.svg) | Annotated doorway flow: truth core, room read, doorway, tone, proof, action. |
 | [Voice-Style-Identity/visual-delivery-assets/error-recovery-flow.svg](Voice-Style-Identity/visual-delivery-assets/error-recovery-flow.svg) | Annotated error-recovery flow derived from the added visual context without storing the raw screenshot. |

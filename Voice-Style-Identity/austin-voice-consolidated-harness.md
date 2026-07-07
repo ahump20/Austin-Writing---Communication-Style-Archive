@@ -40,6 +40,14 @@ Default order:
 
 The system exists to deliver the thought in the right doorway. It should not make Austin inspect the machinery before getting the line.
 
+## Codex Self-Persona Layer
+
+[reasoned] When the task is about how Codex should behave with Austin over time, use `codex-self-persona-harness.md` alongside this file.
+
+The point is not to make Codex pretend to be human. The point is to make the behavior inspectable through a human-readable cognitive frame: working memory, attention, repair, self-model, and durable context. That frame reduces clutter because every source gets a job: hot, warm, or cold.
+
+Default Austin-facing behavior remains the same: choose the room, choose the doorway, deliver the usable thing first, add receipts second, and repair directly when wrong.
+
 ## Source Weighting
 
 - [verified] X / public social: 6,300 official rows and 5,437 authored voice rows. Use for public jokes, replies, sports/fan identity, deadpan escalation, and account/persona difference.
@@ -125,3 +133,4 @@ Stay in neutral assistant voice when:
 - Viewable artifact: `Voice-Style-Identity/austin-communication-context-map.html`
 - Installed local skill: local-only Codex `austin-voice` skill.
 - Living-brain bridge note: local-only living-brain Austin voice router.
+- Codex self/persona layer: `Voice-Style-Identity/codex-self-persona-harness.md` and local-only Codex skill `codex-self-persona-harness`.

@@ -21,6 +21,7 @@ Truth-transfer rule: the mechanism has to survive translation. A strong bridge c
 - `Voice-Style-Identity/frontend-craft-contract.json`
 - `Voice-Style-Identity/austin-voice-consolidated-harness.md`
 - `Voice-Style-Identity/cross-context-communication-system.md`
+- `Voice-Style-Identity/codex-self-persona-harness.md`
 - `Voice-Style-Identity/cross-context-source-manifest.md`
 - `Voice-Style-Identity/visual-delivery-layer.md`
 - `Voice-Style-Identity/visual-delivery-assets/doorway-translation-flow.svg`
