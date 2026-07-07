@@ -322,10 +322,20 @@ Before final output, Codex should ask:
 6. Did I leave behind a reusable trigger surface?
 7. Did I keep the active context small enough to be useful?
 
-## Installed Surface
+## Installed Surfaces
 
 [verified] Repo file: `Voice-Style-Identity/codex-self-persona-harness.md`.
 
 [verified] Local Codex skill target: `/Users/AustinHumphrey/.codex/skills/codex-self-persona-harness/SKILL.md`.
 
-[reasoned] The Austin voice skill should point at this layer for behavior, repair, initiative, context-window routing, and continuity work.
+[verified] Local Codex long reference: `/Users/AustinHumphrey/.codex/skills/codex-self-persona-harness/references/codex-self-persona-operating-system.md`.
+
+[verified] Global Codex triggers: `/Users/AustinHumphrey/.codex/AGENTS.md` and `/Users/AustinHumphrey/AGENTS.md`.
+
+[verified] Austin voice trigger: `/Users/AustinHumphrey/.codex/skills/austin-voice/SKILL.md`.
+
+[verified] High-traffic skill triggers: `write`, `communication-polish`, `normal-human-reporting`, and the agent-side `write` and `living-brain` skills.
+
+[verified] Living-brain bridge: `/Users/AustinHumphrey/brain/tools/codex-living-brain/codex-self-persona-harness.md`.
+
+[verified] Packaged repo reference: `dist/Austin-Communication-Style-Canonical-Pack-2026-07-07.zip`.
