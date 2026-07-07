@@ -22,6 +22,7 @@ North Star: the best communication changes the doorway, not the truth.
 | Local plugin `austin-communication-os` | Compact active router for Codex/plugin routing. |
 | Local `austin-voice` skill | Compatibility shim for voice/writing triggers. |
 | Local `codex-self-persona-harness` skill | Compatibility shim for Codex behavior and repair triggers. |
+| Codex subagent aliases | Optional workers for context, voice, and muzzle checks. They route through the OS and do not own identity. |
 | Living-brain skills | Private recall/sync boundary. They are routed to, not merged into voice. |
 
 ## Why This Reduces Drift
@@ -41,12 +42,21 @@ The OS can use privacy-safe derived evidence from Snapchat, iMessage, and living
 
 Generated Austin-style prose is output. It is not source evidence.
 
+## Subagent Rule
+
+Subagents are workers, not truth owners.
+
+The local Codex aliases `austin-context`, `austin-voice`, and `muzzle-detector` should load Austin Communication OS first, then perform their narrow job: context scouting, voice drafting/auditing, or muzzle detection. They should not claim to be Austin, replace the repo reference, or store generated Austin-style prose as source material.
+
+Codex subagents must use explicit supported model settings in this account. Inherited-model subagents fail to spawn and should be treated as stale until fixed.
+
 ## Current Local Paths
 
 - Plugin root: `/Users/AustinHumphrey/plugins/austin-communication-os`
 - Plugin router skill: `/Users/AustinHumphrey/plugins/austin-communication-os/skills/austin-communication-router/SKILL.md`
 - Plugin source map: `/Users/AustinHumphrey/plugins/austin-communication-os/references/source-map.md`
 - Sprawl audit: `/Users/AustinHumphrey/plugins/austin-communication-os/scripts/audit_sprawl.py`
+- Austin subagents: `/Users/AustinHumphrey/.codex/agents/austin-context.toml`, `/Users/AustinHumphrey/.codex/agents/austin-voice.toml`, `/Users/AustinHumphrey/.codex/agents/muzzle-detector.toml`
 
 These paths are local runtime infrastructure. The public repo documents their role without copying private raw data into the archive.
 
@@ -59,4 +69,3 @@ Update in this order when doctrine changes:
 3. Local compatibility shims.
 4. Living-brain bridge only when recall/sync routing changes.
 5. Memory note only when the change is durable and privacy-safe.
-
