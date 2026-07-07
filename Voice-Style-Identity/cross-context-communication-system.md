@@ -1,6 +1,6 @@
 # Austin Cross-Context Communication System
 
-[verified] Built on 2026-07-06 from the current writing archive, official X archive analysis, Snapchat metadata export analysis, and existing voice system files.
+[verified] Built on 2026-07-06 and updated on 2026-07-07 from the current writing archive, official X archive analysis, Snapchat metadata export analysis, iMessage aggregate metadata analysis, and existing voice system files.
 
 ## Why This Exists
 
@@ -45,15 +45,16 @@ Then choose the register. Do not start from the funniest X voice and back-fill c
 
 - Official X archive: 6,300 official rows, 5,437 authored voice rows, 2011-2026.
 - Snapchat metadata export: 2,417 chat rows, 1,052 sent text rows, 208 conversations, March 24, 2016 to July 4, 2026. Raw messages, names, media URLs, and media files were kept out of the repo. This is the primary evidence for private one-on-one, basic coordination, quick-reaction, and warm/private compression.
+- iMessage metadata: 483,242 local message rows, 435,735 base human-message rows, 183,603 sent base rows, 252,132 received base rows, 632 active group chats, 30,469 reactions/tapbacks, 3,311 reply-thread rows, and 22,022 attachments. Raw private text, contact names, handles, group names, filenames, attachment contents, and media paths were kept out of the repo. This is the primary evidence for group/direct distribution, tapback/reaction behavior, reply-thread use, and attachment-heavy private communication shape.
 - Writing archive: 50+ human-authored college and professional documents analyzed across ages 17-25.
 - Existing voice system: `voice-dna.md`, `writing-system.md`, `source-passages.md`, `developmental-analysis.md`, `ai-voice-transfer.md`.
 - Professional materials and sports writing in this repository.
 
-[verified] Still-blocked evidence:
+[verified] Resolved access gate:
 
-- iMessage/private-chat analysis remains blocked by macOS Full Disk Access / TCC permissions. On July 6, 2026, the Apple Messages connector `search_messages` call returned `unable to open database file`; direct `sqlite3 ~/Library/Messages/chat.db 'select count(*) from message;'` returned `authorization denied`; and `~/Library/Messages/chat.db` exists locally as a 744,714,240 byte database. This is an OS access gate, not a missing archive or parser/schema issue.
+- iMessage/private-chat metadata was blocked by macOS Full Disk Access / TCC on July 6, 2026. On July 7, 2026, Full Disk Access was enabled for Codex-related processes. Direct `sqlite3` access to `~/Library/Messages/chat.db` now succeeds, and the Apple Messages MCP can query the database.
 
-[verified] X/Twitter anchors public/social voice and Snapchat upgrades private one-on-one, basic coordination, and warm/private register shape from provisional to evidence-backed. [open] iMessage still matters for full friend-group dynamics, reactions/tapbacks, edited/unsent behavior, Apple Messages thread context, and current private-chat distribution.
+[verified] X/Twitter anchors public/social voice, Snapchat upgrades private one-on-one/basic coordination/warm-private compression, and iMessage upgrades private group/direct metadata, reactions/tapbacks, reply-thread behavior, attachment shape, and current private-chat distribution.
 
 See `cross-context-source-manifest.md` for the consolidated source manifest.
 
@@ -183,7 +184,7 @@ Avoid:
 
 ### 5. Friend-Group / Group Chat
 
-[verified] Evidence status: Snapchat verifies private-chat compression and casual marker families. [open] iMessage is still needed for true group-chat thread dynamics.
+[verified] Evidence status: Snapchat verifies private-chat compression and casual marker families. iMessage verifies group/direct metadata, reaction/tapback volume, reply-thread rows, and attachment-heavy private communication shape. [reasoned] Exact private wording remains privacy-bound because raw Messages text is not quoted or committed.
 
 Use for: group chats, casual replies, sports arguments, quick jokes, low-stakes social coordination.
 
@@ -380,12 +381,12 @@ Same thought, different contexts:
 
 ## Upgrade Path
 
-[open] To finish the full cross-context model, add iMessage evidence once macOS allows read access. First, grant Full Disk Access to the app/process hosting Codex and the Apple Messages MCP server, restart Codex/MCP, then rerun a small `search_messages` proof before deriving private-register summaries.
+[verified] The first iMessage metadata pass is complete and privacy-safe. The remaining optional upgrade is a local-only private-language pass if Austin explicitly asks for it.
 
-- Aggregate message stats by year, hour, contact, and group chat.
-- Top group-chat cadence patterns.
-- Sent-only samples for affection, apology, logistics, jokes, and argument repair.
-- Reaction/tapback distribution.
-- Conversation initiation and double-text patterns.
+- Keep aggregate message stats by year, hour, group/direct shape, reactions, replies, and attachments current.
+- Add private language summaries only if they can stay privacy-safe and useful.
+- Sample sent-only wording for affection, apology, logistics, jokes, and argument repair only in a private local pass, not in public repo docs.
+- Preserve reaction/tapback, edited/unsent, reply-thread, and group/direct distribution as metadata evidence.
+- Track conversation initiation and double-text patterns only as aggregate behavior, not as named-contact records.
 
 Do not auto-file private messages into public-facing style guides. Use private evidence to refine the singular router, then store a privacy-safe synthesis. Raw Snapchat exports and raw iMessage content remain local-only.

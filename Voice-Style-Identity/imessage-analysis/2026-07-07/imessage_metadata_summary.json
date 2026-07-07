@@ -1,0 +1,344 @@
+{
+  "attachments": {
+    "by_type": [
+      {
+        "count": 13460,
+        "type": "image"
+      },
+      {
+        "count": 6748,
+        "type": "unknown"
+      },
+      {
+        "count": 912,
+        "type": "video"
+      },
+      {
+        "count": 789,
+        "type": "text"
+      },
+      {
+        "count": 104,
+        "type": "application"
+      },
+      {
+        "count": 9,
+        "type": "audio"
+      }
+    ],
+    "total": 22022
+  },
+  "conversation_shape": {
+    "active_direct_chats": 2488,
+    "active_group_chats": 632,
+    "direct_or_unjoined_message_rows": 321281,
+    "group_message_row_share_pct": 26.27,
+    "group_message_rows": 114454,
+    "joined_or_unjoined_base_rows": 435735,
+    "largest_member_count": 27
+  },
+  "coverage": {
+    "all_message_rows": 483242,
+    "associated_message_rows": 31491,
+    "base_message_rows": 435735,
+    "chat_message_join_rows": 424178,
+    "chats": 3272,
+    "date_range_all_rows_local": {
+      "earliest": "2014-06-07 20:06:08",
+      "latest": "2026-07-06 18:18:48"
+    },
+    "date_range_base_local": {
+      "earliest": "2014-06-07 20:06:08",
+      "latest": "2026-07-06 18:18:48"
+    },
+    "handles": 4617,
+    "received_base_rows": 252132,
+    "sent_base_rows": 183603,
+    "system_item_rows": 16016
+  },
+  "generated_at_utc": "2026-07-07T02:15:34+00:00",
+  "interaction_metadata": {
+    "edited_total": 82,
+    "effect_rows": 89,
+    "effects_by_id": [
+      {
+        "count": 23,
+        "effect_id": "com.apple.messages.effect.CKEchoEffect"
+      },
+      {
+        "count": 19,
+        "effect_id": "com.apple.MobileSMS.expressivesend.invisibleink"
+      },
+      {
+        "count": 10,
+        "effect_id": "com.apple.messages.effect.CKLasersEffect"
+      },
+      {
+        "count": 9,
+        "effect_id": "com.apple.messages.effect.CKConfettiEffect"
+      },
+      {
+        "count": 7,
+        "effect_id": "com.apple.MobileSMS.expressivesend.impact"
+      },
+      {
+        "count": 5,
+        "effect_id": "com.apple.messages.effect.CKHappyBirthdayEffect"
+      },
+      {
+        "count": 5,
+        "effect_id": "com.apple.MobileSMS.expressivesend.loud"
+      },
+      {
+        "count": 4,
+        "effect_id": "com.apple.MobileSMS.expressivesend.gentle"
+      },
+      {
+        "count": 3,
+        "effect_id": "com.apple.messages.effect.CKFireworksEffect"
+      },
+      {
+        "count": 2,
+        "effect_id": "com.apple.messages.effect.CKSpotlightEffect"
+      },
+      {
+        "count": 2,
+        "effect_id": "com.apple.messages.effect.CKShootingStarEffect"
+      }
+    ],
+    "reaction_total": 30469,
+    "reactions_by_type": {
+      "dislike": {
+        "received": 703,
+        "sent": 105,
+        "total": 808
+      },
+      "emphasize": {
+        "received": 5838,
+        "sent": 1408,
+        "total": 7246
+      },
+      "laugh": {
+        "received": 6231,
+        "sent": 995,
+        "total": 7226
+      },
+      "like": {
+        "received": 6287,
+        "sent": 1379,
+        "total": 7666
+      },
+      "love": {
+        "received": 5055,
+        "sent": 2122,
+        "total": 7177
+      },
+      "question": {
+        "received": 301,
+        "sent": 45,
+        "total": 346
+      }
+    },
+    "reply_thread_rows": 3311,
+    "unsent_total": 0
+  },
+  "sent_temporal_peaks": [
+    {
+      "count": 2203,
+      "day": "Thu",
+      "hour": 17
+    },
+    {
+      "count": 2195,
+      "day": "Wed",
+      "hour": 16
+    },
+    {
+      "count": 2092,
+      "day": "Wed",
+      "hour": 18
+    },
+    {
+      "count": 2073,
+      "day": "Tue",
+      "hour": 16
+    },
+    {
+      "count": 2071,
+      "day": "Tue",
+      "hour": 17
+    },
+    {
+      "count": 2059,
+      "day": "Thu",
+      "hour": 21
+    },
+    {
+      "count": 2030,
+      "day": "Wed",
+      "hour": 15
+    },
+    {
+      "count": 2021,
+      "day": "Thu",
+      "hour": 20
+    }
+  ],
+  "source": {
+    "database": "/Users/AustinHumphrey/Library/Messages/chat.db",
+    "date_conversion": "Apple nanosecond timestamp converted from 2001-01-01 epoch to local time.",
+    "privacy_boundary": "Aggregate metadata only. No message text, contact names, handles, phone numbers, email addresses, group names, filenames, or media exported."
+  },
+  "top_group_chats_anonymized": [
+    {
+      "first_message": "2017-04-27 23:26:17",
+      "last_message": "2022-12-25 21:54:19",
+      "member_count": 20,
+      "message_count": 33097,
+      "rank": 1
+    },
+    {
+      "first_message": "2018-11-03 11:14:11",
+      "last_message": "2026-04-07 15:59:00",
+      "member_count": 12,
+      "message_count": 24995,
+      "rank": 2
+    },
+    {
+      "first_message": "2022-11-18 18:06:09",
+      "last_message": "2026-07-06 11:44:12",
+      "member_count": 4,
+      "message_count": 17477,
+      "rank": 3
+    },
+    {
+      "first_message": "2017-02-13 18:37:06",
+      "last_message": "2017-09-09 16:43:42",
+      "member_count": 7,
+      "message_count": 7089,
+      "rank": 4
+    },
+    {
+      "first_message": "2017-07-26 16:54:39",
+      "last_message": "2018-03-14 19:35:36",
+      "member_count": 5,
+      "message_count": 3947,
+      "rank": 5
+    },
+    {
+      "first_message": "2022-08-04 11:57:36",
+      "last_message": "2026-05-21 18:41:24",
+      "member_count": 10,
+      "message_count": 3574,
+      "rank": 6
+    },
+    {
+      "first_message": "2022-06-21 22:22:46",
+      "last_message": "2022-08-12 04:28:58",
+      "member_count": 5,
+      "message_count": 3295,
+      "rank": 7
+    },
+    {
+      "first_message": "2018-05-29 11:15:20",
+      "last_message": "2018-07-29 15:26:25",
+      "member_count": 10,
+      "message_count": 3018,
+      "rank": 8
+    },
+    {
+      "first_message": "2019-08-31 20:45:33",
+      "last_message": "2021-10-19 17:20:55",
+      "member_count": 14,
+      "message_count": 1899,
+      "rank": 9
+    },
+    {
+      "first_message": "2018-04-04 18:04:22",
+      "last_message": "2018-06-17 13:09:29",
+      "member_count": 3,
+      "message_count": 1524,
+      "rank": 10
+    }
+  ],
+  "yearly_base_messages": [
+    {
+      "received": 14565,
+      "sent": 11377,
+      "total": 25942,
+      "year": "2014"
+    },
+    {
+      "received": 12789,
+      "sent": 12395,
+      "total": 25184,
+      "year": "2015"
+    },
+    {
+      "received": 15120,
+      "sent": 15482,
+      "total": 30602,
+      "year": "2016"
+    },
+    {
+      "received": 39669,
+      "sent": 20833,
+      "total": 60502,
+      "year": "2017"
+    },
+    {
+      "received": 36553,
+      "sent": 21908,
+      "total": 58461,
+      "year": "2018"
+    },
+    {
+      "received": 21042,
+      "sent": 12797,
+      "total": 33839,
+      "year": "2019"
+    },
+    {
+      "received": 13557,
+      "sent": 7274,
+      "total": 20831,
+      "year": "2020"
+    },
+    {
+      "received": 24047,
+      "sent": 25050,
+      "total": 49097,
+      "year": "2021"
+    },
+    {
+      "received": 20817,
+      "sent": 16992,
+      "total": 37809,
+      "year": "2022"
+    },
+    {
+      "received": 19592,
+      "sent": 14975,
+      "total": 34567,
+      "year": "2023"
+    },
+    {
+      "received": 13024,
+      "sent": 11474,
+      "total": 24498,
+      "year": "2024"
+    },
+    {
+      "received": 14601,
+      "sent": 8951,
+      "total": 23552,
+      "year": "2025"
+    },
+    {
+      "received": 6756,
+      "sent": 4095,
+      "total": 10851,
+      "year": "2026"
+    }
+  ]
+}

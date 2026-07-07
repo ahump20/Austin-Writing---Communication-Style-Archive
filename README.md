@@ -44,7 +44,7 @@ The goal is durable reuse:
 | Official X/Twitter exports | [verified] | 6,300 official rows, 5,437 authored voice rows, public humor, replies, sports/fan identity, and persona shifts across `@a_hump20` and `@TXTrickWhooper`. |
 | Snapchat metadata export | [verified] | Privacy-safe derived private-register signals: short coordination, direct asks, quick reactions, warm one-on-one compression. Raw private text is not committed. |
 | Living-brain bridge | [verified] | Durable routing note for agents and Obsidian context. Resurfaces Austin-derived language without filing generated prose as source truth. |
-| iMessage / Apple Messages | [open] | Still blocked by macOS Full Disk Access / TCC. The local database exists, but access is denied, so group-thread behavior remains unproven. |
+| iMessage / Apple Messages | [verified/private metadata] | Privacy-safe aggregate metadata from the local Messages database: 483,242 total rows, 435,735 base human-message rows, 632 active group chats, reactions/tapbacks, reply threads, and attachment shape. Raw private text, names, handles, and group names are not committed. |
 
 ## How To Use This Repo
 
@@ -71,7 +71,7 @@ For a person reviewing the archive:
 | Public long-form | Claim early. Explain the system. Evidence at point of need. Close with the next move. | Coursework, research, sports writing, business plans |
 | Public brand/platform | Vision over grievance. Concrete proof. Current doctrine over stale source docs. | Professional docs, origin story, brand files |
 | X/social | Concrete noun, blunt verdict, absurd escalation, stop. | Official X archive |
-| Friend-group / casual | Shorter, faster, more shorthand. Teasing through specifics. | Snapchat derived signals, X replies, iMessage still open |
+| Friend-group / casual | Shorter, faster, more shorthand. Teasing through specifics. | Snapchat derived signals, iMessage aggregate metadata, X replies |
 | Warm one-on-one | Specific attention, playful challenge, low pressure, brief. | Snapchat derived signals |
 | Basic coordination | Direct ask, one useful detail, no ceremony. | Snapchat derived signals |
 | Repair/vulnerable | Own the specific action, explain mechanism without excuse, state the next behavior. | Voice system plus direct user instructions |
@@ -92,7 +92,7 @@ Old documents may still contain historical language because this repo is an arch
 
 ```text
 Voice-Style-Identity/
-  Canonical voice system, router, source manifest, generated dossier, screenshots, and privacy-safe Snapchat analysis.
+  Canonical voice system, router, source manifest, generated dossier, screenshots, privacy-safe Snapchat analysis, and privacy-safe iMessage metadata analysis.
 
 X-Twitter-Archive/
   Official X export parser outputs, X-only evidence artifact, tweet summaries, and public/social voice analysis.
@@ -128,13 +128,14 @@ docs/
 |---|---|
 | [Voice-Style-Identity/cross-context-voice-system-artifact.html](Voice-Style-Identity/cross-context-voice-system-artifact.html) | Canonical React dossier for the cross-platform communication model. |
 | [X-Twitter-Archive/x-twitter-archive-analysis-artifact.html](X-Twitter-Archive/x-twitter-archive-analysis-artifact.html) | X-only generated evidence explorer. Useful for tweet-level public/social analysis, not the full voice system. |
+| [Voice-Style-Identity/imessage-analysis/2026-07-07/imessage_private_context_summary.md](Voice-Style-Identity/imessage-analysis/2026-07-07/imessage_private_context_summary.md) | Privacy-safe iMessage metadata summary for private group/direct shape, tapbacks, replies, and attachments. |
 | [Voice-Style-Identity/cross-context-artifact-desktop.png](Voice-Style-Identity/cross-context-artifact-desktop.png) | Desktop render proof of the current dossier. |
 | [Voice-Style-Identity/cross-context-artifact-mobile.png](Voice-Style-Identity/cross-context-artifact-mobile.png) | Mobile render proof of the current dossier. |
 
 ## Privacy Rules
 
 - Do not commit raw Snapchat private text, contact names, media URLs, location data, phone/email identifiers, or media files.
-- Do not commit raw iMessage content unless Austin explicitly asks for a privacy-safe derived export and the access gate is solved.
+- Do not commit raw iMessage private text, contact names, handles, group names, filenames, attachment contents, or media paths. Commit only privacy-safe aggregate summaries unless Austin explicitly asks for a separate local private analysis pass.
 - Do not treat reposts, likes, follows, viewed content, or generated Austin-style prose as Austin-authored voice.
 - Keep private-source material as summaries, marker counts, source manifests, and router corrections unless the user asks otherwise.
 

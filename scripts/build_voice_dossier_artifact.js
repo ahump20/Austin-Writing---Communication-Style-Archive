@@ -7,10 +7,12 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const xDataPath = path.join(ROOT, "X-Twitter-Archive/official-analysis/2026-07-06/official_analysis_data.json");
 const snapchatPath = path.join(ROOT, "Voice-Style-Identity/snapchat-analysis/2026-07-06/snapchat_summary.json");
+const imessagePath = path.join(ROOT, "Voice-Style-Identity/imessage-analysis/2026-07-07/imessage_metadata_summary.json");
 const outPath = path.join(ROOT, "Voice-Style-Identity/cross-context-voice-system-artifact.html");
 
 const xData = JSON.parse(fs.readFileSync(xDataPath, "utf8"));
 const snapchat = JSON.parse(fs.readFileSync(snapchatPath, "utf8"));
+const imessage = JSON.parse(fs.readFileSync(imessagePath, "utf8"));
 
 const accountOrder = ["a_hump20", "TXTrickWhooper"];
 const accountLabels = {
@@ -84,6 +86,14 @@ const topConversations = snapchat.contacts.top_conversations_anonymized.slice(0,
   sentRows: row.sent_rows,
   sentTextRows: row.sent_text_rows,
 }));
+
+const imessageReactions = Object.entries(imessage.interaction_metadata.reactions_by_type)
+  .map(([label, row]) => ({ label, value: row.total }))
+  .sort((a, b) => b.value - a.value);
+
+const imessageAttachments = imessage.attachments.by_type
+  .filter((row) => row.count > 0)
+  .map((row) => ({ label: row.type, value: row.count }));
 
 const quoteLabels = [
   "Waffle House as civil-defense institution",
@@ -162,17 +172,21 @@ const methodSteps = [
     detail: "Parsed Snapchat metadata into counts, marker rates, word lengths, year buckets, and anonymized conversation shape. Raw private text, names, media URLs, locations, and media files stayed local-only.",
   },
   {
-    label: "5. Reconcile with long-form writing",
+    label: "5. Derive iMessage metadata signals",
+    detail: "Read the local Messages database after Full Disk Access was fixed, then exported only aggregate metadata: group/direct shape, sent/received counts, tapbacks, reply threads, edits, effects, and attachment types. Raw message text, names, handles, group names, filenames, and media paths stayed local-only.",
+  },
+  {
+    label: "6. Reconcile with long-form writing",
     detail: "Compared X and Snapchat signals against the writing archive: source passages, voice DNA, origin story, professional context, and existing writing-system rules.",
   },
   {
-    label: "6. Route into one canonical model",
-    detail: "X and Snapchat are treated as extension layers for one Austin reference, not separate personas. The output is a room router: public social, long-form, brand, private, coordination, repair, and partner interaction.",
+    label: "7. Route into one canonical model",
+    detail: "X, Snapchat, and iMessage metadata are treated as extension layers for one Austin reference, not separate personas. The output is a room router: public social, long-form, brand, private, coordination, repair, and partner interaction.",
   },
 ];
 
 const dossier = {
-  generatedAt: "2026-07-06",
+  generatedAt: "2026-07-07",
   accounts,
   xYearRows,
   phaseRows,
@@ -190,14 +204,41 @@ const dossier = {
     snapchatChatRows: snapchat.chat.message_counts.all_chat_rows,
     snapchatSentTextRows: snapchat.chat.message_counts.sent_text_rows,
     snapchatConversations: snapchat.contacts.conversation_count,
+    imessageRows: imessage.coverage.all_message_rows,
+    imessageBaseRows: imessage.coverage.base_message_rows,
+    imessageGroupChats: imessage.conversation_shape.active_group_chats,
+    imessageReactions: imessage.interaction_metadata.reaction_total,
+    imessageReplyThreads: imessage.interaction_metadata.reply_thread_rows,
+    imessageAttachments: imessage.attachments.total,
     writingFiles: "50+",
+  },
+  imessage: {
+    allRows: imessage.coverage.all_message_rows,
+    baseRows: imessage.coverage.base_message_rows,
+    sentBaseRows: imessage.coverage.sent_base_rows,
+    receivedBaseRows: imessage.coverage.received_base_rows,
+    activeGroupChats: imessage.conversation_shape.active_group_chats,
+    activeDirectChats: imessage.conversation_shape.active_direct_chats,
+    groupSharePct: imessage.conversation_shape.group_message_row_share_pct,
+    largestMemberCount: imessage.conversation_shape.largest_member_count,
+    reactions: imessage.interaction_metadata.reaction_total,
+    reactionRows: imessageReactions,
+    replyThreads: imessage.interaction_metadata.reply_thread_rows,
+    editedRows: imessage.interaction_metadata.edited_total,
+    unsentRows: imessage.interaction_metadata.unsent_total,
+    attachments: imessage.attachments.total,
+    attachmentRows: imessageAttachments,
+    range: [
+      imessage.coverage.date_range_base_local.earliest,
+      imessage.coverage.date_range_base_local.latest,
+    ],
   },
   sourceStatus: [
     { label: "X/Twitter", status: "verified", detail: "Official archive exports parsed and deduped. Public quotes are allowed in this artifact." },
     { label: "Snapchat", status: "verified/private", detail: "Parsed into privacy-safe derived markers. No raw private messages are quoted." },
     { label: "Long-form writing", status: "verified", detail: "Source passages and existing voice files used for thinking style, structure, and public prose." },
     { label: "Living brain", status: "verified bridge", detail: "Neutral routing note points future agents back to this canonical system." },
-    { label: "iMessage", status: "blocked", detail: "Apple Messages connector returns unable to open database file; direct sqlite returns authorization denied; chat.db exists locally." },
+    { label: "iMessage", status: "verified/private metadata", detail: "Local Messages metadata parsed into aggregate group/direct, reaction, reply-thread, and attachment shape. No raw private text, names, handles, group names, filenames, or media paths are quoted." },
   ],
   synthesisRules: [
     ["Specific first", "Name the object, place, team, person, tool, or failure before making the claim."],
@@ -207,6 +248,7 @@ const dossier = {
     ["Scale mismatch", "Small inconvenience becomes civic infrastructure, malpractice, birthright, or sports theology."],
     ["Self-own valve", "Confidence lands better when Austin gets the first joke at his own expense."],
     ["Private contraction", "In private contexts, the same mind gets shorter, more logistical, warmer, and less performed."],
+    ["Private context shape", "Snapchat gives wording/cadence markers; iMessage metadata gives group/direct distribution, tapbacks, reply threads, and attachments without exposing raw private text."],
   ],
 };
 
@@ -404,7 +446,6 @@ const html = String.raw`<!doctype html>
       border-radius: 8px;
       padding: 17px;
     }
-    .status-card.blocked { border-left-color: var(--red); }
     .status-card.private { border-left-color: var(--green); }
     .status-card h3 {
       display: flex;
@@ -441,7 +482,7 @@ const html = String.raw`<!doctype html>
     }
     .metric-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
       gap: 14px;
     }
     .metric {
@@ -830,12 +871,34 @@ const html = String.raw`<!doctype html>
         h("p", { className: "caption" }, h("strong", null, "Implication: "), "Private evidence is not one stray export row. It spans 2016-2026, with enough density in 2018-2022 to prove the private baseline: short, direct, logistical, and context-heavy.")
       );
     }
+    function ImessageMetadataPanel() {
+      return h("div", { className: "panel private-note", style: { marginTop: "18px" } },
+        h("h3", null, "iMessage Metadata Layer"),
+        h("div", { className: "metric-grid", style: { margin: "14px 0 18px" } },
+          h(Metric, { value: fmt.format(DATA.imessage.baseRows), label: "base human-message rows" }),
+          h(Metric, { value: fmt.format(DATA.imessage.activeGroupChats), label: "active group chats" }),
+          h(Metric, { value: fmt.format(DATA.imessage.reactions), label: "reactions and tapbacks" }),
+          h(Metric, { value: fmt.format(DATA.imessage.replyThreads), label: "reply-thread rows" })
+        ),
+        h("div", { className: "grid-2" },
+          h("div", null,
+            h("h3", null, "Reaction Distribution"),
+            h(BarChart, { rows: DATA.imessage.reactionRows, color: "green" })
+          ),
+          h("div", null,
+            h("h3", null, "Attachment Shape"),
+            h(BarChart, { rows: DATA.imessage.attachmentRows, color: "gold" })
+          )
+        ),
+        h("p", { className: "caption" }, h("strong", null, "Implication: "), "Messages access is fixed. iMessage now supports the router at the metadata level: group/direct density, reaction behavior, replies, edits, effects, and attachment-heavy private communication. It does not expose private wording.")
+      );
+    }
     function App() {
       return h("div", { className: "layout" },
         h("aside", null,
           h("p", { className: "eyebrow" }, "Austin Voice System"),
           h("h1", null, "Communication Dossier"),
-          h("p", null, "A durable brief built from real X/Twitter, Snapchat, writing, instructions, and living-brain routing evidence."),
+          h("p", null, "A durable brief built from real X/Twitter, Snapchat, iMessage metadata, writing, instructions, and living-brain routing evidence."),
           h("nav", { className: "nav", "aria-label": "Dossier sections" },
             ["overview","method","coverage","evolution","themes","private","quotes","synthesis","open"].map((id) =>
               h("a", { href: "#" + id, key: id }, id[0].toUpperCase() + id.slice(1))
@@ -853,11 +916,12 @@ const html = String.raw`<!doctype html>
                 h(Metric, { value: fmt.format(DATA.totals.officialXRows), label: "official X rows parsed" }),
                 h(Metric, { value: fmt.format(DATA.totals.authoredXRows), label: "authored public voice rows" }),
                 h(Metric, { value: fmt.format(DATA.totals.snapchatSentTextRows), label: "sent private text rows summarized" }),
+                h(Metric, { value: fmt.format(DATA.totals.imessageBaseRows), label: "iMessage base rows summarized" }),
                 h(Metric, { value: DATA.totals.writingFiles, label: "long-form writing files referenced" })
               )
             ),
             h("div", { className: "status-stack" }, DATA.sourceStatus.map((row) =>
-              h("div", { className: "status-card " + (row.status.includes("blocked") ? "blocked" : row.status.includes("private") ? "private" : ""), key: row.label },
+              h("div", { className: "status-card " + (row.status.includes("private") ? "private" : ""), key: row.label },
                 h("h3", null, h("span", null, row.label), h("span", null, row.status)),
                 h("p", null, row.detail)
               )
@@ -905,7 +969,7 @@ const html = String.raw`<!doctype html>
             )
           ),
           h("section", { id: "private" },
-            h("div", { className: "section-head" }, h("h2", null, "Private Register"), h("p", null, "Snapchat is included as a privacy-safe derived layer. It corrects the model without exporting raw private messages.")),
+            h("div", { className: "section-head" }, h("h2", null, "Private Register"), h("p", null, "Snapchat and iMessage are included as privacy-safe derived layers. They correct the model without exporting raw private messages.")),
             h("div", { className: "grid-2" },
               h("div", { className: "panel private-note" },
                 h("h3", null, "Marker Rates Per 100 Sent Texts"),
@@ -921,10 +985,11 @@ const html = String.raw`<!doctype html>
                 h("tbody", null, DATA.topConversations.map((row) => h("tr", { key: row.label }, h("td", null, row.label), h("td", null, fmt.format(row.rows)), h("td", null, fmt.format(row.sentRows)), h("td", null, fmt.format(row.sentTextRows)))))
               ),
               h("p", { className: "caption" }, h("strong", null, "Implication: "), "The private corpus has a long tail: many small threads and a few dense ones. That supports a room-sensitive model, not one generic private voice.")
-            )
+            ),
+            h(ImessageMetadataPanel, null)
           ),
           h("section", { id: "quotes" },
-            h("div", { className: "section-head" }, h("h2", null, "Source Quotes"), h("p", null, "Direct public X quotes and long-form writing excerpts used as evidence. Raw private Snapchat text is intentionally excluded.")),
+            h("div", { className: "section-head" }, h("h2", null, "Source Quotes"), h("p", null, "Direct public X quotes and long-form writing excerpts used as evidence. Raw private Snapchat and iMessage text is intentionally excluded.")),
             h("h3", null, "Public X Evidence"),
             h("div", { className: "quote-grid" }, DATA.sourceQuotes.map((quote) => h(QuoteCard, { quote, key: quote.label }))),
             h("h3", { style: { marginTop: "26px" } }, "Long-Form Evidence"),
@@ -943,12 +1008,12 @@ const html = String.raw`<!doctype html>
             h("div", { className: "grid-2" },
               h("div", { className: "panel" },
                 h("h3", null, "Known"),
-                h("p", null, "X/Twitter public voice, Snapchat private compression, long-form systemic writing, and current partner-mode instructions are all backed by parsed or source-linked evidence.")
+                h("p", null, "X/Twitter public voice, Snapchat private compression, iMessage private metadata, long-form systemic writing, and current partner-mode instructions are all backed by parsed or source-linked evidence.")
               ),
               h("div", { className: "open-gate" },
-                h("h3", null, "Open: iMessage"),
-                h("p", null, "Apple Messages remains blocked by macOS Full Disk Access/TCC. The connector returns unable to open database file. Direct sqlite access returns authorization denied. The local chat.db exists, so the blocker is permission, not missing data."),
-                h("p", null, "Next proof step: grant Full Disk Access to the app/process hosting Codex and the Apple Messages MCP server, restart, run a one-message search proof, then produce privacy-safe derived summaries for tapbacks, group-thread rhythm, edited/unsent behavior, and current distribution.")
+                h("h3", null, "Open: Private-Language Pass"),
+                h("p", null, "Messages access is fixed. What remains open is whether Austin wants a separate local-only pass over private wording patterns. That would refine wording for affection, repair, logistics, jokes, and argument rhythm without committing raw text."),
+                h("p", null, "Current boundary: public repo gets aggregate metadata and derived synthesis only. Raw private Messages text, names, handles, group names, filenames, attachment contents, and media paths stay local.")
               )
             )
           ),

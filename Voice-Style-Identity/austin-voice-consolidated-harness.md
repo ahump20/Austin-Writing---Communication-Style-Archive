@@ -1,6 +1,6 @@
 # Austin Voice Consolidated Harness
 
-[verified] Updated July 6, 2026 from the official X archive analysis, Snapchat private-register analysis, existing writing archive, local `austin-voice` skill, and living-brain routing rules.
+[verified] Updated July 7, 2026 from the official X archive analysis, Snapchat private-register analysis, iMessage aggregate metadata analysis, existing writing archive, local `austin-voice` skill, and living-brain routing rules.
 
 Use this as the single top-level instruction for Austin voice, communication, relationship context, and cross-platform public/private presentation work.
 
@@ -24,7 +24,7 @@ X/Twitter and Snapchat revise the singular reference. They do not create separat
 - [verified] Snapchat / private register: 2,417 chat rows, 1,052 sent text rows, 208 anonymized conversations. Use for private compression, direct asks, logistics, quick reactions, short warmth, and lower-performance communication.
 - [verified] Writing archive / long-form: 50+ writing and voice-system files. Use for systemic analysis, founder/platform prose, public narrative, and professional register.
 - [verified] Living brain: use for Austin's verbatim words, decisions, and self-understanding. Resurface, never generate.
-- [verified/open] iMessage: blocked by macOS Full Disk Access / TCC as of July 6, 2026. The Apple Messages connector returns `unable to open database file`; direct `sqlite3` access to `~/Library/Messages/chat.db` returns `authorization denied`; the database exists locally. Tapbacks, edited/unsent behavior, and current Apple group-thread dynamics remain unproven until access is granted and a privacy-safe derived summary is produced.
+- [verified] iMessage / private group-direct metadata: 483,242 local message rows, 435,735 base human-message rows, 183,603 sent base rows, 632 active group chats, 30,469 reactions/tapbacks, 3,311 reply-thread rows, and 22,022 attachments. Use for group/direct distribution, tapback/reaction behavior, reply-thread use, attachment shape, and evidence confidence. Raw private text, names, handles, group names, filenames, attachment contents, and media paths stay out of public repo artifacts.
 
 ## Automatic Use
 
@@ -84,6 +84,7 @@ Stay in neutral assistant voice when:
 ## Privacy Rules
 
 - Do not commit raw Snapchat private text, contact names, media URLs, location data, phone/email identifiers, or media files.
+- Do not commit raw iMessage private text, contact names, handles, group names, filenames, attachment contents, or media paths.
 - Do not treat reposts, likes, follows, or viewed content as Austin-authored voice.
 - Do not file generated Austin-style prose into Obsidian as Austin's own words.
 - Use private evidence to refine the router, not to leak private language into public artifacts.
