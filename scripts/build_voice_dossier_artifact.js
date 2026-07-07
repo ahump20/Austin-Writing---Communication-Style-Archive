@@ -1,4 +1,218 @@
-<!doctype html>
+#!/usr/bin/env node
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.resolve(__dirname, "..");
+const xDataPath = path.join(ROOT, "X-Twitter-Archive/official-analysis/2026-07-06/official_analysis_data.json");
+const snapchatPath = path.join(ROOT, "Voice-Style-Identity/snapchat-analysis/2026-07-06/snapchat_summary.json");
+const outPath = path.join(ROOT, "Voice-Style-Identity/cross-context-voice-system-artifact.html");
+
+const xData = JSON.parse(fs.readFileSync(xDataPath, "utf8"));
+const snapchat = JSON.parse(fs.readFileSync(snapchatPath, "utf8"));
+
+const accountOrder = ["a_hump20", "TXTrickWhooper"];
+const accountLabels = {
+  a_hump20: "Austin Humphrey",
+  TXTrickWhooper: "Stallion account",
+};
+
+function pct(value) {
+  return Number((value * 100).toFixed(1));
+}
+
+function accountCard(handle) {
+  const counts = xData.summary.counts[handle];
+  return {
+    handle,
+    label: accountLabels[handle],
+    officialRows: counts.official_archive_rows,
+    authoredRows: counts.authored_voice_tweets,
+    retweets: counts.retweets_context,
+    replies: counts.replies,
+    originalTweets: counts.tweets,
+    medianWords: counts.median_words,
+    averageWords: counts.avg_words,
+    replyRate: pct(counts.replies / counts.authored_voice_tweets),
+    mentionRate: pct(counts.mention_rate),
+    hashtagRate: pct(counts.hashtag_rate),
+    emojiRate: pct(counts.emoji_rate),
+    profanityRate: pct(counts.profanity_rate),
+    allcapsRate: pct(counts.allcaps_rate),
+    range: counts.authored_date_range_ct,
+    topThemes: counts.top_themes.slice(0, 8).map(([label, value]) => ({ label, value })),
+    topHumor: counts.top_humor_tags.slice(0, 8).map(([label, value]) => ({ label, value })),
+  };
+}
+
+const accounts = accountOrder.map(accountCard);
+const countsByHandle = Object.fromEntries(accountOrder.map((handle) => [handle, xData.summary.counts[handle]]));
+const years = Array.from(
+  new Set(accountOrder.flatMap((handle) => Object.keys(countsByHandle[handle].by_year).map(Number)))
+).sort((a, b) => a - b);
+
+const xYearRows = years.map((year) => ({
+  year,
+  a_hump20: countsByHandle.a_hump20.by_year[String(year)] || 0,
+  TXTrickWhooper: countsByHandle.TXTrickWhooper.by_year[String(year)] || 0,
+}));
+
+const phaseRows = xData.phases.map((phase) => ({
+  phase: phase.phase,
+  count: phase.count,
+  range: phase.date_range_ct,
+  topThemes: phase.top_themes.slice(0, 4).map(([label, value]) => ({ label, value })),
+  topHumor: phase.top_humor.slice(0, 4).map(([label, value]) => ({ label, value })),
+}));
+
+const privateYearRows = Object.entries(snapchat.by_year).map(([year, row]) => ({
+  year,
+  rows: row.rows,
+  sentRows: row.sent_rows,
+  sentTextRows: row.sent_text_rows,
+  medianSentWords: row.median_sent_words,
+})).sort((a, b) => Number(a.year) - Number(b.year));
+
+const privateMarkerRates = Object.entries(snapchat.chat.marker_rates_per_100_sent_texts)
+  .map(([label, value]) => ({ label, value }))
+  .sort((a, b) => b.value - a.value);
+
+const topConversations = snapchat.contacts.top_conversations_anonymized.slice(0, 10).map((row) => ({
+  label: row.contact_label,
+  rows: row.rows,
+  sentRows: row.sent_rows,
+  sentTextRows: row.sent_text_rows,
+}));
+
+const quoteLabels = [
+  "Waffle House as civil-defense institution",
+  "Vape charger mock PSA",
+  "For You page grievance letter",
+  "Reading code punchline",
+  "Fable access as birthright",
+  "Boerne rivalry shot",
+  "Old Facebook self-awareness",
+  "Barbie/Oppenheimer social bit",
+  "Chick-fil-A acceptance speech",
+  "Camera operator meltdown",
+  "God is real relief",
+  "Nice.",
+];
+const examplesByLabel = new Map(xData.examples.map((example) => [example.label, example]));
+const sourceQuotes = quoteLabels
+  .map((label) => examplesByLabel.get(label))
+  .filter(Boolean)
+  .map((example) => ({
+    label: example.label,
+    note: example.note,
+    account: example.tweet.account,
+    date: example.tweet.date_ct.slice(0, 10),
+    text: example.tweet.text,
+    likes: example.tweet.likes,
+    reposts: example.tweet.reposts,
+    url: example.tweet.url,
+    themes: example.tweet.themes,
+    humor: example.tweet.humor,
+  }));
+
+const longFormQuotes = [
+  {
+    source: "Freshman IR writing, 2015",
+    quote: "In the globalized capitalist world system of today, every country plays their own small but crucial role in assisting the economy to function at its maximum efficiency; although no country more so than the United States...",
+    implication: "The system lens starts early: one actor is almost always interpreted through the larger machine around it.",
+  },
+  {
+    source: "International Relations reading response, 2016",
+    quote: "Capitalism didn't eliminate oppressive upper classes. It just changed the basis upon which they stood.",
+    implication: "The mature move is already present: surface change, same underlying function.",
+  },
+  {
+    source: "Germany-Greece trade paper, 2017",
+    quote: "Greece's wrecked economy bogs down the value of the euro. For an export-driven economy like Germany this is ideal.",
+    implication: "Austin looks for the hidden beneficiary instead of stopping at the obvious victim.",
+  },
+  {
+    source: "Geographies of Globalization, 2018",
+    quote: "Just because the rich are getting richer doesn't mean the rest of us are.",
+    implication: "The abstract system gets pulled back to a blunt human stake.",
+  },
+  {
+    source: "Texas covenant note",
+    quote: "A home, a family, a philosophy.",
+    implication: "Identity writing works when it stays specific and physical first, then widens into values.",
+  },
+];
+
+const methodSteps = [
+  {
+    label: "1. Parse X archives",
+    detail: "Read tweets.js plus community, note, and deleted tweet files from both official exports. Direct messages, contacts, IP/device logs, ad files, and Grok chats were excluded.",
+  },
+  {
+    label: "2. Apply BirdClaw archive discipline",
+    detail: "Used BirdClaw's archive-handling pattern as a reference: account identity from account.js, JavaScript assignment payloads parsed as data, tweet IDs as canonical dedupe keys, and reply/thread/media metadata preserved.",
+  },
+  {
+    label: "3. Separate authored voice from context",
+    detail: "Retweets and context rows were preserved but kept out of the authored voice count. Replies stayed in because reply timing is central to the public voice.",
+  },
+  {
+    label: "4. Derive private-register signals",
+    detail: "Parsed Snapchat metadata into counts, marker rates, word lengths, year buckets, and anonymized conversation shape. Raw private text, names, media URLs, locations, and media files stayed local-only.",
+  },
+  {
+    label: "5. Reconcile with long-form writing",
+    detail: "Compared X and Snapchat signals against the writing archive: source passages, voice DNA, origin story, professional context, and existing writing-system rules.",
+  },
+  {
+    label: "6. Route into one canonical model",
+    detail: "X and Snapchat are treated as extension layers for one Austin reference, not separate personas. The output is a room router: public social, long-form, brand, private, coordination, repair, and partner interaction.",
+  },
+];
+
+const dossier = {
+  generatedAt: "2026-07-06",
+  accounts,
+  xYearRows,
+  phaseRows,
+  privateYearRows,
+  privateMarkerRates,
+  topConversations,
+  sourceQuotes,
+  longFormQuotes,
+  methodSteps,
+  totals: {
+    officialXRows: xData.summary.counts.a_hump20.official_archive_rows + xData.summary.counts.TXTrickWhooper.official_archive_rows,
+    authoredXRows: xData.summary.counts.a_hump20.authored_voice_tweets + xData.summary.counts.TXTrickWhooper.authored_voice_tweets,
+    retweetContextRows: xData.summary.counts.a_hump20.retweets_context + xData.summary.counts.TXTrickWhooper.retweets_context,
+    deletedTweetRows: 4,
+    snapchatChatRows: snapchat.chat.message_counts.all_chat_rows,
+    snapchatSentTextRows: snapchat.chat.message_counts.sent_text_rows,
+    snapchatConversations: snapchat.contacts.conversation_count,
+    writingFiles: "50+",
+  },
+  sourceStatus: [
+    { label: "X/Twitter", status: "verified", detail: "Official archive exports parsed and deduped. Public quotes are allowed in this artifact." },
+    { label: "Snapchat", status: "verified/private", detail: "Parsed into privacy-safe derived markers. No raw private messages are quoted." },
+    { label: "Long-form writing", status: "verified", detail: "Source passages and existing voice files used for thinking style, structure, and public prose." },
+    { label: "Living brain", status: "verified bridge", detail: "Neutral routing note points future agents back to this canonical system." },
+    { label: "iMessage", status: "blocked", detail: "Apple Messages connector returns unable to open database file; direct sqlite returns authorization denied; chat.db exists locally." },
+  ],
+  synthesisRules: [
+    ["Specific first", "Name the object, place, team, person, tool, or failure before making the claim."],
+    ["System behind event", "Treat the surface thing as evidence of a larger mechanism."],
+    ["Verdict early", "Give the read first. Explain after the reader has something to hold."],
+    ["Affection plus critique", "Love and roasting can sit in the same sentence without cancelling each other out."],
+    ["Scale mismatch", "Small inconvenience becomes civic infrastructure, malpractice, birthright, or sports theology."],
+    ["Self-own valve", "Confidence lands better when Austin gets the first joke at his own expense."],
+    ["Private contraction", "In private contexts, the same mind gets shorter, more logistical, warmer, and less performed."],
+  ],
+};
+
+const dataJSON = JSON.stringify(dossier).replace(/</g, "\\u003c");
+
+const html = String.raw`<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -527,7 +741,7 @@
 <body>
   <div id="root"></div>
   <script>
-    const DATA = {"generatedAt":"2026-07-06","accounts":[{"handle":"a_hump20","label":"Austin Humphrey","officialRows":4760,"authoredRows":4033,"retweets":727,"replies":1626,"originalTweets":2407,"medianWords":9,"averageWords":10.4,"replyRate":40.3,"mentionRate":46.5,"hashtagRate":23.8,"emojiRate":11.6,"profanityRate":8.4,"allcapsRate":7.7,"range":["2011-07-02T11:50:11-05:00","2025-10-18T21:24:56-05:00"],"topThemes":[{"label":"question/reply energy","value":1626},{"label":"sports/Texas","value":1190},{"label":"everyday observation","value":1041},{"label":"family/life","value":436},{"label":"AI/dev/tools","value":423},{"label":"X/platform","value":335},{"label":"school/social life","value":272},{"label":"place/Texas/Memphis","value":172}],"topHumor":[{"label":"short deadpan","value":2704},{"label":"self-involving aside","value":1737},{"label":"reply volley","value":1626},{"label":"casual bluntness","value":340},{"label":"question punchline","value":260},{"label":"overstated stakes","value":239},{"label":"rivalry/trash-talk","value":55},{"label":"absurd everyday object","value":44}]},{"handle":"TXTrickWhooper","label":"Stallion account","officialRows":1540,"authoredRows":1404,"retweets":136,"replies":1293,"originalTweets":111,"medianWords":13,"averageWords":16.3,"replyRate":92.1,"mentionRate":90,"hashtagRate":2.8,"emojiRate":6.8,"profanityRate":9.5,"allcapsRate":12,"range":["2022-07-01T20:58:29-05:00","2026-07-05T21:06:59-05:00"],"topThemes":[{"label":"question/reply energy","value":1293},{"label":"sports/Texas","value":570},{"label":"AI/dev/tools","value":320},{"label":"family/life","value":189},{"label":"X/platform","value":169},{"label":"place/Texas/Memphis","value":101},{"label":"food/vices","value":83},{"label":"school/social life","value":68}],"topHumor":[{"label":"reply volley","value":1293},{"label":"short deadpan","value":678},{"label":"self-involving aside","value":578},{"label":"casual bluntness","value":134},{"label":"question punchline","value":101},{"label":"overstated stakes","value":70},{"label":"absurd everyday object","value":51},{"label":"rivalry/trash-talk","value":26}]}],"xYearRows":[{"year":2011,"a_hump20":533,"TXTrickWhooper":0},{"year":2012,"a_hump20":1484,"TXTrickWhooper":0},{"year":2013,"a_hump20":1302,"TXTrickWhooper":0},{"year":2014,"a_hump20":243,"TXTrickWhooper":0},{"year":2015,"a_hump20":14,"TXTrickWhooper":0},{"year":2016,"a_hump20":9,"TXTrickWhooper":0},{"year":2017,"a_hump20":8,"TXTrickWhooper":0},{"year":2019,"a_hump20":19,"TXTrickWhooper":0},{"year":2020,"a_hump20":89,"TXTrickWhooper":0},{"year":2021,"a_hump20":158,"TXTrickWhooper":0},{"year":2022,"a_hump20":61,"TXTrickWhooper":22},{"year":2023,"a_hump20":66,"TXTrickWhooper":106},{"year":2024,"a_hump20":35,"TXTrickWhooper":655},{"year":2025,"a_hump20":12,"TXTrickWhooper":299},{"year":2026,"a_hump20":0,"TXTrickWhooper":322}],"phaseRows":[{"phase":"2011-2014: early social and school voice","count":3562,"range":["2011-07-02T11:50:11-05:00","2014-12-25T22:56:20-06:00"],"topThemes":[{"label":"question/reply energy","value":1449},{"label":"sports/Texas","value":1000},{"label":"everyday observation","value":947},{"label":"family/life","value":364}],"topHumor":[{"label":"short deadpan","value":2414},{"label":"self-involving aside","value":1608},{"label":"reply volley","value":1449},{"label":"casual bluntness","value":300}]},{"phase":"2015-2019: lower-volume bridge years","count":50,"range":["2015-01-15T12:01:07-06:00","2019-12-29T19:03:03-06:00"],"topThemes":[{"label":"sports/Texas","value":17},{"label":"question/reply energy","value":16},{"label":"everyday observation","value":11},{"label":"AI/dev/tools","value":9}],"topHumor":[{"label":"short deadpan","value":29},{"label":"self-involving aside","value":16},{"label":"reply volley","value":16},{"label":"casual bluntness","value":3}]},{"phase":"2020-2023: sports, place, and adult-life commentary","count":502,"range":["2020-02-09T17:27:54-06:00","2023-12-31T16:05:09-06:00"],"topThemes":[{"label":"question/reply energy","value":242},{"label":"sports/Texas","value":217},{"label":"everyday observation","value":87},{"label":"family/life","value":85}],"topHumor":[{"label":"short deadpan","value":310},{"label":"reply volley","value":242},{"label":"self-involving aside","value":136},{"label":"casual bluntness","value":43}]},{"phase":"2024-2026: commentary persona and AI-tool era","count":1323,"range":["2024-01-01T00:11:08-06:00","2026-07-05T21:06:59-05:00"],"topThemes":[{"label":"question/reply energy","value":1212},{"label":"sports/Texas","value":526},{"label":"AI/dev/tools","value":314},{"label":"family/life","value":173}],"topHumor":[{"label":"reply volley","value":1212},{"label":"short deadpan","value":629},{"label":"self-involving aside","value":555},{"label":"casual bluntness","value":128}]}],"privateYearRows":[{"year":"2016","rows":8,"sentRows":2,"sentTextRows":2,"medianSentWords":8},{"year":"2017","rows":23,"sentRows":0,"sentTextRows":0,"medianSentWords":null},{"year":"2018","rows":423,"sentRows":125,"sentTextRows":124,"medianSentWords":7},{"year":"2019","rows":447,"sentRows":219,"sentTextRows":215,"medianSentWords":5},{"year":"2020","rows":407,"sentRows":230,"sentTextRows":224,"medianSentWords":6},{"year":"2021","rows":210,"sentRows":107,"sentTextRows":99,"medianSentWords":5},{"year":"2022","rows":255,"sentRows":128,"sentTextRows":120,"medianSentWords":5},{"year":"2023","rows":160,"sentRows":78,"sentTextRows":72,"medianSentWords":5},{"year":"2024","rows":161,"sentRows":93,"sentTextRows":79,"medianSentWords":5},{"year":"2025","rows":174,"sentRows":97,"sentTextRows":88,"medianSentWords":5},{"year":"2026","rows":149,"sentRows":60,"sentTextRows":29,"medianSentWords":5}],"privateMarkerRates":[{"label":"question","value":34.41},{"label":"logistics","value":17.87},{"label":"laughter","value":12.17},{"label":"affection","value":5.23},{"label":"profanity","value":2.47},{"label":"sports_place","value":2.47},{"label":"repair","value":0.29}],"topConversations":[{"label":"contact_001","rows":261,"sentRows":12,"sentTextRows":8},{"label":"contact_002","rows":126,"sentRows":72,"sentTextRows":72},{"label":"contact_003","rows":117,"sentRows":60,"sentTextRows":57},{"label":"contact_004","rows":113,"sentRows":2,"sentTextRows":1},{"label":"contact_005","rows":108,"sentRows":60,"sentTextRows":60},{"label":"contact_006","rows":88,"sentRows":51,"sentTextRows":51},{"label":"contact_007","rows":61,"sentRows":39,"sentTextRows":39},{"label":"contact_008","rows":53,"sentRows":31,"sentTextRows":31},{"label":"contact_009","rows":53,"sentRows":24,"sentTextRows":22},{"label":"contact_010","rows":51,"sentRows":34,"sentTextRows":34}],"sourceQuotes":[{"label":"Waffle House as civil-defense institution","note":"Deadpan civic overstatement.","account":"TXTrickWhooper","date":"2026-06-05","text":"@DrewVento Waffle house is our last line of defense","likes":460,"reposts":16,"url":"https://x.com/TXTrickWhooper/status/2062988282917494908","themes":["food/vices","question/reply energy"],"humor":["reply volley","short deadpan","self-involving aside","overstated stakes","absurd everyday object"]},{"label":"Vape charger mock PSA","note":"Fake discovery framed like public knowledge.","account":"TXTrickWhooper","date":"2026-07-05","text":"Yesterday I learned you can charge your vape by plugging it directly into your phone with the charging wire #themoreyouknow #nicoFIEND #gamechanger","likes":0,"reposts":0,"url":"https://x.com/TXTrickWhooper/status/2073785932877017597","themes":["sports/Texas","food/vices"],"humor":["self-involving aside","absurd everyday object","mock PSA setup"]},{"label":"For You page grievance letter","note":"Formal-letter frame used for an unserious rage bit.","account":"TXTrickWhooper","date":"2026-06-23","text":"Dear @elonmusk,\n\nI literally have every single soccer-related synonym in the dictionary muted. I also block EVERY single user I come across who mentions it permanently.\n\nThat said, PLEASE kindly get it THE fuck off my “For You” FEATURED page. Or at least allow the option to remove it. Thx :)\n\nBest regards,\nStallion\n\nP.S., Soccer can suck my shriveled suck","likes":0,"reposts":0,"url":"https://x.com/TXTrickWhooper/status/2069630504740032512","themes":["sports/Texas","AI/dev/tools","X/platform"],"humor":["self-involving aside","casual bluntness"]},{"label":"Reading code punchline","note":"Reply timing: premise rejected in one line.","account":"TXTrickWhooper","date":"2026-07-05","text":"@theo Reading code is for nerds and agents","likes":0,"reposts":0,"url":"https://x.com/TXTrickWhooper/status/2073727702498951283","themes":["AI/dev/tools","question/reply energy"],"humor":["reply volley","short deadpan"]},{"label":"Fable access as birthright","note":"AI tooling complaint turned into rights language.","account":"TXTrickWhooper","date":"2026-06-12","text":"@grok @AnthropicAI Yeah fuck them i was mid-ship. Give me my fucking American born right to Fable 5","likes":1,"reposts":0,"url":"https://x.com/TXTrickWhooper/status/2065599283890442592","themes":["AI/dev/tools","politics/news","question/reply energy"],"humor":["reply volley","self-involving aside","casual bluntness","overstated stakes"]},{"label":"Boerne rivalry shot","note":"Early rivalry voice: direct, local, competitive.","account":"a_hump20","date":"2013-08-29","text":"S/O to Boerne high for finally finding something they can compete with us in #getoveryourselves","likes":26,"reposts":0,"url":"https://x.com/a_hump20/status/373267087210184704","themes":["place/Texas/Memphis"],"humor":["rivalry/trash-talk"]},{"label":"Old Facebook self-awareness","note":"Self-own without overexplaining.","account":"a_hump20","date":"2014-02-01","text":"Reading all my old Facebook messages makes me realize how weird I really was","likes":23,"reposts":1,"url":"https://x.com/a_hump20/status/429693209279610880","themes":["school/social life"],"humor":["self-involving aside"]},{"label":"Barbie/Oppenheimer social bit","note":"Self-aware bit built from a social pattern.","account":"a_hump20","date":"2023-07-23","text":"Haven’t been able to resist asking every single group of girls I see dressed in Barbie pink this weekend how Oppenheimer was. I need to be stopped","likes":0,"reposts":0,"url":"https://x.com/a_hump20/status/1683052741147627520","themes":["food/vices","school/social life","music/pop culture"],"humor":["self-involving aside"]},{"label":"Chick-fil-A acceptance speech","note":"Mock gratitude with sports-ring language.","account":"a_hump20","date":"2025-04-10","text":"I would like to thank Jesus, my family, and most importantly @ChickfilA for existing #Dynasty #championshipDNA https://t.co/Quk68kLlXQ","likes":1,"reposts":0,"url":"https://x.com/a_hump20/status/1910418489376202903","themes":["food/vices","place/Texas/Memphis","family/life"],"humor":["self-involving aside","overstated stakes","mock gratitude"]},{"label":"Camera operator meltdown","note":"Sports-fan frustration reduced to job-performance comedy.","account":"a_hump20","date":"2025-10-18","text":"That camera man had one fuckin job and fucked it up on the biggest play of the game lmao","likes":0,"reposts":0,"url":"https://x.com/a_hump20/status/1979735486857171194","themes":["sports/Texas"],"humor":["casual bluntness","absurd everyday object"]},{"label":"God is real relief","note":"Melodramatic relief after sports stress.","account":"a_hump20","date":"2024-12-07","text":"THANK YOU God is real and I don’t have to resort to substance abuse now","likes":1,"reposts":0,"url":"https://x.com/a_hump20/status/1865546200717398099","themes":["everyday observation"],"humor":["self-involving aside","overstated stakes","mock gratitude"]},{"label":"Nice.","note":"One-word deadpan, early archive.","account":"a_hump20","date":"2014-01-22","text":"Nice.","likes":1,"reposts":0,"url":"https://x.com/a_hump20/status/426194988519538688","themes":["everyday observation"],"humor":["short deadpan"]}],"longFormQuotes":[{"source":"Freshman IR writing, 2015","quote":"In the globalized capitalist world system of today, every country plays their own small but crucial role in assisting the economy to function at its maximum efficiency; although no country more so than the United States...","implication":"The system lens starts early: one actor is almost always interpreted through the larger machine around it."},{"source":"International Relations reading response, 2016","quote":"Capitalism didn't eliminate oppressive upper classes. It just changed the basis upon which they stood.","implication":"The mature move is already present: surface change, same underlying function."},{"source":"Germany-Greece trade paper, 2017","quote":"Greece's wrecked economy bogs down the value of the euro. For an export-driven economy like Germany this is ideal.","implication":"Austin looks for the hidden beneficiary instead of stopping at the obvious victim."},{"source":"Geographies of Globalization, 2018","quote":"Just because the rich are getting richer doesn't mean the rest of us are.","implication":"The abstract system gets pulled back to a blunt human stake."},{"source":"Texas covenant note","quote":"A home, a family, a philosophy.","implication":"Identity writing works when it stays specific and physical first, then widens into values."}],"methodSteps":[{"label":"1. Parse X archives","detail":"Read tweets.js plus community, note, and deleted tweet files from both official exports. Direct messages, contacts, IP/device logs, ad files, and Grok chats were excluded."},{"label":"2. Apply BirdClaw archive discipline","detail":"Used BirdClaw's archive-handling pattern as a reference: account identity from account.js, JavaScript assignment payloads parsed as data, tweet IDs as canonical dedupe keys, and reply/thread/media metadata preserved."},{"label":"3. Separate authored voice from context","detail":"Retweets and context rows were preserved but kept out of the authored voice count. Replies stayed in because reply timing is central to the public voice."},{"label":"4. Derive private-register signals","detail":"Parsed Snapchat metadata into counts, marker rates, word lengths, year buckets, and anonymized conversation shape. Raw private text, names, media URLs, locations, and media files stayed local-only."},{"label":"5. Reconcile with long-form writing","detail":"Compared X and Snapchat signals against the writing archive: source passages, voice DNA, origin story, professional context, and existing writing-system rules."},{"label":"6. Route into one canonical model","detail":"X and Snapchat are treated as extension layers for one Austin reference, not separate personas. The output is a room router: public social, long-form, brand, private, coordination, repair, and partner interaction."}],"totals":{"officialXRows":6300,"authoredXRows":5437,"retweetContextRows":863,"deletedTweetRows":4,"snapchatChatRows":2417,"snapchatSentTextRows":1052,"snapchatConversations":208,"writingFiles":"50+"},"sourceStatus":[{"label":"X/Twitter","status":"verified","detail":"Official archive exports parsed and deduped. Public quotes are allowed in this artifact."},{"label":"Snapchat","status":"verified/private","detail":"Parsed into privacy-safe derived markers. No raw private messages are quoted."},{"label":"Long-form writing","status":"verified","detail":"Source passages and existing voice files used for thinking style, structure, and public prose."},{"label":"Living brain","status":"verified bridge","detail":"Neutral routing note points future agents back to this canonical system."},{"label":"iMessage","status":"blocked","detail":"Apple Messages connector returns unable to open database file; direct sqlite returns authorization denied; chat.db exists locally."}],"synthesisRules":[["Specific first","Name the object, place, team, person, tool, or failure before making the claim."],["System behind event","Treat the surface thing as evidence of a larger mechanism."],["Verdict early","Give the read first. Explain after the reader has something to hold."],["Affection plus critique","Love and roasting can sit in the same sentence without cancelling each other out."],["Scale mismatch","Small inconvenience becomes civic infrastructure, malpractice, birthright, or sports theology."],["Self-own valve","Confidence lands better when Austin gets the first joke at his own expense."],["Private contraction","In private contexts, the same mind gets shorter, more logistical, warmer, and less performed."]]};
+    const DATA = ${dataJSON};
     const h = React.createElement;
     const fmt = new Intl.NumberFormat("en-US");
     const pctLabel = (value) => String(value.toFixed ? value.toFixed(1) : value) + "%";
@@ -746,3 +960,7 @@
   </script>
 </body>
 </html>
+`;
+
+fs.writeFileSync(outPath, html, "utf8");
+console.log(`Wrote ${outPath}`);

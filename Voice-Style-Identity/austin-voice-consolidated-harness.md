@@ -24,7 +24,7 @@ X/Twitter and Snapchat revise the singular reference. They do not create separat
 - [verified] Snapchat / private register: 2,417 chat rows, 1,052 sent text rows, 208 anonymized conversations. Use for private compression, direct asks, logistics, quick reactions, short warmth, and lower-performance communication.
 - [verified] Writing archive / long-form: 50+ writing and voice-system files. Use for systemic analysis, founder/platform prose, public narrative, and professional register.
 - [verified] Living brain: use for Austin's verbatim words, decisions, and self-understanding. Resurface, never generate.
-- [open] iMessage: still blocked, so tapbacks, edited/unsent behavior, and current Apple group-thread dynamics remain unproven.
+- [verified/open] iMessage: blocked by macOS Full Disk Access / TCC as of July 6, 2026. The Apple Messages connector returns `unable to open database file`; direct `sqlite3` access to `~/Library/Messages/chat.db` returns `authorization denied`; the database exists locally. Tapbacks, edited/unsent behavior, and current Apple group-thread dynamics remain unproven until access is granted and a privacy-safe derived summary is produced.
 
 ## Automatic Use
 

@@ -51,7 +51,7 @@ Then choose the register. Do not start from the funniest X voice and back-fill c
 
 [verified] Still-blocked evidence:
 
-- iMessage/private-chat analysis is currently blocked by macOS privacy access. The database exists at `~/Library/Messages/chat.db`, but read attempts return `authorization denied`; the Messages connector returns `unable to open database file`.
+- iMessage/private-chat analysis remains blocked by macOS Full Disk Access / TCC permissions. On July 6, 2026, the Apple Messages connector `search_messages` call returned `unable to open database file`; direct `sqlite3 ~/Library/Messages/chat.db 'select count(*) from message;'` returned `authorization denied`; and `~/Library/Messages/chat.db` exists locally as a 744,714,240 byte database. This is an OS access gate, not a missing archive or parser/schema issue.
 
 [verified] X/Twitter anchors public/social voice and Snapchat upgrades private one-on-one, basic coordination, and warm/private register shape from provisional to evidence-backed. [open] iMessage still matters for full friend-group dynamics, reactions/tapbacks, edited/unsent behavior, Apple Messages thread context, and current private-chat distribution.
 
@@ -380,7 +380,7 @@ Same thought, different contexts:
 
 ## Upgrade Path
 
-[open] To finish the full cross-context model, add iMessage evidence once macOS allows read access:
+[open] To finish the full cross-context model, add iMessage evidence once macOS allows read access. First, grant Full Disk Access to the app/process hosting Codex and the Apple Messages MCP server, restart Codex/MCP, then rerun a small `search_messages` proof before deriving private-register summaries.
 
 - Aggregate message stats by year, hour, contact, and group chat.
 - Top group-chat cadence patterns.
@@ -388,4 +388,4 @@ Same thought, different contexts:
 - Reaction/tapback distribution.
 - Conversation initiation and double-text patterns.
 
-Do not auto-file private messages into public-facing style guides. Use private evidence to refine the singular router, then store a privacy-safe synthesis. Snapchat raw exports remain local-only.
+Do not auto-file private messages into public-facing style guides. Use private evidence to refine the singular router, then store a privacy-safe synthesis. Raw Snapchat exports and raw iMessage content remain local-only.

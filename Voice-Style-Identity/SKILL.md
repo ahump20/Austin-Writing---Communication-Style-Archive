@@ -162,7 +162,7 @@ X/Twitter and Snapchat are extension and revision layers for the single Austin r
 - Basic coordination: direct ask, one useful detail, no ceremony. Snapchat shows high question/direct-ask and logistics marker density.
 - Repair/vulnerable: own the specific action, explain mechanism without excuse, state next behavior. Repair style remains partly reasoned because Snapchat repair markers are sparse.
 
-Snapchat private-register evidence is verified from a privacy-safe derived summary: 2,417 chat rows, 1,052 sent text rows, 208 conversations, 2016-2026, median sent text 5 words. Raw private text is not part of this repository. iMessage remains open because macOS privacy blocks database reads.
+Snapchat private-register evidence is verified from a privacy-safe derived summary: 2,417 chat rows, 1,052 sent text rows, 208 conversations, 2016-2026, median sent text 5 words. Raw private text is not part of this repository. iMessage remains open because macOS Full Disk Access / TCC blocks database reads: the Apple Messages connector returns `unable to open database file`, direct `sqlite3` returns `authorization denied`, and `~/Library/Messages/chat.db` exists locally.
 
 ## Automatic-Use Contract
 
