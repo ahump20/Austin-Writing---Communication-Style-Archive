@@ -30,7 +30,7 @@
   "DEPTH_INTEGRITY": 2,
   "signature_move": "A dossier where the operating premise leads, the doorway rule is explicit, and each chart is a receipt for the implication it supports.",
   "layout_architecture": "sticky dossier rail plus long-form reading column and chart pairs",
-  "information_flow": "doorway rule, repeatable movement, method, system behavior, visual delivery, evidence receipts, public examples, private shape, doorway plays, source boundaries",
+  "information_flow": "doorway rule, repeatable movement, method, system behavior, visual delivery, source support, public examples, private shape, doorway plays, source boundaries",
   "section_or_zone_rhythm": "one governing thesis, long-form reflection chapters, paired evidence panels, doorway plays, and calmer source rows",
   "primary_visual_asset": "custom SVG evidence charts and annotated delivery-flow assets",
   "asset_job": "make private compression, pressure conditions, strength/risk patterns, doorway translation, and error recovery readable without exposing raw private content",
@@ -93,5 +93,5 @@
     "final_repo_path": "Voice-Style-Identity/austin-communication-context-map.html",
     "fallback_if_unavailable": "plain HTML tables and no-script message remain in the artifact"
   },
-  "restraint_clause": "Numbers are evidence, not the center of the artifact. Private data stays aggregate-only. The artifact should feel useful to read, not merely impressive to audit."
+  "restraint_clause": "Numbers are evidence, not the center of the artifact. Private data becomes privacy-safe summaries and router corrections. The artifact should feel useful to read, not merely impressive to audit."
 }

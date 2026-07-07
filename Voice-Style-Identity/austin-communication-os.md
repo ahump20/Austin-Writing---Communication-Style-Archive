@@ -36,6 +36,8 @@ The corrected rule is load order:
 3. Only the specific lane needed for the next output: writing, behavior/repair, recall, sync, reporting, or editing.
 4. Heavy source docs only when they change the answer.
 
+Newest correction: private intonation is now a first-class lane. When Austin asks about interpersonal writing, humor in Messages, private-style replies, warmth, repair, or how his informal tone lands, route through the private intonation section in `cross-context-communication-system.md`. The operative move is scene-aware compression: decide what the other person should see, hear, or remember, then write the shortest line that keeps the feeling and timing intact. Do not publish or store raw private Messages.
+
 ## Privacy Boundary
 
 The OS can use privacy-safe derived evidence from Snapchat, iMessage, and living-brain context. It must not publish or commit raw private messages, private names, handles, group names, media paths, filenames, private phrase lists, burner metadata, DMs, or relationship maps.

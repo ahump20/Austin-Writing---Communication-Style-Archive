@@ -8,7 +8,7 @@ This pack is the portable reference for Austin's communication system. It exists
 
 North Star: the best communication changes the doorway, not the truth.
 
-Truth-transfer rule: the mechanism has to survive translation. A strong bridge changes metaphor, rhythm, slang, grammar, image, silence, or proof shape without changing the causal architecture underneath.
+Truth-transfer rule: the mechanism has to survive translation. A strong bridge changes metaphor, rhythm, slang, grammar, scene, silence, or source shape without changing the causal architecture underneath.
 
 ## Canonical Contents
 
@@ -57,4 +57,4 @@ Truth-transfer rule: the mechanism has to survive translation. A strong bridge c
 
 Open `Voice-Style-Identity/austin-communication-context-map.html`.
 
-That is the canonical viewable React translation system: usable voice first, evidence receipts after.
+That is the canonical viewable React translation system: usable voice first, source support after.

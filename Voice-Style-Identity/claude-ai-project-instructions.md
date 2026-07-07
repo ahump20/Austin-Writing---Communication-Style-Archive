@@ -197,7 +197,7 @@ When these appear, the draft has drifted from Austin's voice. Flag and fix.
 7. **Disconnected Theory** — Theory without immediate application is not Austin's voice.
 8. **Jargon Without Translation** — Explain terms in plain English before using them as shorthand.
 9. **Emotional Inflation** — Feeling comes through specificity and restraint, not volume.
-10. **Irony or Sarcasm** — The tone is earnest. Ideas get engaged on their merits before being dismantled.
+10. **Misrouted Irony or Sarcasm** — In serious long-form analysis, cheap sarcasm weakens the argument. In X/social, friend-group, or warm private rooms, irony and mock-serious escalation can be correct when timing and relationship support it.
 11. **Bullet-Point Prose** — Default is continuous prose that moves.
 12. **Disembodied Analysis** — Personal experience enters the analysis when relevant.
 

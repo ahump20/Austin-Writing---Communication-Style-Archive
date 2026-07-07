@@ -6,20 +6,20 @@
 
 ## What This Is
 
-This repo is the canonical communication router for Austin Humphrey's writing, public voice, private-register signals, and AI collaboration style. The archive matters because it proves the system. The system comes first.
+This repo is the canonical communication router for Austin Humphrey's writing, public voice, private-register signals, interpersonal intonation, and AI collaboration style. The archive matters because it grounds the system. The system comes first.
 
 The operating premise is simple: there is not an X Austin, a texting Austin, and an essay Austin. There is one thought process translated through different rooms. This repo exists to preserve that movement with evidence, not to split it into fake platform identities.
 
 The shortest rule is newer and cleaner: **the best communication changes the doorway, not the truth.**
 
-It is not a scrapbook, not a generic brand guide, and not a raw data landfill. It is a working voice skill backed by real source material across long-form writing, public social posts, professional documents, and privacy-safe derived analysis.
+It is not a scrapbook, not a generic brand guide, and not a raw data landfill. It is a working voice skill backed by real source material across long-form writing, public social posts, professional documents, direct corrections, and privacy-safe private-source analysis.
 
 The goal is durable reuse:
 
 - give future agents a canonical Austin voice reference;
 - keep public writing, private-style drafts, social posts, and AI collaboration from drifting into generic chatbot prose;
 - preserve the source archive without forcing every reader to dig through raw coursework, tweet exports, resume files, and generated artifacts;
-- make the difference between verified evidence, reasoned synthesis, and open gaps explicit.
+- keep public evidence, local-only private signal, and open gaps clearly separated.
 
 ## Start Here
 
@@ -46,6 +46,7 @@ The goal is durable reuse:
 - Uses a local Austin Communication OS plugin as the compact trigger layer while keeping the full repo as the durable source of truth.
 - Preserves one canonical Austin reference instead of splitting him into fake platform identities.
 - Changes the doorway without changing the truth: same observation, audience-native entrance.
+- Treats scene, sound, artifact, and social situation as possible doorways in private conversation, not just abstract ideas to summarize.
 - Treats strong metaphor as causal architecture, not surface resemblance: the source path, authority signal, failure point, and human consequence still have to match.
 - Runs a cold-read guardrail against flattering, vague, or mystical claims. If a claim cannot be sourced, it stays reasoned/open or gets cut.
 - Treats metaphor as audience translation: the same truth should move across cultures, contexts, and domains without making the room decode a foreign reference.
@@ -63,7 +64,8 @@ The goal is durable reuse:
 | Official X/Twitter exports | [verified] | 6,300 official rows, 5,437 authored voice rows, public humor, replies, sports/fan identity, and public-pressure translation across `@a_hump20` and `@TXTrickWhooper`. |
 | Snapchat metadata export | [verified] | Privacy-safe derived private-register signals: short coordination, direct asks, quick reactions, warm one-on-one compression. Raw private text is not committed. |
 | Living-brain bridge | [verified] | Durable routing note for agents and Obsidian context. Resurfaces Austin-derived language without filing generated prose as source truth. |
-| iMessage / Apple Messages | [verified/private derived] | Privacy-safe aggregate metadata and private-language signals from the local Messages database: 483,242 total rows, 435,735 base human-message rows, 179,882 decoded sent text rows, 632 active group chats, reactions/tapbacks, reply threads, attachment shape, private wording rates, anonymous relationship-room shape, and purpose buckets. Raw private text, names, handles, and group names are not committed. |
+| iMessage / Apple Messages | [verified/private derived] | Privacy-safe aggregate metadata and private-language signals from the local Messages database: 483,242 total rows, 435,735 base human-message rows, 179,882 decoded sent text rows, 632 active group chats, reactions/tapbacks, reply threads, attachment shape, private wording rates, anonymous relationship-room shape, and purpose buckets. A local-only intonation pass read targeted private windows for scene-setting, humor timing, repair, warmth, and coordination. Raw private text, names, handles, group names, filenames, media paths, and private examples are not committed. |
+| Shared ChatGPT correction conversation | [verified/local scratch] | 533 extracted shared-conversation rows, including 18 Austin/user rows. Used to correct the model around artistry, intonation, image-as-emotional-memory, and "same thought process, different rooms." Also updates the repair rule: when Austin says the model is missing it, re-read the room and change behavior instead of producing another map. Raw scratch extraction is not committed. |
 
 ## How To Use This Repo
 
@@ -74,7 +76,8 @@ For an agent or assistant:
 3. Check [Voice-Style-Identity/cross-context-source-manifest.md](Voice-Style-Identity/cross-context-source-manifest.md) before making claims about source coverage.
 4. Choose the room before writing: public long-form, public platform, X/social, friend group, warm private, coordination, repair, or AI-partner mode.
 5. Choose the bridge before the analogy: what nearby domain does this audience already understand well enough to feel the point?
-6. Treat generated Austin-style prose as output, not evidence.
+6. For informal private-style writing, decide what the other person needs to see, hear, or remember before deciding the line.
+7. Treat generated Austin-style prose as output, not evidence.
 
 For a person reviewing the archive:
 
@@ -91,10 +94,10 @@ For a person reviewing the archive:
 | Public long-form | Claim early. Explain the system. Evidence at point of need. Close with the next move. | Coursework, research, sports writing, business plans |
 | Public brand/platform | Vision over grievance. Concrete proof. Current doctrine over stale source docs. | Professional docs, origin story, brand files |
 | X/social | Concrete noun, blunt verdict, absurd escalation, stop. | Official X archive |
-| Friend-group / casual | Shorter, faster, more shorthand. Teasing through specifics. | Snapchat derived signals, iMessage derived language/context, X replies |
-| Warm one-on-one | Specific attention, playful challenge, low pressure, brief. | Snapchat derived signals |
+| Friend-group / casual | Shorter, faster, more shorthand. Teasing through specifics. Scene, sound, quote, or artifact can do the first half of the joke. | Snapchat derived signals, iMessage derived language/context, local-only Messages intonation pass, X replies |
+| Warm one-on-one | Specific attention, playful challenge, low pressure, brief. Scene or detail carries feeling before explanation. | Snapchat derived signals, local-only Messages intonation pass |
 | Basic coordination | Direct ask, one useful detail, no ceremony. | Snapchat derived signals, iMessage private-language rates |
-| Repair/vulnerable | Own the specific action, explain mechanism without excuse, state the next behavior. | Voice system plus direct user instructions |
+| Repair/vulnerable | Own the specific action, explain mechanism without excuse, state the next behavior. Keep it plain unless the other person needs the scene named. | Voice system, local-only Messages intonation pass, direct user instructions |
 
 ## Current Brand Guardrails
 
@@ -160,6 +163,7 @@ docs/
 
 - Do not commit raw Snapchat private text, contact names, media URLs, location data, phone/email identifiers, or media files.
 - Do not commit raw iMessage private text, contact names, handles, group names, filenames, attachment contents, media paths, private relationship maps, burner/account metadata, or DM exports. Commit only privacy-safe aggregate summaries; keep raw/private audits in ignored local-only paths.
+- Do not publish private examples disguised as calibration. The private intonation pass may update the router, but the public repo only gets the safe lesson.
 - Do not treat reposts, likes, follows, viewed content, or generated Austin-style prose as Austin-authored voice.
 - Keep private-source material as summaries, marker counts, source manifests, and router corrections unless the user asks otherwise.
 
@@ -177,7 +181,7 @@ When cleaning the repo:
 
 - Remove generated artifacts only when a newer canonical artifact fully replaces their purpose.
 - Preserve historical documents even when their claims are stale, but mark stale public guidance clearly.
-- Keep proof files when they explain parser behavior, source boundaries, or validation state.
+- Keep source-bound files when they explain parser behavior, source boundaries, or validation state.
 
 ## License
 

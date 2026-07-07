@@ -152,8 +152,8 @@ Technical terms deployed to signal expertise rather than serve communication. Ex
 ### 9. Emotional Inflation
 "I was absolutely devastated..." Feeling comes through specificity and restraint, not volume. The helmet's scratches carry the emotion.
 
-### 10. Irony or Sarcasm
-The tone is earnest throughout. Ideas get engaged on their merits before being dismantled.
+### 10. Misrouted Irony or Sarcasm
+In serious long-form analysis, cheap sarcasm weakens the argument. Ideas get engaged on their merits before being dismantled. This does not apply as a blanket ban to X/social, friend-group, or warm private rooms, where irony, self-owning, and mock-serious escalation can be the timing mechanism.
 
 ### 11. Bullet-Point Prose
 Default is continuous prose that moves. Lists appear only when parallel structure genuinely helps.

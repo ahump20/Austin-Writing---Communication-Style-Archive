@@ -77,6 +77,45 @@ const markerRows = [
   },
 ];
 
+const privateIntonationRows = [
+  {
+    move: "Scene first",
+    signal: "Point the other person at the thing before explaining the point.",
+    use: "Best for friend-group jokes, warm private messages, media/context passing, and social friction.",
+    avoid: "Turning every private note into a visual essay. Coordination still wins when the job is simple.",
+  },
+  {
+    move: "Sound and replay",
+    signal: "Use a clip, quote fragment, or heard line as the scene, then add the verdict.",
+    use: "Best when the funny part is already in the artifact and the reply should not explain it to death.",
+    avoid: "Repeating private wording in public artifacts.",
+  },
+  {
+    move: "Laughter as timing",
+    signal: "Laughter can announce the register before the content arrives.",
+    use: "Softens a jab, marks the bit, or lets the other person know the next line is playful.",
+    avoid: "Treating laughter as meaningless filler or adding it where trust is needed.",
+  },
+  {
+    move: "Self-placement",
+    signal: "Turn the shared scene into a quick self-portrait or self-own.",
+    use: "Makes the joke relational instead of just observational.",
+    avoid: "Overconfession or fake humility.",
+  },
+  {
+    move: "Abrupt stop",
+    signal: "The line lands because it refuses to explain the obvious shared picture.",
+    use: "Works in rooms with enough shared context.",
+    avoid: "Using it with people who need explicit reassurance or context.",
+  },
+  {
+    move: "Low-drama repair",
+    signal: "Name the action, give the mechanism, return to the relationship or task.",
+    use: "Keeps accountability from sounding like therapy-script performance.",
+    avoid: "Overexplaining feelings when the other person needs changed behavior.",
+  },
+];
+
 const privateContextRows = imessageLanguage.private_context_router;
 const purposeRows = imessageLanguage.purpose_buckets;
 
@@ -132,6 +171,30 @@ const sourceRows = [
     dateRange: "2014-2026",
     yieldNote: "Usable means successfully decoded sent-text rows.",
     gaps: "Empty, media, or archive-residue rows are rejected. No raw wording or n-grams are committed.",
+  },
+  {
+    label: "iMessage intonation",
+    kind: "local-only private read",
+    rows: 1,
+    usable: 1,
+    note: "Targeted windows around scene-setting, sound, media/context passing, humor, repair, warmth, and coordination.",
+    privacy: "Router correction only. No quotes, names, handles, group names, or private examples.",
+    proof: "Windowed local Messages pass, July 7, 2026.",
+    dateRange: "2025-2026 sampled windows",
+    yieldNote: "Usable means the durable lesson: scene-first delivery can carry tone in informal rooms.",
+    gaps: "Not a full corpus export and not a quote source.",
+  },
+  {
+    label: "Shared ChatGPT correction",
+    kind: "direct instruction",
+    rows: 533,
+    usable: 18,
+    note: "Austin's direct corrections around authenticity, intonation, image as emotional memory, and one thought process across rooms.",
+    privacy: "Local scratch extraction only.",
+    proof: "533 extracted rows, 18 Austin/user rows.",
+    dateRange: "fetched 2026-07-07",
+    yieldNote: "Usable means Austin-authored correction rows, not assistant/tool chatter.",
+    gaps: "Used for direct instruction pressure, not private-relationship evidence.",
   },
   {
     label: "Long-form writing",
@@ -246,7 +309,7 @@ const routerModes = [
   {
     mode: "Brand/platform",
     evidence: "professional docs + current BSI doctrine",
-    shape: "Vision over grievance, concrete proof, current guardrails.",
+    shape: "Vision over grievance, concrete source support, current guardrails.",
     avoid: "Stale multi-sport or Blaze Intelligence framing.",
     score: 4,
     values: [4, 3, 2, 3, 4, 3],
@@ -425,6 +488,19 @@ const humanSynthesis = [
     watch: "People who need explicit reassurance may miss warmth if it stays too compressed.",
   },
   {
+    title: "Private intonation is scene-aware, not just short.",
+    status: "verified + reasoned",
+    summary: "The local Messages reread corrected the earlier model: private speech is compressed, but the tone often comes from pointing someone at a scene, sound, artifact, quote fragment, or shared situation before the verdict lands.",
+    evidence: [
+      "Targeted local Messages windows were read around scene, sound, media/context, humor, repair, warmth, and coordination markers.",
+      "The aggregate baseline still holds: median private sent text is 5 words and coordination markers dominate.",
+      "The shared ChatGPT correction conversation added Austin's direct frame: emotion often evokes memory as flashes of images.",
+    ],
+    implication: "For informal drafts, ask what the person should see, hear, or remember before writing the line. Then keep the line short enough to preserve the timing.",
+    strength: "This keeps intimacy from becoming polished prose and keeps humor tied to the shared room.",
+    watch: "Do not overstate this into a universal identity claim. Coordination, direct asks, and simple logistics still deserve simple lines.",
+  },
+  {
     title: "Public voice is a translation layer, not a separate self.",
     status: "verified",
     summary: "Stallion is not fake, but it is amplified. It turns the same thought process toward public timing: sports certainty, Texas/place nouns, mock ceremony, bluntness, AI-tool anger, and self-owning asides.",
@@ -557,7 +633,7 @@ const usableVoiceRows = [
   {
     lane: "With Austin",
     useWhen: "Direct collaboration, corrections, decisions, execution.",
-    line: "[verified] The issue is not the artifact size. It is that the top explains the evidence before it gives you usable voice. I am moving the usable lines to the front and making the receipts prove them.",
+    line: "The issue is not the artifact size. It is that the top explains the evidence before it gives you usable voice. Move the usable lines to the front and let source context support them.",
     why: "Outcome first, evidence tag, concrete miss, corrective action.",
   },
   {
@@ -599,10 +675,10 @@ const defaultDeliveryRules = [
   },
   {
     rule: "Keep the truth stable.",
-    detail: "The mechanism should survive every translation. Only the doorway changes: metaphor, cadence, slang, density, proof, or silence.",
+    detail: "The mechanism should survive every translation. Only the doorway changes: metaphor, cadence, slang, density, source shape, or silence.",
   },
   {
-    rule: "Use receipts after the move.",
+    rule: "Use source context after the move.",
     detail: "Evidence earns trust. It should not crowd out the thing the reader came to use.",
   },
   {
@@ -634,7 +710,7 @@ const truthTransferRows = [
   },
   {
     layer: "Delivery",
-    question: "What rhythm, slang, grammar, image, or silence makes it land?",
+    question: "What rhythm, slang, grammar, scene, or silence makes it land?",
   },
   {
     layer: "Durability",
@@ -756,7 +832,7 @@ const reflectionChapters = [
     status: "reasoned",
     read: [
       "Stallion heat, private compression, professional analysis, and direct agent-partner talk are all real. The failure mode is flattening them into one voice and dragging that voice everywhere.",
-      "The archive argues for routing before writing. Who is in the room? What job is the message doing? Can this source be quoted? Does the situation need heat, care, repair, clarity, or proof?"
+      "The archive argues for routing before writing. Who is in the room? What job is the message doing? Can this source be quoted? Does the situation need heat, care, repair, clarity, or source context?"
     ],
     evidence: [
       "The X archive can prove public voice and humor mechanics.",
@@ -850,6 +926,13 @@ const communicationRecipes = [
     avoid: "Long background before the person knows what you need.",
   },
   {
+    room: "Informal private / friend-group",
+    start: "Decide what the person should see, hear, or remember first.",
+    proof: "Local-only Messages intonation windows plus aggregate private compression.",
+    add: "A short verdict, self-own, laugh cue, or playful challenge after the scene is clear.",
+    avoid: "Explaining the bit or turning a shared artifact into a public-facing monologue.",
+  },
+  {
     room: "Repair or apology",
     start: "Name the action, own the miss, explain the mechanism without excuse.",
     proof: "Repair markers are rarer, so the wording must be cleaner when used.",
@@ -858,9 +941,9 @@ const communicationRecipes = [
   },
   {
     room: "AI-agent collaboration",
-    start: "Restate the goal and assumptions, then execute with proof.",
+    start: "Restate the goal and assumptions, then execute with evidence.",
     proof: "Current repo instructions and skill files.",
-    add: "Evidence tags: verified, reasoned, guess.",
+    add: "Known, unknown, open when stakes justify it.",
     avoid: "Making artifacts that are impressive once and useless later.",
   },
 ];
@@ -872,7 +955,7 @@ const methodSteps = [
   },
   {
     title: "Converted private archives into shape",
-    body: "Snapchat and Messages were reduced to counts, rates, anonymous room types, and purpose buckets. No private text, names, group names, handles, filenames, or media paths are published.",
+    body: "Snapchat and Messages were reduced to counts, rates, anonymous room types, purpose buckets, and a local-only intonation correction. No private text, names, group names, handles, filenames, or media paths are published.",
   },
   {
     title: "Cross-read the translations",
@@ -889,7 +972,7 @@ const northStar = {
   quote: "The mistake is thinking there's an X Austin, a texting Austin, and an essay Austin. There isn't. There's one thought process being translated into different rooms.",
   doorway: "The best communication changes the doorway, not the truth.",
   implication: "The artifact should preserve how Austin reasons before it recommends a style. Evidence still matters, but the evidence should explain the movement behind the voice and the doorway chosen for the room.",
-  truthTransfer: "Truth transfer means the mechanism survives while the metaphor, rhythm, slang, grammar, image, silence, or proof shape changes for the audience.",
+  truthTransfer: "Truth transfer means the mechanism survives while the metaphor, rhythm, slang, grammar, scene, silence, or source shape changes for the audience.",
   source: "Austin direct instruction, 2026-07-07",
 };
 
@@ -898,6 +981,11 @@ const thoughtEngine = [
     step: "Object",
     prompt: "What concrete thing is carrying the feeling?",
     example: "A breakfast counter, helmet, phone, coach, failed tool, missed camera shot.",
+  },
+  {
+    step: "Scene",
+    prompt: "What should the other person see, hear, or remember first?",
+    example: "The line often lands after the shared picture, sound, clip, quote, or social situation is already in the room.",
   },
   {
     step: "Pressure",
@@ -917,17 +1005,17 @@ const thoughtEngine = [
   {
     step: "Lesson",
     prompt: "What does the line teach without sounding like a lecture?",
-    example: "The ordinary object becomes proof of a larger consequence.",
+    example: "The ordinary object becomes evidence of a larger consequence.",
   },
   {
     step: "Rhythm",
-    prompt: "What cadence makes the line land?",
-    example: "Short anchor, textured contrast, punch or reframe. Not all compression, not all ornament.",
+    prompt: "What intonation makes the line land?",
+    example: "Short anchor, scene or sound cue, textured contrast, punch or reframe. Not all compression, not all ornament.",
   },
   {
     step: "Room",
     prompt: "What translation does this audience deserve?",
-    example: "Public heat, private care, group shorthand, professional proof, repair, or partner-mode execution.",
+    example: "Public heat, private care, group shorthand, professional support, repair, or partner-mode execution.",
   },
 ];
 
@@ -968,7 +1056,7 @@ const researchBoundaryRows = [
   {
     label: "Uploaded enhancement manifest",
     status: "candidate input",
-    note: "Useful for section ideas such as claim ladders and research boundaries. Not treated as proof by itself.",
+    note: "Useful for section ideas such as claim ladders and research boundaries. Not treated as source evidence by itself.",
   },
   {
     label: "Connector-limited research",
@@ -1010,7 +1098,7 @@ const systemBehaviorRows = [
   {
     layer: "Tone calibration",
     trigger: "Room, stakes, relationship, or emotional temperature changes.",
-    rule: "Keep the same person. Change delivery, density, heat, and proof.",
+    rule: "Keep the same person. Change delivery, density, heat, and source shape.",
     failure: "Tone whiplash, X voice everywhere, or polished public prose in a private room.",
   },
   {
@@ -1055,7 +1143,7 @@ const visualAssetRows = [
   {
     title: "Doorway translation flow",
     file: "visual-delivery-assets/doorway-translation-flow.svg",
-    note: "Truth core, room read, doorway, tone, proof, action. This is the reusable bridge model.",
+    note: "Truth core, room read, doorway, tone, source shape, action. This is the reusable bridge model.",
   },
   {
     title: "Error recovery flow",
@@ -1080,7 +1168,7 @@ const data = {
       density: 4,
       depth: 2,
     },
-    note: "D3 owns chart geometry. React owns the reading structure. The deeper sections lead with human implications, rhythm, metaphor, and evidence boundaries; numbers act as receipts.",
+    note: "D3 owns chart geometry. React owns the reading structure. The deeper sections lead with human implications, rhythm, metaphor, and evidence boundaries; numbers act as support.",
   },
   northStar,
   thoughtEngine,
@@ -1101,6 +1189,7 @@ const data = {
   matrixRows,
   compressionRows,
   markerRows,
+  privateIntonationRows,
   privateContextRows,
   purposeRows,
   combinedThemes,
@@ -1179,7 +1268,7 @@ const frontendContract = {
   DEPTH_INTEGRITY: data.design.dials.depth,
   signature_move: "A dossier where the operating premise leads, the doorway rule is explicit, and each chart is a receipt for the implication it supports.",
   layout_architecture: "sticky dossier rail plus long-form reading column and chart pairs",
-  information_flow: "doorway rule, repeatable movement, method, system behavior, visual delivery, evidence receipts, public examples, private shape, doorway plays, source boundaries",
+  information_flow: "doorway rule, repeatable movement, method, system behavior, visual delivery, source support, public examples, private shape, doorway plays, source boundaries",
   section_or_zone_rhythm: "one governing thesis, long-form reflection chapters, paired evidence panels, doorway plays, and calmer source rows",
   primary_visual_asset: "custom SVG evidence charts and annotated delivery-flow assets",
   asset_job: "make private compression, pressure conditions, strength/risk patterns, doorway translation, and error recovery readable without exposing raw private content",
@@ -1242,7 +1331,7 @@ const frontendContract = {
     final_repo_path: "Voice-Style-Identity/austin-communication-context-map.html",
     fallback_if_unavailable: "plain HTML tables and no-script message remain in the artifact"
   },
-  restraint_clause: "Numbers are evidence, not the center of the artifact. Private data stays aggregate-only. The artifact should feel useful to read, not merely impressive to audit."
+  restraint_clause: "Numbers are evidence, not the center of the artifact. Private data becomes privacy-safe summaries and router corrections. The artifact should feel useful to read, not merely impressive to audit."
 };
 
 const dataJSON = JSON.stringify(data).replace(/</g, "\\u003c");
@@ -1910,7 +1999,7 @@ const html = String.raw`<!doctype html>
     function Matrix() {
       return h("div", { className:"matrix chart-card" },
         h("div", { className:"chart-title-row" },
-          h("h3", null, "What each source can prove"),
+          h("h3", null, "What each source supports"),
           h(Badge, { kind:"reasoned" }, "1 to 5")
         ),
         h("table", null,
@@ -1923,6 +2012,18 @@ const html = String.raw`<!doctype html>
         ),
         h("p", { className:"caption" }, "Scores route evidence. They are not personality scores.")
       );
+    }
+    function PrivateIntonationPanel() {
+      return h("div", { className:"recipe-grid" }, DATA.privateIntonationRows.map((row) =>
+        h("article", { className:"recipe-card", key:row.move },
+          h("h3", null, row.move),
+          h("dl", null,
+            h("div", null, h("dt", null, "Signal"), h("dd", null, row.signal)),
+            h("div", null, h("dt", null, "Use"), h("dd", null, row.use)),
+            h("div", null, h("dt", null, "Avoid"), h("dd", null, row.avoid))
+          )
+        )
+      ));
     }
     function PrivateContextRouter() {
       return h("div", { className:"chart-card context-table-wrap" },
@@ -1966,7 +2067,7 @@ const html = String.raw`<!doctype html>
       return h("div", { className:"source-grid" }, DATA.sourceRows.map((row) =>
         h("article", { className:"source-card", key:row.label },
           h("h3", null, h("span", null, row.label), h("span", null, row.kind)),
-          h("p", { className:"proof" }, row.proof),
+          h("p", { className:"proof" }, h("strong", null, "Source shape: "), row.proof),
           h("div", { className:"stat-grid" },
             h(Stat, { value: fmt.format(row.rows) + (row.suffix || ""), label:"source rows/items" }),
             h(Stat, { value: fmt.format(row.usable) + (row.suffix || ""), label:"usable signal" })
@@ -2111,7 +2212,7 @@ const html = String.raw`<!doctype html>
           h("p", null, item.summary),
           h("div", { className:"insight-grid" },
             h("div", null,
-              h("p", { className:"eyebrow" }, "receipts"),
+              h("p", { className:"eyebrow" }, "source support"),
               h("ul", { className:"evidence-list" }, item.evidence.map((line) => h("li", { key:line }, line)))
             ),
             h("div", { className:"implication" },
@@ -2155,7 +2256,7 @@ const html = String.raw`<!doctype html>
           h("h3", null, item.room),
           h("dl", null,
             h("div", null, h("dt", null, "Start"), h("dd", null, item.start)),
-            h("div", null, h("dt", null, "Evidence"), h("dd", null, item.proof)),
+            h("div", null, h("dt", null, "Source shape"), h("dd", null, item.proof)),
             h("div", null, h("dt", null, "Add"), h("dd", null, item.add)),
             h("div", null, h("dt", null, "Avoid"), h("dd", null, item.avoid))
           )
@@ -2169,7 +2270,7 @@ const html = String.raw`<!doctype html>
           h("div", null,
             h("h4", null, item.title),
             h("p", null, item.read),
-            h("p", null, h("strong", null, "Proof: "), item.proof),
+            h("p", null, h("strong", null, "Source shape: "), item.proof),
             h("p", null, h("strong", null, "Implication: "), item.implication)
           )
         )
@@ -2213,17 +2314,18 @@ const html = String.raw`<!doctype html>
             ["visual-layer","Visual layer"],
             ["human-read","Human read"],
             ["deeper-read","Deeper read"],
-            ["charts","Evidence receipts"],
+            ["intonation","Intonation"],
+            ["charts","Evidence support"],
             ["trends","Time pressure"],
             ["quotes","Public examples"],
             ["private-router","Private shape"],
             ["recipes","Doorway plays"],
             ["filters","Translation checks"],
-            ["sources","Source receipts"],
+            ["sources","Sources"],
             ["boundaries","Boundaries"],
             ["privacy","Privacy"]
           ].map(([id,label]) => h("a", { href:"#"+id, key:id }, label))),
-          h("p", null, "Generated " + DATA.generatedAt + ". Private sources are aggregate-only.")
+          h("p", null, "Generated " + DATA.generatedAt + ". Private sources become privacy-safe summaries.")
         ),
         h("main", { id:"main" },
           h("section", { className:"hero", id:"answer" },
@@ -2232,9 +2334,9 @@ const html = String.raw`<!doctype html>
               h("h2", null, "The best communication changes the doorway, not the truth."),
               h("p", { className:"thesis" }, "This is a translation system, not a personality map. The archive exists to learn the movement underneath the line, then choose the entrance an audience can actually walk through."),
               h("div", { className:"summary-strip" },
-                h("div", null, h("strong", null, "Core movement"), h("p", null, "Object, pressure, system, bridge, lesson, rhythm, room.")),
+                h("div", null, h("strong", null, "Core movement"), h("p", null, "Object, scene, pressure, system, bridge, lesson, room.")),
                 h("div", null, h("strong", null, "Humor pattern"), h("p", null, "Take a normal object and give it institutional stakes.")),
-                h("div", null, h("strong", null, "Doorway rule"), h("p", null, "Change the entrance. Keep the mechanism."))
+                h("div", null, h("strong", null, "Private intonation"), h("p", null, "Let scene, sound, or artifact carry tone before explanation."))
               ),
               h("div", { className:"stat-grid" },
                 h(Stat, { value:fmt.format(DATA.totals.officialX), label:"official X rows parsed" }),
@@ -2245,7 +2347,7 @@ const html = String.raw`<!doctype html>
             ),
             h("div", { className:"hero-aside" },
               h(Card, { title:"What changed", badge:{ kind:"verified", text:"updated" } },
-                h("p", null, "Rooms are delivery conditions, not selves. The page now starts from the doorway rule before it shows any buckets, charts, or sources.")
+                h("p", null, "Rooms are delivery conditions, not selves. The page now includes a local-only private intonation pass, so informal speech is treated as scene-aware rather than just short.")
               ),
               h(Card, { title:"What stays stable", badge:{ kind:"reasoned", text:"read" } },
                 h("p", null, "The repeated move is pressure turned into a concrete object, a system read, a lesson, and a line with cadence.")
@@ -2264,7 +2366,7 @@ const html = String.raw`<!doctype html>
             h(NorthStarPanel, null)
           ),
           h("section", { id:"truth-transfer" },
-            h(SectionHead, { title:"Truth Transfer", body:"Same bones, different doorway. The mechanism survives while metaphor, rhythm, slang, grammar, image, silence, or proof changes for the room." }),
+            h(SectionHead, { title:"Truth Transfer", body:"Same bones, different doorway. The mechanism survives while metaphor, rhythm, slang, grammar, scene, silence, or source shape changes for the room." }),
             h(TruthTransferDoctrine, null),
             h("div", { className:"reading-path" },
               h("h3", null, "Causal architecture test"),
@@ -2294,7 +2396,7 @@ const html = String.raw`<!doctype html>
             )),
             h("div", { className:"reading-path" },
               h("h3", null, "How to read this"),
-              h("p", null, "Start with the doorway rule and repeatable movement, then use the charts as receipts. The private sections prove shape, not private wording. Public examples show real phrasing because they were already public.")
+              h("p", null, "Start with the doorway rule and repeatable movement, then use the charts as support. The private sections show shape, not private wording. Public examples show real phrasing because they were already public.")
             ),
             h("p", { className:"footer" }, "Design read: " + DATA.design.read + " Seed " + DATA.design.seed + ". " + DATA.design.note)
           ),
@@ -2322,8 +2424,16 @@ const html = String.raw`<!doctype html>
               h(TensionPairs, null)
             )
           ),
+          h("section", { id:"intonation" },
+            h(SectionHead, { title:"Informal Intonation", body:"The local Messages reread corrected the private model. Private writing is not only compressed; in the right room, it points someone at a scene, sound, artifact, or shared situation, then lets the short line carry tone." }),
+            h(PrivateIntonationPanel, null),
+            h("div", { className:"reading-path" },
+              h("h3", null, "How to use this"),
+              h("p", null, "Before drafting a private-style joke, warm note, or repair, ask what the person needs to see, hear, or remember first. Then write the shortest line that preserves the feeling without exposing private source material.")
+            )
+          ),
           h("section", { id:"charts" },
-            h(SectionHead, { title:"Evidence Receipts", body:"The charts do not define Austin. They show where the evidence supports the read: compression, private-room shape, source strength, and translation risk." }),
+            h(SectionHead, { title:"Evidence Support", body:"The charts do not define Austin. They show where the source material supports the read: compression, private-room shape, source strength, and translation risk." }),
             h("div", { className:"grid-2" },
               h(MarkerComparisonChart, null),
               h(ContextBubbleChart, null)
@@ -2342,7 +2452,7 @@ const html = String.raw`<!doctype html>
             )
           ),
           h("section", { id:"trends" },
-            h(SectionHead, { title:"Time Pressure And Use Notes", body:"The pattern is not early, middle, recent as a maturity story. The stronger read is translation pressure: public heat, private compression, professional proof, and AI partnership." }),
+            h(SectionHead, { title:"Time Pressure And Use Notes", body:"The pattern is not early, middle, recent as a maturity story. The stronger read is translation pressure: public heat, private compression, professional support, and AI partnership." }),
             h(TrendNarrative, null),
             h("div", { style:{ marginTop:"18px" } }, h(StudyPrompts, null))
           ),
@@ -2351,7 +2461,7 @@ const html = String.raw`<!doctype html>
             h(QuoteGallery, null)
           ),
           h("section", { id:"private-router" },
-            h(SectionHead, { title:"Private Shape Without Private Exposure", body:"This is the executed local-only Messages pass in safe form: room shape, length, markers, and purpose buckets without names, quotes, or private phrases." }),
+            h(SectionHead, { title:"Private Shape Without Private Exposure", body:"This is the executed local-only Messages pass in safe form: room shape, length, markers, intonation moves, and purpose buckets without names, quotes, or private phrases." }),
             h("div", { className:"grid-2" },
               h(PrivateContextRouter, null),
               h("div", { className:"chart-card" },
@@ -2362,7 +2472,7 @@ const html = String.raw`<!doctype html>
             )
           ),
           h("section", { id:"recipes" },
-            h(SectionHead, { title:"Doorway Plays", body:"This is the reusable part. Read the movement first. Then pick the room, the job, and the amount of heat, care, proof, or compression the room deserves." }),
+            h(SectionHead, { title:"Doorway Plays", body:"This is the reusable part. Read the movement first. Then pick the room, the job, and the amount of heat, care, source context, or compression the room deserves." }),
             h(CommunicationRecipes, null)
           ),
           h("section", { id:"filters" },
@@ -2370,7 +2480,7 @@ const html = String.raw`<!doctype html>
             h(FilterAtlas, null)
           ),
           h("section", { id:"sources" },
-            h(SectionHead, { title:"Source Receipts", body:"Each source teaches a pressure condition. The reference keeps those pressures from becoming fake separate identities." }),
+            h(SectionHead, { title:"Sources", body:"Each source teaches a pressure condition. The reference keeps those pressures from becoming fake separate identities." }),
             h(SourceCards, null),
             h("div", { style:{ marginTop:"18px" } }, h(Matrix, null))
           ),

@@ -8,7 +8,7 @@
 
 The truth stays stable. The route into it changes by audience, relationship, literacy, emotion, platform, stakes, and shared reference. This is the cleaner version of the bridge discipline: do not split Austin into separate platform selves. Learn the movement, then choose the entrance the room can actually use.
 
-The goal is truth transfer: keep the mechanism intact while changing the metaphor, rhythm, slang, grammar, image, silence, or proof shape so the room can enter it without the idea becoming false, sterile, or condescending.
+The goal is truth transfer: keep the mechanism intact while changing the metaphor, rhythm, slang, grammar, scene, silence, or source shape so the room can enter it without the idea becoming false, sterile, or condescending.
 
 ## Truth Transfer Doctrine
 
@@ -21,12 +21,12 @@ The goal is truth transfer: keep the mechanism intact while changing the metapho
 | Audience world | What does this person already understand in their body? |
 | Metaphor bridge | What different domain has the same structure? |
 | Contextual acuteness | What must change because of culture, room, history, stakes, or language? |
-| Delivery | What rhythm, slang, grammar, image, or silence makes it land? |
+| Delivery | What rhythm, slang, grammar, scene, or silence makes it land? |
 | Durability | Will the lesson still work tomorrow, elsewhere, for someone else? |
 
 [reasoned] The rocket-science example is the access protocol: a brilliant explanation the listener cannot enter is failed communication. A simplified explanation that loses the mechanism is also failed communication. The bridge preserves the mechanism while changing the doorway.
 
-## What The Added Visual Context Proves
+## What The Added Visual Context Contributes
 
 [verified] No direct professor video, caption track, talking-head clip, or classroom conversation recording was found in the provided repo files or current attachment set.
 
@@ -51,8 +51,8 @@ The raw screenshot is not committed. The repo stores the reusable lesson, not th
 1. **Truth core:** What remains true if the audience changes?
 2. **Room read:** Who is receiving it, and what do they already understand?
 3. **Doorway:** Which metaphor, object, domain, or format lets them enter without decoding?
-4. **Tone:** How much heat, care, proof, speed, humor, or repair does this room deserve?
-5. **Proof:** Which verified source, public example, private-derived rate, or concrete object supports the line?
+4. **Tone:** How much heat, care, source support, speed, humor, or repair does this room deserve?
+5. **Source support:** Which verified source, public example, private-derived rate, or concrete object supports the line?
 6. **Action:** What should the reader do, feel, repair, understand, or remember?
 
 ### Error Recovery Flow

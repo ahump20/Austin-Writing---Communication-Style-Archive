@@ -6,8 +6,9 @@ Use this reference when writing in Austin's voice requires grounding in his actu
 
 Austin Humphrey. Based in Boerne, TX. Sports intelligence, product strategy, AI-assisted analytics.
 
-Contact: ahump20@outlook.com · Austin@BlazeSportsIntel.com (BSI business) · (210) 273-5538
-Web: AustinHumphrey.com · BlazeSportsIntel.com · linkedin.com/in/ahump20
+Public contact route: AustinHumphrey.com · BlazeSportsIntel.com · linkedin.com/in/ahump20
+
+Privacy note: do not publish personal phone numbers or private contact paths from this repository. Use public web/contact surfaces unless Austin explicitly provides a context-specific contact line for the output.
 
 ## Experience
 
