@@ -8,7 +8,7 @@
 
 This repo is the canonical communication router for Austin Humphrey's writing, public voice, private-register signals, interpersonal intonation, and AI collaboration style. The archive matters because it grounds the system. The system comes first.
 
-The operating premise is simple: there is not an X Austin, a texting Austin, and an essay Austin. There is one thought process translated through different rooms. This repo exists to preserve that movement with evidence, not to split it into fake platform identities.
+The operating premise is simple: do not split Austin into platform selves. This repo treats the archive as one recurring thought process translated through different rooms, with source context preserved but private wording protected.
 
 The shortest rule is newer and cleaner: **the best communication changes the doorway, not the truth.**
 
@@ -46,7 +46,7 @@ The goal is durable reuse:
 - Uses a local Austin Communication OS plugin as the compact trigger layer while keeping the full repo as the durable source of truth.
 - Preserves one canonical Austin reference instead of splitting him into fake platform identities.
 - Changes the doorway without changing the truth: same observation, audience-native entrance.
-- Treats scene, sound, artifact, and social situation as possible doorways in private conversation, not just abstract ideas to summarize.
+- Treats private intonation as an operating rule, not an evidence display: scene, sound, artifact, and social situation can be doorways in private conversation, not just abstract ideas to summarize.
 - Treats strong metaphor as causal architecture, not surface resemblance: the source path, authority signal, failure point, and human consequence still have to match.
 - Runs a cold-read guardrail against flattering, vague, or mystical claims. If a claim cannot be sourced, it stays reasoned/open or gets cut.
 - Treats metaphor as audience translation: the same truth should move across cultures, contexts, and domains without making the room decode a foreign reference.
@@ -65,7 +65,7 @@ The goal is durable reuse:
 | Snapchat metadata export | [verified] | Privacy-safe derived private-register signals: short coordination, direct asks, quick reactions, warm one-on-one compression. Raw private text is not committed. |
 | Living-brain bridge | [verified] | Durable routing note for agents and Obsidian context. Resurfaces Austin-derived language without filing generated prose as source truth. |
 | iMessage / Apple Messages | [verified/private derived] | Privacy-safe aggregate metadata and private-language signals from the local Messages database: 483,242 total rows, 435,735 base human-message rows, 179,882 decoded sent text rows, 632 active group chats, reactions/tapbacks, reply threads, attachment shape, private wording rates, anonymous relationship-room shape, and purpose buckets. A local-only intonation pass read targeted private windows for scene-setting, humor timing, repair, warmth, and coordination. Raw private text, names, handles, group names, filenames, media paths, and private examples are not committed. |
-| Shared ChatGPT correction conversation | [verified/local scratch] | 533 extracted shared-conversation rows, including 18 Austin/user rows. Used to correct the model around artistry, intonation, image-as-emotional-memory, and "same thought process, different rooms." Also updates the repair rule: when Austin says the model is missing it, re-read the room and change behavior instead of producing another map. Raw scratch extraction is not committed. |
+| Shared ChatGPT correction conversation | [verified/local scratch] | 533 extracted shared-conversation rows, including 18 Austin/user rows. Used to correct the model around artistry, intonation, image-as-emotional-memory, room-routed voice, and correction-pressure repair. Raw scratch extraction and conversation metadata are not committed. |
 
 ## How To Use This Repo
 

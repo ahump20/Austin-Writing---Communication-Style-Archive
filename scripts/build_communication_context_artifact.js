@@ -181,7 +181,7 @@ const sourceRows = [
     privacy: "Router correction only. No quotes, names, handles, group names, or private examples.",
     proof: "Windowed local Messages pass, July 7, 2026.",
     dateRange: "2025-2026 sampled windows",
-    yieldNote: "Usable means the durable lesson: scene-first delivery can carry tone in informal rooms.",
+    yieldNote: "Usable means the durable lesson: scene-setting can carry tone in informal rooms.",
     gaps: "Not a full corpus export and not a quote source.",
   },
   {
@@ -424,9 +424,9 @@ const publicExamples = xData.examples
 
 const humanSynthesis = [
   {
-    title: "There is one thought process, not separate Austins.",
+    title: "There is one communication system, routed by room.",
     status: "reasoned",
-    summary: "The archive should not be read as X Austin, texting Austin, essay Austin. It is one thought process translated through room, stakes, audience, and consequence.",
+    summary: "The archive should not be read as separate platform identities. It is one recurring communication pattern translated through room, stakes, audience, and consequence.",
     evidence: [
       "5,437 authored public X rows show a reply-native voice with short public posts.",
       "179,882 decoded sent Messages texts show a 5-word private median and 75.45 per 100 at 10 words or fewer.",
@@ -488,7 +488,7 @@ const humanSynthesis = [
     watch: "People who need explicit reassurance may miss warmth if it stays too compressed.",
   },
   {
-    title: "Private intonation is scene-aware, not just short.",
+    title: "Private intonation is scene-setting when useful, not just short.",
     status: "verified + reasoned",
     summary: "The local Messages reread corrected the earlier model: private speech is compressed, but the tone often comes from pointing someone at a scene, sound, artifact, quote fragment, or shared situation before the verdict lands.",
     evidence: [
@@ -969,7 +969,7 @@ const methodSteps = [
 
 const northStar = {
   statement: "Read the movement, then translate the room.",
-  quote: "The mistake is thinking there's an X Austin, a texting Austin, and an essay Austin. There isn't. There's one thought process being translated into different rooms.",
+  quote: "Do not split Austin into platform selves. Treat the archive as one recurring communication pattern translated through different rooms.",
   doorway: "The best communication changes the doorway, not the truth.",
   implication: "The artifact should preserve how Austin reasons before it recommends a style. Evidence still matters, but the evidence should explain the movement behind the voice and the doorway chosen for the room.",
   truthTransfer: "Truth transfer means the mechanism survives while the metaphor, rhythm, slang, grammar, scene, silence, or source shape changes for the audience.",
@@ -2347,7 +2347,7 @@ const html = String.raw`<!doctype html>
             ),
             h("div", { className:"hero-aside" },
               h(Card, { title:"What changed", badge:{ kind:"verified", text:"updated" } },
-                h("p", null, "Rooms are delivery conditions, not selves. The page now includes a local-only private intonation pass, so informal speech is treated as scene-aware rather than just short.")
+                h("p", null, "Rooms are delivery conditions, not selves. The page now includes a local-only private intonation pass, so informal speech is treated as scene-setting when useful and plain when not.")
               ),
               h(Card, { title:"What stays stable", badge:{ kind:"reasoned", text:"read" } },
                 h("p", null, "The repeated move is pressure turned into a concrete object, a system read, a lesson, and a line with cadence.")
