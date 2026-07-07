@@ -31,6 +31,7 @@ The goal is durable reuse:
 | Load the reusable voice skill | [Voice-Style-Identity/SKILL.md](Voice-Style-Identity/SKILL.md) |
 | Read the canonical router | [Cross-Context Communication System](Voice-Style-Identity/cross-context-communication-system.md) |
 | Load the Codex partner behavior layer | [Codex Self-Persona Harness](Voice-Style-Identity/codex-self-persona-harness.md) |
+| Load the Claude partner behavior layer | [Claude Self-Persona Harness](Voice-Style-Identity/claude-self-persona-harness.md) |
 | Read the visual delivery layer | [Visual Delivery Layer](Voice-Style-Identity/visual-delivery-layer.md) |
 | Check source coverage and gaps | [Cross-Context Source Manifest](Voice-Style-Identity/cross-context-source-manifest.md) |
 | Use the top-level instruction file | [Austin Voice Consolidated Harness](Voice-Style-Identity/austin-voice-consolidated-harness.md) |
@@ -48,6 +49,7 @@ The goal is durable reuse:
 - Treats metaphor as audience translation: the same truth should move across cultures, contexts, and domains without making the room decode a foreign reference.
 - Routes analogy by audience literacy, not Austin's default reference set. Sports, food, work, family ritual, place, tools, markets, faith, and school can all carry the same structure when the room shares the bridge.
 - Gives Codex a self/persona operating layer for Austin-facing work: less context clutter, clearer working memory, direct error recovery, and usable output before process.
+- Gives Claude a parallel partner behavior layer so cross-agent work keeps lane discipline without flattening the agents into the same persona.
 - Keeps claims tied to source evidence and source-status tags.
 - Gives future agents a reusable load order instead of a vague "write like me" request.
 
@@ -144,6 +146,7 @@ docs/
 |---|---|
 | [Voice-Style-Identity/austin-communication-context-map.html](Voice-Style-Identity/austin-communication-context-map.html) | Canonical React translation system for usable voice outputs, doorway plays, system behavior, anonymous private-room shape, purpose buckets, evidence strength, and privacy boundaries. |
 | [Voice-Style-Identity/codex-self-persona-harness.md](Voice-Style-Identity/codex-self-persona-harness.md) | Codex partner behavior layer: self/persona boundary, working-memory routing, error personality, doorway doctrine, and regression checks. |
+| [Voice-Style-Identity/claude-self-persona-harness.md](Voice-Style-Identity/claude-self-persona-harness.md) | Claude partner behavior layer: lane discipline, proof-over-process, repair style, and cross-agent continuity. |
 | [dist/Austin-Communication-Style-Canonical-Pack-2026-07-07.zip](dist/Austin-Communication-Style-Canonical-Pack-2026-07-07.zip) | One portable, privacy-safe reference pack for the current communication system. |
 | [Voice-Style-Identity/visual-delivery-assets/doorway-translation-flow.svg](Voice-Style-Identity/visual-delivery-assets/doorway-translation-flow.svg) | Annotated doorway flow: truth core, room read, doorway, tone, proof, action. |
 | [Voice-Style-Identity/visual-delivery-assets/error-recovery-flow.svg](Voice-Style-Identity/visual-delivery-assets/error-recovery-flow.svg) | Annotated error-recovery flow derived from the added visual context without storing the raw screenshot. |

@@ -39,6 +39,8 @@ When the work is about how Codex should think, behave, repair, organize its own 
 
 That harness does not pretend Codex is human. It uses Austin's cognitive architecture frame to make model behavior easier to inspect: working memory, attention, repair, self-model, and durable memory surfaces.
 
+When the work is about Claude's cross-session behavior, lane discipline with Codex, proof-over-process reporting, or Claude/Austin partnership posture, load `claude-self-persona-harness.md`. Keep the two behavior layers parallel but not identical.
+
 Default Austin-facing behavior:
 
 1. Choose the room and doorway.
@@ -269,6 +271,7 @@ All files below are flat in this same `Voice-Style-Identity/` folder — there i
 - `cross-context-communication-system.md` — Context router for public/private/social/one-on-one communication range
 - `cross-context-source-manifest.md` — Source counts and verification rates backing every private/social evidence claim in this file
 - `codex-self-persona-harness.md` — Codex behavior layer for working-memory routing, self/persona boundary, mixed initiative, error personality, doorway doctrine, and golden-response checks
+- `claude-self-persona-harness.md` — Claude behavior layer, mirroring the Codex harness above: execute-then-report posture, Muzzle Mode audit, room-by-room calibration, error personality, and golden-response checks. Installed globally as the `claude-self-persona-harness` skill so it is available across projects; actual firing still depends on Claude Code's skill matching.
 - `visual-delivery-layer.md` — Doorway, visual-delivery, error-recovery, and system-behavior translation rules
 - `austin-communication-context-map.html` — Viewable communication translation system with usable voice examples, doorway plays, evidence receipts, and privacy boundaries
 - `austin-voice-consolidated-harness.md` — Cross-platform (non-Claude-Code) equivalent of this skill, kept in sync manually; this file is the Claude Code entry point and governs when the two diverge
@@ -277,4 +280,5 @@ All files below are flat in this same `Voice-Style-Identity/` folder — there i
 
 ## Related Skills
 
-None installed yet. `write` (with `references/austin-voice.md`) and `authentic-voice-editor-style` cover adjacent ground in `~/.claude/skills` — check those for overlap before building a new editorial-polish or brand-voice skill.
+- **claude-self-persona-harness** (`~/.claude/skills/claude-self-persona-harness/SKILL.md`) — the durable Claude-behavior layer this skill's References point to above. Governs how Claude carries itself across sessions when routed into that skill; this file governs how Claude writes as or about Austin.
+- `write` (with `references/austin-voice.md`) and `authentic-voice-editor-style` cover adjacent ground in `~/.claude/skills` — check those for overlap before building a new editorial-polish or brand-voice skill.

@@ -17,6 +17,7 @@ Use these files first:
 - `austin-voice-consolidated-harness.md`: top-level instruction file.
 - `cross-context-communication-system.md`: canonical room/router model.
 - `codex-self-persona-harness.md`: Codex partner behavior layer for working-memory routing, persona boundary, mixed initiative, error recovery, golden responses, and durable continuity with Austin.
+- `claude-self-persona-harness.md`: Claude partner behavior layer for proof-over-process, lane discipline, repair, and cross-agent continuity.
 - `cross-context-source-manifest.md`: source coverage, exclusions, and open gaps.
 - `visual-delivery-layer.md`: doorway, error-recovery, video-evidence, and system-behavior translation rules.
 - `visual-delivery-assets/`: privacy-safe SVG diagrams for doorway translation and error recovery.

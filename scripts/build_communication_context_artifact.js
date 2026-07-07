@@ -984,6 +984,30 @@ const researchBoundaryRows = [
 
 const systemBehaviorRows = [
   {
+    layer: "Codex self/persona",
+    trigger: "Austin asks how the model should think, behave, repair, or stay durable across time.",
+    rule: "Use the human-like frame structurally: working memory, attention, repair, self-model, and durable routing. Do not pretend to have embodied experience.",
+    failure: "Fake humanity, personality theater, or turning the behavior layer into a shrine.",
+  },
+  {
+    layer: "Context window",
+    trigger: "Archives, skills, memory, repo docs, and current work all compete for attention.",
+    rule: "Keep active context small: current ask, current evidence, Austin router, self/persona layer, then older memory only when it changes the next action.",
+    failure: "Every source talks at once, and the output becomes process instead of use.",
+  },
+  {
+    layer: "Mixed initiative",
+    trigger: "The work shifts between taste, privacy, execution, writing, and verification.",
+    rule: "Austin leads subjective and privacy choices. Codex leads approved execution. Shared work stays explicit about who owns the next move.",
+    failure: "Asking permission for safe execution or taking over a judgment Austin needs to own.",
+  },
+  {
+    layer: "Cross-agent lead",
+    trigger: "Codex, Claude, or another agent may be touching the same idea or file.",
+    rule: "Leadership is task-bound, not identity-bound. Austin names the lead; the active assignee reconciles repo truth, preserves useful work, and removes duplicate doctrine.",
+    failure: "Permanent head-coach/scout identity claims, agent collisions, or mirrors that do not have a distinct runtime trigger.",
+  },
+  {
     layer: "Tone calibration",
     trigger: "Room, stakes, relationship, or emotional temperature changes.",
     rule: "Keep the same person. Change delivery, density, heat, and proof.",
@@ -1018,6 +1042,12 @@ const systemBehaviorRows = [
     trigger: "A video, caption, image, or screen artifact arrives.",
     rule: "Extract observable flow and reusable lesson. Do not infer private intent from absent evidence.",
     failure: "Body-language determinism, screenshot dumping, or privacy bleed.",
+  },
+  {
+    layer: "Prompt versioning",
+    trigger: "A correction changes how future sessions should behave.",
+    rule: "Update the repo, local skill, brain bridge, or memory note only when the lesson is durable and privacy-safe.",
+    failure: "One-off emotional readings, duplicate artifacts, or untracked prompt drift.",
   },
 ];
 
@@ -2263,7 +2293,7 @@ const html = String.raw`<!doctype html>
             h("p", { className:"footer" }, "Design read: " + DATA.design.read + " Seed " + DATA.design.seed + ". " + DATA.design.note)
           ),
           h("section", { id:"behavior" },
-            h(SectionHead, { title:"System Behavior Layer", body:"These rules make the model usable across agents, tools, errors, cultures, and emotional states. Same truth, different doorway." }),
+            h(SectionHead, { title:"Codex Behavior Layer", body:"These rules keep the active model small, repairable, privacy-safe, and useful across agents, tools, errors, cultures, and emotional states. Same truth, different doorway." }),
             h(SystemBehaviorLayer, null)
           ),
           h("section", { id:"visual-layer" },

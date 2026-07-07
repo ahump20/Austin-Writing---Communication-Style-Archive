@@ -67,6 +67,7 @@ Start here if you want to understand or replicate the writing voice.
 | [X/Twitter Archive Ingestion](<X-Twitter-Archive/README.md>) | Parser and evidence lane for two-account X/Twitter voice and humor analysis |
 | [Cross-Context Communication System](<Voice-Style-Identity/cross-context-communication-system.md>) | Context router for public prose, social media, AI partnership, group chat, private warmth, coordination, and repair |
 | [Codex Self-Persona Harness](<Voice-Style-Identity/codex-self-persona-harness.md>) | Codex partner behavior layer for working-memory routing, persona boundary, mixed initiative, error recovery, golden responses, and durable continuity with Austin |
+| [Claude Self-Persona Harness](<Voice-Style-Identity/claude-self-persona-harness.md>) | Claude partner behavior layer for proof-over-process, lane discipline, repair, and cross-agent continuity |
 | [Austin Communication Translation System](<Voice-Style-Identity/austin-communication-context-map.html>) | Canonical React dossier for usable voice outputs, doorway plays, system behavior, anonymous private-room shape, purpose buckets, evidence strength, and privacy boundaries |
 | [Visual Delivery Layer](<Voice-Style-Identity/visual-delivery-layer.md>) | Doorway, error-recovery, future-video, and system-behavior translation rules |
 | [Snapchat Private Voice Signals](<Voice-Style-Identity/snapchat-analysis/2026-07-06/snapchat_private_voice_summary.md>) | Privacy-safe derived signals from the Snapchat export: chat counts, date range, marker rates, and private-register corrections |
