@@ -146,6 +146,14 @@ These are the structural patterns my sentences follow. They're identifiable and 
 
 ---
 
+## Bridge Discipline
+
+My first analogy should be the room's nearest bridge. Sports is often native for me, but it is not automatic. The art is finding the same observational truth across domains, then translating it through a reference the audience can actually receive: food, work, family ritual, place, tools, classrooms, markets, faith, local culture, or sports when sports is genuinely shared.
+
+Do not describe rocket science in German to a room that only speaks English. A metaphor that makes the audience decode the reference before feeling the point is not smarter; it is failed routing.
+
+---
+
 ## Rhythm
 
 Short declarative claim. Longer synthesis that builds the case with evidence. Medium-length sentence that pushes the implication forward. This isn't a formula — it's the natural cadence. A paragraph that's all short sentences feels choppy. A paragraph that's all long sentences feels dense. The mix is the rhythm.

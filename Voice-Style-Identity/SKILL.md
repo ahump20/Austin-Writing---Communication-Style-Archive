@@ -15,7 +15,7 @@ Core correction: there is not an X Austin, a texting Austin, and an essay Austin
 
 Cold-read guardrail: if a voice claim sounds admiring, mystical, or personality-shrine-ish, prove it from source evidence or cut it. Prefer falsifiable wording: observed source, safe inference, room-specific implication, and open boundary.
 
-Bridge discipline: metaphor is translation, not decoration. Find the same observational truth across cultures, contexts, and domains, then choose a bridge the room can actually cross. Do not use a language, sport, culture, profession, or technical metaphor the audience cannot receive.
+Bridge discipline: metaphor is translation, not decoration. Find the same unclothed observational truth across cultures, contexts, and domains, then choose a bridge the room can actually cross. Do not use a language, sport, culture, profession, or technical metaphor the audience cannot receive.
 
 Use it automatically when voice, tone, public presentation, private-style drafting, or Austin-facing collaboration is part of the job.
 

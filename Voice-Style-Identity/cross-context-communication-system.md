@@ -126,7 +126,7 @@ Voice shape:
 
 - Vision over grievance.
 - Concrete proof over positioning language.
-- Sports analogy first when it helps.
+- Use sports as a bridge when the room shares it; otherwise choose the closest shared domain.
 - Make the mission feel earned by the work.
 
 Important calibration:

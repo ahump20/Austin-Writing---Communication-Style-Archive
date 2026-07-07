@@ -99,7 +99,7 @@ Emotions named through the physical object or place that holds them. The footbal
 "[Category]: [item], [item], and [item]; for [other party], [item], [item], and [item]."
 
 **The Bridge:**
-Abstract claim, then immediate concrete application. Two sentences — first abstract, second concrete.
+Abstract claim, then immediate concrete application. Two sentences: first abstract, second concrete. The concrete bridge must use a domain the audience can receive; sports is native when shared, but food, work, family ritual, place, tools, classrooms, markets, faith, or local culture may carry the same relation better.
 
 **The Directive Close:**
 "[Do this] and you'll [get this outcome]." Sections end with action, not summary.
@@ -197,7 +197,7 @@ Personal experience enters the analysis when relevant. Critical and affectionate
 - Scientific processes through narrative arcs
 - Genuinely curious questions
 - Information in sequential, causal frameworks
-- Sports as first reference even in non-sports contexts
+- Concrete bridge chosen for the audience, not sports by default
 
 ### Blog / Short-Form
 - Structure: systemic force → who benefits → who loses → tension → open question

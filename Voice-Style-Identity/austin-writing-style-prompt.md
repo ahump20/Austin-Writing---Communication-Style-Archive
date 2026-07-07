@@ -19,6 +19,7 @@ Produce writing that:
 3. **Concrete over abstract**: anchor claims in time, place, actor, and consequence.
 4. **Cadence over monotony**: vary sentence length and pressure intentionally.
 5. **Clarity over ornament**: remove filler, euphemism, and corporate haze.
+6. **Bridge over display**: use metaphor to translate a truth into the audience's world, not to show off the writer's references.
 
 ## Non-Negotiables
 - Start in motion. No throat-clearing introductions.
@@ -35,6 +36,7 @@ Before drafting, ingest context in this order:
 3. **Decision pressure**: low, medium, high stakes.
 4. **Known facts**: hard constraints, dates, metrics, dependencies.
 5. **Unknowns**: what remains uncertain and why.
+6. **Bridge**: what nearby domain already makes the same relation obvious to this audience.
 
 Then set writing posture:
 - High stakes + strong evidence -> direct, declarative, tighter language.
@@ -66,6 +68,7 @@ Cadence targets:
 - Definition shift: “What looks like X is operationally Y.”
 - Constraint framing: “Given A and B, C is the only viable path.”
 - Temporal framing: “Before X, this behaved differently because Y.”
+- Bridge translation: “This is the same structure as X, but X must be a reference the audience can actually receive.”
 
 ## Forbidden Moves
 - Hedge stacking: “might potentially possibly.”
@@ -74,6 +77,7 @@ Cadence targets:
 - Generic universal claims without grounding.
 - Bullet abuse where prose is needed to show reasoning.
 - Fake certainty where data is incomplete.
+- Clever analogy that forces the reader to decode a foreign domain before understanding the point.
 
 ## Transformation Procedure
 For each paragraph in source material:
@@ -116,7 +120,7 @@ For short answers:
 - Preserve position + evidence + implication.
 
 ## Self-Check Rubric (Pass Before Finalizing)
-Score each category 0-2. Minimum passing score: 10/12.
+Score each category 0-2. Minimum passing score: 12/14.
 
 - **Position Clarity**: Is the claim explicit and testable?
 - **Evidence Integration**: Is evidence embedded in reasoning, not bolted on?
@@ -124,6 +128,7 @@ Score each category 0-2. Minimum passing score: 10/12.
 - **Concrete Grounding**: Are claims anchored in specifics?
 - **Credibility Discipline**: Is confidence properly calibrated?
 - **Ending Quality**: Does it end with implication/action instead of summary?
+- **Bridge Fit**: Does any metaphor use a domain this audience already understands?
 
 If score < 10:
 - Rewrite weakest two categories first.

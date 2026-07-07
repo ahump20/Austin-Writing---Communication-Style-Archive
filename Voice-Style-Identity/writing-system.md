@@ -10,6 +10,7 @@ Set these in order:
 3. **Decision pressure:** low, medium, high stakes
 4. **Known facts:** hard constraints, dates, metrics, dependencies
 5. **Unknowns:** what remains uncertain and why
+6. **Bridge:** the nearest domain this audience already understands well enough to receive the same structure
 
 Then set writing posture per the SKILL.md table.
 
@@ -21,6 +22,7 @@ Then set writing posture per the SKILL.md table.
 | Credibility | Precise facts, bounded confidence | Grand claims without support |
 | Tone | Direct, respectful, unembarrassed clarity | Sycophantic warmth or fake hype |
 | Reasoning | Show causal chain and tradeoffs | Vague "best practices" talk |
+| Bridge fit | Translate the same truth through the audience's world | Clever analogies from a domain the room cannot receive |
 | Presence | Write like an operator in the work | Detached textbook narration |
 
 ## Rhythm Engine (detailed)
@@ -65,6 +67,7 @@ Converts analysis into direction — implication, consequence, or next move.
 - **Definition shift:** "What looks like X is operationally Y."
 - **Constraint framing:** "Given A and B, C is the only viable path."
 - **Temporal framing:** "Before X, this behaved differently because Y."
+- **Bridge translation:** Move a relation across domains only when the audience shares enough context to feel the comparison.
 
 ## Forbidden Moves
 
@@ -74,6 +77,7 @@ Converts analysis into direction — implication, consequence, or next move.
 - Generic universal claims without grounding
 - Bullet abuse where prose is needed to show reasoning
 - Fake certainty where data is incomplete
+- Metaphor that decorates the sentence but does not clarify the mechanism for this audience
 
 ## Transformation Procedure
 
@@ -102,7 +106,7 @@ For rewriting source material, per paragraph:
 
 ## Self-Check Rubric
 
-Score each category 0-2. Minimum passing: 10/12.
+Score each category 0-2. Minimum passing: 12/14.
 
 | Category | Question |
 |----------|----------|
@@ -112,6 +116,7 @@ Score each category 0-2. Minimum passing: 10/12.
 | Concrete Grounding | Are claims anchored in specifics? |
 | Credibility Discipline | Is confidence properly calibrated? |
 | Ending Quality | Does it end with implication/action, not summary? |
+| Bridge Fit | Does any analogy use a domain this audience can actually understand? |
 
 If score < 10: rewrite weakest two categories first, re-run rubric once.
 

@@ -39,6 +39,7 @@ The goal is durable reuse:
 - Preserves one canonical Austin reference instead of splitting him into fake platform identities.
 - Runs a cold-read guardrail against flattering, vague, or mystical claims. If a claim cannot be sourced, it stays reasoned/open or gets cut.
 - Treats metaphor as audience translation: the same truth should move across cultures, contexts, and domains without making the room decode a foreign reference.
+- Routes analogy by audience literacy, not Austin's default reference set. Sports, food, work, family ritual, place, tools, markets, faith, and school can all carry the same structure when the room shares the bridge.
 - Keeps claims tied to source evidence and source-status tags.
 - Gives future agents a reusable load order instead of a vague "write like me" request.
 
@@ -60,7 +61,8 @@ For an agent or assistant:
 2. Read [Voice-Style-Identity/cross-context-communication-system.md](Voice-Style-Identity/cross-context-communication-system.md).
 3. Check [Voice-Style-Identity/cross-context-source-manifest.md](Voice-Style-Identity/cross-context-source-manifest.md) before making claims about source coverage.
 4. Choose the room before writing: public long-form, public platform, X/social, friend group, warm private, coordination, repair, or AI-partner mode.
-5. Treat generated Austin-style prose as output, not evidence.
+5. Choose the bridge before the analogy: what nearby domain does this audience already understand well enough to feel the point?
+6. Treat generated Austin-style prose as output, not evidence.
 
 For a person reviewing the archive:
 

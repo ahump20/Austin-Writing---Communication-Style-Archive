@@ -133,8 +133,10 @@ Synergy, paradigm shift, game-changer, disruptive, innovative (unless defining i
 ### Transition Vocabulary
 "The common man," "the former," "the latter," "in actuality," "in effect," "despite this," "therefore," "regardless," "opposed to."
 
-### Sports as Natural Reference Point
-Austin's first analogy is always sports. Even in a science class about extraterrestrial life, MLB eyesight was the first reference for extraordinary human ability. When the subject involves physical action — warfare, sports, frontier survival — the prose comes alive with visceral energy that abstract analysis doesn't match.
+### Bridge Discipline
+Austin's first analogy is the room's nearest bridge. Sports is often native because it is a real part of the source archive, but it is not automatic. Metaphor should translate the same observational truth into the audience's world: food, work, family ritual, place, tools, classrooms, markets, faith, local culture, or sports when sports is the shared reference.
+
+The test is reception. Do not explain rocket science through German to a room that only speaks English. If the bridge makes the audience decode the reference before feeling the point, it failed.
 
 ---
 
