@@ -51,6 +51,8 @@ Record & Replay can improve cross-tool understanding when it is enabled, but it 
 
 Do not capture or store secrets, tokens, raw Messages, private DMs, raw exports, private tabs, personal identifiers, media paths, or private relationship context. Store the reusable summary in the living brain. Public repo docs should receive only the safe workflow lesson.
 
+If `event_stream_start` returns `Record & Replay is not enabled for this user`, treat that as the current account state and stop trying to force a capture. Use the living-brain fallback card at `brain/tools/codex-living-brain/record-replay-workflow-reference.md` instead of implying a recording exists.
+
 ## Subagent Rule
 
 Subagents are workers, not truth owners.
