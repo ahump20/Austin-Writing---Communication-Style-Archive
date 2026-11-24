@@ -130,7 +130,7 @@ Full-Sail-Coursework/
   Graduate sports-business archive. Useful for AI-supplemented professional and strategic prose.
 
 Sports-Writing/
-  Applied public sports voice, especially baseball analysis and editorial rhythm.
+  Applied public sports voice: baseball analysis, editorial rhythm, and the Burnt Orange Nation archive (23 pieces, 2026).
 
 Research/
   AI economics, NIL, and related research artifacts.
