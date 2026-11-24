@@ -38,7 +38,7 @@ Some labels below are historical archive labels, not current public positioning.
 ├── Writing-Record/              → Writing history, intellectual autobiography, and consolidated records
 ├── UT-Austin-Coursework/        → 21 UT Austin undergraduate courses (2014–2020)
 ├── Full-Sail-Coursework/        → 12 Full Sail MBA-adjacent courses + exploratory papers (2024–2025)
-├── Sports-Writing/              → Editorial baseball coverage and sports journalism (2026)
+├── Sports-Writing/              → Editorial sports journalism, including 23 Burnt Orange Nation pieces (2026)
 ├── Research/                    → AI economics research and BSI/NIL analysis
 ├── X-Twitter-Archive/           → X/Twitter archive ingestion, status notes, and processed tweet evidence
 ├── Austin_Humphrey_Resume_Package/  → Executive resume, headshot, and professional materials
@@ -58,6 +58,7 @@ Start here if you want to understand or replicate the writing voice.
 | [Humphrey Writing Index (HWI)](<Voice-Style-Identity/Humphrey_Writing_Index_HWI.md>) | Scoring rubric: "Does this draft sound like Austin?" — 9 categories, anti-pattern deductions |
 | [Intellectual Autobiography](<Writing-Record/Austin_Humphrey_Writing_Intellectual_Autobiography.md>) | First-person narrative of the writing arc from age 17 to present |
 | [Developmental Analysis](<Voice-Style-Identity/developmental-analysis.md>) | Chronological analysis of 50+ human-authored documents — voice traits observed per period |
+| [BON Sportswriting Style Evolution](<Voice-Style-Identity/bon-sportswriting-style-evolution.md>) | Chronological read of the 23 Burnt Orange Nation pieces (Oct.–Nov. 2026) — phases, recurring devices, markers by piece |
 | [Source Passages](<Voice-Style-Identity/source-passages.md>) | Curated calibration excerpts organized by voice trait, with era annotations |
 | [Comprehensive Writing Record](<Writing-Record/Comprehensive_Record_of_Austin_Humphreys_Writing_FINAL.md>) | Consolidated record across pre-AI and AI-assisted eras |
 | [Writing Record (Operational)](<Writing-Record/README_Austin_Humphrey_Writing_Record.md>) | Practical "how to use this in 10 minutes" guide |
@@ -564,6 +565,8 @@ Executive resume, headshot, and supporting materials.
 ### Sports Writing (2026)
 
 Editorial baseball coverage — voice profile applied to sports journalism. See [`Sports-Writing/`](Sports-Writing/).
+
+**Burnt Orange Nation (Oct.–Nov. 2026):** 23 published Texas Longhorns pieces across football, basketball and baseball, archived word for word. See the [BON archive index](<Sports-Writing/burnt-orange-nation/README.md>) and the [BON Sportswriting Style Evolution](<Voice-Style-Identity/bon-sportswriting-style-evolution.md>) analysis.
 
 - [Texas Baseball Week 1 Recap & Lamar Preview (Markdown)](<Sports-Writing/texas-baseball-week1-recap-lamar-preview-msu-series-2026.md>)
 - [Texas Week 1 Recap & Lamar Preview (HTML)](<Sports-Writing/texas-week1-recap-lamar-preview-2026.html>)

@@ -517,3 +517,9 @@ The best writing in the archive — the Comanche Warfare paper, the Adderall com
 52. Epics of the West — The Son Explication: "God's Chosen Tiehteti-taibo"
 53. Epics of the West — LHO on LHO
 54. Foundations of IRG — Literature Review: Syrian Civil War
+
+---
+
+## Continued: Burnt Orange Nation (Oct.–Nov. 2026)
+
+The arc picks up seven years later in public, deadline-driven sportswriting. See [BON Sportswriting Style Evolution](bon-sportswriting-style-evolution.md) for a period-by-period read of all 23 published pieces.
